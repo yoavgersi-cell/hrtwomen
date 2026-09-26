@@ -78,20 +78,20 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         factors that actually matter. Choosing the right option involves more than picking a
         prescription - clinical expertise in menopause, treatment choice, follow-up, pricing
         transparency and insurance options can vary a lot between providers. Not sure where to start?
-        Read our 
+        Read our{" "}
         <Link href="/articles/best-online-hrt-providers-compared" className="font-semibold text-[#A8285E] hover:underline">
           guide to the best online HRT providers
-        </Link> 
+        </Link>{" "}
         for the full breakdown.
       </p>
       <p className="mb-8">
         This page is a practical, evidence-based overview of what menopause and perimenopause are,
         how hormone therapy and its alternatives differ, the risks worth understanding, and how to pick
-        a provider you can trust. Prefer to jump straight to the comparison? See our 
+        a provider you can trust. Prefer to jump straight to the comparison? See our{" "}
         <Link href="/reviews" className="font-semibold text-[#A8285E] hover:underline">
           in-depth provider reviews
-        </Link> 
-        or a head-to-head like 
+        </Link>{" "}
+        or a head-to-head like{" "}
         <Link href="/winona-vs-gala" className="font-semibold text-[#A8285E] hover:underline">
           Winona vs Gala
         </Link>.
@@ -152,11 +152,11 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         <strong>Worth knowing:</strong> Some of these symptoms overlap with other conditions, such as
         thyroid problems, anemia or depression. And any bleeding after menopause should always be
         checked by a clinician promptly. That is one reason it is smart to get a proper clinical
-        assessment rather than guess. Learn more in 
+        assessment rather than guess. Learn more in{" "}
         <Link href="/articles/perimenopause-symptoms" className="font-semibold text-[#A8285E] hover:underline">
           perimenopause symptoms explained
-        </Link> 
-        and 
+        </Link>{" "}
+        and{" "}
         <Link href="/articles/is-hrt-safe" className="font-semibold text-[#A8285E] hover:underline">
           is HRT safe?
         </Link>
@@ -175,11 +175,11 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <TreatmentTable rows={treatmentRows} />
       <p className="mb-8 text-[13.5px] text-gray-500">
         This table is general information, not medical advice. What&apos;s right for you depends on your
-        health history and a clinician&apos;s judgment. Learn more in 
+        health history and a clinician&apos;s judgment. Learn more in{" "}
         <Link href="/articles/bioidentical-hormones-explained" className="font-semibold text-[#A8285E] hover:underline">
           bioidentical hormones explained
-        </Link> 
-        and 
+        </Link>{" "}
+        and{" "}
         <Link href="/articles/is-hrt-safe" className="font-semibold text-[#A8285E] hover:underline">
           is HRT safe?
         </Link>.
@@ -196,11 +196,11 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-8 text-[13.5px] text-gray-500">
         These are general comparisons; much of the clot-risk evidence comes from observational studies,
         and individual risk varies. Only a licensed clinician can tell you which option, if any, is
-        appropriate for you. For a full breakdown see 
+        appropriate for you. For a full breakdown see{" "}
         <Link href="/articles/estrogen-patch-vs-pill" className="font-semibold text-[#A8285E] hover:underline">
           estrogen patch vs pill
-        </Link> 
-        and our overview of 
+        </Link>{" "}
+        and our overview of{" "}
         <Link href="/articles/bioidentical-hormones-explained" className="font-semibold text-[#A8285E] hover:underline">
           bioidentical hormones
         </Link>.
@@ -226,7 +226,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-8"><strong>Red flags to avoid:</strong> &quot;no prescription needed&quot; hormones, claims that any product is completely risk-free or &quot;reverses aging&quot;, no clinician involvement, no screening questions about clots or cancer history, and hidden fees. See our 
         <Link href="/reviews" className="font-semibold text-[#A8285E] hover:underline">
           provider reviews
-        </Link> 
+        </Link>{" "}
         for vetted options.
       </p>
 
@@ -247,13 +247,13 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         <li><strong>Insurance & lab options</strong> - some providers accept insurance for visits or can order labs when clinically useful</li>
       </ul>
       <p className="mb-8">
-        Want to see how specific providers stack up? Read our reviews of 
+        Want to see how specific providers stack up? Read our reviews of{" "}
         <Link href="/reviews/winona" className="font-semibold text-[#A8285E] hover:underline">Winona</Link>, 
-        <Link href="/reviews/gala" className="font-semibold text-[#A8285E] hover:underline">Gala</Link> 
-        and 
+        <Link href="/reviews/gala" className="font-semibold text-[#A8285E] hover:underline">Gala</Link>{" "}
+        and{" "}
         <Link href="/reviews/midi" className="font-semibold text-[#A8285E] hover:underline">Midi Health</Link>, or compare them head to head in 
-        <Link href="/winona-vs-midi" className="font-semibold text-[#A8285E] hover:underline">Winona vs Midi</Link> 
-        and 
+        <Link href="/winona-vs-midi" className="font-semibold text-[#A8285E] hover:underline">Winona vs Midi</Link>{" "}
+        and{" "}
         <Link href="/gala-vs-midi" className="font-semibold text-[#A8285E] hover:underline">Gala vs Midi</Link>.
       </p>
 
@@ -278,14 +278,14 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-8">
         To compare fairly, look at the <strong>total monthly cost for the care and medication you would
         actually use</strong> - including visits, membership, pharmacy and shipping - not just the
-        lowest advertised starting price. Our 
+        lowest advertised starting price. Our{" "}
         <Link href="/" className="font-semibold text-[#A8285E] hover:underline">
           comparison of top providers
-        </Link> 
-        is built to make that easier, and you can check availability where you live in our 
+        </Link>{" "}
+        is built to make that easier, and you can check availability where you live in our{" "}
         <Link href="/online-hrt" className="font-semibold text-[#A8285E] hover:underline">
           online HRT by state
-        </Link> 
+        </Link>{" "}
         guide.
       </p>
 
@@ -306,7 +306,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         combined estrogen plus progestogen, a small increase in <strong>breast cancer</strong> risk with
         longer use. HRT is not recommended for everyone - for example, women with a history of
         certain cancers, blood clots, stroke or liver disease may need other options. No treatment is
-        risk-free and none should promise to stop aging. We break this down in 
+        risk-free and none should promise to stop aging. We break this down in{" "}
         <Link href="/articles/is-hrt-safe" className="font-semibold text-[#A8285E] hover:underline">
           is HRT safe?
         </Link>.
@@ -350,10 +350,10 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <h3 className="mb-2 text-[18px] font-bold text-[#191919]">Can I start HRT during perimenopause?</h3>
       <p className="mb-4">
         Often, yes. Many women start treatment while still having periods, when symptoms first appear.
-        A clinician can advise on options that suit an irregular cycle. See 
+        A clinician can advise on options that suit an irregular cycle. See{" "}
         <Link href="/articles/perimenopause-symptoms" className="font-semibold text-[#A8285E] hover:underline">
           perimenopause symptoms
-        </Link> 
+        </Link>{" "}
         for what to look out for.
       </p>
 
@@ -369,27 +369,24 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-4">
         &quot;Bioidentical&quot; describes hormones chemically identical to those your body makes, and
         several FDA-approved products (like estradiol and micronized progesterone) fit that description.
-        Custom-compounded versions are not FDA-approved and have not been shown to be safer. Read 
+        Custom-compounded versions are not FDA-approved and have not been shown to be safer. Read{" "}
         <Link href="/articles/bioidentical-hormones-explained" className="font-semibold text-[#A8285E] hover:underline">
           bioidentical hormones explained
-        </Link> 
+        </Link>{" "}
         for the details.
       </p>
 
       <h3 className="mb-2 text-[18px] font-bold text-[#191919]">Is online HRT legit?</h3>
       <p className="mb-8">
         Reputable telehealth providers are legitimate and convenient, using licensed clinicians and
-        pharmacies. The key is choosing a trustworthy one - which is exactly what our 
+        pharmacies. The key is choosing a trustworthy one - which is exactly what our{" "}
         <Link href="/reviews" className="font-semibold text-[#A8285E] hover:underline">
           independent reviews
-        </Link>, 
-        <Link href="/find-your-match" className="font-semibold text-[#A8285E] hover:underline">
-          matching quiz
-        </Link> 
-        and 
+        </Link>{" "}
+        and{" "}
         <Link href="/articles" className="font-semibold text-[#A8285E] hover:underline">
           HRT guides
-        </Link> 
+        </Link>{" "}
         are for.
       </p>
 

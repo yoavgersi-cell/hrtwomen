@@ -38,14 +38,7 @@ export function LandingEditorial({ sections }: LandingEditorialProps) {
         >
           HRT and menopause articles
         </Link>{" "}
-        for more research and guides, or{" "}
-        <Link
-          href="/find-your-match"
-          className="font-semibold text-[#A8285E] hover:underline"
-        >
-          take our matching quiz
-        </Link>{" "}
-        for a personalized recommendation.
+        for more research and guides.
       </p>
     </div>
   );

@@ -50,7 +50,7 @@ export function BattleStickyCta({
     >
       <div className="overflow-hidden rounded-t-2xl border-t border-gray-200 bg-white/95 shadow-[0_-6px_24px_rgba(0,0,0,0.10)] backdrop-blur">
         {/* Brand accent line */}
-        <div className="h-[3px] bg-gradient-to-r from-[#C2366E] via-[#1a8cd8] to-[#C2366E]" />
+        <div className="h-[3px] bg-gradient-to-r from-[#C2366E] via-[#F4A6C3] to-[#C2366E]" />
 
         <div className="px-3 pt-2.5 pb-[calc(0.75rem+env(safe-area-inset-bottom))]">
           {/* Reassurance strip - evergreen, always-positive, provider-agnostic */}

@@ -102,7 +102,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
 
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-gray-200 bg-white">
-        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#C2366E] via-[#1a8cd8] to-[#C2366E]" />
+        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#C2366E] via-[#F4A6C3] to-[#C2366E]" />
         <div className="mx-auto max-w-[1100px] px-4 pb-10 pt-10 sm:px-6 sm:pb-12 sm:pt-12">
           <Breadcrumbs items={[{ label: "Home", href: hubLink(ctx, "/") }, { label: trio.title }]} />
           <h1 className="text-[26px] font-extrabold leading-[1.15] text-[#191919] sm:text-[36px]">{trio.title}</h1>

@@ -534,7 +534,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   <TopProviderCards
                     config={config}
                     limit={3}
-                    quizHref={hubLink(ctx, "/find-your-match")}
                     linkPrefix=""
                     pageType="listing"
                     sourceFlow="main_comparison"

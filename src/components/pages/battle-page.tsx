@@ -468,7 +468,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* ───── HERO ───── */}
         <section className="relative overflow-hidden border-b border-gray-200 bg-white">
           {/* Subtle gradient accent */}
-          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#C2366E] via-[#1a8cd8] to-[#C2366E]" />
+          <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#C2366E] via-[#F4A6C3] to-[#C2366E]" />
           {/* Mobile-tight hero: less padding, a smaller subtitle, and a single
               wrapping byline row - the fold should reach real content, not
               spend itself on credits. Desktop keeps its previous scale. */}
@@ -531,7 +531,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               named winner. Renders only when a winner is named. */}
           {verdictWinner && verdictRunnerUp && shortAnswerReason && (
             <div className="mb-8 max-w-[820px] overflow-hidden rounded-2xl border border-[#C2366E]/20 bg-white shadow-sm">
-              <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-[#F3F9FD] px-5 py-3 sm:px-6">
+              <div className="flex items-center justify-between gap-3 border-b border-gray-100 bg-[#FDF0F5] px-5 py-3 sm:px-6">
                 <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-[#A8285E]">
                   The verdict
                 </p>
@@ -737,7 +737,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm"
                   >
                     {/* Accent bar */}
-                    <div className="h-1 bg-gradient-to-r from-[#C2366E] via-[#1a8cd8] to-[#C2366E]" />
+                    <div className="h-1 bg-gradient-to-r from-[#C2366E] via-[#F4A6C3] to-[#C2366E]" />
 
                     <div className="p-6 sm:p-8">
                       {/* Header: logo + Trustpilot rating + quick CTA */}
