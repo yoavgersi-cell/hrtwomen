@@ -103,8 +103,8 @@ export const hrtConfig: SiteConfig = {
       name: "Winona",
       tagline:
         "Physician-led online menopause care - estrogen, progesterone and vaginal estrogen prescribed without a video visit",
-      logo: "/logos/winona.svg",
-      smallLogo: "/logos/winona.svg",
+      logo: "/logos/winonahrtlogo.webp",
+      smallLogo: "/logos/winonahrtlogo.webp",
       highlights: [
         "Board-certified physicians",
         "No video visit - online intake",
@@ -119,8 +119,8 @@ export const hrtConfig: SiteConfig = {
       name: "Gala",
       tagline:
         "Flat-fee menopause HRT from US-licensed clinicians, with ongoing check-ins and dose adjustments included",
-      logo: "/logos/gala.svg",
-      smallLogo: "/logos/gala.svg",
+      logo: "/logos/galahrtlogo.png",
+      smallLogo: "/logos/galahrtlogo.png",
       highlights: [
         "FDA-approved estradiol & progesterone",
         "One monthly price, no insurance needed",
@@ -135,8 +135,8 @@ export const hrtConfig: SiteConfig = {
       name: "Midi Health",
       tagline:
         "Insurance-billed video visits with menopause-trained clinicians, with prescriptions sent to your own pharmacy",
-      logo: "/logos/midi.svg",
-      smallLogo: "/logos/midi.svg",
+      logo: "/logos/midihealthhrtlogo.png",
+      smallLogo: "/logos/midihealthhrtlogo.png",
       highlights: [
         "In-network with most major insurance",
         "Video visits with menopause specialists",
