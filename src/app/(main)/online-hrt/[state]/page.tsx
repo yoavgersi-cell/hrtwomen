@@ -227,7 +227,7 @@ export default async function StatePage({
         </h2>
         <p className="mb-4">
           The providers listed above serve women in <strong>{s.name}</strong> - from busy metros like{" "}
-          {c0} to rural areas far from the nearest menopause specialist. Depending on the provider, medication
+          {c0} to rural areas far from the nearest menopause clinic. Depending on the provider, medication
           is shipped to your {s.abbr} address or sent to a local pharmacy, and refills are managed through your
           online care team. For many women in{" "}
           {s.name}, the biggest advantage is access: clinicians who focus on menopause, without a long wait for an
