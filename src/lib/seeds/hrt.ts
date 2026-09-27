@@ -552,7 +552,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "7 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#7a2e4f",
+      heroColor: "#FCE4EC",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Perimenopause is the transition before menopause, when hormone levels - especially estrogen - fluctuate unpredictably, often for several years.",
@@ -592,7 +592,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "8 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#5b2140",
+      heroColor: "#F8D7E3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "HRT is the most effective treatment for hot flashes and night sweats, but it carries real risks, including blood clots, stroke and breast-cancer considerations.",
@@ -636,7 +636,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "7 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#9d3c63",
+      heroColor: "#FBE9F0",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Estradiol can be taken by mouth (pill), through the skin (patch, gel, spray or cream) or vaginally for local symptoms.",
@@ -680,7 +680,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "7 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#7a2e4f",
+      heroColor: "#F6DCE7",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "\"Bioidentical\" means a hormone is chemically identical to what the body makes - estradiol and progesterone are common examples.",
@@ -720,7 +720,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "8 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#9d3c63",
+      heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Winona: physician-led, no video visit, several estrogen forms, self-pay subscription with free delivery.",

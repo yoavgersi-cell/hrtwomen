@@ -9,6 +9,15 @@ function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
 }
 
+// Lowercase a vertical name for mid-sentence use while keeping acronyms
+// ("Menopause & HRT" -> "menopause & HRT").
+function lowerKeepAcronyms(name: string): string {
+  return name
+    .split(" ")
+    .map((w) => (w.length > 1 && w === w.toUpperCase() ? w : w.toLowerCase()))
+    .join(" ");
+}
+
 export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata> {
   const url = canonicalUrl(ctx, "/articles");
   const vName = verticalName(ctx.vertical);
@@ -16,7 +25,7 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
   const description =
     ctx.vertical === "weight-loss"
       ? `Evidence-based weight loss guides for 2026 - GLP-1 treatment options, verified costs, what to expect, and how to choose the right online provider.`
-      : `Evidence-based ${vName.toLowerCase()} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
+      : `Evidence-based ${lowerKeepAcronyms(vName)} guides for 2026 - treatment options, verified costs, what to expect, and how to choose the right online provider.`;
   return {
     title,
     description,
@@ -83,7 +92,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     name: `${vName} Articles - Research, Guides & Expert Insights`,
-    description: `Evidence-based ${vName.toLowerCase()} guides and research - treatment options, what to expect, and choosing the right online provider.`,
+    description: `Evidence-based ${lowerKeepAcronyms(vName)} guides and research - treatment options, what to expect, and choosing the right online provider.`,
     url: canonicalUrl(ctx, "/articles"),
     mainEntity: {
       "@type": "ItemList",
@@ -121,7 +130,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             Articles
           </h1>
           <p className="mt-2 max-w-2xl text-[15px] leading-relaxed text-gray-500">
-            Evidence-based {vName.toLowerCase()} guides - treatment options, what
+            Evidence-based {lowerKeepAcronyms(vName)} guides - treatment options, what
             to expect, and making informed decisions about your health.
           </p>
         </div>
@@ -146,7 +155,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                   decoding="async"
                 />
               ) : (
-                <span className="text-[40px] font-extrabold text-[#191919]/10 select-none">
+                <span className="text-[40px] font-extrabold text-[#A8285E]/35 select-none">
                   01
                 </span>
               )}
@@ -199,7 +208,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                     decoding="async"
                   />
                 ) : (
-                  <span className="text-[36px] font-extrabold text-[#191919]/10 select-none">
+                  <span className="text-[36px] font-extrabold text-[#A8285E]/35 select-none">
                     {String(i + 2).padStart(2, "0")}
                   </span>
                 )}
