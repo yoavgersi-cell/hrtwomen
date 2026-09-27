@@ -1,10 +1,11 @@
 import { BookOpen } from "lucide-react";
 
 // Authoritative outgoing citations, per vertical. Every entry is a real,
-// verifiable source (FDA pages, peer-reviewed position statements via DOI, NIH/MedlinePlus,
-// ACOG)
-// - never invent or approximate a citation. Rendered as a "Sources" section on
-// articles, reviews and comparisons so YMYL pages visibly ground their claims.
+// verifiable source (FDA pages, peer-reviewed papers and position statements
+// via DOI, NICE, ACOG, NIH) - never invent or approximate a citation. Newest
+// regulatory and research sources are listed first. Rendered as a "Sources"
+// section on articles, reviews and comparisons so YMYL pages visibly ground
+// their claims.
 export interface MedicalSource {
   label: string;
   publisher: string;
@@ -14,19 +15,19 @@ export interface MedicalSource {
 export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
   hrt: [
     {
-      label: "Menopause - overview",
-      publisher: "National Institute on Aging (NIA), NIH",
-      href: "https://www.nia.nih.gov/health/menopause",
+      label: "FDA Approves Labeling Changes to Menopausal Hormone Therapy Products",
+      publisher: "U.S. Food & Drug Administration - February 2026",
+      href: "https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products",
     },
     {
-      label: "Hormone Therapy for Menopause",
-      publisher: "MedlinePlus, U.S. National Library of Medicine (NIH)",
-      href: "https://medlineplus.gov/hormonetherapyformenopause.html",
+      label: "FDA Requests Labeling Changes to Clarify the Benefit/Risk Considerations for Menopausal Hormone Therapies",
+      publisher: "U.S. Food & Drug Administration - November 2025",
+      href: "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requests-labeling-changes-related-safety-information-clarify-benefitrisk-considerations",
     },
     {
-      label: "Menopause: Medicines to Help You",
-      publisher: "U.S. Food & Drug Administration",
-      href: "https://www.fda.gov/consumers/free-publications-women/menopause-medicines-help-you",
+      label: "The Women's Health Initiative Randomized Trials and Clinical Practice: A Review",
+      publisher: "Manson JE et al., JAMA - 2024;331(20):1748-1760",
+      href: "https://doi.org/10.1001/jama.2024.6542",
     },
     {
       label: "The 2022 hormone therapy position statement of The North American Menopause Society",
@@ -34,14 +35,29 @@ export const SOURCES_BY_VERTICAL: Record<string, MedicalSource[]> = {
       href: "https://doi.org/10.1097/GME.0000000000002028",
     },
     {
+      label: "The 2023 nonhormone therapy position statement of The North American Menopause Society",
+      publisher: "Menopause (journal), The Menopause Society - 2023",
+      href: "https://doi.org/10.1097/GME.0000000000002200",
+    },
+    {
+      label: "Menopause: identification and management (NG23, updated November 2024)",
+      publisher: "National Institute for Health and Care Excellence (NICE)",
+      href: "https://www.nice.org.uk/guidance/ng23",
+    },
+    {
+      label: "FDA Update on Estradiol Transdermal Patch Availability",
+      publisher: "U.S. Food & Drug Administration - 2026",
+      href: "https://www.fda.gov/drugs/drug-alerts-and-statements/fda-update-estradiol-transdermal-patch-availability",
+    },
+    {
       label: "Hormone Therapy for Menopause - patient FAQ",
       publisher: "American College of Obstetricians and Gynecologists (ACOG)",
       href: "https://www.acog.org/womens-health/faqs/hormone-therapy-for-menopause",
     },
     {
-      label: "The Menopause Years - patient FAQ",
-      publisher: "American College of Obstetricians and Gynecologists (ACOG)",
-      href: "https://www.acog.org/womens-health/faqs/the-menopause-years",
+      label: "Menopause - overview",
+      publisher: "National Institute on Aging (NIA), NIH",
+      href: "https://www.nia.nih.gov/health/menopause",
     },
   ],
 };
