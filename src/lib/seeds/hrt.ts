@@ -30,11 +30,17 @@ import type { SiteConfig } from "@/lib/config";
 //    your pharmacy of choice; hormonal and non-hormonal care plans;
 //    testosterone out of pocket; also weight management, sexual wellness,
 //    hair & skin.
-//  - FDA: on Nov 10, 2025 the FDA announced it was requesting labeling
-//    changes to remove the boxed warnings on cardiovascular disease, breast
-//    cancer and probable dementia from menopausal hormone therapy products;
-//    the endometrial-cancer boxed warning for systemic estrogen-alone products
-//    was not removed.
+//  - FDA: on Nov 10, 2025 the FDA requested labeling changes to remove the
+//    boxed warnings on cardiovascular disease, breast cancer and probable
+//    dementia from menopausal hormone therapy products; on Feb 12, 2026 it
+//    approved the first six updated labels (Prometrium, Divigel, Cenestin,
+//    Enjuvia, Estring, Bijuva), with the rest following product by product.
+//    The endometrial-cancer boxed warning for systemic estrogen-alone
+//    products stays. Non-hormonal Rx: fezolinetant (Veozah, 2023) and
+//    elinzanetant (Lynkuet, approved Oct 24, 2025).
+//  - Estradiol patches: demand roughly tripled after the label change and
+//    some brands are intermittently hard to find in 2026; the FDA says they
+//    remain available and is working with manufacturers on supply.
 //
 // PLACEHOLDERS / OPERATOR TO VERIFY:
 //  - No Trustpilot ratings/reviews are set - operator supplies later.
@@ -47,8 +53,6 @@ import type { SiteConfig } from "@/lib/config";
 //    third-party sources). Set `excludedStates` once confirmed.
 //  - Which Winona formulations are compounded vs FDA-approved products was not
 //    confirmed - copy tells readers to ask their clinician.
-//  - FDA label-change status: copy says the FDA "requested" changes (Nov 2025);
-//    confirm the current labeling status before strengthening that wording.
 // ─────────────────────────────────────────────────────────────────────────────
 
 const UPDATED = "2026-09-26";
@@ -552,7 +556,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "7 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#7a2e4f",
+      heroColor: "#FCE4EC",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Perimenopause is the transition before menopause, when hormone levels - especially estrogen - fluctuate unpredictably, often for several years.",
@@ -591,13 +595,13 @@ export const hrtConfig: SiteConfig = {
       category: "Safety",
       readTime: "8 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-09-26",
-      heroColor: "#5b2140",
+      updatedAt: "2026-09-27",
+      heroColor: "#F8D7E3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "HRT is the most effective treatment for hot flashes and night sweats, but it carries real risks, including blood clots, stroke and breast-cancer considerations.",
         "Risk depends heavily on age, time since menopause, the type and route of hormones, and your personal and family history.",
-        "In November 2025 the FDA announced it was requesting removal of several boxed warnings from menopausal hormone therapy labels, while keeping the endometrial-cancer warning for estrogen-alone products.",
+        "The FDA began removing the boxed warnings on heart disease, breast cancer and dementia in November 2025 and approved the first updated labels in February 2026 - but kept the endometrial-cancer warning for estrogen-alone products.",
         "HRT is not for everyone - a licensed clinician should weigh your individual history before prescribing.",
       ],
       sections: [
@@ -606,8 +610,8 @@ export const hrtConfig: SiteConfig = {
           body: `<p>For many women, the word "HRT" still comes with a warning attached. That largely traces back to the <strong>Women's Health Initiative (WHI)</strong>, a large set of US trials whose early results, published in 2002, reported increased risks of breast cancer, heart disease, stroke and blood clots in women taking hormone therapy. Prescriptions fell dramatically afterward, and boxed warnings were added to product labels.</p><p>In the years since, researchers have re-examined that data. An important nuance: the WHI participants were, on average, in their 60s and many years past menopause - older than most women who start HRT for symptoms today. Later analyses suggested that the balance of risks and benefits looks different for younger women who start treatment closer to menopause.</p>`,
         },
         {
-          heading: "What changed: the FDA's 2025 labeling decision",
-          body: `<p>In <strong>November 2025</strong>, the FDA announced it was requesting labeling changes to remove the boxed warnings about cardiovascular disease, breast cancer and probable dementia from menopausal hormone therapy products, and to add more age-specific context about starting therapy. The agency pointed to evidence that the absolute risk of short-term HRT for hot flashes in younger women is low.</p><p>Two important caveats: the FDA did <strong>not</strong> remove the boxed warning about <strong>endometrial cancer</strong> for systemic estrogen-alone products (which is why women with a uterus are generally prescribed a progestogen alongside estrogen), and removing a boxed warning does <strong>not</strong> mean the risks disappeared. They remain part of the prescribing information and part of the conversation with your clinician.</p>`,
+          heading: "What changed: the FDA's 2025-2026 labeling decision",
+          body: `<p>In <strong>November 2025</strong>, the FDA asked manufacturers to remove the boxed warnings about cardiovascular disease, breast cancer and probable dementia from menopausal hormone therapy products, and to add more age-specific context about starting therapy. On <strong>February 12, 2026</strong> it approved the first six updated labels - including Prometrium (progesterone), Divigel (estradiol gel) and Estring (vaginal estradiol) - with other products following as their manufacturers' changes are reviewed. The agency pointed to evidence that HRT started within about 10 years of menopause, generally before age 60, has a more favorable balance of benefits and risks.</p><p>That matches the long-term findings of the Women's Health Initiative itself: a 2024 review of the trials in <em>JAMA</em> concluded that women who start hormone therapy in early menopause have lower absolute risks than women who start it later.</p><p>Two important caveats: the FDA did <strong>not</strong> remove the boxed warning about <strong>endometrial cancer</strong> for systemic estrogen-alone products (which is why women with a uterus are generally prescribed a progestogen alongside estrogen), and removing a boxed warning does <strong>not</strong> mean the risks disappeared. They remain part of the prescribing information and part of the conversation with your clinician.</p>`,
         },
         {
           heading: "The real risks to understand",
@@ -635,8 +639,8 @@ export const hrtConfig: SiteConfig = {
       category: "Treatments",
       readTime: "7 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-09-26",
-      heroColor: "#9d3c63",
+      updatedAt: "2026-09-27",
+      heroColor: "#FBE9F0",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Estradiol can be taken by mouth (pill), through the skin (patch, gel, spray or cream) or vaginally for local symptoms.",
@@ -666,6 +670,10 @@ export const hrtConfig: SiteConfig = {
           body: `<p>If you still have a uterus, taking systemic estrogen on its own raises the risk of endometrial (uterine lining) cancer. That's why women with a uterus are generally prescribed a <strong>progestogen</strong> - often micronized progesterone - alongside estrogen. Women who have had a hysterectomy typically don't need it. Your clinician will decide on the right combination and schedule.</p>`,
         },
         {
+          heading: "A note on patch availability in 2026",
+          body: `<p>Demand for estradiol patches rose sharply after the FDA's 2025-2026 boxed-warning changes, and some women have had trouble finding their usual brand or strength at the pharmacy. The FDA says estradiol patches remain available and that manufacturers have been expanding production, but availability can still vary by pharmacy and brand.</p><p>If your patch is hard to find, don't switch products or doses on your own - ask your clinician or pharmacist. Options can include a different patch brand, a gel or spray, or another route your clinician thinks suits you.</p>`,
+        },
+        {
           heading: "How to choose - and where to get it",
           body: `<p>The right form depends on your health history, clot and stroke risk, symptoms, skin and preferences - a clinician should make the call with you. Online providers differ in what they offer: <a href="/reviews/winona">Winona</a> offers estradiol as pill, patch or cream; <a href="/reviews/gala">Gala</a> focuses on FDA-approved pill or patch estradiol; and <a href="/reviews/midi">Midi Health</a> prescribes through your own pharmacy and insurance. See <a href="/winona-vs-gala">Winona vs Gala</a> for a closer look.</p><p><em>This article is general information, not medical advice. A licensed clinician should decide which form of HRT, if any, is right for you.</em></p>`,
         },
@@ -680,7 +688,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "7 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#7a2e4f",
+      heroColor: "#F6DCE7",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "\"Bioidentical\" means a hormone is chemically identical to what the body makes - estradiol and progesterone are common examples.",
@@ -720,7 +728,7 @@ export const hrtConfig: SiteConfig = {
       readTime: "8 min read",
       publishedAt: "2026-09-26",
       updatedAt: "2026-09-26",
-      heroColor: "#9d3c63",
+      heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Winona: physician-led, no video visit, several estrogen forms, self-pay subscription with free delivery.",
@@ -766,7 +774,7 @@ export const hrtConfig: SiteConfig = {
     {
       question: "Is HRT safe?",
       answer:
-        "For many healthy women who start it before age 60 or within about 10 years of menopause, major medical societies consider HRT an appropriate option for bothersome symptoms. It does carry real risks, including blood clots, stroke and breast-cancer considerations, and it is generally not recommended for women with a history of certain cancers, blood clots, stroke or unexplained bleeding. In November 2025 the FDA announced it was requesting removal of several boxed warnings from menopausal HRT labels, but the risks remain part of the prescribing information.",
+        "For many healthy women who start it before age 60 or within about 10 years of menopause, major medical societies consider HRT an appropriate option for bothersome symptoms. It does carry real risks, including blood clots, stroke and breast-cancer considerations, and it is generally not recommended for women with a history of certain cancers, blood clots, stroke or unexplained bleeding. The FDA began removing several boxed warnings from menopausal HRT labels in November 2025 (the first updated labels were approved in February 2026), but the risks remain part of the prescribing information.",
     },
     {
       question: "Can I get HRT online?",
@@ -796,7 +804,7 @@ export const hrtConfig: SiteConfig = {
     {
       question: "Are there non-hormonal options for menopause symptoms?",
       answer:
-        "Yes. There are prescription non-hormonal treatments for hot flashes, as well as lifestyle approaches and vaginal moisturizers and lubricants for dryness. Non-hormonal options can be especially relevant for women who can't or prefer not to take hormones. A menopause-trained clinician can help you compare them.",
+        "Yes. FDA-approved non-hormonal prescriptions for hot flashes include fezolinetant (Veozah) and, since October 2025, elinzanetant (Lynkuet), and clinicians also use other medicines such as certain antidepressants (SSRIs/SNRIs) and gabapentin. Cognitive behavioral therapy also has good evidence, as do vaginal moisturizers and lubricants for dryness. Non-hormonal options can be especially relevant for women who can't or prefer not to take hormones. A menopause-trained clinician can help you compare them.",
     },
   ],
 

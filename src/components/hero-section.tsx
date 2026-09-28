@@ -25,7 +25,7 @@ export function HeroSection({
   maxTextWidth = "640px",
 }: HeroSectionProps) {
   return (
-    <section className="relative w-full min-h-[150px] py-5 sm:py-0 sm:h-[200px] lg:h-[210px] overflow-hidden bg-gradient-to-r from-[#FDE8F0] via-[#FCEFF4] to-[#FFF6F9]">
+    <section className="relative w-full min-h-[150px] py-5 sm:py-0 sm:h-[240px] lg:h-[300px] overflow-hidden bg-gradient-to-r from-[#FDE8F0] via-[#FCEFF4] to-[#FFF6F9]">
       {/* Hero image positioned on the right (omitted when no image is set) */}
       {backgroundImageUrl && (
         <div className="absolute right-[380px] top-0 h-full w-[50%] hidden sm:block">
