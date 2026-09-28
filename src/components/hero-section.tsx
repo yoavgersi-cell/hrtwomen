@@ -25,27 +25,17 @@ export function HeroSection({
   maxTextWidth = "640px",
 }: HeroSectionProps) {
   return (
-    <section
-      className={cn(
-        "relative w-full min-h-[150px] py-5 sm:py-0 overflow-hidden bg-gradient-to-r from-[#FDE8F0] via-[#FCEFF4] to-[#FFF6F9]",
-        backgroundImageUrl ? "sm:h-[240px] lg:h-[300px]" : "sm:h-[200px] lg:h-[210px]"
-      )}
-    >
-      {/* Full-width banner (tablet/desktop only; mobile keeps the plain pink
-          background). Designed at 1429x300: cropped from the left edge on
-          narrower screens so the artwork on the right stays in view, with a
-          soft fade behind the headline to keep the text readable. */}
+    <section className="relative w-full min-h-[150px] py-5 sm:py-0 sm:h-[240px] lg:h-[300px] overflow-hidden bg-gradient-to-r from-[#FDE8F0] via-[#FCEFF4] to-[#FFF6F9]">
+      {/* Hero image positioned on the right (omitted when no image is set) */}
       {backgroundImageUrl && (
-        <div className="absolute inset-0 hidden sm:block">
+        <div className="absolute right-[380px] top-0 h-full w-[50%] hidden sm:block">
           <Image
             src={backgroundImageUrl}
             alt={imageAlt}
             fill
             priority
-            sizes="100vw"
-            className="object-cover object-right"
+            className="object-contain object-right-top"
           />
-          <div className="absolute inset-y-0 left-0 w-[70%] bg-gradient-to-r from-[#FFF6F9]/90 via-[#FFF6F9]/60 to-transparent" />
         </div>
       )}
 
@@ -56,7 +46,7 @@ export function HeroSection({
           textAlign === "center" && "items-center text-center"
         )}
       >
-        <div className={cn("max-w-[640px]", !backgroundImageUrl && "lg:max-w-[900px]")} style={{ maxWidth: maxTextWidth !== "640px" ? maxTextWidth : undefined }}>
+        <div className="max-w-[640px] lg:max-w-[900px]" style={{ maxWidth: maxTextWidth !== "640px" ? maxTextWidth : undefined }}>
           {updatedLabel && (
             <span className="mb-2.5 sm:mb-3 inline-flex items-center gap-1.5 text-[13px] text-gray-600">
               <svg className="h-4 w-4 text-green-500" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
