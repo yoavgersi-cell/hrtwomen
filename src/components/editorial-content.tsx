@@ -170,7 +170,12 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-4">
         Menopause symptoms can be managed with hormone therapy, non-hormonal medication, lifestyle
         changes, or a combination. Here is how the main options compare - these are options to discuss
-        with a licensed clinician, not a recommendation to take any specific product.
+        with a licensed clinician, not a recommendation to take any specific product. New to the
+        topic? Start with{" "}
+        <Link href="/articles/what-is-hrt" className="font-semibold text-[#A8285E] hover:underline">
+          what is HRT?
+        </Link>{" "}
+        - our plain-English guide to hormone replacement therapy.
       </p>
       <TreatmentTable rows={treatmentRows} />
       <p className="mb-8 text-[13.5px] text-gray-500">
@@ -351,6 +356,10 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
       <p className="mb-4">
         Often, yes. Many women start treatment while still having periods, when symptoms first appear.
         A clinician can advise on options that suit an irregular cycle. See{" "}
+        <Link href="/articles/hrt-for-perimenopause" className="font-semibold text-[#A8285E] hover:underline">
+          HRT for perimenopause
+        </Link>{" "}
+        for how treatment works before periods stop, and{" "}
         <Link href="/articles/perimenopause-symptoms" className="font-semibold text-[#A8285E] hover:underline">
           perimenopause symptoms
         </Link>{" "}
