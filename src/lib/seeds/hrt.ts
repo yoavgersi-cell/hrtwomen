@@ -38,6 +38,16 @@ import type { SiteConfig } from "@/lib/config";
 //    The endometrial-cancer boxed warning for systemic estrogen-alone
 //    products stays. Non-hormonal Rx: fezolinetant (Veozah, 2023) and
 //    elinzanetant (Lynkuet, approved Oct 24, 2025).
+//  - Fezolinetant (Veozah) got a boxed warning for rare serious liver injury on
+//    Dec 16, 2024 (liver blood tests during treatment). Low-dose paroxetine is
+//    the FDA-approved SSRI for hot flashes; gabapentin is off-label.
+//  - Prometrium (label / DailyMed): capsules contain peanut oil (contraindicated
+//    with peanut allergy); take at bedtime (dizziness/drowsiness); label
+//    regimen for endometrial protection is 200 mg at bedtime for 12 days per
+//    28-day cycle with daily estrogen. Vaginal progesterone for endometrial
+//    protection is off-label in the US with thinner evidence (BMS guidance).
+//  - Menopausal HRT is not contraception; pregnancy remains possible in
+//    perimenopause, so contraception is still needed if pregnancy is unwanted.
 //  - Estradiol patches: demand roughly tripled after the label change and
 //    some brands are intermittently hard to find in 2026; the FDA says they
 //    remain available and is working with manufacturers on supply.
@@ -551,11 +561,11 @@ export const hrtConfig: SiteConfig = {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
       description:
-        "Hot flashes, poor sleep, mood changes, irregular periods and more - here's what perimenopause really looks like, why it happens and when treatment is worth discussing.",
+        "Perimenopause symptoms explained - hot flashes, poor sleep, mood changes, irregular periods and more, why they happen and when treatment is worth discussing.",
       category: "Guides",
       readTime: "7 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-09-26",
+      updatedAt: "2026-09-30",
       heroColor: "#FCE4EC",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -579,7 +589,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "When to talk to a clinician",
-          body: `<p>You don't need to wait until symptoms are unbearable. It is reasonable to seek care if symptoms are affecting your sleep, work, relationships or quality of life. And some changes should always be checked promptly, including <strong>very heavy bleeding, bleeding between periods, bleeding after sex, or any bleeding after menopause</strong>.</p><p>A menopause-literate clinician can talk you through options ranging from lifestyle changes to <strong>hormone replacement therapy (HRT)</strong> and <strong>non-hormonal prescriptions</strong>. If you are weighing hormone therapy, our guide to <a href="/articles/is-hrt-safe">whether HRT is safe</a> explains the current evidence on risks and benefits.</p>`,
+          body: `<p>You don't need to wait until symptoms are unbearable. It is reasonable to seek care if symptoms are affecting your sleep, work, relationships or quality of life. And some changes should always be checked promptly, including <strong>very heavy bleeding, bleeding between periods, bleeding after sex, or any bleeding after menopause</strong>.</p><p>A menopause-literate clinician can talk you through options ranging from lifestyle changes to <strong>hormone replacement therapy (HRT)</strong> and <strong>non-hormonal prescriptions</strong>. You don't have to wait until your periods stop - see our guide to <a href="/articles/hrt-for-perimenopause">HRT for perimenopause</a>. If you are weighing hormone therapy, our guide to <a href="/articles/is-hrt-safe">whether HRT is safe</a> explains the current evidence on risks and benefits.</p>`,
         },
         {
           heading: "Getting care online",
@@ -763,6 +773,150 @@ export const hrtConfig: SiteConfig = {
         },
       ],
     },
+    {
+      slug: "what-is-hrt",
+      title: "What Is HRT? Hormone Replacement Therapy Explained",
+      description:
+        "What is HRT and what does it treat? A plain-English guide to hormone replacement therapy - types, forms, benefits, risks and your treatment options.",
+      category: "Guides",
+      readTime: "8 min read",
+      publishedAt: "2026-09-30",
+      updatedAt: "2026-09-30",
+      heroColor: "#FCE4EC",
+      author: "HRT Women Editorial Team",
+      keyTakeaways: [
+        "HRT (hormone replacement therapy) replaces some of the estrogen - and, for women with a uterus, progesterone - that the body makes less of around menopause.",
+        "It is the most effective treatment for hot flashes and night sweats, and it also helps with vaginal dryness and bone loss.",
+        "HRT comes as estrogen-only or combined therapy, and as pills, patches, gels, sprays and vaginal products - the right choice depends on your history.",
+        "HRT carries real risks and isn't for everyone; non-hormonal treatment options exist, and a licensed clinician should help you decide.",
+      ],
+      sections: [
+        {
+          heading: "What is HRT? The meaning in plain English",
+          body: `<p><strong>HRT</strong> stands for <strong>hormone replacement therapy</strong>. In menopause care it means taking medication that replaces some of the hormones - mainly <strong>estrogen</strong>, and for many women <strong>progesterone</strong> - that the ovaries produce less of during perimenopause and after menopause. You may also see it called <strong>menopausal hormone therapy (MHT)</strong> or simply "hormone therapy"; they all refer to the same kind of treatment.</p><p>HRT doesn't "reverse" menopause or restore hormones to the levels of your 20s. The aim is more practical: to relieve symptoms that are affecting your quality of life, and in some cases to protect long-term health such as bone density, at the lowest dose that works for you.</p>`,
+        },
+        {
+          heading: "What HRT treatment is used for",
+          body: `<p>Falling and fluctuating estrogen affects many parts of the body, which is why HRT therapy can help with a range of symptoms. The main ones it is used for are:</p><ul><li><strong>Hot flashes and night sweats</strong> - HRT is the most effective treatment available for these vasomotor symptoms.</li><li><strong>Sleep disruption</strong> - especially when night sweats keep waking you up.</li><li><strong>Vaginal dryness, discomfort and urinary symptoms</strong> - known as genitourinary syndrome of menopause (GSM), which tends to persist or worsen over time without treatment.</li><li><strong>Bone protection</strong> - systemic estrogen helps prevent the bone loss that speeds up after menopause.</li></ul><p>Some women also notice improvements in mood, joint aches or brain fog, but these respond less predictably, and they can have other causes worth checking. Our guide to <a href="/articles/perimenopause-symptoms">perimenopause symptoms</a> covers the full picture.</p>`,
+        },
+        {
+          heading: "Types of HRT: estrogen-only vs combined",
+          body: `<p>The first big distinction is whether you take estrogen on its own or with a progestogen:</p><ul><li><strong>Estrogen-only HRT</strong> - generally used by women who have had a hysterectomy (no uterus).</li><li><strong>Combined HRT</strong> - estrogen plus a <strong>progestogen</strong> (either micronized progesterone or a synthetic progestin). Women who still have a uterus generally need this, because systemic estrogen on its own raises the risk of endometrial (uterine lining) cancer, and the progestogen protects against that.</li></ul><p>Combined HRT can be taken <strong>cyclically</strong> (progestogen for part of each month, usually with a monthly bleed) or <strong>continuously</strong> (every day, usually aiming for no bleeding). Which schedule makes sense often depends on whether you are still having periods. Our guide to <a href="/articles/progesterone-side-effects">progesterone for menopause</a> explains this in more detail.</p>`,
+        },
+        {
+          heading: "Systemic vs vaginal HRT, and the forms it comes in",
+          body: `<p>HRT is also divided by how much of the body it is meant to reach:</p><ul><li><strong>Systemic HRT</strong> circulates through the bloodstream and treats whole-body symptoms like hot flashes. It comes as a <strong>pill</strong>, a <strong>patch</strong>, a <strong>gel</strong> or a <strong>spray</strong> (and some higher-dose vaginal rings).</li><li><strong>Vaginal (local) estrogen</strong> - low-dose <strong>creams</strong>, <strong>tablets</strong> or <strong>rings</strong> - works mainly on vaginal and urinary tissue. Very little reaches the bloodstream, so it treats dryness and related symptoms rather than hot flashes.</li></ul><p>The route matters for safety as well as convenience: oral estrogen is associated with a higher risk of blood clots than transdermal forms such as patches and gels. We compare the options in <a href="/articles/estrogen-patch-vs-pill">estrogen patch vs pill</a>. Most modern HRT uses estradiol, which is chemically identical to the estrogen your ovaries make - see <a href="/articles/bioidentical-hormones-explained">bioidentical hormones explained</a> for what that label does and doesn't mean.</p>`,
+        },
+        {
+          heading: "Benefits, risks and who shouldn't take HRT",
+          body: `<p>For many healthy women with bothersome symptoms who start before age 60 or within about 10 years of menopause, major medical societies consider HRT an appropriate option. But it is a real medication with real risks, including <strong>blood clots</strong>, <strong>stroke</strong>, <strong>breast-cancer considerations</strong> with longer use of combined therapy, and <strong>endometrial cancer</strong> if estrogen is taken without a progestogen by a woman with a uterus. Risk depends on your age, time since menopause, the type, dose and route of hormones, and your personal and family history.</p><p>Clinicians are generally cautious about or avoid systemic HRT in women with a history of breast or other estrogen-sensitive cancers, blood clots, stroke or heart attack, unexplained vaginal bleeding, or active liver disease. Some of these women may still be candidates for low-dose vaginal estrogen or non-hormonal treatment - a specialist decision. For the full evidence, including the FDA's 2025-2026 boxed-warning changes, read <a href="/articles/is-hrt-safe">is HRT safe?</a></p>`,
+        },
+        {
+          heading: "HRT treatment options beyond hormones",
+          body: `<p>HRT isn't the only way to treat menopause symptoms, and it isn't the right choice for everyone. Other evidence-based options a clinician may discuss include:</p><ul><li><strong>Fezolinetant (Veozah)</strong> - a non-hormonal prescription for moderate to severe hot flashes due to menopause, approved in 2023. It carries a boxed warning about rare but serious liver injury, so liver blood tests are part of treatment.</li><li><strong>Elinzanetant (Lynkuet)</strong> - another non-hormonal prescription for moderate to severe hot flashes due to menopause, approved by the FDA on October 24, 2025.</li><li><strong>Certain antidepressants (SSRIs/SNRIs)</strong> - low-dose paroxetine is FDA-approved for hot flashes, and clinicians use some others off-label.</li><li><strong>Gabapentin</strong> - sometimes used off-label, particularly for night sweats.</li><li><strong>Cognitive behavioral therapy (CBT)</strong> - has good evidence for helping women cope with hot flashes and sleep problems.</li><li><strong>Vaginal moisturizers and lubricants</strong> - first-line, non-prescription options for dryness.</li></ul><p>Each of these has its own side effects and suitability questions, so the choice should be made with a clinician who knows your history.</p>`,
+        },
+        {
+          heading: "How to get HRT: in person or online",
+          body: `<p>You can get HRT from a primary-care doctor, a gynecologist or a menopause specialist - or from a licensed <strong>online HRT</strong> provider. Online services differ mainly in how you see the clinician and how you pay: <a href="/reviews/winona">Winona</a> uses a physician-reviewed online intake with no video visit, <a href="/reviews/gala">Gala</a> charges one flat monthly price, and <a href="/reviews/midi">Midi Health</a> offers insurance-billed video visits. Compare all three in our <a href="/articles/best-online-hrt-providers-compared">online HRT providers comparison</a> or head-to-heads like <a href="/winona-vs-gala">Winona vs Gala</a>.</p><p>Whichever route you choose, a legitimate provider will take a full health history before prescribing - and should be willing to explain which product, dose and route you're getting and why.</p><p><em>This article is general information, not medical advice. A licensed clinician should decide whether HRT, or any treatment, is right for you.</em></p>`,
+        },
+      ],
+    },
+    {
+      slug: "hrt-for-perimenopause",
+      title: "HRT for Perimenopause: Can You Start Before Your Periods Stop?",
+      description:
+        "You don't have to wait for menopause. How HRT for perimenopause works, why irregular bleeding complicates it and other perimenopause treatment options.",
+      category: "Treatments",
+      readTime: "7 min read",
+      publishedAt: "2026-09-30",
+      updatedAt: "2026-09-30",
+      heroColor: "#F8D7E3",
+      author: "HRT Women Editorial Team",
+      keyTakeaways: [
+        "You don't have to wait until your periods stop - clinicians commonly prescribe HRT during perimenopause when symptoms are bothersome.",
+        "Perimenopause regimens often pair estradiol with a cyclical progestogen; some women are offered low-dose hormonal contraception instead.",
+        "Menopausal HRT is not birth control - if pregnancy is possible and unwanted, you still need contraception.",
+        "Irregular bleeding is expected in perimenopause, but heavy, prolonged or unusual bleeding should be checked before and during treatment.",
+      ],
+      sections: [
+        {
+          heading: "Can you take HRT during perimenopause?",
+          body: `<p>Yes. A common misconception is that hormone therapy is only for women who have already reached menopause - 12 months without a period. In reality, symptoms like hot flashes, night sweats, poor sleep and mood changes often start years earlier, and clinicians commonly prescribe <strong>HRT for perimenopause</strong> when those symptoms are affecting daily life.</p><p>The same safety questions apply as at any other stage: your personal and family history, clot and stroke risk, and any history of breast or other estrogen-sensitive cancers. But being "not there yet" is not, by itself, a reason to go without treatment. If you're unsure whether what you're experiencing is perimenopause, our guide to <a href="/articles/perimenopause-symptoms">perimenopause symptoms</a> is a good place to start.</p>`,
+        },
+        {
+          heading: "How HRT for perimenopause is usually set up",
+          body: `<p>Because your ovaries are still producing hormones - just erratically - perimenopause treatment is often set up a little differently from HRT after menopause. Approaches a clinician may consider include:</p><ul><li><strong>Estradiol plus a cyclical progestogen</strong> - estrogen daily, with progesterone for part of each month. This usually produces a predictable monthly bleed and is a common choice while periods are still happening.</li><li><strong>Estradiol plus a continuous progestogen</strong> - taken every day. This is more often used after menopause, because in perimenopause it can lead to unpredictable bleeding, though some clinicians use it earlier.</li><li><strong>A levonorgestrel IUD</strong> - some clinicians use a hormonal IUD to provide the progestogen part of HRT (and contraception) alongside estrogen.</li><li><strong>Low-dose combined hormonal contraception</strong> - for some women who also need birth control and have no reasons to avoid it (such as smoking over age 35 or certain migraine or clot histories), a low-dose pill can help regulate cycles and ease symptoms.</li></ul><p>Which of these fits depends on your symptoms, bleeding pattern, contraception needs and health history - it's a clinician decision. For more on the progestogen part, see <a href="/articles/progesterone-side-effects">progesterone for menopause</a>.</p>`,
+        },
+        {
+          heading: "HRT is not birth control",
+          body: `<p>This is easy to miss: the doses in menopausal HRT are much lower than in hormonal contraceptives and are not designed to stop ovulation. Pregnancy is still possible in perimenopause, even with irregular periods. If you don't want to become pregnant, you'll need a reliable form of contraception until your clinician confirms you no longer need it - something to raise at your appointment, especially if you're under 50.</p>`,
+        },
+        {
+          heading: "Why irregular bleeding complicates things",
+          body: `<p>Irregular periods are one of the hallmarks of perimenopause - cycles can get shorter, longer, heavier, lighter or skipped altogether. HRT adds another layer: cyclical regimens create a withdrawal bleed of their own, and any regimen can cause spotting, particularly in the first few months. That can make it harder to tell what is "normal" for you.</p><p>For that reason, clinicians often want a clear picture of your bleeding pattern <strong>before</strong> starting treatment, and may suggest keeping a simple diary once you start.</p>`,
+        },
+        {
+          heading: "When bleeding needs to be checked",
+          body: `<p>Some bleeding changes shouldn't be put down to perimenopause or HRT without being evaluated. Talk to a clinician promptly about:</p><ul><li>Very heavy bleeding - for example, soaking through protection every hour or two, or passing large clots.</li><li>Periods that last much longer than usual, or bleeding between periods.</li><li>Bleeding after sex.</li><li>Bleeding that continues beyond the first few months of HRT, or starts again after it had settled.</li><li>Any bleeding after you've gone 12 months without a period.</li></ul><p>These can have many causes, most of them not serious, but some - such as polyps, fibroids or changes in the uterine lining - need investigation.</p>`,
+        },
+        {
+          heading: "Other perimenopause treatment options",
+          body: `<p>HRT isn't the only route. Depending on your symptoms and history, a clinician may also discuss:</p><ul><li><strong>Non-hormonal prescriptions</strong> - such as certain SSRIs/SNRIs or gabapentin for hot flashes. The newer non-hormonal drugs fezolinetant (Veozah) and elinzanetant (Lynkuet) are approved for hot flashes due to menopause; whether they suit you during perimenopause is a question for your clinician.</li><li><strong>Vaginal estrogen, moisturizers and lubricants</strong> for dryness and discomfort.</li><li><strong>Cognitive behavioral therapy (CBT)</strong>, which has good evidence for hot flashes, sleep and coping with symptoms.</li><li><strong>Lifestyle foundations</strong> - regular exercise, strength training for bone health, limiting alcohol, not smoking and good sleep habits. These won't eliminate hot flashes for most women, but they support overall health through the transition.</li></ul><p>For a broader overview, see our guide to <a href="/articles/what-is-hrt">what HRT is and your treatment options</a>.</p>`,
+        },
+        {
+          heading: "Getting perimenopause treatment online",
+          body: `<p>Licensed online menopause services generally see women in perimenopause as well as after menopause, but the clinician will want details about your cycle, bleeding and contraception before recommending anything. <a href="/reviews/midi">Midi Health</a> offers video visits and care plans that can include hormonal and non-hormonal options, while <a href="/reviews/winona">Winona</a> and <a href="/reviews/gala">Gala</a> work through an online intake reviewed by a clinician. Ask any provider directly how they handle perimenopause and irregular bleeding, and compare them in our <a href="/articles/best-online-hrt-providers-compared">online HRT providers comparison</a> or <a href="/winona-vs-midi">Winona vs Midi Health</a>.</p><p><em>This article is general information, not medical advice. A licensed clinician should decide what perimenopause treatment, if any, is right for you.</em></p>`,
+        },
+      ],
+    },
+    {
+      slug: "progesterone-side-effects",
+      title: "Progesterone for Menopause: Benefits, Side Effects and What to Expect",
+      description:
+        "Why progesterone is prescribed with estrogen, micronized progesterone vs progestins, common progesterone side effects and when to call a clinician.",
+      category: "Treatments",
+      readTime: "7 min read",
+      publishedAt: "2026-09-30",
+      updatedAt: "2026-09-30",
+      heroColor: "#FBE9F0",
+      author: "HRT Women Editorial Team",
+      keyTakeaways: [
+        "If you have a uterus and take systemic estrogen, a progestogen such as progesterone is generally needed to protect the uterine lining.",
+        "Micronized progesterone (for example, Prometrium) is chemically identical to the body's own progesterone; synthetic progestins are related but different molecules.",
+        "Common side effects include drowsiness or dizziness, breast tenderness, bloating, mood changes and spotting - oral progesterone is usually taken at bedtime.",
+        "Prometrium capsules contain peanut oil and should not be used by people allergic to peanuts; serious symptoms need prompt medical attention.",
+      ],
+      sections: [
+        {
+          heading: "Why progesterone is part of HRT",
+          body: `<p>Estrogen is the part of HRT that relieves hot flashes and night sweats. But in a woman who still has a uterus, systemic estrogen taken on its own stimulates the uterine lining (endometrium) to grow, which raises the risk of endometrial hyperplasia and endometrial cancer. Adding a <strong>progestogen</strong> - the umbrella term for progesterone and synthetic progestins - counteracts that effect.</p><p>That is why women with a uterus are generally prescribed combined HRT, while women who have had a hysterectomy usually take estrogen alone. Progesterone's main job in menopausal HRT is <strong>endometrial protection</strong>, not symptom relief.</p>`,
+        },
+        {
+          heading: "Micronized progesterone vs synthetic progestins",
+          body: `<p><strong>Micronized progesterone</strong> is chemically identical to the progesterone the ovaries make; "micronized" refers to the fine particle size that helps it be absorbed when swallowed. The best-known FDA-approved product is <strong>Prometrium</strong>, and generic versions are widely available. <strong>Synthetic progestins</strong> - such as medroxyprogesterone acetate or norethindrone - are related molecules with somewhat different effects, and they're used in some combined pills and patches and in the levonorgestrel IUD.</p><p>Many menopause clinicians favor micronized progesterone for its side-effect profile, but progestins remain valid options, and some women tolerate one better than the other. As with estrogen, "bioidentical" doesn't mean risk-free - see <a href="/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>.</p>`,
+        },
+        {
+          heading: "Oral vs vaginal, cyclical vs continuous",
+          body: `<p><strong>Oral micronized progesterone</strong> is the standard, FDA-approved form for protecting the uterine lining in menopausal HRT. Some clinicians prescribe <strong>vaginal progesterone</strong> for women who get side effects from the oral form; in the US this is generally an off-label use for endometrial protection, and the evidence is more limited than for oral progesterone, so it's worth asking your clinician why it's being recommended.</p><p>Progesterone can be taken on two main schedules:</p><ul><li><strong>Cyclical (sequential)</strong> - taken for part of each month. The Prometrium label, for example, describes 200 mg at bedtime for 12 days of each 28-day cycle alongside daily estrogen. This usually brings a monthly withdrawal bleed and is common in perimenopause.</li><li><strong>Continuous</strong> - a lower dose every day, usually aiming for no bleeding once things settle. It is more often used after menopause.</li></ul><p>Your clinician will choose the product, dose and schedule based on your bleeding pattern and history - don't change them on your own. If you're still having periods, see <a href="/articles/hrt-for-perimenopause">HRT for perimenopause</a>.</p>`,
+        },
+        {
+          heading: "Common progesterone side effects",
+          body: `<p>Many women take progesterone without much trouble, but side effects are common, especially in the first few months. The ones most often reported include:</p><ul><li><strong>Drowsiness or dizziness</strong> - which is why oral progesterone is usually taken at bedtime. Be cautious driving or operating machinery until you know how it affects you.</li><li><strong>Breast tenderness</strong>.</li><li><strong>Bloating</strong> and other stomach upset.</li><li><strong>Mood changes</strong> - some women notice low mood, irritability or PMS-like symptoms, particularly on the progestogen days of a cyclical regimen.</li><li><strong>Headache</strong>.</li><li><strong>Spotting or bleeding</strong> - irregular bleeding is common early on, and cyclical regimens usually produce a regular monthly bleed.</li></ul><p>If side effects are bothering you, tell your clinician. Options can include changing the timing, dose, schedule or type of progestogen - but those are decisions to make together.</p>`,
+        },
+        {
+          heading: "Less common and serious warnings",
+          body: `<p>A few important points from the prescribing information:</p><ul><li><strong>Peanut allergy</strong> - Prometrium capsules contain peanut oil and should not be used by anyone allergic to peanuts. Tell your clinician about any food allergies, and ask whether a generic you're given has the same ingredients.</li><li><strong>Severe dizziness or drowsiness</strong> - during early treatment some women have had extreme dizziness or drowsiness, along with symptoms like blurred vision, slurred speech or difficulty walking. These need medical attention.</li><li><strong>Contraindications</strong> - progesterone is generally not used in women with unexplained vaginal bleeding, known or suspected breast cancer, active or past blood clots or stroke, or significant liver disease, among others.</li></ul><p>On <strong>February 12, 2026</strong>, the FDA approved updated labeling for Prometrium as one of the first six menopausal hormone therapy products to drop the boxed warning about cardiovascular disease, breast cancer and probable dementia. That reflects newer evidence about timing and age - it does <strong>not</strong> mean those risks disappeared. They remain in the prescribing information, and combined estrogen-plus-progestogen therapy is still associated with a small increase in breast-cancer risk with longer use. Read more in <a href="/articles/is-hrt-safe">is HRT safe?</a></p>`,
+        },
+        {
+          heading: "When to call a clinician",
+          body: `<p><strong>Seek emergency care</strong> for possible signs of a blood clot, stroke or heart attack: chest pain, sudden shortness of breath, pain or swelling in one leg, a sudden severe headache, sudden vision changes, or weakness, numbness or trouble speaking. Also get urgent help for signs of a serious allergic reaction.</p><p><strong>Contact your clinician soon</strong> if you notice a new breast lump, yellowing of your skin or eyes, heavy or persistent bleeding (or any bleeding after you had stopped bleeding for 12 months), significant mood changes or depression, or side effects that don't settle after the first few months.</p>`,
+        },
+        {
+          heading: "Getting progesterone through an online provider",
+          body: `<p>If you take estrogen and have a uterus, any legitimate HRT provider should include a progestogen in your plan. <a href="/reviews/winona">Winona</a> prescribes progesterone alongside its estradiol options, <a href="/reviews/gala">Gala</a> offers oral or vaginal progesterone with FDA-approved estradiol, and <a href="/reviews/midi">Midi Health</a> sends prescriptions to your own pharmacy. See how they compare in <a href="/winona-vs-gala">Winona vs Gala</a>, <a href="/gala-vs-midi">Gala vs Midi Health</a>, or our guide to <a href="/articles/what-is-hrt">what HRT is</a>.</p><p><em>This article is general information, not medical advice. A licensed clinician should decide which progestogen, dose and schedule, if any, is right for you.</em></p>`,
+        },
+      ],
+    },
   ],
 
   faqs: [
@@ -805,6 +959,16 @@ export const hrtConfig: SiteConfig = {
       question: "Are there non-hormonal options for menopause symptoms?",
       answer:
         "Yes. FDA-approved non-hormonal prescriptions for hot flashes include fezolinetant (Veozah) and, since October 2025, elinzanetant (Lynkuet), and clinicians also use other medicines such as certain antidepressants (SSRIs/SNRIs) and gabapentin. Cognitive behavioral therapy also has good evidence, as do vaginal moisturizers and lubricants for dryness. Non-hormonal options can be especially relevant for women who can't or prefer not to take hormones. A menopause-trained clinician can help you compare them.",
+    },
+    {
+      question: "Can I take HRT during perimenopause?",
+      answer:
+        "Yes. Clinicians commonly prescribe HRT during perimenopause when symptoms are bothersome - you don't have to wait until your periods stop. Regimens often pair estradiol with a cyclical progestogen, and some women are offered low-dose hormonal contraception instead. Menopausal HRT is not birth control, and heavy or unusual bleeding should be checked, so a licensed clinician should decide what fits your history.",
+    },
+    {
+      question: "What are the side effects of progesterone?",
+      answer:
+        "Common side effects of progesterone taken with HRT include drowsiness or dizziness (which is why oral progesterone is usually taken at bedtime), breast tenderness, bloating, mood changes, headache and spotting or bleeding. Prometrium capsules contain peanut oil and shouldn't be used by people allergic to peanuts. Symptoms such as chest pain, leg swelling, sudden severe headache or vision changes need urgent medical attention.",
     },
   ],
 

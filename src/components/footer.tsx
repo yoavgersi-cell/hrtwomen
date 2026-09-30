@@ -17,10 +17,12 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Guides",
     links: [
+      { label: "What Is HRT?", href: "/articles/what-is-hrt" },
+      { label: "HRT for Perimenopause", href: "/articles/hrt-for-perimenopause" },
       { label: "Perimenopause Symptoms", href: "/articles/perimenopause-symptoms" },
       { label: "Is HRT Safe?", href: "/articles/is-hrt-safe" },
+      { label: "Progesterone Side Effects", href: "/articles/progesterone-side-effects" },
       { label: "Estrogen Patch vs Pill", href: "/articles/estrogen-patch-vs-pill" },
-      { label: "Bioidentical Hormones", href: "/articles/bioidentical-hormones-explained" },
       { label: "Online HRT by State", href: "/online-hrt" },
       { label: "All Guides", href: "/articles" },
     ],
