@@ -25,18 +25,104 @@ import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
 
-// Per-provider SEO overrides, "is X legit?" trust blocks, and extra FAQs were a
-// weight-loss-vertical feature (all keyed by WL provider slugs and, where used,
-// gated to ctx.vertical === "weight-loss"). This single-vertical HRT build keeps
-// the maps empty and renders reviews from the HRT config (src/lib/seeds/hrt.ts):
-// the "is X legit?" answer falls back to the review's own intro, and the FAQ
-// list is built entirely from the review's researched content. Add an HRT entry
-// here only with real, verified figures.
-const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {};
+// Per-provider SEO overrides, "is X legit?" trust blocks and extra FAQs for
+// the HRT reviews. Everything here is written from facts verified in
+// src/lib/seeds/hrt.ts - keep it in step when a provider's offer changes.
 
-const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {};
+// HRT review titles/descriptions shaped by Search Console queries (Oct 2026):
+// "winona hrt reviews", "how much does winona cost", "does winona take
+// insurance", "is midi health legit", "gala hrt reviews", etc.
+const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  winona: {
+    title: "Winona HRT Reviews (2026): Cost, Insurance, Products & Is It Legit?",
+    description:
+      "Honest Winona HRT review: what it costs per month, whether it takes insurance, which estrogen and progesterone products it prescribes, and whether it's legit and safe.",
+  },
+  gala: {
+    title: "Gala HRT Reviews (2026): Cost, Hormone Therapy & Is Gala Legit?",
+    description:
+      "Gala hormone therapy reviewed: flat monthly pricing, FDA-approved estradiol and progesterone, what's included and whether Gala is a legit option for menopause HRT.",
+  },
+  midi: {
+    title: "Midi Health Reviews (2026): Cost, Insurance & Is It Worth It?",
+    description:
+      "Midi Health review: insurance-covered video visits with menopause clinicians, self-pay cost, what it treats, where it's available and whether it's worth it.",
+  },
+};
 
-const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {};
+// Direct answers for the "Is X legit?" FAQ, built only from the facts
+// verified in src/lib/seeds/hrt.ts.
+const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
+  winona: {
+    verdict:
+      "Yes - Winona is a legitimate US telehealth company. Treatment is prescribed by board-certified physicians after an online medical questionnaire, and ongoing care runs through secure doctor messaging. As with any HRT, whether it's appropriate for you is a medical decision, so answer the intake honestly.",
+    signals: ["Board-certified physicians", "Prescription-only, after a medical review", "Secure doctor messaging and follow-ups"],
+  },
+  gala: {
+    verdict:
+      "Yes - Gala is a legitimate telehealth service. US-licensed clinicians review your health history before prescribing, and its HRT plan uses FDA-approved estradiol and progesterone with check-ins and dose adjustments included. Confirm current pricing and availability on Gala's own site.",
+    signals: ["US-licensed clinicians", "FDA-approved estradiol and progesterone", "Check-ins and dose adjustments included"],
+  },
+  midi: {
+    verdict:
+      "Yes - Midi Health is a legitimate virtual menopause clinic. Care is delivered over video by women's-health nurse practitioners and certified nurse midwives, it is in-network with most major commercial insurance plans, and prescriptions go to the pharmacy you choose.",
+    signals: ["Video visits with menopause-trained clinicians", "In-network with most major commercial insurance", "Prescriptions sent to your own pharmacy"],
+  },
+};
+
+const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  winona: [
+    {
+      question: "Does Winona take insurance?",
+      answer:
+        "No. Winona does not bill insurance directly - treatment is a monthly self-pay subscription. Its HRT prescriptions are generally HSA/FSA eligible, and some patients submit receipts to their insurer for possible reimbursement, but that depends entirely on your plan.",
+    },
+    {
+      question: "How much does Winona cost per month?",
+      answer:
+        "Approximately $39/month for progesterone alone, with common estrogen-plus-progesterone combinations (such as its estrogen body cream with progesterone) around $89/month; patches tend to cost more. The subscription includes the physician review, unlimited messaging and follow-ups, and free shipping. Prices change, so confirm at checkout.",
+    },
+    {
+      question: "What products does Winona prescribe?",
+      answer:
+        "Winona's HRT options include estradiol as a pill, patch or cream, estriol, progesterone pills, and vaginal estrogen cream for dryness and urinary symptoms. It also offers non-HRT add-ons such as an arousal cream and hair and skin products. It does not prescribe testosterone.",
+    },
+    {
+      question: "Is Winona safe?",
+      answer:
+        "Winona prescribes hormone therapy only after a physician reviews your medical history, which is the key safety step. HRT itself carries real risks - including blood clots, stroke and breast-cancer considerations - and is not right for everyone, so answer the intake completely and ask your doctor about side effects such as breast tenderness, bloating, spotting or (with progesterone) drowsiness.",
+    },
+  ],
+  gala: [
+    {
+      question: "Does Gala take insurance?",
+      answer:
+        "No. Gala charges a single flat monthly price for its HRT plan rather than billing insurance. That price includes the clinician, check-ins, dose adjustments and medication shipping. Confirm the current price on Gala's site.",
+    },
+    {
+      question: "What hormone therapy does Gala offer?",
+      answer:
+        "Gala prescribes FDA-approved estradiol as a pill or patch, oral or vaginal progesterone, and vaginal estradiol, after a review by a US-licensed clinician.",
+    },
+  ],
+  midi: [
+    {
+      question: "Does Midi Health take insurance?",
+      answer:
+        "Yes. Midi is in-network with most major commercial and PPO insurance plans, so visits usually cost your normal specialist copay, coinsurance or deductible. Midi does not bill Medicare, and some services (such as testosterone) are out of pocket. Check your coverage when you register.",
+    },
+    {
+      question: "How much does Midi Health cost without insurance?",
+      answer:
+        "Self-pay visits have been listed at roughly $250 for the first visit and $150 for follow-ups. Medication is billed separately through your pharmacy. Confirm current prices when you book.",
+    },
+    {
+      question: "Is Midi Health available in Canada?",
+      answer:
+        "No. Midi Health serves patients in the United States; it is not a telehealth option for people living in Canada.",
+    },
+  ],
+};
 
 
 export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
@@ -152,10 +238,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       ? { question: `Who is ${provider.name} best for?`, answer: `${provider.name} is best for ${review.bestFor.join("; ")}.` }
       : null,
     { question: `Is ${provider.name} worth it?`, answer: review.finalVerdict },
-    // Extra FAQs are all researched against weight-loss offers, so they only
-    // apply there - a provider id shared across verticals (e.g. directmeds on
-    // HRT) must not inherit another vertical's prices and shipping claims.
-    ...(ctx.vertical === "weight-loss" ? REVIEW_EXTRA_FAQS[slug] ?? [] : []),
+    // Single-vertical HRT build: extra FAQs are keyed by HRT provider slug.
+    ...(REVIEW_EXTRA_FAQS[slug] ?? []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
   const faqSchema = {

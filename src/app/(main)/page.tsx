@@ -15,13 +15,13 @@ const SITE_URL = "https://www.hrtwomen.com";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Best Online HRT for Women (2026) - Top Menopause Providers Compared",
+    absolute: "Online HRT for Women: Best Menopause Providers of 2026, Compared",
   },
   description:
-    "Compare the best online HRT for women in 2026. Top menopause and perimenopause telehealth providers ranked by treatment options, pricing, medical support and value - find your best fit.",
+    "Online HRT for women, compared: the best menopause and perimenopause telehealth providers of 2026, ranked by treatment options, pricing, insurance and clinician support.",
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Best Online HRT for Women (2026) - Top Menopause Providers Compared",
+    title: "Online HRT for Women: Best Menopause Providers of 2026, Compared",
     description:
       "Compare the best HRT options of 2026 - top online providers ranked by treatment, price, support and value.",
     url: SITE_URL,
@@ -90,7 +90,7 @@ export default async function HomePage() {
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: "Best Online HRT for Women (2026) - Top Menopause Providers Compared",
+    name: "Online HRT for Women: Best Menopause Providers of 2026, Compared",
     description:
       "Compare treatment options, pricing, medical support and overall value across the top online HRT providers of 2026.",
     url: SITE_URL,

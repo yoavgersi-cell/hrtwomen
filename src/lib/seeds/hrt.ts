@@ -693,11 +693,11 @@ export const hrtConfig: SiteConfig = {
       slug: "bioidentical-hormones-explained",
       title: "Bioidentical Hormones Explained: FDA-Approved vs Compounded",
       description:
-        "\"Bioidentical\" is one of the most confusing words in menopause care. Here's what it actually means, how FDA-approved and compounded hormones differ, and what the evidence says about safety.",
+        "What \"bioidentical\" really means, a list of FDA-approved bioidentical hormones (estradiol, progesterone, Bijuva), how compounded hormones differ and what the evidence says.",
       category: "Treatments",
       readTime: "7 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-09-26",
+      updatedAt: "2026-10-03",
       heroColor: "#F6DCE7",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -714,6 +714,10 @@ export const hrtConfig: SiteConfig = {
         {
           heading: "FDA-approved bioidentical hormones exist",
           body: `<p>A common misconception is that you need a specialty pharmacy to get bioidentical hormones. In fact, many <strong>FDA-approved</strong> products are bioidentical - including estradiol pills, patches, gels and sprays, vaginal estradiol products, and oral micronized progesterone. These are manufactured to consistent standards, tested for safety and effectiveness, and come with standardized prescribing information.</p>`,
+        },
+        {
+          heading: "List of FDA-approved bioidentical hormones",
+          body: `<p>These FDA-approved products contain hormones that are chemically identical to the ones your body makes - <strong>estradiol</strong> and/or <strong>progesterone</strong>. Many are also available as generics, and brand availability changes over time, so treat this as a guide to the categories rather than a shopping list:</p><ul><li><strong>Estradiol pills</strong> - oral estradiol tablets (generic; originally sold as Estrace).</li><li><strong>Estradiol patches</strong> - including Climara, Alora, Vivelle-Dot and Dotti, plus generic patches.</li><li><strong>Estradiol gels and spray</strong> - Divigel, EstroGel and Elestrin (gels) and Evamist (spray).</li><li><strong>Vaginal estradiol</strong> - Estrace vaginal cream, the Estring and Femring vaginal rings, and the Vagifem, Yuvafem and Imvexxy vaginal inserts.</li><li><strong>Micronized progesterone</strong> - Prometrium oral capsules and their generics.</li><li><strong>Estradiol + progesterone in one capsule</strong> - Bijuva, approved by the FDA in 2018 as the first combination of bioidentical estradiol and progesterone in a single oral capsule, for women with a uterus.</li></ul><p>Which product, route and dose suits you - and whether you need progesterone at all - is a decision for a licensed clinician. If an online provider offers you a "bioidentical" hormone, it is reasonable to ask whether it is one of these FDA-approved products or a compounded preparation.</p>`,
         },
         {
           heading: "What compounded hormones are",

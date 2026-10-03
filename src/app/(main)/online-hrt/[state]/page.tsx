@@ -26,7 +26,7 @@ export async function generateMetadata({
   const s = STATE_BY_SLUG.get(state);
   if (!s) return {};
   const url = `${SITE_URL}/online-hrt/${s.slug}`;
-  const title = `Online Menopause HRT in ${s.name} (2026)`;
+  const title = `Online HRT & Menopause Treatment in ${s.name} (2026)`;
   const description =
     `Compare licensed online menopause HRT providers serving ${s.name}. Telehealth visits with ${s.abbr}-licensed clinicians for estradiol, progesterone, vaginal estrogen, and non-hormonal options.`;
   return {
