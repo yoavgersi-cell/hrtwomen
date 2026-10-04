@@ -1,3 +1,5 @@
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ClipboardCheck, Database, ShieldCheck, Scale, Trophy, RefreshCw, Check, X } from "lucide-react";
@@ -75,6 +77,7 @@ export default async function HowWeRankPage() {
     description:
       "Our full methodology for ranking and reviewing online menopause and HRT providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners.",
     url: CANONICAL,
+    ...pageReviewSchema("/how-we-rank"),
     publisher: { "@type": "Organization", name: "hrtwomen.com", url: "https://www.hrtwomen.com" },
   };
 
@@ -116,6 +119,7 @@ export default async function HowWeRankPage() {
             HRT provider, where our information comes from, and how we keep it accurate.
           </p>
           <LastUpdated date={CONTENT_LAST_UPDATED} className="mt-4" />
+          <MedicalReviewBar path="/how-we-rank" className="mt-4 max-w-[760px]" />
         </div>
       </div>
 

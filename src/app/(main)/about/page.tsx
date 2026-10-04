@@ -1,3 +1,4 @@
+import { REVIEWERS, reviewerDisplayName, reviewerPath, reviewerPersonSchema } from "@/data/reviewers";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Shield, Users, Award, BookOpen, Search, BarChart3 } from "lucide-react";
@@ -19,22 +20,25 @@ export default async function AboutPage() {
   const config = await getConfig();
   const experts = config.experts ?? [];
 
-  const teamSchema = experts.length > 0 ? {
+  const teamSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "hrtwomen.com",
     url: "https://www.hrtwomen.com",
-    employee: experts.map((e) => ({
-      "@type": "Person",
-      name: e.credentials ? `${e.name}, ${e.credentials}` : e.name,
-      jobTitle: e.role,
-      description: e.bio,
-    })),
-  } : null;
+    employee: [
+      ...REVIEWERS.map(reviewerPersonSchema),
+      ...experts.map((e) => ({
+        "@type": "Person",
+        name: e.credentials ? `${e.name}, ${e.credentials}` : e.name,
+        jobTitle: e.role,
+        description: e.bio,
+      })),
+    ],
+  };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {teamSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamSchema) }} />}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamSchema) }} />
       {/* Hero */}
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
@@ -81,6 +85,31 @@ export default async function AboutPage() {
                 </div>
                 <h3 className="mb-1 text-[15px] font-bold text-[#191919]">{title}</h3>
                 <p className="text-[13px] leading-relaxed text-gray-500">{desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Medical review */}
+        <section className="mb-12">
+          <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Medical review</h2>
+          <div className="space-y-3">
+            {REVIEWERS.map((r) => (
+              <div key={r.slug} className="flex flex-col gap-4 rounded-xl border border-[#E5E5E5] bg-white p-5 sm:flex-row sm:items-start">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={r.image.webp} alt={`${r.name}, ${r.jobTitle}`} width={88} height={88} className="h-[88px] w-[88px] shrink-0 rounded-xl object-cover" />
+                <div className="min-w-0">
+                  <p className="text-[16px] font-bold text-[#191919]">{reviewerDisplayName(r)}</p>
+                  <p className="text-[13px] text-gray-500">{r.jobTitle} · {r.headline}</p>
+                  <p className="mt-2 text-[14px] leading-relaxed text-gray-600">{r.shortBio}</p>
+                  <p className="mt-3 flex flex-wrap gap-x-4 text-[13.5px] font-semibold">
+                    <Link href={reviewerPath(r)} className="text-[#A8285E] hover:underline">Full profile</Link>
+                    <Link href="/medical-review-policy" className="text-[#A8285E] hover:underline">How we review</Link>
+                    {r.linkedin && (
+                      <a href={r.linkedin} target="_blank" rel="noopener noreferrer" className="text-[#A8285E] hover:underline">LinkedIn</a>
+                    )}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
