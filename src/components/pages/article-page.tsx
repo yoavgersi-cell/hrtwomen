@@ -7,7 +7,8 @@ import { PRODUCT_CATALOG } from "@/lib/product-catalog";
 import { enhanceArticleHtml } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
-import { ExpertByline } from "@/components/expert-byline";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalSources } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -187,6 +188,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
     articleSection: article.category,
+    ...pageReviewSchema(`/articles/${slug}`),
     author: author
       ? {
           "@type": "Person",
@@ -326,19 +328,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             <p className="mt-2.5 max-w-[640px] text-[15px] leading-[1.55] text-gray-600 sm:text-[16px]">
               {article.description}
             </p>
-            <div className="mt-4 flex flex-wrap items-center gap-x-3 gap-y-1.5">
-              {author ? (
-                <ExpertByline
-                  expert={author}
-                  label="Written by"
-                  showRole={false}
-                  compact
-                />
-              ) : (
-                article.author && <span className="text-[12px] text-gray-500">By {article.author}</span>
-              )}
-              <span className="text-[12px] text-gray-400">Updated {formattedDate}</span>
-            </div>
+            <p className="mt-3 text-[12px] text-gray-400">Updated {formattedDate}</p>
+            <MedicalReviewBar path={`/articles/${slug}`} className="mt-4 max-w-[760px]" />
           </div>
         </div>
 

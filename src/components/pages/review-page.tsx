@@ -12,7 +12,8 @@ import { cn } from "@/lib/utils";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
-import { ExpertByline } from "@/components/expert-byline";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { LastUpdated } from "@/components/last-updated";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
@@ -215,6 +216,17 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   // on the editorial rating above. The visible on-page Trustpilot score and
   // editorial rating stay; we just don't request star rich snippets.
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": canonicalUrl(ctx, `/reviews/${slug}`),
+    url: canonicalUrl(ctx, `/reviews/${slug}`),
+    name: `${provider.name} Review`,
+    dateModified: latestUpdate(review.updatedAt),
+    isPartOf: { "@type": "WebSite", name: "HRT Women", url: ctx.origin },
+    ...pageReviewSchema(`/reviews/${slug}`),
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -281,6 +293,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -335,7 +348,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     </span>
                   </div>
                 )}
+                {/* Desktop: byline inside the title column. Mobile renders it
+                    full-width below the header row instead (see sm:hidden). */}
+                <div className="hidden sm:block">
+                  <MedicalReviewBar path={`/reviews/${slug}`} className="mt-3 max-w-[760px]" compact />
+                </div>
               </div>
+            </div>
+            <div className="sm:hidden">
+              <MedicalReviewBar path={`/reviews/${slug}`} schema={false} />
             </div>
             <ProviderCta
               href={provider.affiliateUrl}
@@ -407,14 +428,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         {/* Intro */}
         <div className="mb-8">
           <ReadableProse text={review.reviewIntro} paragraphClassName="text-[16px] leading-[1.8] text-gray-600" />
-          {config.experts && config.experts.length > 0 && (
-            <div className="mt-5">
-              <ExpertByline
-                expert={config.experts[0]}
-                label="Reviewed by"
-              />
-            </div>
-          )}
         </div>
 
         {/* Is [brand] legit? - trust block for the "is X legit" query cluster */}

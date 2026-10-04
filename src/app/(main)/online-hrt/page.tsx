@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { STATES } from "@/lib/states";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 
 export const revalidate = 60;
 
@@ -20,9 +22,21 @@ export const metadata: Metadata = {
 };
 
 export default function OnlineHrtIndex() {
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `${SITE_URL}/online-hrt`,
+    url: `${SITE_URL}/online-hrt`,
+    name: "Online Menopause HRT by State",
+    isPartOf: { "@type": "WebSite", name: "HRT Women", url: SITE_URL },
+    ...pageReviewSchema("/online-hrt"),
+  };
+
   return (
     <div className="mx-auto max-w-[1000px] px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <h1 className="mb-4 text-3xl font-bold text-[#191919]">Online Menopause HRT by State</h1>
+      <MedicalReviewBar path="/online-hrt" className="mb-5 max-w-[760px]" compact />
       <p className="mb-4 max-w-2xl text-[16px] leading-[1.7] text-gray-700">
         Menopause and perimenopause hormone therapy is widely available online through licensed telehealth
         providers - with a health-history intake, a video or asynchronous visit with a licensed clinician, and

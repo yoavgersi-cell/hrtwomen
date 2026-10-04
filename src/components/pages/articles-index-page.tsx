@@ -1,3 +1,5 @@
+import { pageReviewSchema } from "@/data/reviewers";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowRight, Trophy } from "lucide-react";
@@ -91,6 +93,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
+    ...pageReviewSchema("/articles"),
     name: `${vName} Articles - Research, Guides & Expert Insights`,
     description: `Evidence-based ${lowerKeepAcronyms(vName)} guides and research - treatment options, what to expect, and choosing the right online provider.`,
     url: canonicalUrl(ctx, "/articles"),
@@ -133,6 +136,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             Evidence-based {lowerKeepAcronyms(vName)} guides - treatment options, what
             to expect, and making informed decisions about your health.
           </p>
+          <MedicalReviewBar path="/articles" className="mt-4 max-w-[760px]" compact />
         </div>
 
         {/* Featured article (first one) */}

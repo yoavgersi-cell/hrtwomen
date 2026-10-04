@@ -1,3 +1,5 @@
+import { pageReviewSchema } from "@/data/reviewers";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
@@ -99,8 +101,18 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
     ],
   };
 
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": canonicalUrl(ctx, "/reviews"),
+    url: canonicalUrl(ctx, "/reviews"),
+    name: `${vName} Provider Reviews`,
+    ...pageReviewSchema("/reviews"),
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6">
@@ -113,6 +125,9 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
             Read our expert analysis of each to find the best fit for your goals,
             budget, and lifestyle.
           </p>
+          <div className="mx-auto mt-5 max-w-[640px] text-left">
+            <MedicalReviewBar path="/reviews" compact />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
