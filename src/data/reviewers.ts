@@ -187,7 +187,93 @@ export interface PageReview {
   reviewedAt: string; // YYYY-MM-DD
 }
 
-export const REVIEW_LOG: Record<string, PageReview> = {};
+// 2026-10-04: full-site review by Francheska Capistrano - every content page
+// that carried the review bar on that date (operator-confirmed): homepage,
+// reviews and articles indexes, /online-hrt and its 51 state pages, How We
+// Rank, the 3 provider reviews, 3 comparisons and 8 articles. Pages created
+// after this date are NOT covered; add them below when reviewed.
+const REVIEWED_2026_10_04: string[] = [
+  "/",
+  "/reviews",
+  "/articles",
+  "/online-hrt",
+  "/how-we-rank",
+  "/reviews/winona",
+  "/reviews/gala",
+  "/reviews/midi",
+  "/winona-vs-gala",
+  "/winona-vs-midi",
+  "/gala-vs-midi",
+  "/articles/perimenopause-symptoms",
+  "/articles/is-hrt-safe",
+  "/articles/estrogen-patch-vs-pill",
+  "/articles/bioidentical-hormones-explained",
+  "/articles/best-online-hrt-providers-compared",
+  "/articles/what-is-hrt",
+  "/articles/hrt-for-perimenopause",
+  "/articles/progesterone-side-effects",
+  "/online-hrt/alabama",
+  "/online-hrt/alaska",
+  "/online-hrt/arizona",
+  "/online-hrt/arkansas",
+  "/online-hrt/california",
+  "/online-hrt/colorado",
+  "/online-hrt/connecticut",
+  "/online-hrt/delaware",
+  "/online-hrt/florida",
+  "/online-hrt/georgia",
+  "/online-hrt/hawaii",
+  "/online-hrt/idaho",
+  "/online-hrt/illinois",
+  "/online-hrt/indiana",
+  "/online-hrt/iowa",
+  "/online-hrt/kansas",
+  "/online-hrt/kentucky",
+  "/online-hrt/louisiana",
+  "/online-hrt/maine",
+  "/online-hrt/maryland",
+  "/online-hrt/massachusetts",
+  "/online-hrt/michigan",
+  "/online-hrt/minnesota",
+  "/online-hrt/mississippi",
+  "/online-hrt/missouri",
+  "/online-hrt/montana",
+  "/online-hrt/nebraska",
+  "/online-hrt/nevada",
+  "/online-hrt/new-hampshire",
+  "/online-hrt/new-jersey",
+  "/online-hrt/new-mexico",
+  "/online-hrt/new-york",
+  "/online-hrt/north-carolina",
+  "/online-hrt/north-dakota",
+  "/online-hrt/ohio",
+  "/online-hrt/oklahoma",
+  "/online-hrt/oregon",
+  "/online-hrt/pennsylvania",
+  "/online-hrt/rhode-island",
+  "/online-hrt/south-carolina",
+  "/online-hrt/south-dakota",
+  "/online-hrt/tennessee",
+  "/online-hrt/texas",
+  "/online-hrt/utah",
+  "/online-hrt/vermont",
+  "/online-hrt/virginia",
+  "/online-hrt/washington",
+  "/online-hrt/washington-dc",
+  "/online-hrt/west-virginia",
+  "/online-hrt/wisconsin",
+  "/online-hrt/wyoming",
+];
+
+// Pages published and reviewed after the full-site pass.
+const REVIEWED_LATER: Record<string, PageReview> = {};
+
+export const REVIEW_LOG: Record<string, PageReview> = {
+  ...Object.fromEntries(
+    REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }]),
+  ),
+  ...REVIEWED_LATER,
+};
 
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
   return REVIEWERS.find((r) => r.slug === slug);
