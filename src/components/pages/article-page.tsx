@@ -36,8 +36,13 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
   // CTR override (code-controlled) wins over stored meta for target articles.
   const override = ctx.vertical === "weight-loss" ? ARTICLE_SEO_OVERRIDES[slug] : undefined;
 
+  const seoTitle = override?.title ?? article.title;
+
   return {
-    title: override?.title ?? article.title,
+    // Long, query-led titles carry their own keywords; appending the
+    // " | HRT Women" template suffix would push them past the ~60-character
+    // SERP cut-off, so those render as-is.
+    title: seoTitle.length > 48 ? { absolute: seoTitle } : seoTitle,
     description: override?.description ?? article.description,
     robots: ctx.noindex
       ? { index: false, follow: false }
@@ -64,7 +69,11 @@ const categoryColors: Record<string, string> = {
   Guide: "bg-emerald-50 text-emerald-700",
   Advice: "bg-amber-50 text-amber-700",
   Wellness: "bg-purple-50 text-purple-700",
+  "Provider Guides": "bg-[#FDE8F0] text-[#A8285E]",
 };
+
+// Article categories that carry medical content (see the schema note below).
+const MEDICAL_CATEGORIES = new Set(["Guides", "Safety", "Treatments"]);
 
 function slugifyHeading(heading: string): string {
   return heading
@@ -188,7 +197,6 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
     articleSection: article.category,
-    ...pageReviewSchema(`/articles/${slug}`),
     author: author
       ? {
           "@type": "Person",
@@ -210,9 +218,14 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         url: `${ctx.origin}/logo-mark.png`,
       },
     },
+    // Medical guides are typed as a MedicalWebPage so reviewedBy /
+    // lastReviewed sit on the page entity, where schema.org defines them
+    // (they are not Article properties). Provider-business pages (cost,
+    // legitimacy, comparisons) stay a plain WebPage.
     mainEntityOfPage: {
-      "@type": "WebPage",
+      "@type": MEDICAL_CATEGORIES.has(article.category) ? "MedicalWebPage" : "WebPage",
       "@id": canonicalUrl(ctx, `/articles/${slug}`),
+      ...pageReviewSchema(`/articles/${slug}`),
     },
     keywords: [
       "HRT for women",

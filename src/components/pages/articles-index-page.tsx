@@ -48,6 +48,7 @@ const categoryColors: Record<string, string> = {
   Guide: "bg-emerald-50 text-emerald-700",
   Advice: "bg-amber-50 text-amber-700",
   Wellness: "bg-purple-50 text-purple-700",
+  "Provider Guides": "bg-[#FDE8F0] text-[#A8285E]",
 };
 
 export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
