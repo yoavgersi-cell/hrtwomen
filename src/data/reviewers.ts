@@ -153,12 +153,7 @@ export const REVIEWERS: Reviewer[] = [
       "Evidence appraisal and medical fact-checking",
       "Patient education and health communication",
     ],
-    selectedWork: [
-      { title: "The gap your recruitment forecast can't see", outlet: "83bar", url: "https://www.83bar.com/the-gap-your-recruitment-forecast-cant-see/" },
-      { title: "Can AI accelerate patient recruitment?", outlet: "83bar", url: "https://www.83bar.com/can-ai-accelerate-patient-recruitment/" },
-      { title: "Why are so many referrals lost before screening really begins?", outlet: "Antidote", url: "https://www.antidote.me/blog/why-are-so-many-referrals-lost-before-screening-really-begins" },
-      { title: "Neurology enrollment: why sites miss dates even when willing patients are willing to enroll", outlet: "Antidote", url: "https://www.antidote.me/blog/neurology-enrollment-why-sites-miss-dates-even-if-willing-patients-are-willing-to-enroll" },
-    ],
+    selectedWork: [],
     sameAs: [
       "https://www.linkedin.com/in/francheskacapistrano/",
       "https://www.antidote.me/blog/author/francheska-capistrano",
