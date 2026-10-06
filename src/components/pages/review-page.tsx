@@ -40,9 +40,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Honest Winona HRT review: what it costs per month, whether it takes insurance, which estrogen and progesterone products it prescribes, and whether it's legit and safe.",
   },
   gala: {
-    title: "Gala HRT Reviews (2026): Cost, Hormone Therapy & Is Gala Legit?",
+    title: "Gala Health HRT Reviews (2026): Cost, Hormone Therapy & Is Gala Legit?",
     description:
-      "Gala hormone therapy reviewed: flat monthly pricing, FDA-approved estradiol and progesterone, what's included and whether Gala is a legit option for menopause HRT.",
+      "Gala Health hormone therapy reviewed: flat monthly pricing, FDA-approved estradiol and progesterone, what's included and whether Gala is a legit option for menopause HRT.",
   },
   midi: {
     title: "Midi Health Reviews (2026): Cost, Insurance & Is It Worth It?",
@@ -274,6 +274,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const clusterSlugs = [
     { slug: `is-${provider.id}-legit`, label: `Is ${provider.name} legit?` },
     { slug: `${provider.id}-cost`, label: `How much does ${provider.name} cost?` },
+    { slug: `${provider.id}-products`, label: `What does ${provider.name} prescribe?` },
     { slug: `${provider.id}-alternatives`, label: `Best ${provider.name} alternatives` },
   ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
 
