@@ -266,7 +266,14 @@ const REVIEWED_2026_10_04: string[] = [
 ];
 
 // Pages published and reviewed after the full-site pass.
-const REVIEWED_LATER: Record<string, PageReview> = {};
+const REVIEWED_LATER: Record<string, PageReview> = {
+  // 2026-10-06: the five provider brand pages (operator-confirmed).
+  "/articles/gala-cost": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
+  "/articles/is-gala-legit": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
+  "/articles/winona-cost": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
+  "/articles/winona-products": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
+  "/articles/midi-cost": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
+};
 
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(
