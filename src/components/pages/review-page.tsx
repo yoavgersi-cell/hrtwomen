@@ -42,7 +42,7 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   gala: {
     title: "Gala Health HRT Reviews (2026): Cost, Hormone Therapy & Is Gala Legit?",
     description:
-      "Gala Health hormone therapy reviewed: flat monthly pricing, FDA-approved estradiol and progesterone, what's included and whether Gala is a legit option for menopause HRT.",
+      "Gala Health hormone therapy reviewed: flat monthly pricing, estradiol and progesterone options, what's included and whether Gala is a legit option for menopause HRT.",
   },
   midi: {
     title: "Midi Health Reviews (2026): Cost, Insurance & Is It Worth It?",
@@ -61,8 +61,8 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   },
   gala: {
     verdict:
-      "Yes - Gala is a legitimate telehealth service. US-licensed clinicians review your health history before prescribing, and its HRT plan uses FDA-approved estradiol and progesterone with check-ins and dose adjustments included. Confirm current pricing and availability on Gala's own site.",
-    signals: ["US-licensed clinicians", "FDA-approved estradiol and progesterone", "Check-ins and dose adjustments included"],
+      "Yes - Gala is a legitimate telehealth service. US-licensed clinicians review your health history before prescribing, and its HRT plan uses estradiol and progesterone with check-ins and dose adjustments included. Confirm current pricing and availability on Gala's own site.",
+    signals: ["US-licensed clinicians", "Estradiol and progesterone", "Check-ins and dose adjustments included"],
   },
   midi: {
     verdict:
@@ -81,7 +81,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "How much does Winona cost per month?",
       answer:
-        "Approximately $39/month for progesterone alone, with common estrogen-plus-progesterone combinations (such as its estrogen body cream with progesterone) around $89/month; patches tend to cost more. The subscription includes the physician review, unlimited messaging and follow-ups, and free shipping. Prices change, so confirm at checkout.",
+        "Listed starting prices are about $39/month for progesterone capsules, $54/month for estradiol tablets, $89/month for the estrogen body cream (with or without progesterone) or vaginal estrogen cream, and $149/month for the estrogen patch; combining products costs more. The subscription includes the physician review, unlimited messaging and follow-ups, and free shipping. Prices change, so confirm at checkout.",
     },
     {
       question: "What products does Winona prescribe?",
@@ -103,7 +103,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "What hormone therapy does Gala offer?",
       answer:
-        "Gala prescribes FDA-approved estradiol as a pill or patch, oral or vaginal progesterone, and vaginal estradiol, after a review by a US-licensed clinician.",
+        "Gala prescribes estradiol as a pill or patch, oral or vaginal progesterone, and vaginal estradiol, after a review by a US-licensed clinician. Its site carries a compounded-medication disclaimer, so ask whether your product is FDA-approved or compounded.",
     },
   ],
   midi: [
@@ -158,7 +158,9 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   const isThinNoindex = ctx.vertical === "weight-loss" && NOINDEX_WL_REVIEW_SLUGS.has(slug);
 
   return {
-    title: pageTitle,
+    // Long review titles render without the " | HRT Women" suffix (SERP
+    // cut-off ~60 characters); short ones keep it.
+    title: pageTitle.length > 48 ? { absolute: pageTitle } : pageTitle,
     description: pageDescription,
     robots: ctx.noindex
       ? { index: false, follow: false }

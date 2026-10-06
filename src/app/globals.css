@@ -174,10 +174,18 @@ html[data-hub] .hub-name {
   color: #191919;
 }
 @media (max-width: 640px) {
+  /* Wide tables scroll inside their own box. Cells wrap with a sensible
+     minimum width, so a 4-column table is ~550px of swipe rather than one
+     unwrapped line per cell (which made some tables 1,600px wide). */
   .article-body table {
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .article-body table th,
+  .article-body table td {
+    min-width: 8.5rem;
+    white-space: normal;
   }
 }
 .article-body .qa {

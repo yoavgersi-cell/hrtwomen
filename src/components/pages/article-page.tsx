@@ -36,8 +36,13 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
   // CTR override (code-controlled) wins over stored meta for target articles.
   const override = ctx.vertical === "weight-loss" ? ARTICLE_SEO_OVERRIDES[slug] : undefined;
 
+  const seoTitle = override?.title ?? article.title;
+
   return {
-    title: override?.title ?? article.title,
+    // Long, query-led titles carry their own keywords; appending the
+    // " | HRT Women" template suffix would push them past the ~60-character
+    // SERP cut-off, so those render as-is.
+    title: seoTitle.length > 48 ? { absolute: seoTitle } : seoTitle,
     description: override?.description ?? article.description,
     robots: ctx.noindex
       ? { index: false, follow: false }
