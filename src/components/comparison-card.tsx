@@ -169,7 +169,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
 
 function ShippingBadge() {
   return (
-    <p className="mt-2.5 flex items-center gap-1.5 whitespace-nowrap text-[12px] font-semibold text-[#0B9E6A]">
+    <p className="mt-2.5 flex items-center gap-1.5 whitespace-nowrap text-[12px] font-semibold text-[#047857]">
       <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
       Free &amp; Discreet Shipping
     </p>

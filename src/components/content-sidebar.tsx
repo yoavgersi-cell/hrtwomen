@@ -31,7 +31,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
             if (block.type === "providers" && selectedProviders.length > 0) {
               return (
                 <div key={i} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-                  <h3 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">
+                  <h3 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-500">
                     Top Providers
                   </h3>
                   <div className="space-y-4">
@@ -87,7 +87,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
             if (block.type === "relatedArticles" && selectedArticles.length > 0) {
               return (
                 <div key={i} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-                  <h3 className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">
+                  <h3 className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-500">
                     Related Articles
                   </h3>
                   <div className="space-y-3">
@@ -101,7 +101,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                           {article.title}
                         </p>
                         {article.category && (
-                          <span className="mt-0.5 inline-block text-[11px] text-gray-400">
+                          <span className="mt-0.5 inline-block text-[11px] text-gray-500">
                             {article.category}
                           </span>
                         )}
@@ -143,7 +143,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
           if (block.type === "providers" && selectedProviders.length > 0) {
             return (
               <div key={i} className="rounded-xl border border-gray-200 bg-white p-5 shadow-sm">
-                <h3 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top Providers</h3>
+                <h3 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-500">Top Providers</h3>
                 <div className="space-y-3">
                   {selectedProviders.map((provider, pi) => (
                     <div key={provider.id} className="flex items-center gap-3">

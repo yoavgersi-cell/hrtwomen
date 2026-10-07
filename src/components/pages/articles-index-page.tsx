@@ -172,7 +172,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                 >
                   {articles[0].category}
                 </span>
-                <span className="flex items-center gap-1 text-[12px] text-gray-400">
+                <span className="flex items-center gap-1 text-[12px] text-gray-500">
                   <Clock className="h-3 w-3" strokeWidth={1.5} />
                   {articles[0].readTime}
                 </span>
@@ -225,7 +225,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                   >
                     {article.category}
                   </span>
-                  <span className="flex items-center gap-1 text-[12px] text-gray-400">
+                  <span className="flex items-center gap-1 text-[12px] text-gray-500">
                     <Clock className="h-3 w-3" strokeWidth={1.5} />
                     {article.readTime}
                   </span>

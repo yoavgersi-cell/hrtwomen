@@ -134,13 +134,13 @@ export function RichComparisonCard({
                     <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[11px]">Starting price</p>
                     <p className="mt-1 flex items-baseline gap-2 text-gray-900">
                       {startingPlan.regularPrice && (
-                        <span className="text-[13px] font-medium text-gray-400 line-through sm:text-[14px]">{startingPlan.regularPrice}</span>
+                        <span className="text-[13px] font-medium text-gray-500 line-through sm:text-[14px]">{startingPlan.regularPrice}</span>
                       )}
                       <span className="text-[19px] font-extrabold text-[#191919] sm:text-[20px]">{startingPlan.price}</span>
                       {startingPlan.unit && <span className="text-[12.5px] font-semibold text-gray-500 sm:text-[13px]">{startingPlan.unit}</span>}
                     </p>
                     {mentionsCompounded && (
-                      <p className="mt-1.5 text-[10.5px] leading-snug text-gray-400 sm:text-[11px]">
+                      <p className="mt-1.5 text-[10.5px] leading-snug text-gray-500 sm:text-[11px]">
                         *Compounded medications are not FDA-approved.
                       </p>
                     )}
@@ -170,7 +170,7 @@ export function RichComparisonCard({
               <div className="shrink-0 leading-tight lg:text-center">
                 <span className="hidden text-[12.5px] text-gray-500 lg:block">Pricing starts at</span>
                 <p className="whitespace-nowrap text-gray-900">
-                  <span className="text-[11px] font-semibold text-gray-400 lg:hidden">from </span>
+                  <span className="text-[11px] font-semibold text-gray-500 lg:hidden">from </span>
                   <span className="text-[20px] font-extrabold text-[#191919] lg:text-[22px]">{startingPlan.price}</span>
                   {startingPlan.unit && <span className="text-[12px] font-semibold text-gray-500 lg:text-[13px]">{startingPlan.unit}</span>}
                 </p>
@@ -200,7 +200,7 @@ export function RichComparisonCard({
                   <Star className="h-3.5 w-3.5 fill-[#00B67A] text-[#00B67A]" strokeWidth={0} />
                   <span className="font-bold text-gray-800">{product.trustpilotRating}</span>
                   <span>Trustpilot</span>
-                  {product.trustpilotReviewCount && <span className="text-gray-400">({product.trustpilotReviewCount})</span>}
+                  {product.trustpilotReviewCount && <span className="text-gray-500">({product.trustpilotReviewCount})</span>}
                 </div>
               )}
             </div>

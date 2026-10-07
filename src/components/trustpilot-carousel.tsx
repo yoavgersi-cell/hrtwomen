@@ -62,7 +62,7 @@ function ReviewCard({ r }: { r: TrustpilotReview }) {
       <div className="mb-2.5 flex items-center justify-between gap-2">
         <TrustpilotStars rating={r.rating} boxClass="h-4 w-4" />
         {r.date && (
-          <span className="shrink-0 text-[11px] text-gray-400">{r.date}</span>
+          <span className="shrink-0 text-[11px] text-gray-500">{r.date}</span>
         )}
       </div>
       {r.title && (
@@ -79,7 +79,7 @@ function ReviewCard({ r }: { r: TrustpilotReview }) {
         </div>
         <div className="min-w-0">
           <p className="truncate text-[12.5px] font-semibold text-[#191919]">{r.name}</p>
-          <p className="text-[11px] text-gray-400">{r.location}</p>
+          <p className="text-[11px] text-gray-500">{r.location}</p>
         </div>
       </div>
     </div>
@@ -135,7 +135,7 @@ export function TrustpilotCarousel({
             </div>
           )}
           <h3 className="text-[16px] font-bold text-[#191919]">
-            {providerName} <span className="font-medium text-gray-400">reviews on</span>
+            {providerName} <span className="font-medium text-gray-500">reviews on</span>
           </h3>
           <TrustpilotWordmark />
         </div>
@@ -143,11 +143,11 @@ export function TrustpilotCarousel({
           <div className="flex items-center gap-2">
             <TrustpilotStars rating={numericRating} boxClass="h-[20px] w-[20px]" />
             {reviewCount && (
-              <span className="text-[12px] text-gray-400">({reviewCount} reviews)</span>
+              <span className="text-[12px] text-gray-500">({reviewCount} reviews)</span>
             )}
           </div>
         ) : (
-          <span className="text-[12px] text-gray-400">Source: Trustpilot</span>
+          <span className="text-[12px] text-gray-500">Source: Trustpilot</span>
         )}
       </div>
 
@@ -164,7 +164,7 @@ export function TrustpilotCarousel({
             <button
               onClick={() => setPage((page - 1 + pageCount) % pageCount)}
               aria-label="Previous reviews"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 transition-colors hover:bg-gray-50"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-500 transition-colors hover:bg-gray-50"
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
@@ -183,7 +183,7 @@ export function TrustpilotCarousel({
             <button
               onClick={() => setPage((page + 1) % pageCount)}
               aria-label="Next reviews"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 transition-colors hover:bg-gray-50"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-500 transition-colors hover:bg-gray-50"
             >
               <ChevronRight className="h-4 w-4" strokeWidth={2} />
             </button>
@@ -223,14 +223,14 @@ export function TrustpilotCarousel({
             <button
               onClick={() => setCurrent((current - 1 + total) % total)}
               aria-label="Previous review"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-500 active:bg-gray-50"
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
             <button
               onClick={() => setCurrent((current + 1) % total)}
               aria-label="Next review"
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-500 active:bg-gray-50"
             >
               <ChevronRight className="h-4 w-4" strokeWidth={2} />
             </button>

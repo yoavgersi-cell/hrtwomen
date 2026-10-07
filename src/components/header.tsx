@@ -19,7 +19,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-baseline gap-1.5" aria-label="HRT Women home">
           <span className="text-[20px] font-extrabold tracking-tight text-[#A8285E]">HRT Women</span>
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#8A8A8A]">
+          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#6B6B6B]">
             .com
           </span>
         </Link>

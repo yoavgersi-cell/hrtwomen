@@ -79,11 +79,11 @@ function ThreadCard({
           r/
         </span>
         <span className="shrink-0 font-bold text-[#191919]">{thread.subreddit ?? "Reddit"}</span>
-        <span className="text-gray-400">·</span>
+        <span className="text-gray-500">·</span>
         <span className="min-w-0 truncate text-gray-500">u/{thread.author}</span>
         {thread.age && (
           <>
-            <span className="text-gray-400">·</span>
+            <span className="text-gray-500">·</span>
             <span className="shrink-0 text-gray-500">{thread.age}</span>
           </>
         )}
@@ -178,7 +178,7 @@ export function RedditThreadCarousel({
         ))}
       </div>
 
-      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-400">
+      <p className="mt-3 text-[11.5px] leading-relaxed text-gray-500">
         Excerpts from public Reddit posts, lightly trimmed; vote and comment counts shown as
         captured at the time of review. Reddit is a trademark of Reddit, Inc. and is not affiliated
         with this site.

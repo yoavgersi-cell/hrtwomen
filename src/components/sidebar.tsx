@@ -29,7 +29,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
               </div>
               <div>
                 <p className="text-[22px] font-extrabold text-[#191919] leading-tight">{config.socialProofNumber}</p>
-                <p className="text-[13px] leading-snug text-gray-400">{config.socialProofText}</p>
+                <p className="text-[13px] leading-snug text-gray-500">{config.socialProofText}</p>
               </div>
             </div>
           </SidebarCard>
@@ -44,7 +44,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
               </div>
               <div>
                 <p className="text-[14px] font-bold text-[#191919]">{config.secureTitle}</p>
-                <p className="text-[13px] leading-snug text-gray-400">{config.secureText}</p>
+                <p className="text-[13px] leading-snug text-gray-500">{config.secureText}</p>
               </div>
             </div>
           </SidebarCard>
@@ -100,7 +100,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
               </div>
               <div>
                 <p className="text-[15px] font-bold text-[#191919]">Our Ranking Methodology</p>
-                <p className="mt-0.5 text-[13px] text-gray-400">Provider scores are based on:</p>
+                <p className="mt-0.5 text-[13px] text-gray-500">Provider scores are based on:</p>
               </div>
             </div>
             <div className="space-y-3">
@@ -117,7 +117,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-[11px] text-gray-400">Scores are updated regularly by our editorial team.</p>
+            <p className="mt-4 text-[11px] text-gray-500">Scores are updated regularly by our editorial team.</p>
           </SidebarCard>
         );
 
@@ -125,8 +125,8 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
         return (
           <SidebarCard key="disclosure">
             <div className="flex items-start gap-2">
-              <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={1.5} />
-              <p className="text-xs leading-relaxed text-gray-400">
+              <Info className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-500" strokeWidth={1.5} />
+              <p className="text-xs leading-relaxed text-gray-500">
                 We may earn compensation from some providers featured on this page. Rankings and reviews are determined independently by our editorial team.
               </p>
             </div>

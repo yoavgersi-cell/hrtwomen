@@ -48,7 +48,7 @@ export default function ContactPage() {
           provider directly. This site is intended for adults aged 18 and older.
         </p>
 
-        <p className="pt-2 text-sm text-gray-400">
+        <p className="pt-2 text-sm text-gray-500">
           We aim to respond to messages within a few business days.
         </p>
       </div>

@@ -329,7 +329,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               >
                 {article.category}
               </span>
-              <span className="flex items-center gap-1 text-[12px] text-gray-400">
+              <span className="flex items-center gap-1 text-[12px] text-gray-500">
                 <Clock className="h-3 w-3" strokeWidth={1.5} />
                 {article.readTime}
               </span>
@@ -341,7 +341,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             <p className="mt-2.5 max-w-[640px] text-[15px] leading-[1.55] text-gray-600 sm:text-[16px]">
               {article.description}
             </p>
-            <p className="mt-3 text-[12px] text-gray-400">Updated {formattedDate}</p>
+            <p className="mt-3 text-[12px] text-gray-500">Updated {formattedDate}</p>
             <MedicalReviewBar path={`/articles/${slug}`} className="mt-4 max-w-[760px]" />
           </div>
         </div>
@@ -391,13 +391,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               articles. Rendered only when there are enough sections to warrant it. */}
           {article.sections.length >= 4 && (
             <nav aria-label="Table of contents" className="mb-8 rounded-xl border border-gray-200 bg-white p-5">
-              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-400">
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-gray-500">
                 In this article
               </p>
               <ol className="space-y-1.5">
                 {article.sections.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[14px] leading-snug">
-                    <span className="shrink-0 font-semibold text-gray-300">{i + 1}.</span>
+                    <span className="shrink-0 font-semibold text-gray-500">{i + 1}.</span>
                     <a href={`#${slugifyHeading(s.heading)}`} className="text-[#A8285E] hover:underline">
                       {s.heading}
                     </a>
@@ -587,7 +587,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     <p className="text-[14px] font-semibold leading-snug text-[#191919] group-hover:text-[#A8285E] transition-colors">
                       {ra.title}
                     </p>
-                    <p className="mt-1.5 text-[12px] text-gray-400 line-clamp-2">
+                    <p className="mt-1.5 text-[12px] text-gray-500 line-clamp-2">
                       {ra.description}
                     </p>
                   </Link>
@@ -603,9 +603,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 href={hubLink(ctx, `/articles/${prevArticle.slug}`)}
                 className="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md"
               >
-                <ArrowLeft className="mt-0.5 h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#A8285E] transition-colors" strokeWidth={2} />
+                <ArrowLeft className="mt-0.5 h-4 w-4 shrink-0 text-gray-500 group-hover:text-[#A8285E] transition-colors" strokeWidth={2} />
                 <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500">
                     Previous
                   </span>
                   <p className="mt-0.5 text-[14px] font-semibold leading-snug text-[#191919] group-hover:text-[#A8285E] transition-colors">
@@ -621,9 +621,9 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 href={hubLink(ctx, `/articles/${nextArticle.slug}`)}
                 className="group flex items-start gap-3 rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md sm:text-right sm:flex-row-reverse"
               >
-                <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#A8285E] transition-colors" strokeWidth={2} />
+                <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-gray-500 group-hover:text-[#A8285E] transition-colors" strokeWidth={2} />
                 <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500">
                     Next
                   </span>
                   <p className="mt-0.5 text-[14px] font-semibold leading-snug text-[#191919] group-hover:text-[#A8285E] transition-colors">

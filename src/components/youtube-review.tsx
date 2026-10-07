@@ -120,7 +120,7 @@ export function YoutubeReviewSection({
 
       <LiteYoutubePlayer videoId={entry.videoId} title={title} />
 
-      <p className="mt-4 text-[11.5px] leading-relaxed text-gray-400">
+      <p className="mt-4 text-[11.5px] leading-relaxed text-gray-500">
         The creator&apos;s views are their own. We are not affiliated with the channel and no
         compensation was involved in featuring this video. YouTube is a trademark of Google LLC.
       </p>

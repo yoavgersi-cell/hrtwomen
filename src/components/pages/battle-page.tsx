@@ -503,7 +503,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </Link>
                 </span>
               )}
-              <span className="text-gray-300">·</span>
+              <span className="text-gray-500">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
             <MedicalReviewBar path={`/${battle.slug}`} className="mt-4 max-w-[760px]" />
@@ -588,7 +588,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <table className="w-full table-fixed border-collapse text-left">
                 <thead>
                   <tr className="border-b-2 border-gray-200 bg-gray-50/80">
-                    <th className="w-[26%] py-3 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
+                    <th className="w-[26%] py-3 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-500 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
                       At a glance
                     </th>
                     <th className="py-3 px-2 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p1.name}</th>
@@ -611,7 +611,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               </table>
               {/* Freshness line - SERP winners date-stamp their prices; ours
                   are verified against published rates on every content pass. */}
-              <p className="border-t border-gray-100 px-4 py-2.5 text-[11.5px] text-gray-400">
+              <p className="border-t border-gray-100 px-4 py-2.5 text-[11.5px] text-gray-500">
                 Prices are the providers&rsquo; published rates at our last verification - confirm the
                 final figure at checkout, as offers change.{" "}
                 <Link href={hubLink(ctx, "/how-we-rank")} className="font-medium text-gray-500 underline underline-offset-2 hover:text-[#A8285E]">
@@ -842,12 +842,12 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                                 <div className="flex items-baseline gap-1.5">
                                   <span className="text-[22px] font-extrabold text-[#A8285E]">{plan.price}</span>
                                   {plan.regularPrice && (
-                                    <span className="text-[13px] text-gray-400 line-through">{plan.regularPrice}</span>
+                                    <span className="text-[13px] text-gray-500 line-through">{plan.regularPrice}</span>
                                   )}
-                                  {plan.unit && <span className="text-[12px] text-gray-400">{plan.unit}</span>}
+                                  {plan.unit && <span className="text-[12px] text-gray-500">{plan.unit}</span>}
                                 </div>
                                 {plan.cadence && (
-                                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wide text-gray-400">
+                                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wide text-gray-500">
                                     {plan.cadence}
                                   </p>
                                 )}
@@ -902,7 +902,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               <ul className="space-y-2">
                                 {cons.map((c, i) => (
                                   <li key={i} className="flex items-start gap-2 text-[13.5px] leading-[1.55] text-gray-600">
-                                    <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-400" strokeWidth={2} />
+                                    <Minus className="mt-0.5 h-3.5 w-3.5 shrink-0 text-gray-500" strokeWidth={2} />
                                     {c}
                                   </li>
                                 ))}
@@ -963,7 +963,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <table className="w-full min-w-[520px] border-collapse text-left">
                   <thead>
                     <tr className="border-b-2 border-gray-200 bg-gray-50/80">
-                      <th className="w-[34%] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400" />
+                      <th className="w-[34%] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-500" />
                       <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p1.name}</th>
                       <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p2.name}</th>
                     </tr>
@@ -979,7 +979,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </tbody>
                 </table>
               </div>
-              <p className="mt-3 text-[12.5px] leading-relaxed text-gray-400">{BATTLE_COST_MATH[slug].note}</p>
+              <p className="mt-3 text-[12.5px] leading-relaxed text-gray-500">{BATTLE_COST_MATH[slug].note}</p>
             </div>
           )}
 
@@ -1030,7 +1030,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     const bestFor = /best[\s-]?for/i.test(row.feature);
                     // Differences read in full contrast; identical rows stay quiet so
                     // the eye is drawn to what actually separates the two providers.
-                    const value = `${same ? "text-gray-400" : "text-[#191919]"} ${bestFor ? "font-semibold" : "font-normal"}`;
+                    const value = `${same ? "text-gray-500" : "text-[#191919]"} ${bestFor ? "font-semibold" : "font-normal"}`;
                     return (
                       <tr key={i} className="border-b border-gray-100 align-top">
                         <td
@@ -1202,7 +1202,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold text-[#191919]">
                         {t.names.map((name, ni) => (
                           <Fragment key={ni}>
-                            {ni > 0 && <span className="text-[11px] font-extrabold text-gray-300">VS</span>}
+                            {ni > 0 && <span className="text-[11px] font-extrabold text-gray-500">VS</span>}
                             <span>{name}</span>
                           </Fragment>
                         ))}
@@ -1224,7 +1224,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   >
                     <div className="flex items-center gap-2 text-[13px] font-bold text-[#191919]">
                       <span>{bp1.name}</span>
-                      <span className="text-[11px] font-extrabold text-gray-300">VS</span>
+                      <span className="text-[11px] font-extrabold text-gray-500">VS</span>
                       <span>{bp2.name}</span>
                     </div>
                     <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[#A8285E] group-hover:underline">
@@ -1242,11 +1242,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <Link href={hubLink(ctx, `/reviews/${p1.id}`)} className="font-semibold text-[#A8285E] hover:underline">
               {p1.name} Review
             </Link>
-            <span className="text-gray-300">|</span>
+            <span className="text-gray-500">|</span>
             <Link href={hubLink(ctx, `/reviews/${p2.id}`)} className="font-semibold text-[#A8285E] hover:underline">
               {p2.name} Review
             </Link>
-            <span className="text-gray-300">|</span>
+            <span className="text-gray-500">|</span>
             <Link href={hubLink(ctx, "/")} className="font-semibold text-[#A8285E] hover:underline">
               Compare All Providers
             </Link>

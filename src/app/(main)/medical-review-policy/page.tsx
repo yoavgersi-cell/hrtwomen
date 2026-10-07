@@ -44,7 +44,7 @@ export default function MedicalReviewPolicyPage() {
             training to check them. This page says exactly what that means, and what it
             does not.
           </p>
-          <p className="mt-3 text-[13px] text-gray-400">Last updated {UPDATED}</p>
+          <p className="mt-3 text-[13px] text-gray-500">Last updated {UPDATED}</p>
         </div>
       </div>
 
@@ -127,7 +127,7 @@ export default function MedicalReviewPolicyPage() {
           </p>
         </section>
 
-        <p className="text-[13px] leading-relaxed text-gray-400">
+        <p className="text-[13px] leading-relaxed text-gray-500">
           Nothing on this site is medical advice. Compounded hormone products are not FDA-approved. Whether hormone therapy
           is right for you is a decision for a licensed clinician; talk to one before starting or changing any treatment.
         </p>
