@@ -63,7 +63,7 @@ export default async function OGImage({
             marginBottom: "24px",
           }}
         >
-          {providerName} Review 2026
+          {`${providerName} Review 2026`}
         </div>
         {score && (
           <div
