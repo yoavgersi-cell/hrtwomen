@@ -28,7 +28,7 @@ export function RatingBadge({ rating, label, starRating, className }: RatingBadg
                     ? "fill-[#FDB515] text-[#FDB515]"
                     : i === fullStars && hasHalf
                       ? "fill-[#FDB515]/50 text-[#FDB515]"
-                      : "fill-gray-300 text-gray-300"
+                      : "fill-gray-300 text-gray-500"
                 )}
                 strokeWidth={0}
               />
@@ -36,7 +36,7 @@ export function RatingBadge({ rating, label, starRating, className }: RatingBadg
           </div>
           <div className="mt-0.5 flex items-center gap-0.5">
             <span className="text-[11px] font-semibold text-gray-600">{label}</span>
-            <ChevronDown className="h-3 w-3 text-gray-400" strokeWidth={1.5} />
+            <ChevronDown className="h-3 w-3 text-gray-500" strokeWidth={1.5} />
           </div>
         </div>
       </div>

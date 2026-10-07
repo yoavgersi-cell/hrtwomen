@@ -76,7 +76,7 @@ export async function Footer() {
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h4 className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</h4>
+              <h2 className="mb-2.5 text-[12px] font-bold uppercase tracking-wider text-[#191919]">{col.title}</h2>
               <nav className="space-y-1.5">
                 {col.links.map((l) => (
                   <Link key={l.label} href={l.href} className="block text-[13px] text-gray-500 hover:text-[#A8285E]">
@@ -89,16 +89,16 @@ export async function Footer() {
         </div>
 
         <div className="mt-8 border-t border-gray-100 pt-5">
-          <p className="mb-4 text-xs text-gray-400">
+          <p className="mb-4 text-xs text-gray-500">
             <strong className="text-gray-500">Affiliate Disclosure:</strong> HRT Women may earn a commission
             when you click on links and make a purchase. This does not affect our rankings or reviews. We are
             committed to providing honest, independent comparisons to help you make informed decisions.
           </p>
           <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-            <p className="text-[12px] text-gray-400">
+            <p className="text-[12px] text-gray-500">
               &copy; {new Date().getFullYear()} HRT Women. All rights reserved.
             </p>
-            <p className="text-[11px] text-gray-300">
+            <p className="text-[11px] text-gray-500">
               hrtwomen.com is not a medical provider. Always consult a licensed clinician.
             </p>
           </div>

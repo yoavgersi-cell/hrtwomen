@@ -41,7 +41,7 @@ export function NotFoundLinks({
 
       {topProviders.length > 0 && (
         <div className="mt-12">
-          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Top providers</h2>
+          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-500">Top providers</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {topProviders.map((p) => (
               <Link
@@ -62,7 +62,7 @@ export function NotFoundLinks({
 
       {comparisons.length > 0 && (
         <div className="mt-8">
-          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-400">Popular comparisons</h2>
+          <h2 className="mb-4 text-[13px] font-bold uppercase tracking-wider text-gray-500">Popular comparisons</h2>
           <div className="grid gap-3 sm:grid-cols-2">
             {comparisons.map((c) => (
               <Link

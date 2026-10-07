@@ -28,7 +28,7 @@ export function ProviderAudit({
             What we verified
           </h2>
         </div>
-        <p className="text-[12px] font-semibold text-gray-400">
+        <p className="text-[12px] font-semibold text-gray-500">
           Checked {PROVIDER_DATA_CHECKED}
         </p>
       </div>
@@ -43,7 +43,7 @@ export function ProviderAudit({
         <dl className="grid gap-x-10 gap-y-3.5 sm:grid-cols-2">
           {audit.rows.map((row, i) => (
             <div key={i} className="flex flex-col gap-0.5 border-l-2 border-gray-100 pl-3.5">
-              <dt className="text-[11.5px] font-bold uppercase tracking-[0.05em] text-gray-400">
+              <dt className="text-[11.5px] font-bold uppercase tracking-[0.05em] text-gray-500">
                 {row.label}
               </dt>
               <dd className="text-[14px] leading-[1.6] text-gray-800">

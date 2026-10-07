@@ -76,7 +76,7 @@ export function TopProviderCards({
   return (
     <div className="my-8">
       {title && (
-        <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-400">
+        <p className="mb-3 text-[13px] font-bold uppercase tracking-wider text-gray-500">
           {title}
         </p>
       )}

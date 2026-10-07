@@ -80,7 +80,7 @@ export function SourcesMethodology({
                   {kind === "review" ? (
                     <>
                       <span className="font-semibold text-[#191919]">{p.name}</span>
-                      <span className="text-gray-400">
+                      <span className="text-gray-500">
                         {" "}
                         - pricing, plans &amp; policies as published on its own site
                       </span>
@@ -93,7 +93,7 @@ export function SourcesMethodology({
                       >
                         {p.name}
                       </a>
-                      <span className="text-gray-400"> - full pricing &amp; plan breakdown</span>
+                      <span className="text-gray-500"> - full pricing &amp; plan breakdown</span>
                     </>
                   )}
                 </li>
@@ -123,7 +123,7 @@ export function SourcesMethodology({
               <ol className="grid gap-x-8 gap-y-2 sm:grid-cols-2">
                 {medicalSources.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[13px] leading-relaxed">
-                    <span className="shrink-0 font-semibold text-gray-300">{i + 1}.</span>
+                    <span className="shrink-0 font-semibold text-gray-500">{i + 1}.</span>
                     <span className="text-gray-600">
                       <a
                         href={s.href}
@@ -134,7 +134,7 @@ export function SourcesMethodology({
                         {s.label}
                         <ExternalLink className="mb-0.5 ml-0.5 inline h-3 w-3" strokeWidth={2} />
                       </a>{" "}
-                      <span className="text-gray-400">- {s.publisher}</span>
+                      <span className="text-gray-500">- {s.publisher}</span>
                     </span>
                   </li>
                 ))}
@@ -143,7 +143,7 @@ export function SourcesMethodology({
           )}
         </div>
 
-        <p className="mt-7 border-t border-gray-100 pt-4 text-[12.5px] leading-relaxed text-gray-400">
+        <p className="mt-7 border-t border-gray-100 pt-4 text-[12.5px] leading-relaxed text-gray-500">
           Last reviewed {PROVIDER_DATA_CHECKED}. We revisit comparisons when providers change their
           pricing or policies. This page is information only and is not medical advice - always
           consult a licensed clinician before starting treatment.

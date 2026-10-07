@@ -102,7 +102,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
               </p>
               <h1 className="text-[28px] font-extrabold leading-[1.15] text-[#191919] sm:text-[34px]">
                 {r.name}
-                <span className="font-semibold text-gray-400">, {r.credentials.join(", ")}</span>
+                <span className="font-semibold text-gray-500">, {r.credentials.join(", ")}</span>
               </h1>
               <p className="mt-1 text-[16px] font-semibold text-[#191919]">{r.jobTitle}, HRT Women</p>
               <p className="mt-1 text-[15px] leading-relaxed text-gray-500">{r.headline}</p>
@@ -208,7 +208,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
           </div>
         </section>
 
-        <p className="text-[13px] leading-relaxed text-gray-400">
+        <p className="text-[13px] leading-relaxed text-gray-500">
           Reviewers assess medical and scientific statements. They do not choose providers, set prices or rankings, or
           take part in commercial partnerships. Nothing on this site is medical advice; talk to a licensed clinician
           about your own situation.

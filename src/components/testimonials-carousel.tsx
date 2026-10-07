@@ -34,7 +34,7 @@ function TestimonialCard({ t }: { t: Testimonial }) {
         </div>
         <div>
           <p className="text-[13px] font-semibold text-[#191919]">{t.name}</p>
-          <p className="text-[11px] text-gray-400">{t.state}</p>
+          <p className="text-[11px] text-gray-500">{t.state}</p>
         </div>
       </div>
     </div>
@@ -109,13 +109,13 @@ export function TestimonialsCarousel({ testimonials }: { testimonials: Testimoni
           <div className="flex gap-1.5">
             <button
               onClick={() => setCurrent((current - 1 + total) % total)}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-500 active:bg-gray-50"
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
             <button
               onClick={() => setCurrent((current + 1) % total)}
-              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-400 active:bg-gray-50"
+              className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-200 text-gray-500 active:bg-gray-50"
             >
               <ChevronRight className="h-4 w-4" strokeWidth={2} />
             </button>

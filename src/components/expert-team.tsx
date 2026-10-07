@@ -35,7 +35,7 @@ export function ExpertTeam({ experts }: { experts: Expert[] }) {
                 <h3 className="flex items-center gap-1.5 text-[16px] font-bold leading-tight text-[#191919]">
                   <span className="truncate">
                     {expert.name}
-                    {expert.credentials && <span className="text-gray-400">, {expert.credentials}</span>}
+                    {expert.credentials && <span className="text-gray-500">, {expert.credentials}</span>}
                   </span>
                   <BadgeCheck className="h-4 w-4 shrink-0 text-[#A8285E]" strokeWidth={2} />
                 </h3>

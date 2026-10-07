@@ -40,10 +40,10 @@ export function ExpertByline({
           initials(expert.name)
         )}
       </span>
-      <span className={`leading-tight text-gray-400 ${compact ? "text-[13px]" : "text-[14px]"}`}>
+      <span className={`leading-tight text-gray-500 ${compact ? "text-[13px]" : "text-[14px]"}`}>
         {label}{" "}
         <span className="font-bold text-[#191919] group-hover:text-[#A8285E]">{credit}</span>
-        {showRole && <span className="ml-1 font-medium text-gray-400">· {expert.role}</span>}
+        {showRole && <span className="ml-1 font-medium text-gray-500">· {expert.role}</span>}
       </span>
     </Link>
   );

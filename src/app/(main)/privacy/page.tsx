@@ -14,7 +14,7 @@ export default function PrivacyPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-16">
       <h1 className="mb-2 text-3xl font-bold text-[#191919]">Privacy Policy</h1>
-      <p className="mb-6 text-sm text-gray-400">Last updated: {UPDATED}</p>
+      <p className="mb-6 text-sm text-gray-500">Last updated: {UPDATED}</p>
       <div className="space-y-4 text-gray-600 leading-relaxed">
         <p>
           This Privacy Policy explains how HRT Women (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;),

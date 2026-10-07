@@ -84,14 +84,14 @@ function ProductCard({
             <span className="text-[17px] font-extrabold tracking-tight text-[#191919] [font-variant-numeric:tabular-nums]">
               {product.price}
             </span>
-            <span className="text-[11px] font-semibold text-gray-400">/mo</span>
+            <span className="text-[11px] font-semibold text-gray-500">/mo</span>
             {product.regularPrice && (
-              <span className="text-[12px] font-medium text-gray-400 line-through [font-variant-numeric:tabular-nums]">
+              <span className="text-[12px] font-medium text-gray-500 line-through [font-variant-numeric:tabular-nums]">
                 {product.regularPrice}
               </span>
             )}
           </div>
-          <p className="mt-0.5 text-[11px] leading-snug text-gray-400">{product.priceNote}</p>
+          <p className="mt-0.5 text-[11px] leading-snug text-gray-500">{product.priceNote}</p>
           <p className="mt-1.5 text-[12.5px] font-medium text-gray-800">{provider.name}</p>
           <div className="mt-auto flex items-center gap-1.5 pt-2 text-[11.5px] text-gray-500">
             <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />

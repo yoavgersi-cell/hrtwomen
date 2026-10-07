@@ -71,7 +71,7 @@ export function WinnerTugMeter({
             <span className="text-[28px] font-extrabold leading-none tracking-[-0.03em] tabular-nums text-[#0F6F4D] sm:text-[30px]">
               {pct}%
             </span>
-            <span className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.07em] text-gray-400">
+            <span className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.07em] text-gray-500">
               advantage
             </span>
           </div>
@@ -79,7 +79,7 @@ export function WinnerTugMeter({
 
         {/* Verdict + CTA */}
         <div className="min-w-0 flex-1">
-          <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-gray-400">
+          <p className="text-[11.5px] font-bold uppercase tracking-[0.09em] text-gray-500">
             Who we&rsquo;d pick
           </p>
 
@@ -122,17 +122,17 @@ export function WinnerTugMeter({
 
           {/* Sources */}
           <div
-            className={`mt-5 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 border-t border-gray-100 pt-3.5 text-[11px] text-gray-400 transition-opacity delay-150 duration-500 sm:justify-start ${
+            className={`mt-5 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 border-t border-gray-100 pt-3.5 text-[11px] text-gray-500 transition-opacity delay-150 duration-500 sm:justify-start ${
               revealed ? "opacity-100" : "opacity-0"
             }`}
           >
             <span className="font-bold uppercase tracking-[0.06em]">Sources</span>
-            <span className="text-gray-300">·</span>
+            <span className="text-gray-500">·</span>
             <span className="inline-flex items-center gap-1">
               <TrustpilotStar className="h-3 w-3" />
               Trustpilot reviews
             </span>
-            <span className="text-gray-300">·</span>
+            <span className="text-gray-500">·</span>
             <span>Our own research</span>
           </div>
         </div>

@@ -85,7 +85,7 @@ export function MedicalSources({ vertical }: { vertical: string }) {
       <ol className="space-y-2">
         {sources.map((s, i) => (
           <li key={i} className="flex gap-2.5 text-[13.5px] leading-relaxed">
-            <span className="shrink-0 font-semibold text-gray-300">{i + 1}.</span>
+            <span className="shrink-0 font-semibold text-gray-500">{i + 1}.</span>
             <span className="text-gray-600">
               <a
                 href={s.href}
@@ -95,7 +95,7 @@ export function MedicalSources({ vertical }: { vertical: string }) {
               >
                 {s.label}
               </a>{" "}
-              <span className="text-gray-400">- {s.publisher}</span>
+              <span className="text-gray-500">- {s.publisher}</span>
             </span>
           </li>
         ))}
@@ -111,7 +111,7 @@ export function MedicalSources({ vertical }: { vertical: string }) {
 // being repeated here.
 export function TrustDisclosure({ disclaimerHref }: { disclaimerHref: string }) {
   return (
-    <p className="mt-2.5 max-w-[720px] text-[11.5px] leading-[1.55] text-gray-400 sm:mt-3 sm:text-[12px]">
+    <p className="mt-2.5 max-w-[720px] text-[11.5px] leading-[1.55] text-gray-500 sm:mt-3 sm:text-[12px]">
       We may earn a commission from links on this page - it never affects our rankings (
       <a href={disclaimerHref} className="font-medium text-[#A8285E] hover:underline">
         how we stay objective

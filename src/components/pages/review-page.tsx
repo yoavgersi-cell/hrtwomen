@@ -337,7 +337,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                               ? "fill-[#FDB515] text-[#FDB515]"
                               : i === editorialFullStars && editorialHasHalf
                                 ? "fill-[#FDB515]/50 text-[#FDB515]"
-                                : "fill-gray-300 text-gray-300"
+                                : "fill-gray-300 text-gray-500"
                           )}
                           strokeWidth={0}
                         />
@@ -460,7 +460,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </li>
                 )}
               </ul>
-              <p className="mt-4 text-[12px] leading-relaxed text-gray-400">
+              <p className="mt-4 text-[12px] leading-relaxed text-gray-500">
                 &ldquo;Legitimate&rdquo; here means a real, licensed telehealth operation - not a
                 guarantee of results. Compounded medications are not FDA-approved brand drugs. Always
                 confirm current details and eligibility with the provider.
@@ -513,7 +513,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     <span className="text-[28px] font-extrabold leading-none text-[#191919]">{plan.price}</span>
                     {plan.unit && <span className="text-[14px] font-semibold text-gray-500">{plan.unit}</span>}
                     {plan.regularPrice && (
-                      <span className="text-[15px] font-medium text-gray-400 line-through">{plan.regularPrice}</span>
+                      <span className="text-[15px] font-medium text-gray-500 line-through">{plan.regularPrice}</span>
                     )}
                   </div>
                   {plan.regularPrice && (
@@ -680,7 +680,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     {t.subreddit ? (
                       <>
                         <span className="font-bold text-[#191919]">{t.subreddit}</span>
-                        <span className="text-gray-400">·</span>
+                        <span className="text-gray-500">·</span>
                         <span className="text-gray-500">u/{t.author}</span>
                       </>
                     ) : (
@@ -688,8 +688,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     )}
                     {t.age && (
                       <>
-                        <span className="text-gray-400">·</span>
-                        <span className="text-gray-400">{t.age}</span>
+                        <span className="text-gray-500">·</span>
+                        <span className="text-gray-500">{t.age}</span>
                       </>
                     )}
                   </div>
@@ -713,7 +713,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                         <span className="inline-flex items-center gap-1 rounded-full bg-gray-100 px-2.5 py-1 text-[12px] font-bold text-gray-600">
                           <ArrowBigUp className="h-4 w-4 text-[#FF4500]" strokeWidth={2} />
                           {t.upvotes}
-                          <ArrowBigDown className="h-4 w-4 text-gray-400" strokeWidth={2} />
+                          <ArrowBigDown className="h-4 w-4 text-gray-500" strokeWidth={2} />
                         </span>
                       )}
                       {t.commentCount !== undefined && (
@@ -749,7 +749,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <span className="font-semibold text-[#191919]">The takeaway: </span>
               {REVIEW_COMMUNITY_FEEDBACK[slug].takeaway}
             </p>
-            <p className="mt-2 text-[11.5px] leading-relaxed text-gray-400">
+            <p className="mt-2 text-[11.5px] leading-relaxed text-gray-500">
               Excerpts from public Reddit posts, lightly trimmed; vote and comment counts shown as
               captured at the time of review. Reddit is a trademark of Reddit, Inc. and is not
               affiliated with this site.
@@ -819,7 +819,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#C2366E]/30 hover:bg-[#C2366E]/[0.02]"
                   >
                     <span className="text-[#A8285E]">{provider.name} vs {otherProvider?.name}</span>
-                    <span className="ml-auto text-[12px] text-gray-400">Compare</span>
+                    <span className="ml-auto text-[12px] text-gray-500">Compare</span>
                   </Link>
                 );
               })}
@@ -830,7 +830,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   className="flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-3 text-[14px] font-medium text-[#191919] transition-colors hover:border-[#C2366E]/30 hover:bg-[#C2366E]/[0.02]"
                 >
                   <span className="truncate">{article.title}</span>
-                  <span className="ml-auto shrink-0 text-[12px] text-gray-400">{article.readTime}</span>
+                  <span className="ml-auto shrink-0 text-[12px] text-gray-500">{article.readTime}</span>
                 </Link>
               ))}
             </div>
