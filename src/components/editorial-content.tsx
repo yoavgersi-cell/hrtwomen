@@ -287,11 +287,7 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
         <Link href="/" className="font-semibold text-[#A8285E] hover:underline">
           comparison of top providers
         </Link>{" "}
-        is built to make that easier, and you can check availability where you live in our{" "}
-        <Link href="/online-hrt" className="font-semibold text-[#A8285E] hover:underline">
-          online HRT by state
-        </Link>{" "}
-        guide.
+        is built to make that easier. Each provider confirms which states it serves during sign-up.
       </p>
 
       <hr className="mb-8 border-gray-200" />

@@ -23,7 +23,6 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Is HRT Safe?", href: "/articles/is-hrt-safe" },
       { label: "Progesterone Side Effects", href: "/articles/progesterone-side-effects" },
       { label: "Estrogen Patch vs Pill", href: "/articles/estrogen-patch-vs-pill" },
-      { label: "Online HRT by State", href: "/online-hrt" },
       { label: "All Guides", href: "/articles" },
     ],
   },
