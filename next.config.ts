@@ -20,6 +20,15 @@ const nextConfig: NextConfig = {
   // JSON-LD "image" URLs (and any URL Google already discovered) returning
   // the image instead of a 404. Re-check the hashes in the build output
   // ("opengraph-image-xxxxxx") if an opengraph-image.tsx file is ever moved.
+  // The per-state /online-hrt pages were near-duplicates (same body, state
+  // name swapped into the H1) - thin programmatic content. Removed; send any
+  // links or indexed URLs to the main provider comparison.
+  async redirects() {
+    return [
+      { source: "/online-hrt", destination: "/", permanent: true },
+      { source: "/online-hrt/:state", destination: "/", permanent: true },
+    ];
+  },
   async rewrites() {
     return [
       { source: "/opengraph-image", destination: "/opengraph-image-12jlf3" },

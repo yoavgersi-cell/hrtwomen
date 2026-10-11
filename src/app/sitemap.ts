@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
-import { STATES } from "@/lib/states";
 import { REVIEWERS } from "@/data/reviewers";
 
 const SITE_URL = "https://www.hrtwomen.com";
@@ -16,7 +15,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/", priority: 1, changeFrequency: "weekly" },
     { path: "/reviews", priority: 0.9, changeFrequency: "weekly" },
     { path: "/articles", priority: 0.8, changeFrequency: "weekly" },
-    { path: "/online-hrt", priority: 0.8, changeFrequency: "weekly" },
     { path: "/how-we-rank", priority: 0.6, changeFrequency: "monthly" },
     { path: "/about", priority: 0.3, changeFrequency: "monthly" },
     { path: "/contact", priority: 0.3, changeFrequency: "monthly" },
@@ -68,15 +66,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     });
   }
 
-  // Programmatic per-state pages
-  for (const s of STATES) {
-    entries.push({
-      url: `${SITE_URL}/online-hrt/${s.slug}`,
-      lastModified: FALLBACK_DATE,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    });
-  }
 
   // Articles / guides
   for (const a of cfg.articles ?? []) {
