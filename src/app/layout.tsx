@@ -87,12 +87,14 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": `${SITE_URL}/#organization`,
               name: "HRT Women",
               url: SITE_URL,
+              logo: { "@type": "ImageObject", url: `${SITE_URL}/logo-mark.png` },
               areaServed: { "@type": "Country", name: "United States" },
               description:
                 "Independent guides and provider comparisons for online menopause HRT - expert reviews, pricing research, and side-by-side comparisons.",
-              sameAs: [],
+              publishingPrinciples: `${SITE_URL}/medical-review-policy`,
             }),
           }}
         />
@@ -102,8 +104,11 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": `${SITE_URL}/#website`,
               name: "HRT Women",
               url: SITE_URL,
+              inLanguage: "en-US",
+              publisher: { "@id": `${SITE_URL}/#organization` },
               description:
                 "Compare trusted online menopause and HRT providers side by side.",
             }),

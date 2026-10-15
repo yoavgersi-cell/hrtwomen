@@ -229,6 +229,27 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     ...pageReviewSchema(`/reviews/${slug}`),
   };
 
+  // Editorial article entity for the review: who wrote it, who publishes it and
+  // which company it is about. No rating fields - see the note above.
+  const reviewArticleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: `${provider.name} Review`,
+    description: review.reviewIntro,
+    image: canonicalUrl(ctx, `/reviews/${slug}/opengraph-image`),
+    dateModified: latestUpdate(review.updatedAt),
+    mainEntityOfPage: { "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
+    about: { "@type": "Organization", name: provider.name },
+    author: { "@type": "Organization", name: "HRT Women Editorial Team", url: canonicalUrl(ctx, "/about") },
+    publisher: {
+      "@type": "Organization",
+      "@id": `${ctx.origin}/#organization`,
+      name: "HRT Women",
+      url: ctx.origin,
+      logo: { "@type": "ImageObject", url: `${ctx.origin}/logo-mark.png` },
+    },
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -297,6 +318,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewArticleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
