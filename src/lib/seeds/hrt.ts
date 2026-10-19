@@ -1,5 +1,6 @@
 import type { SiteConfig } from "@/lib/config";
 import { MENOPAUSE_COMPLETE_GUIDE } from "./articles/menopause-complete-guide";
+import { IS_WINONA_LEGIT, IS_MIDI_LEGIT } from "./articles/provider-legit";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -1049,7 +1050,7 @@ export const hrtConfig: SiteConfig = {
       category: "Comparisons",
       readTime: "8 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-09-26",
+      updatedAt: "2026-10-19",
       heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1078,6 +1079,10 @@ export const hrtConfig: SiteConfig = {
         {
           heading: "Head-to-head at a glance",
           body: `<ul><li><strong>Most convenient:</strong> Winona - no appointments, delivered to your door. See <a href="/winona-vs-gala">Winona vs Gala</a>.</li><li><strong>Most predictable price:</strong> Gala - one flat monthly fee.</li><li><strong>Best if you have insurance:</strong> Midi Health. See <a href="/winona-vs-midi">Winona vs Midi Health</a> and <a href="/gala-vs-midi">Gala vs Midi Health</a>.</li><li><strong>Want a live conversation:</strong> Midi Health's video visits.</li><li><strong>Want FDA-approved products specifically:</strong> <a href="/reviews/winona">Winona</a> lists which of its products are FDA-approved (tablets, patch, progesterone capsules) and which are compounded; with any provider, ask which product you will receive.</li></ul>`,
+        },
+        {
+          heading: "Are online menopause clinics worth it?",
+          body: `<div class="qa"><strong>The short answer</strong>For many women, yes - if the service has a real clinical gate, prescribes mainstream treatment and includes follow-up. Online clinics remove the two biggest barriers to menopause care: finding a clinician who takes symptoms seriously, and waiting weeks for an appointment. They are not worth it if a low price comes from skipping the medical review, or if your insurance would cover the same care and medication for less elsewhere.</div><p><strong>Where they are worth it:</strong></p><ul><li>You have struggled to get menopause symptoms taken seriously, or there is no menopause specialist near you.</li><li>You want treatment started in days rather than weeks, with follow-up by message or video.</li><li>You value home delivery and a clinician you can reach between visits.</li></ul><p><strong>Where they may not be:</strong></p><ul><li>Your insurance covers a menopause specialist and generic estradiol and progesterone at low copays - your own doctor plus your pharmacy may cost less than a cash subscription (Midi is the online option that bills insurance).</li><li>You need an in-person exam - for example unexplained or postmenopausal bleeding, a breast lump, or pelvic pain.</li><li>You have a complex history (such as a past blood clot or breast cancer) that calls for a specialist who can coordinate with your other doctors.</li></ul><p><strong>Red flags in any online clinic:</strong> prescribing without a full health history, no named or licensed clinicians, "hormone balancing" via saliva tests, only compounded products with no FDA-approved options, or vague pricing and cancellation terms. All three providers on this page pass the clinical checks; their trade-offs are covered in <a href="/articles/is-winona-legit">Is Winona legit?</a>, <a href="/articles/is-gala-legit">Is Gala legit?</a> and <a href="/articles/is-midi-legit">Is Midi Health legit?</a> For the bigger picture of treatment options, see <a href="/articles/menopause-complete-guide">our complete menopause guide</a>.</p>`,
         },
         {
           heading: "Whichever you choose",
@@ -1279,17 +1284,18 @@ export const hrtConfig: SiteConfig = {
       slug: "is-gala-legit",
       title: "Is Gala Health Legit? Yes - What 4,199 Reviews Show (2026)",
       description:
-        "Yes. Gala uses US-licensed clinicians, prescribes only after review and holds a 4.6 Trustpilot rating across 4,199 reviews. What the reviews and caveats say.",
+        "Yes. Gala uses US-licensed clinicians, prescribes only after review and holds a 4.6 Trustpilot rating across 4,199 reviews. What the reviews, BBB complaints and caveats say.",
       category: "Provider Guides",
       readTime: "6 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-06",
+      updatedAt: "2026-10-19",
       heroColor: "#F8D7E3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Yes, Gala Health is a legitimate US telehealth service: a US-licensed clinician reviews your health assessment and prescribes only if HRT is appropriate, then handles check-ins and dose adjustments.",
         "Its claimed Trustpilot profile rates it 4.6 across 4,199 reviews (as shown on Oct 4, 2026). Recent reviewers mention a quick intake, competitive pricing and responsive support.",
         "The rating covers the whole brand, including Gala's GLP-1 weight-loss program, so many reviews are not about menopause care. The one recent 3-star review we transcribed is about slow shipping.",
+        "Its BBB profile showed a C- rating, not accredited, with 37 complaints in three years when we checked on Oct 19, 2026 - the profile covers Gala's much larger weight-loss business too.",
         "Legit is not a guarantee of results or safety for you: HRT carries real risks (blood clots, stroke, breast-cancer considerations), and Gala does not bill insurance.",
       ],
       sections: [
@@ -1306,6 +1312,10 @@ export const hrtConfig: SiteConfig = {
           body: `<p>We transcribed Gala's newest reviews from its Trustpilot profile on October 4, 2026, leaving out the ones about weight loss. The themes are intake speed, price and support.</p><p>"The new patient intake process was quick. The price was very competitive. And communication with the team was excellent." - Kennetito, 5 stars, Oct 3, 2026</p><p>"Great pricing good. Easy to complete. Covered everything we wanted." - Anna Bracey, 5 stars, Oct 2, 2026</p><p>"Scrolling through the app in the morning is simple and straightforward. I like that everything I need is right there, making it easy to stick with my plan." - Michele, 5 stars, Sep 22, 2026</p><p>"The oil a long time to ship" - Jennifer, 3 stars, Oct 1, 2026</p><p>Most recent reviews are short ("So far has been seamless", "Great support"), which tells you the experience was smooth but not much more. The useful signal is the absence of the complaints that sink telehealth companies: we did not see recent reviews about surprise charges, unreachable clinicians or prescriptions issued without review.</p>`,
         },
         {
+          heading: "What do Gala's BBB complaints say?",
+          body: `<p>When we checked on October 19, 2026, Gala Health's <a href="https://www.bbb.org/us/de/wilmington/profile/health-and-wellness/gala-health-0251-92034883" target="_blank" rel="noopener noreferrer">Better Business Bureau profile</a> (Wilmington, Delaware) showed a <strong>C- rating</strong>, <strong>not BBB-accredited</strong>, with <strong>37 complaints in the past three years</strong>. The BBB cites the number of complaints and how long the business has been operating as reasons for the rating. Some review sites reported an F earlier in 2026, tied to complaints that went unanswered - so check bbb.org for the current grade.</p><p>Two things put that in context. First, like the Trustpilot score, the BBB profile covers <strong>all of Gala's business</strong>, and Gala is best known for its GLP-1 weight-loss program; we found no complaints specific to HRT. Second, the themes match what we see across subscription telehealth: <strong>shipping delays, slow replies and cancellation or refund disputes</strong>.</p><p>A C- is a weaker BBB record than Winona's B or Midi's B with accreditation, and it is a fair reason for caution. If you choose Gala, keep written records of any cancellation request, order before your current supply runs out, and check renewal terms before you subscribe.</p>`,
+        },
+        {
           heading: "Three caveats the 4.6 does not show",
           body: `<p><strong>The rating is for the whole brand.</strong> Gala is best known for GLP-1 weight management, and the same Trustpilot profile covers both programs. A 4.6 tells you Gala runs a competent operation; it does not tell you how many of the 4,199 reviewers were menopause patients.</p><p><strong>Shipping is the recurring friction.</strong> The only below-4-star review in our recent sample was about a slow delivery. If you are switching from another provider, order before your current supply runs low, and remember that some estradiol patch brands have been intermittently hard to find in 2026.</p><p><strong>Cash only.</strong> Gala does not bill insurance. For women with good commercial coverage, an in-network clinic such as <a href="/reviews/midi">Midi Health</a> plus generic hormones through a pharmacy benefit can cost less. Gala also offers fewer estrogen forms than <a href="/reviews/winona">Winona</a>, which adds body creams and a wider product line.</p>`,
         },
@@ -1315,6 +1325,8 @@ export const hrtConfig: SiteConfig = {
         },
       ],
     },
+    IS_WINONA_LEGIT,
+    IS_MIDI_LEGIT,
     {
       slug: "winona-cost",
       title: "Winona Cost Per Month (2026): Prices by Treatment & Insurance",
@@ -1323,7 +1335,7 @@ export const hrtConfig: SiteConfig = {
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-06",
+      updatedAt: "2026-10-19",
       heroColor: "#FBE9F0",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1343,7 +1355,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Does Winona take insurance?",
-          body: `<p><strong>No.</strong> Winona does not bill insurance companies and cannot submit claims for you. Two things soften that:</p><ul><li><strong>HSA and FSA cards are accepted.</strong> Prescription hormone therapy is a qualified medical expense, so you can pay with pre-tax money.</li><li><strong>Out-of-network reimbursement is possible on some plans.</strong> You can submit Winona's receipts to your insurer yourself. Whether you get anything back depends entirely on your plan's out-of-network benefits, so check before counting on it.</li></ul><p>The honest comparison: if your insurance covers a menopause specialist and generic estradiol and progesterone, filling those at your pharmacy can cost less than any cash subscription. What Winona sells for the price is speed and convenience: no appointment to wait for, a physician reachable by message, and medication delivered to your door.</p>`,
+          body: `<p><strong>No.</strong> Winona does not bill insurance companies and cannot submit claims for you. Two things soften that:</p><ul><li><strong>HSA and FSA cards are accepted.</strong> Prescription hormone therapy is a qualified medical expense, so you can pay with pre-tax money.</li><li><strong>Out-of-network reimbursement is possible on some plans.</strong> You can submit Winona's receipts to your insurer yourself. Whether you get anything back depends entirely on your plan's out-of-network benefits, so check before counting on it.</li></ul><p><strong>Are Winona's medications covered by insurance?</strong> Not through Winona. Its subscription price bundles the physician, follow-ups, medication and shipping, and Winona ships the medication itself rather than sending a prescription to your pharmacy, so there is no pharmacy claim for your drug plan to pay. If you want your insurance to cover the hormones, you would need a prescriber who sends prescriptions to a pharmacy in your network - an insurance-billed clinic such as <a href="/reviews/midi">Midi Health</a>, or your own doctor.</p><p>The honest comparison: if your insurance covers a menopause specialist and generic estradiol and progesterone, filling those at your pharmacy can cost less than any cash subscription. What Winona sells for the price is speed and convenience: no appointment to wait for, a physician reachable by message, and medication delivered to your door.</p>`,
         },
         {
           heading: "A year at Winona vs Gala and Midi Health",
@@ -1407,7 +1419,7 @@ export const hrtConfig: SiteConfig = {
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-06",
+      updatedAt: "2026-10-19",
       heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1428,6 +1440,10 @@ export const hrtConfig: SiteConfig = {
         {
           heading: "Without insurance, on Medicare, and the extras",
           body: `<ul><li><strong>Self-pay:</strong> $250 for the first visit, $150 for each follow-up. No monthly fee between visits.</li><li><strong>Medicare:</strong> Midi is not covered by Medicare or Medicare-related plans. Medicare beneficiaries can be seen as self-pay patients but cannot submit claims for Midi visits, medications or related services.</li><li><strong>Medicaid:</strong> Midi is not enrolled with state Medicaid programs (including Medi-Cal) and cannot treat Medicaid patients, even as self-pay.</li><li><strong>Testosterone:</strong> prescribed in selected cases and not covered by insurance. Midi puts creams and gels at about $45 for a 30-day supply to $100+ for 90 days, and because it is a controlled substance, extra labs and visits may be needed. It is only offered in some states.</li><li><strong>Location:</strong> Midi treats patients in the United States only.</li></ul><p>Self-pay Midi is the most expensive way to start among the providers we rank, but you are paying for something the others do not offer: a scheduled video visit, about 30 minutes, with a menopause-trained nurse practitioner or nurse midwife.</p>`,
+        },
+        {
+          heading: "Does Midi Health prescribe testosterone, and what does it cost?",
+          body: `<p><strong>Yes, in selected cases and only in some states.</strong> The evidence-supported use of testosterone in women is for postmenopausal low sexual desire that causes distress. Insurance does not cover it at Midi: Midi puts creams and gels at <strong>about $45 for a 30-day supply to $100+ for 90 days</strong>. Because testosterone is a controlled substance, extra lab tests and visits may be needed, which add to the cost. There is no FDA-approved testosterone product for women in the US, so it is prescribed off-label at carefully adjusted doses. <a href="/reviews/winona">Winona</a> does not prescribe testosterone.</p>`,
         },
         {
           heading: "A worked first year at Midi",
