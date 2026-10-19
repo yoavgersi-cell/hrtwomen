@@ -1,0 +1,92 @@
+name: SEO monitor
+
+# Daily: crawl the live site and open (or update) a GitHub issue when anything
+# breaks, closing it again once the site is healthy.
+# Pull requests: build the branch and run the same checks before it can merge.
+on:
+  schedule:
+    - cron: "23 5 * * *" # 05:23 UTC daily
+  workflow_dispatch:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: seo-monitor-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  live:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check https://www.hrtwomen.com
+        id: check
+        continue-on-error: true
+        run: node scripts/seo-check.mjs https://www.hrtwomen.com
+      - name: Job summary
+        if: always()
+        run: cat seo-report.md >> "$GITHUB_STEP_SUMMARY"
+      - name: Open, update or close the alert issue
+        if: always()
+        uses: actions/github-script@v7
+        env:
+          OUTCOME: ${{ steps.check.outcome }}
+        with:
+          script: |
+            const fs = require("fs");
+            const report = fs.readFileSync("seo-report.md", "utf8");
+            const run = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+            const label = "seo-monitor";
+            const { data: open } = await github.rest.issues.listForRepo({ ...context.repo, state: "open", labels: label });
+            if (process.env.OUTCOME === "failure") {
+              const body = `${report}\n\n[Workflow run](${run})`;
+              if (open.length) {
+                await github.rest.issues.createComment({ ...context.repo, issue_number: open[0].number, body });
+              } else {
+                await github.rest.issues.create({
+                  ...context.repo,
+                  title: "SEO monitor: the live site is failing checks",
+                  labels: [label],
+                  assignees: [context.repo.owner],
+                  body,
+                });
+              }
+              core.setFailed("SEO checks failed - see the report above.");
+            } else {
+              for (const issue of open) {
+                await github.rest.issues.createComment({ ...context.repo, issue_number: issue.number, body: `All checks pass again. ${run}` });
+                await github.rest.issues.update({ ...context.repo, issue_number: issue.number, state: "closed", state_reason: "completed" });
+              }
+            }
+
+  pull-request:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - name: Start the production server
+        run: |
+          npx next start -p 3000 &
+          for i in $(seq 1 30); do curl -sf http://localhost:3000/robots.txt >/dev/null && exit 0; sleep 1; done
+          echo "server did not start" && exit 1
+      - name: Run SEO checks against the branch build
+        run: node scripts/seo-check.mjs http://localhost:3000 --canonical-origin https://www.hrtwomen.com
+      - name: Job summary
+        if: always()
+        run: cat seo-report.md >> "$GITHUB_STEP_SUMMARY" || true

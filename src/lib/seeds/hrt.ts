@@ -1,4 +1,5 @@
 import type { SiteConfig } from "@/lib/config";
+import { MENOPAUSE_COMPLETE_GUIDE } from "./articles/menopause-complete-guide";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -863,6 +864,7 @@ export const hrtConfig: SiteConfig = {
   ],
 
   articles: [
+    MENOPAUSE_COMPLETE_GUIDE,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",

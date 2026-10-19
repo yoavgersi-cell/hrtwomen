@@ -17,6 +17,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Guides",
     links: [
+      { label: "Menopause: Complete Guide", href: "/articles/menopause-complete-guide" },
       { label: "What Is HRT?", href: "/articles/what-is-hrt" },
       { label: "HRT for Perimenopause", href: "/articles/hrt-for-perimenopause" },
       { label: "Perimenopause Symptoms", href: "/articles/perimenopause-symptoms" },

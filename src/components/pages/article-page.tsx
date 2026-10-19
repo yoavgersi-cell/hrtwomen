@@ -211,7 +211,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
         },
     publisher: {
       "@type": "Organization",
-      name: ctx.brandDomain,
+      "@id": `${ctx.origin}/#organization`,
+      name: "HRT Women",
       url: ctx.origin,
       logo: {
         "@type": "ImageObject",
