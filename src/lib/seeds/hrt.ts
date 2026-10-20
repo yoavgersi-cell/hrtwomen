@@ -1,6 +1,7 @@
 import type { SiteConfig } from "@/lib/config";
 import { MENOPAUSE_COMPLETE_GUIDE } from "./articles/menopause-complete-guide";
 import { IS_WINONA_LEGIT, IS_MIDI_LEGIT } from "./articles/provider-legit";
+import { HOW_TO_GET_HRT_ONLINE } from "./articles/how-to-get-hrt-online";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -866,6 +867,7 @@ export const hrtConfig: SiteConfig = {
 
   articles: [
     MENOPAUSE_COMPLETE_GUIDE,
+    HOW_TO_GET_HRT_ONLINE,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -1062,7 +1064,7 @@ export const hrtConfig: SiteConfig = {
       sections: [
         {
           heading: "Two models of online menopause care",
-          body: `<p>Online HRT providers generally follow one of two models. <strong>Subscription services</strong> use an online intake reviewed by a clinician and ship medication to your door for a monthly fee, usually without billing insurance. <strong>Virtual clinics</strong> work more like a specialist practice: you book a video visit, your insurance may be billed, and prescriptions go to your own pharmacy.</p><p>Winona and Gala follow the subscription model; Midi Health is a virtual clinic. Neither model is inherently better - the right one depends on your insurance, budget and how you like to communicate with a clinician.</p>`,
+          body: `<p>Online HRT providers generally follow one of two models. <strong>Subscription services</strong> use an online intake reviewed by a clinician and ship medication to your door for a monthly fee, usually without billing insurance. <strong>Virtual clinics</strong> work more like a specialist practice: you book a video visit, your insurance may be billed, and prescriptions go to your own pharmacy.</p><p>Winona and Gala follow the subscription model; Midi Health is a virtual clinic. Neither model is inherently better - the right one depends on your insurance, budget and how you like to communicate with a clinician.</p> New to online care? Our step-by-step guide on <a href="/articles/how-to-get-hrt-online">how to get HRT online</a> covers eligibility, the intake, costs and red flags.`,
         },
         {
           heading: "Winona: our top pick",
