@@ -19,6 +19,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: "Menopause: Complete Guide", href: "/articles/menopause-complete-guide" },
       { label: "How to Get HRT Online", href: "/articles/how-to-get-hrt-online" },
+      { label: "HRT Black Box Warning Removed", href: "/articles/hrt-black-box-warning-removed" },
       { label: "What Is HRT?", href: "/articles/what-is-hrt" },
       { label: "HRT for Perimenopause", href: "/articles/hrt-for-perimenopause" },
       { label: "Perimenopause Symptoms", href: "/articles/perimenopause-symptoms" },

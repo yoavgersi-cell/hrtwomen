@@ -2,6 +2,7 @@ import type { SiteConfig } from "@/lib/config";
 import { MENOPAUSE_COMPLETE_GUIDE } from "./articles/menopause-complete-guide";
 import { IS_WINONA_LEGIT, IS_MIDI_LEGIT } from "./articles/provider-legit";
 import { HOW_TO_GET_HRT_ONLINE } from "./articles/how-to-get-hrt-online";
+import { HRT_BLACK_BOX_WARNING } from "./articles/hrt-black-box-warning";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -868,6 +869,7 @@ export const hrtConfig: SiteConfig = {
   articles: [
     MENOPAUSE_COMPLETE_GUIDE,
     HOW_TO_GET_HRT_ONLINE,
+    HRT_BLACK_BOX_WARNING,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -932,7 +934,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "What changed: the FDA's 2025-2026 labeling decision",
-          body: `<p>In <strong>November 2025</strong>, the FDA <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requests-labeling-changes-related-safety-information-clarify-benefitrisk-considerations" target="_blank" rel="noopener noreferrer">asked manufacturers</a> to remove the boxed warnings about cardiovascular disease, breast cancer and probable dementia from menopausal hormone therapy products, and to add more age-specific context about starting therapy. On <strong>February 12, 2026</strong> it <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products" target="_blank" rel="noopener noreferrer">approved the first six updated labels</a> - including Prometrium (progesterone), Divigel (estradiol gel) and Estring (vaginal estradiol) - with other products following as their manufacturers' changes are reviewed. The agency pointed to evidence that HRT started within about 10 years of menopause, generally before age 60, has a more favorable balance of benefits and risks.</p><p>That matches the long-term findings of the Women's Health Initiative itself: a <a href="https://doi.org/10.1001/jama.2024.6542" target="_blank" rel="noopener noreferrer">2024 review of the trials in <em>JAMA</em></a> concluded that women who start hormone therapy in early menopause have lower absolute risks than women who start it later.</p><p>Two important caveats: the FDA did <strong>not</strong> remove the boxed warning about <strong>endometrial cancer</strong> for systemic estrogen-alone products (which is why women with a uterus are generally prescribed a progestogen alongside estrogen), and removing a boxed warning does <strong>not</strong> mean the risks disappeared. They remain part of the prescribing information and part of the conversation with your clinician.</p>`,
+          body: `<p>In <strong>November 2025</strong>, the FDA <a href="https://www.fda.gov/drugs/drug-alerts-and-statements/fda-requests-labeling-changes-related-safety-information-clarify-benefitrisk-considerations" target="_blank" rel="noopener noreferrer">asked manufacturers</a> to remove the boxed warnings about cardiovascular disease, breast cancer and probable dementia from menopausal hormone therapy products, and to add more age-specific context about starting therapy. On <strong>February 12, 2026</strong> it <a href="https://www.fda.gov/news-events/press-announcements/fda-approves-labeling-changes-menopausal-hormone-therapy-products" target="_blank" rel="noopener noreferrer">approved the first six updated labels</a> - including Prometrium (progesterone), Divigel (estradiol gel) and Estring (vaginal estradiol) - with other products following as their manufacturers' changes are reviewed. The agency pointed to evidence that HRT started within about 10 years of menopause, generally before age 60, has a more favorable balance of benefits and risks.</p><p>That matches the long-term findings of the Women's Health Initiative itself: a <a href="https://doi.org/10.1001/jama.2024.6542" target="_blank" rel="noopener noreferrer">2024 review of the trials in <em>JAMA</em></a> concluded that women who start hormone therapy in early menopause have lower absolute risks than women who start it later.</p><p>Two important caveats: the FDA did <strong>not</strong> remove the boxed warning about <strong>endometrial cancer</strong> for systemic estrogen-alone products (which is why women with a uterus are generally prescribed a progestogen alongside estrogen), and removing a boxed warning does <strong>not</strong> mean the risks disappeared. They remain part of the prescribing information and part of the conversation with your clinician.</p><p>For the full story - the 2002 study behind the warnings, the July 2025 FDA panel, what experts said and what it means for you - read <a href="/articles/hrt-black-box-warning-removed">HRT's black box warning removed: what changed and why</a>.</p>`,
         },
         {
           heading: "The real risks to understand",
