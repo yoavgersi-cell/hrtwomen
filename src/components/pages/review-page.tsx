@@ -442,7 +442,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <ProductCarousel
             providers={config.providers}
             title={`${provider.name} products & prices`}
-            subtitle={`${provider.name}'s HRT products with published prices and what each price includes. Prescription required - a clinician reviews your history first.`}
+            subtitle={`${provider.name}'s products with published prices and what each price includes. Prescription treatments need a clinician's review first.`}
             onlyProviderIds={[provider.id]}
             pageType="review"
             withSchema
