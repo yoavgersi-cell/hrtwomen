@@ -115,7 +115,7 @@ export const hrtConfig: SiteConfig = {
   hero: {
     backgroundImageUrl: "",
     imageAlt: "Online hormone replacement therapy for women in menopause",
-    updatedLabel: "Last Updated: September 2026",
+    updatedLabel: "Last Updated: October 2026",
     h1: "Best Online HRT for Women of 2026",
     h2: "The top online menopause & HRT providers, ranked and reviewed",
     description:

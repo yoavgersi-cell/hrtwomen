@@ -1,31 +1,41 @@
-import { Truck } from "lucide-react";
-import { PRODUCT_CATALOG, productPriceValue, type CatalogProduct } from "@/lib/product-catalog";
+import { Truck, ShieldCheck, FlaskConical } from "lucide-react";
+import {
+  PRODUCT_CATALOG,
+  PRODUCT_PRICES_AS_OF,
+  productPriceValue,
+  type CatalogProduct,
+} from "@/lib/product-catalog";
 import { ProviderCta } from "@/components/provider-cta";
 import type { Provider } from "@/lib/config";
 import { AFFILIATE_PROVIDER_IDS } from "@/lib/config";
 
 // ───── Product carousel ─────
-// Google-Shopping-style product cards in a scroll-snap strip: product image,
-// linked title, price with its honest condition, provider name, shipping line.
-// Every price comes from the verified catalog; the whole card is the affiliate
-// CTA. Cards without a supplied product image render a provider-logo tile
-// rather than an invented product shot.
+// Shopping-style HRT product cards in a scroll-snap strip: product image,
+// form chip, title, verified FDA status, price with its honest condition,
+// provider and shipping. Everything is server-rendered text (readable by
+// search and AI crawlers), and the whole card is the affiliate CTA.
+//
+// Schema: one ItemList of Product + Offer per page (withSchema on ONE
+// carousel only). Deliberately NO aggregateRating / review - re-publishing
+// Trustpilot scores as product rating markup is a review-snippet policy risk
+// (same decision as the review pages).
 
-// Medication chip on the image corner: similar vials from one provider (or
-// one shared creative) read as duplicates without a fast visual differentiator.
-const MEDICATION_CHIP: Record<string, { label: string; className: string }> = {
-  semaglutide: { label: "Semaglutide", className: "bg-sky-50 text-sky-700 ring-sky-200" },
-  tirzepatide: { label: "Tirzepatide", className: "bg-violet-50 text-violet-700 ring-violet-200" },
-};
-
-function chipFor(product: CatalogProduct): { label: string; className: string } {
-  if (product.format === "drops")
-    return { label: `${product.medication === "semaglutide" ? "Sema" : "Tirz"} drops`, className: "bg-teal-50 text-teal-700 ring-teal-200" };
-  if (product.format === "tablet")
-    return { label: "Tablets", className: "bg-teal-50 text-teal-700 ring-teal-200" };
-  if (product.id === "sprout-wegovy")
-    return { label: "Brand-name", className: "bg-amber-50 text-amber-700 ring-amber-200" };
-  return MEDICATION_CHIP[product.medication];
+function FdaBadge({ status }: { status: CatalogProduct["fdaStatus"] }) {
+  if (status === "fda-approved")
+    return (
+      <span className="inline-flex items-center gap-1 rounded-full bg-emerald-50 px-2 py-0.5 text-[10.5px] font-bold text-emerald-800 ring-1 ring-emerald-200">
+        <ShieldCheck className="h-3 w-3" strokeWidth={2.5} />
+        FDA-approved
+      </span>
+    );
+  if (status === "compounded")
+    return (
+      <span className="inline-flex items-center gap-1 rounded-full bg-amber-50 px-2 py-0.5 text-[10.5px] font-bold text-amber-800 ring-1 ring-amber-200">
+        <FlaskConical className="h-3 w-3" strokeWidth={2.5} />
+        Compounded
+      </span>
+    );
+  return null;
 }
 
 function ProductCard({
@@ -39,9 +49,8 @@ function ProductCard({
   position: number;
   pageType: "listing" | "review" | "battle";
 }) {
-  const chip = chipFor(product);
   return (
-    <div className="flex w-[200px] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md sm:w-[212px]">
+    <article className="flex w-[220px] shrink-0 snap-start flex-col overflow-hidden rounded-xl border border-gray-200 bg-white transition-shadow hover:shadow-md sm:w-[232px]">
       <ProviderCta
         href={provider.affiliateUrl}
         providerName={provider.name}
@@ -51,40 +60,43 @@ function ProductCard({
         sourceFlow="main_comparison"
         className="flex flex-1 flex-col"
       >
-        {/* Product image - or logo tile when no real product shot exists */}
-        <div className="relative flex h-[150px] items-center justify-center border-b border-gray-100 bg-white p-3">
-          {chip && (
-            <span
-              className={`absolute left-2 top-2 z-10 rounded-full px-2 py-0.5 text-[10px] font-bold ring-1 ${chip.className}`}
-            >
-              {chip.label}
-            </span>
-          )}
+        <div className="relative flex h-[160px] items-center justify-center border-b border-gray-100 bg-[#FBF6F8] p-3">
+          <span className="absolute left-2 top-2 z-10 rounded-full bg-white px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-[#A8285E] ring-1 ring-[#F3D3E0]">
+            {product.form}
+          </span>
           {product.image ? (
             // eslint-disable-next-line @next/next/no-img-element
             <img
               src={product.image}
               alt={`${provider.name} ${product.name}`}
               loading="lazy"
+              width={220}
+              height={160}
               className="max-h-full max-w-full object-contain"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center rounded-lg bg-gradient-to-br from-[#EAF2F8] to-white">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-[36px] max-w-[120px] object-contain" />
-            </div>
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={provider.logo} alt={`${provider.name} logo`} className="max-h-[36px] max-w-[120px] object-contain" />
           )}
         </div>
 
         <div className="flex flex-1 flex-col p-3.5">
-          <p className="text-[13px] font-semibold leading-snug text-[#A8285E] line-clamp-2">
-            {product.name}
-          </p>
-          <div className="mt-2 flex items-baseline gap-1.5">
-            <span className="text-[17px] font-extrabold tracking-tight text-[#191919] [font-variant-numeric:tabular-nums]">
+          <h3 className="text-[14px] font-bold leading-snug text-[#191919]">{product.name}</h3>
+          <p className="mt-0.5 text-[12px] font-medium text-gray-600">by {provider.name}</p>
+          {product.fdaStatus && (
+            <div className="mt-2">
+              <FdaBadge status={product.fdaStatus} />
+            </div>
+          )}
+          <p className="mt-2 text-[12px] leading-snug text-gray-600 line-clamp-3">{product.description}</p>
+          <div className="mt-2.5 flex items-baseline gap-1.5">
+            {product.pricePrefix && (
+              <span className="text-[11px] font-semibold text-gray-500">{product.pricePrefix}</span>
+            )}
+            <span className="text-[18px] font-extrabold tracking-tight text-[#191919] [font-variant-numeric:tabular-nums]">
               {product.price}
             </span>
-            <span className="text-[11px] font-semibold text-gray-500">/mo</span>
+            <span className="text-[11px] font-semibold text-gray-500">{product.priceUnit ?? "/mo"}</span>
             {product.regularPrice && (
               <span className="text-[12px] font-medium text-gray-500 line-through [font-variant-numeric:tabular-nums]">
                 {product.regularPrice}
@@ -92,21 +104,23 @@ function ProductCard({
             )}
           </div>
           <p className="mt-0.5 text-[11px] leading-snug text-gray-500">{product.priceNote}</p>
-          <p className="mt-1.5 text-[12.5px] font-medium text-gray-800">{provider.name}</p>
-          <div className="mt-auto flex items-center gap-1.5 pt-2 text-[11.5px] text-gray-500">
-            <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
-            {product.shipping}
+          <div className="mt-auto flex items-center justify-between gap-2 pt-3 text-[11.5px] text-gray-500">
+            <span className="flex items-center gap-1.5">
+              <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />
+              {product.shipping}
+            </span>
+            <span className="font-semibold text-[#A8285E]">View →</span>
           </div>
         </div>
       </ProviderCta>
-    </div>
+    </article>
   );
 }
 
 export function ProductCarousel({
   providers,
-  title = "Shop HRT plans",
-  subtitle = "Real published prices from licensed telehealth providers - conditions shown under every price.",
+  title = "Shop HRT treatments",
+  subtitle = "Real products and published prices from licensed online menopause providers. Prescription required - a clinician reviews your health history first.",
   highlightProviderIds = [],
   onlyProviderIds,
   pageType = "listing",
@@ -130,13 +144,18 @@ export function ProductCarousel({
   const highlight = new Set(highlightProviderIds);
 
   let items = PRODUCT_CATALOG.filter(
-    (p) => byId.has(p.providerId) && AFFILIATE_PROVIDER_IDS.includes(p.providerId)
+    (p) => byId.has(p.providerId) && AFFILIATE_PROVIDER_IDS.includes(p.providerId),
   );
   if (onlyProviderIds) items = items.filter((p) => onlyProviderIds.includes(p.providerId));
+  // Provider ranking order first (the site's editorial order), then price.
+  const rank = new Map(providers.map((p, i) => [p.id, i]));
   items = items.sort((a, b) => {
     const ha = highlight.has(a.providerId) ? 0 : 1;
     const hb = highlight.has(b.providerId) ? 0 : 1;
     if (ha !== hb) return ha - hb;
+    const ra = rank.get(a.providerId) ?? 99;
+    const rb = rank.get(b.providerId) ?? 99;
+    if (ra !== rb) return ra - rb;
     return productPriceValue(a) - productPriceValue(b);
   });
 
@@ -147,111 +166,54 @@ export function ProductCarousel({
       ? {
           "@context": "https://schema.org",
           "@type": "ItemList",
-          // Merchant listings require a product image, so imageless catalog
-          // entries (logo-tile fallback cards) are excluded from the schema
-          // entirely - emitting them only produces GSC "missing image"
-          // criticals. They rejoin automatically once a real shot is added.
-          itemListElement: items.filter((p) => p.image).map((p, i) => {
-            const provider = byId.get(p.providerId)!;
-            // Transit time comes only from the catalog's own verified shipping
-            // copy ("Free 1-2 day shipping", "Free overnight shipping") - no
-            // day counts are ever assumed for plain "Free shipping".
-            const dayMatch = p.shipping.match(/(\d+)(?:-(\d+))?\s*day/i);
-            const overnight = /overnight/i.test(p.shipping);
-            const transit = overnight
-              ? { min: 1, max: 1 }
-              : dayMatch
-                ? { min: parseInt(dayMatch[1], 10), max: parseInt(dayMatch[2] ?? dayMatch[1], 10) }
-                : null;
-            // GSC-requested enrichment, verified data only: description from
-            // the catalog's own honest fields; aggregateRating + one review
-            // only when the provider has a verified Trustpilot record; free-
-            // shipping details only when the catalog says shipping is free.
-            // Return policy: dispensed prescription medication cannot be
-            // returned (US pharmacy practice), so MerchantReturnNotPermitted
-            // is the accurate, conservative declaration for every product -
-            // refund guarantees some providers offer are a separate thing and
-            // are deliberately not represented here.
-            const tpCount = provider.trustpilotReviewCount
-              ? parseInt(provider.trustpilotReviewCount.replace(/,/g, ""), 10)
-              : NaN;
-            const hasAggregate =
-              !!provider.trustpilotRating && Number.isFinite(tpCount) && tpCount > 0;
-            const firstReview = provider.trustpilotReviews?.[0];
-            // "included" (SHED's "home delivery included") means no shipping
-            // charge, same as free - both earn the $0 shippingRate.
-            const freeShipping = /free|included/i.test(p.shipping);
-            return {
-              "@type": "ListItem",
-              position: i + 1,
-              item: {
-                "@type": "Product",
-                name: `${provider.name} ${p.name}`,
-                description: `${p.name} from ${provider.name} - $${productPriceValue(p)}/month (${p.priceNote}). ${p.shipping}.`,
-                ...(p.image ? { image: `https://www.hrtwomen.com${p.image}` } : {}),
-                brand: { "@type": "Brand", name: provider.name },
-                ...(hasAggregate && {
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: provider.trustpilotRating,
-                    reviewCount: tpCount,
-                    bestRating: "5",
-                  },
-                }),
-                ...(hasAggregate &&
-                  firstReview && {
-                    review: {
-                      "@type": "Review",
-                      reviewRating: { "@type": "Rating", ratingValue: String(firstReview.rating), bestRating: "5" },
-                      author: { "@type": "Person", name: firstReview.name },
-                      reviewBody: firstReview.text,
+          name: title,
+          itemListElement: items
+            .filter((p) => p.image)
+            .map((p, i) => {
+              const provider = byId.get(p.providerId)!;
+              const freeShipping = /free|included/i.test(p.shipping);
+              return {
+                "@type": "ListItem",
+                position: i + 1,
+                item: {
+                  "@type": "Product",
+                  name: `${provider.name} ${p.name}`,
+                  description: `${p.description} ${p.pricePrefix ? `${p.pricePrefix} ` : ""}${p.price}${p.priceUnit ?? "/mo"} (${p.priceNote}). Prescription required.`,
+                  image: `https://www.hrtwomen.com${p.image}`,
+                  brand: { "@type": "Brand", name: provider.name },
+                  category: "Menopause hormone therapy",
+                  offers: {
+                    "@type": "Offer",
+                    price: String(productPriceValue(p)),
+                    priceCurrency: "USD",
+                    availability: "https://schema.org/InStock",
+                    url: pageUrl,
+                    hasMerchantReturnPolicy: {
+                      "@type": "MerchantReturnPolicy",
+                      applicableCountry: "US",
+                      returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
                     },
-                  }),
-                offers: {
-                  "@type": "Offer",
-                  price: String(productPriceValue(p)),
-                  priceCurrency: "USD",
-                  availability: "https://schema.org/InStock",
-                  url: pageUrl,
-                  hasMerchantReturnPolicy: {
-                    "@type": "MerchantReturnPolicy",
-                    applicableCountry: "US",
-                    returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+                    ...(freeShipping && {
+                      shippingDetails: {
+                        "@type": "OfferShippingDetails",
+                        shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "USD" },
+                        shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" },
+                      },
+                    }),
                   },
-                  ...(freeShipping && {
-                    shippingDetails: {
-                      "@type": "OfferShippingDetails",
-                      shippingRate: { "@type": "MonetaryAmount", value: 0, currency: "USD" },
-                      shippingDestination: { "@type": "DefinedRegion", addressCountry: "US" },
-                      ...(transit && {
-                        deliveryTime: {
-                          "@type": "ShippingDeliveryTime",
-                          transitTime: {
-                            "@type": "QuantitativeValue",
-                            minValue: transit.min,
-                            maxValue: transit.max,
-                            unitCode: "DAY",
-                          },
-                        },
-                      }),
-                    },
-                  }),
                 },
-              },
-            };
-          }),
+              };
+            }),
         }
       : null;
 
   return (
-    <div>
-      {schema && (
+    <section aria-label={title}>
+      {schema && schema.itemListElement.length > 0 && (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       )}
-      <div className="mb-1.5 flex items-baseline justify-between gap-3">
-        <h2 className="text-[20px] font-bold text-[#191919]">{title}</h2>
-      </div>
-      <p className="mb-4 max-w-[640px] text-[13.5px] text-gray-500">{subtitle}</p>
+      <h2 className="mb-1.5 text-[20px] font-bold text-[#191919]">{title}</h2>
+      <p className="mb-4 max-w-[680px] text-[13.5px] leading-relaxed text-gray-500">{subtitle}</p>
       <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0 [scrollbar-width:thin]">
         <div className="flex snap-x snap-mandatory gap-3">
           {items.map((p, i) => (
@@ -265,6 +227,10 @@ export function ProductCarousel({
           ))}
         </div>
       </div>
-    </div>
+      <p className="mt-2 text-[11.5px] text-gray-500">
+        Prices as published by each provider, checked {PRODUCT_PRICES_AS_OF}; confirm at checkout.
+        &quot;FDA-approved&quot; and &quot;Compounded&quot; labels appear only where we have verified them.
+      </p>
+    </section>
   );
 }

@@ -436,19 +436,19 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
-        {/* This provider's products, shopping-style (weight-loss catalog only) */}
-        {ctx.vertical === "weight-loss" && (
-          <div className="mb-8">
-            <ProductCarousel
-              providers={config.providers}
-              title={`${provider.name} products & prices`}
-              subtitle="Published prices with their conditions - the whole card links to the provider."
-              onlyProviderIds={[provider.id]}
-              pageType="review"
-              pageUrl={canonicalUrl(ctx, `/reviews/${slug}`)}
-            />
-          </div>
-        )}
+        {/* This provider's products only, shopping-style (renders nothing
+            for providers without catalog entries) */}
+        <div className="mb-8">
+          <ProductCarousel
+            providers={config.providers}
+            title={`${provider.name} products & prices`}
+            subtitle={`${provider.name}'s HRT products with published prices and what each price includes. Prescription required - a clinician reviews your history first.`}
+            onlyProviderIds={[provider.id]}
+            pageType="review"
+            withSchema
+            pageUrl={canonicalUrl(ctx, `/reviews/${slug}`)}
+          />
+        </div>
 
         {/* Intro */}
         <div className="mb-8">
