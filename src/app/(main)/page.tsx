@@ -4,6 +4,7 @@ import { ComparisonCard } from "@/components/comparison-card";
 import { SocialProofBand, providerVisitStat } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { EditorialContent } from "@/components/editorial-content";
+import { ProductCarousel } from "@/components/product-carousel";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
@@ -160,7 +161,16 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <EditorialContent />
+      <EditorialContent
+        topSlot={
+          <ProductCarousel
+            providers={config.providers}
+            title="Shop HRT treatments from top online providers"
+            withSchema
+            pageUrl="https://www.hrtwomen.com/"
+          />
+        }
+      />
       <FaqAccordion items={config.faqs} />
     </>
   );

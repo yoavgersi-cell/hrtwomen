@@ -67,7 +67,7 @@ function DrugTable({ rows }: { rows: [string, string, string, string][] }) {
   );
 }
 
-export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
+export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNode; topSlot?: React.ReactNode }) {
   return (
     <div className="mx-auto max-w-[1200px] px-4 pt-6 pb-12 text-[16px] leading-[1.7] text-gray-800">
       <h2 className="mb-4 text-[24px] font-bold text-[#191919]">
@@ -96,6 +96,9 @@ export function EditorialContent({ midSlot }: { midSlot?: React.ReactNode }) {
           Winona vs Gala
         </Link>.
       </p>
+
+      {/* Slot directly under the intro (homepage product carousel) */}
+      {topSlot && <div className="mb-10">{topSlot}</div>}
 
       <hr className="mb-8 border-gray-200" />
 

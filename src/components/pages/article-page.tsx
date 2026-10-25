@@ -126,11 +126,17 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // (otherwise fall back to the full catalog rather than an empty carousel).
   const isLegitArticle = /^is-.+-legit$/.test(slug);
   const restrictCarouselToSubject =
-    isLegitArticle &&
+    (isLegitArticle || article?.category === "Provider Guides") &&
     !!subjectProvider &&
     PRODUCT_CATALOG.some(
       (p) => p.providerId === subjectProvider.id && AFFILIATE_PROVIDER_IDS.includes(p.providerId),
     );
+  // A provider-specific page whose provider has no catalog products shows no
+  // carousel at all, rather than promoting competitors' products on it.
+  const hideCarouselForSubject =
+    (isLegitArticle || article?.category === "Provider Guides") &&
+    !!subjectProvider &&
+    !restrictCarouselToSubject;
   const subjectTrustpilot =
     subjectProvider?.trustpilotReviews?.length ? subjectProvider : undefined;
   const subjectReddit =
@@ -472,10 +478,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   </div>
                 )}
 
-                {/* Full-catalog product carousel mid-article (weight-loss only) -
-                    after roughly the halfway section, never at the bottom. */}
-                {ctx.vertical === "weight-loss" &&
-                  i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) && (
+                {/* Product carousel mid-article - after roughly the halfway
+                    section, never at the bottom. Provider guides show only
+                    their subject provider's products. */}
+                {i === Math.max(0, Math.ceil(article.sections.length / 2) - 1) &&
+                  !hideCarouselForSubject && (
                     <div className="my-10">
                       <ProductCarousel
                         providers={config.providers}
@@ -484,13 +491,13 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         }
                         title={
                           restrictCarouselToSubject && subjectProvider
-                            ? `Shop ${subjectProvider.name}'s GLP-1 plans`
-                            : "Shop GLP-1 plans by product"
+                            ? `${subjectProvider.name} products & prices`
+                            : "HRT products from top online providers"
                         }
                         subtitle={
                           restrictCarouselToSubject && subjectProvider
-                            ? `${subjectProvider.name}'s published plans - conditions shown under each price.`
-                            : "Every provider's published plans - cheapest first, conditions under each price."
+                            ? `${subjectProvider.name}'s HRT products with published prices and what each price includes. Prescription required.`
+                            : "Real HRT products and published prices from the online providers we rank. Prescription required - a clinician reviews your history first."
                         }
                         withSchema
                         pageUrl={canonicalUrl(ctx, `/articles/${slug}`)}
