@@ -991,7 +991,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <ProductCarousel
                 providers={config.providers}
                 title={`${p1.name} vs ${p2.name}: products & prices`}
-                subtitle="Both providers' HRT products with published prices and what each price includes. Prescription required."
+                subtitle="Both providers' products with published prices and what each price includes. Prescription treatments need a clinician's review first."
                 onlyProviderIds={[p1.id, p2.id]}
                 pageType="battle"
                 withSchema

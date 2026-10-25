@@ -496,7 +496,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                         }
                         subtitle={
                           restrictCarouselToSubject && subjectProvider
-                            ? `${subjectProvider.name}'s HRT products with published prices and what each price includes. Prescription required.`
+                            ? `${subjectProvider.name}'s products with published prices and what each price includes. Prescription treatments need a clinician's review first.`
                             : "Real HRT products and published prices from the online providers we rank. Prescription required - a clinician reviews your history first."
                         }
                         withSchema

@@ -14,10 +14,20 @@
 //    names or descriptions - plain product facts only.
 //  - Prices carry their condition in priceNote and an as-of date in
 //    PRODUCT_PRICES_AS_OF.
+//  - kind "supplement" marks over-the-counter dietary supplements (Midi's
+//    shop). They are NOT hormone therapy: they only appear in carousels
+//    scoped to their own provider (review page, that provider's articles,
+//    battles including it), never in the general "HRT treatments" carousels,
+//    and their descriptions attribute any purpose to the seller ("Midi
+//    markets it for ...") rather than making health claims. Midi's "Daily
+//    GLP-1 Support" is deliberately excluded - its name invites confusion
+//    with GLP-1 prescription drugs.
 
 export type CatalogProduct = {
   id: string;
   providerId: string;
+  /** "hrt" (prescription hormone therapy, default) or "supplement" (OTC). */
+  kind?: "hrt" | "supplement";
   /** Product title, e.g. "Estrogen Patch". */
   name: string;
   /** Short form label shown as the image chip, e.g. "Patch", "Body cream". */
@@ -128,6 +138,40 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
     image: "/products/gala-vaginal-estradiol.webp",
   },
 ];
+
+// ── Midi Health supplements ── from Midi's online shop (operator screenshots,
+// Oct 2026). Sale prices with the regular price struck through.
+const midiSupplement = (
+  id: string,
+  name: string,
+  form: string,
+  marketedFor: string,
+  price: string,
+  regularPrice: string,
+): CatalogProduct => ({
+  id,
+  providerId: "midi",
+  kind: "supplement",
+  name,
+  form,
+  description: `A dietary supplement from Midi's midlife line - Midi markets it for ${marketedFor}. Not hormone therapy, and not FDA-approved to treat menopause symptoms.`,
+  price,
+  priceUnit: "",
+  regularPrice,
+  priceNote: "Sale price on Midi's shop, no prescription needed",
+  shipping: "Ships from Midi's shop",
+  image: `/products/${id}.webp`,
+});
+
+PRODUCT_CATALOG.push(
+  midiSupplement("midi-daily-cortisol-support", "Daily Cortisol Support", "Capsules", "stress, calm focus and sleep", "$39.99", "$49.99"),
+  midiSupplement("midi-nightly-steady-sleep", "Nightly Steady Sleep+", "Powder sticks", "sleep", "$39.99", "$49.99"),
+  midiSupplement("midi-daily-omega-3", "Daily Omega-3+", "Softgels", "whole-body support", "$39.99", "$49.99"),
+  midiSupplement("midi-daily-brain-boost", "Daily Brain Boost", "Capsules", "midlife focus and memory", "$27.99", "$34.99"),
+  midiSupplement("midi-daily-fiber", "Daily Fiber+", "Gummies", "fiber and digestion", "$43.99", "$54.99"),
+  midiSupplement("midi-creatine", "Creatine+", "Gummies", "midlife strength", "$39.99", "$49.99"),
+  midiSupplement("midi-berberine", "Berberine+", "Capsules", "metabolic support", "$43.99", "$54.99"),
+);
 
 /** Numeric value for sorting ("$89" → 89). */
 export function productPriceValue(p: CatalogProduct): number {

@@ -20,6 +20,14 @@ import { AFFILIATE_PROVIDER_IDS } from "@/lib/config";
 // Trustpilot scores as product rating markup is a review-snippet policy risk
 // (same decision as the review pages).
 
+function SupplementBadge() {
+  return (
+    <span className="inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-[10.5px] font-bold text-gray-700 ring-1 ring-gray-200">
+      Dietary supplement - not HRT
+    </span>
+  );
+}
+
 function FdaBadge({ status }: { status: CatalogProduct["fdaStatus"] }) {
   if (status === "fda-approved")
     return (
@@ -83,10 +91,16 @@ function ProductCard({
         <div className="flex flex-1 flex-col p-3.5">
           <h3 className="text-[14px] font-bold leading-snug text-[#191919]">{product.name}</h3>
           <p className="mt-0.5 text-[12px] font-medium text-gray-600">by {provider.name}</p>
-          {product.fdaStatus && (
+          {product.kind === "supplement" ? (
             <div className="mt-2">
-              <FdaBadge status={product.fdaStatus} />
+              <SupplementBadge />
             </div>
+          ) : (
+            product.fdaStatus && (
+              <div className="mt-2">
+                <FdaBadge status={product.fdaStatus} />
+              </div>
+            )
           )}
           <p className="mt-2 text-[12px] leading-snug text-gray-600 line-clamp-3">{product.description}</p>
           <div className="mt-2.5 flex items-baseline gap-1.5">
@@ -96,7 +110,9 @@ function ProductCard({
             <span className="text-[18px] font-extrabold tracking-tight text-[#191919] [font-variant-numeric:tabular-nums]">
               {product.price}
             </span>
-            <span className="text-[11px] font-semibold text-gray-500">{product.priceUnit ?? "/mo"}</span>
+            {(product.priceUnit ?? "/mo") && (
+              <span className="text-[11px] font-semibold text-gray-500">{product.priceUnit ?? "/mo"}</span>
+            )}
             {product.regularPrice && (
               <span className="text-[12px] font-medium text-gray-500 line-through [font-variant-numeric:tabular-nums]">
                 {product.regularPrice}
@@ -146,7 +162,12 @@ export function ProductCarousel({
   let items = PRODUCT_CATALOG.filter(
     (p) => byId.has(p.providerId) && AFFILIATE_PROVIDER_IDS.includes(p.providerId),
   );
+  // Supplements only appear in provider-scoped carousels, never in the
+  // general HRT ones (homepage, general articles).
   if (onlyProviderIds) items = items.filter((p) => onlyProviderIds.includes(p.providerId));
+  else items = items.filter((p) => p.kind !== "supplement");
+  // HRT products before supplements within a provider.
+  const kindRank = (p: CatalogProduct) => (p.kind === "supplement" ? 1 : 0);
   // Provider ranking order first (the site's editorial order), then price.
   const rank = new Map(providers.map((p, i) => [p.id, i]));
   items = items.sort((a, b) => {
@@ -156,6 +177,7 @@ export function ProductCarousel({
     const ra = rank.get(a.providerId) ?? 99;
     const rb = rank.get(b.providerId) ?? 99;
     if (ra !== rb) return ra - rb;
+    if (kindRank(a) !== kindRank(b)) return kindRank(a) - kindRank(b);
     return productPriceValue(a) - productPriceValue(b);
   });
 
@@ -178,10 +200,10 @@ export function ProductCarousel({
                 item: {
                   "@type": "Product",
                   name: `${provider.name} ${p.name}`,
-                  description: `${p.description} ${p.pricePrefix ? `${p.pricePrefix} ` : ""}${p.price}${p.priceUnit ?? "/mo"} (${p.priceNote}). Prescription required.`,
+                  description: `${p.description} ${p.pricePrefix ? `${p.pricePrefix} ` : ""}${p.price}${p.priceUnit ?? "/mo"} (${p.priceNote}).${p.kind === "supplement" ? "" : " Prescription required."}`,
                   image: `https://www.hrtwomen.com${p.image}`,
                   brand: { "@type": "Brand", name: provider.name },
-                  category: "Menopause hormone therapy",
+                  category: p.kind === "supplement" ? "Dietary supplement" : "Menopause hormone therapy",
                   offers: {
                     "@type": "Offer",
                     price: String(productPriceValue(p)),
@@ -230,6 +252,8 @@ export function ProductCarousel({
       <p className="mt-2 text-[11.5px] text-gray-500">
         Prices as published by each provider, checked {PRODUCT_PRICES_AS_OF}; confirm at checkout.
         &quot;FDA-approved&quot; and &quot;Compounded&quot; labels appear only where we have verified them.
+        {items.some((p) => p.kind === "supplement") &&
+          " Dietary supplements are sold without a prescription, are not hormone therapy, and are not FDA-approved to treat menopause symptoms."}
       </p>
     </section>
   );
