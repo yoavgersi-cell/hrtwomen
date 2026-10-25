@@ -255,6 +255,8 @@ const REVIEWED_2026_10_25: string[] = [
   "/articles/winona-cost",
   "/articles/winona-products",
   "/articles/midi-cost",
+  // Reviewed the same day after publication (operator-confirmed).
+  "/articles/online-hrt-cost",
 ];
 
 export const REVIEW_LOG: Record<string, PageReview> = {
