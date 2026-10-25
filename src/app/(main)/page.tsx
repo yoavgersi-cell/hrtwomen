@@ -54,6 +54,8 @@ export default async function HomePage() {
         ratingLabel: position.label,
         starRating: position.starRating,
         badge: position.badge,
+        trustpilotRating: provider.trustpilotRating,
+        trustpilotReviewCount: provider.trustpilotReviewCount,
       };
     })
     .filter(Boolean) as Array<{
@@ -70,6 +72,8 @@ export default async function HomePage() {
       ratingLabel: string;
       starRating?: number;
       badge?: string;
+      trustpilotRating?: string;
+      trustpilotReviewCount?: string;
     }>;
 
   const sidebarProviders = providerOrder

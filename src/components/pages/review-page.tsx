@@ -25,6 +25,7 @@ import { REDDIT_COMMUNITY_FEEDBACK as REVIEW_COMMUNITY_FEEDBACK, RedditMark } fr
 import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
+import { CustomerSentiment } from "@/components/customer-sentiment";
 
 // Per-provider SEO overrides, "is X legit?" trust blocks and extra FAQs for
 // the HRT reviews. Everything here is written from facts verified in
@@ -250,6 +251,39 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     },
   };
 
+  // Editorial review of the company by an independent publisher. Google
+  // permits critic/editorial Review markup on another organization (it's not
+  // self-serving), so this carries ONLY our own published score - never the
+  // Trustpilot aggregate, which may only be marked up by the site that
+  // collected those reviews.
+  const editorialReviewSchema = editorial
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Review",
+        name: `${provider.name} Review`,
+        url: canonicalUrl(ctx, `/reviews/${slug}`),
+        itemReviewed: { "@type": "Organization", name: provider.name },
+        author: { "@type": "Organization", "@id": `${ctx.origin}/#organization`, name: "HRT Women", url: ctx.origin },
+        publisher: { "@type": "Organization", "@id": `${ctx.origin}/#organization`, name: "HRT Women" },
+        dateModified: latestUpdate(review.updatedAt),
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: String(editorial.score),
+          bestRating: "10",
+          worstRating: "1",
+        },
+        reviewBody: review.finalVerdict.replace(/<[^>]+>/g, ""),
+        positiveNotes: {
+          "@type": "ItemList",
+          itemListElement: review.pros.map((p, i) => ({ "@type": "ListItem", position: i + 1, name: p })),
+        },
+        negativeNotes: {
+          "@type": "ItemList",
+          itemListElement: review.cons.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c })),
+        },
+      }
+    : null;
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -319,6 +353,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewArticleSchema) }} />
+      {editorialReviewSchema && (
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(editorialReviewSchema) }} />
+      )}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -660,6 +697,9 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             ))}
           </ul>
         </Section>
+
+        {/* Counted, dated summary of review themes (Trustpilot + BBB) */}
+        <CustomerSentiment providerId={provider.id} providerName={provider.name} />
 
         {/* Trustpilot Reviews */}
         {(provider.trustpilotReviews?.length ?? 0) > 0 && (

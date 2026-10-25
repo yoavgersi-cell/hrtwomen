@@ -16,6 +16,43 @@ interface ComparisonCardProduct {
   ratingLabel: string;
   starRating?: number;
   badge?: string;
+  /** Visible Trustpilot line (text only - deliberately no rating markup). */
+  trustpilotRating?: string;
+  trustpilotReviewCount?: string;
+}
+
+function TrustpilotLine({
+  rating,
+  count,
+  className = "",
+  stacked = false,
+}: {
+  rating?: string;
+  count?: string;
+  className?: string;
+  /** Two centered lines (narrow desktop rating column). */
+  stacked?: boolean;
+}) {
+  if (!rating || !count) return null;
+  if (stacked)
+    return (
+      <p className={`text-center text-[11.5px] leading-tight text-gray-600 ${className}`}>
+        <span className="whitespace-nowrap">
+          <span className="font-bold text-[#00B67A]">★</span>{" "}
+          <span className="font-semibold text-[#191919]">{rating}</span> on Trustpilot
+        </span>
+        <br />
+        <span className="whitespace-nowrap">{count} reviews</span>
+      </p>
+    );
+  return (
+    <p className={`flex items-center gap-1 text-[11.5px] text-gray-600 ${className}`}>
+      <span className="font-bold text-[#00B67A]">★</span>
+      <span>
+        <span className="font-semibold text-[#191919]">{rating}</span> on Trustpilot · {count} reviews
+      </span>
+    </p>
+  );
 }
 
 interface ComparisonCardProps {
@@ -87,7 +124,10 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
 
         {/* Column 3: Rating + CTA */}
         <div className="relative flex flex-col items-center justify-center gap-4 px-6 py-5 sm:w-[200px] sm:shrink-0">
-          <RatingBadge rating={product.rating} label={product.ratingLabel} starRating={product.starRating} />
+          <div className="flex flex-col items-center gap-1">
+            <RatingBadge rating={product.rating} label={product.ratingLabel} starRating={product.starRating} />
+            <TrustpilotLine rating={product.trustpilotRating} count={product.trustpilotReviewCount} stacked />
+          </div>
           <div className="relative w-full">
             {showBubble && <SocialProofBubble number={providerVisitStat(product.id)} text={`visited ${product.name} this month`} />}
             <ProviderCta
@@ -125,6 +165,8 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
           </div>
           <RatingBadge rating={product.rating} label={product.ratingLabel} starRating={product.starRating} />
         </div>
+
+        <TrustpilotLine rating={product.trustpilotRating} count={product.trustpilotReviewCount} className="mt-2" />
 
         {/* Tagline */}
         <p className="mt-3 text-[14px] font-semibold text-[#1A1A1A]">{product.tagline}</p>
