@@ -5,6 +5,7 @@ import { HOW_TO_GET_HRT_ONLINE } from "./articles/how-to-get-hrt-online";
 import { HRT_BLACK_BOX_WARNING } from "./articles/hrt-black-box-warning";
 import { PROGESTERONE_GUIDE } from "./articles/progesterone-guide";
 import { ESTROGEN_PATCH_VS_PILL } from "./articles/estrogen-patch-vs-pill";
+import { ONLINE_HRT_COST } from "./articles/online-hrt-cost";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -872,6 +873,7 @@ export const hrtConfig: SiteConfig = {
     MENOPAUSE_COMPLETE_GUIDE,
     HOW_TO_GET_HRT_ONLINE,
     HRT_BLACK_BOX_WARNING,
+    ONLINE_HRT_COST,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -1160,7 +1162,7 @@ export const hrtConfig: SiteConfig = {
       category: "Provider Guides",
       readTime: "6 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-06",
+      updatedAt: "2026-10-25",
       heroColor: "#FCE4EC",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1172,7 +1174,7 @@ export const hrtConfig: SiteConfig = {
       sections: [
         {
           heading: "What Gala charges for menopause HRT",
-          body: `<div class="qa"><strong>The short answer</strong>Gala advertises its hormone therapy plan <strong>from about $79 a month</strong>, paid in cash with no insurance involved. Third-party reviews that walked through the checkout report a lower entry point for pills (<strong>from $69 a month, billed $207 every 12 weeks</strong>) and a higher one for patches (<strong>from $99 a month, billed $297 every 12 weeks</strong>). The fee covers the clinician, ongoing check-ins and dose adjustments, the medication and shipping. Prices move with promotions, so the number on Gala's checkout is the one that counts.</div><p>We have seen Gala's starting price quoted as both $69 and $79 in different places, and the explanation is most likely the route: the cheaper figure is for estradiol pills and the advertised "from $79" is the headline. Gala's HRT sits on the same site as its GLP-1 weight-loss program (galaglp1.com/hormone-health), and those GLP-1 prices ($149 and up) are a separate product. If a page quotes you three figures, check that you are reading the hormone health plan.</p>`,
+          body: `<div class="qa"><strong>The short answer</strong>Gala advertises its hormone therapy plan <strong>from about $79 a month</strong>, paid in cash with no insurance involved. Third-party reviews that walked through the checkout report a lower entry point for pills (<strong>from $69 a month, billed $207 every 12 weeks</strong>) and a higher one for patches (<strong>from $99 a month, billed $297 every 12 weeks</strong>). The fee covers the clinician, ongoing check-ins and dose adjustments, the medication and shipping. Prices move with promotions, so the number on Gala's checkout is the one that counts.</div><table><tr><th>Gala HRT plan</th><th>Per month</th><th>Billing reported</th><th>First year</th></tr><tr><td>Advertised starting price</td><td>From $79</td><td>Monthly</td><td>About $948</td></tr><tr><td>Estradiol pill plan (third-party reports)</td><td>From $69</td><td>$207 every 12 weeks</td><td>About $828-$897</td></tr><tr><td>Estradiol patch plan (third-party reports)</td><td>From $99</td><td>$297 every 12 weeks</td><td>About $1,188-$1,287</td></tr><tr><td>What every plan includes</td><td colspan="3">US-licensed clinician, messaging, check-ins, dose adjustments, medication (estradiol, progesterone, vaginal estradiol as prescribed) and shipping. No insurance billing.</td></tr></table><p>We have seen Gala's starting price quoted as both $69 and $79 in different places, and the explanation is most likely the route: the cheaper figure is for estradiol pills and the advertised "from $79" is the headline. Gala's HRT sits on the same site as its GLP-1 weight-loss program (galaglp1.com/hormone-health), and those GLP-1 prices ($149 and up) are a separate product. If a page quotes you three figures, check that you are reading the hormone health plan.</p><p>Compare every provider's prices in one place in <a href="/articles/online-hrt-cost">how much HRT costs online</a>.</p>`,
         },
         {
           heading: "What the monthly fee covers, and what to ask about",
@@ -1259,7 +1261,7 @@ export const hrtConfig: SiteConfig = {
       sections: [
         {
           heading: "Winona's prices, treatment by treatment",
-          body: `<div class="qa"><strong>The short answer</strong>Winona is self-pay and priced per treatment. At listed starting prices, <strong>progesterone capsules are about $39/month</strong>, <strong>estradiol tablets about $54</strong>, the <strong>estrogen body cream about $89</strong> (also about $89 in the version with progesterone), <strong>vaginal estrogen cream about $89</strong> and the <strong>estrogen patch about $149</strong>. Every subscription includes the physician's review, unlimited messaging and follow-ups, and free shipping. Winona does not take insurance, but HSA and FSA cards work.</div><table><tr><th>Treatment</th><th>Listed from</th><th>Per year at that price</th></tr><tr><td>Progesterone capsules</td><td>$39/mo</td><td>$468</td></tr><tr><td>Estradiol tablets</td><td>$54/mo</td><td>$648</td></tr><tr><td>Estrogen body cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen body cream with progesterone</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Vaginal estrogen cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen patch</td><td>$149/mo</td><td>$1,788</td></tr><tr><td>Blossom arousal cream (non-HRT)</td><td>$79 per order</td><td>-</td></tr></table><p>The $39 and $89 figures match what we have tracked since launch; the $54, $149 and $79 figures come from Winona's product pages as shown in search results and from third-party reviews, because Winona's site could not be loaded directly. "From" means the lowest dose or plan, so a higher dose can cost more, and promotions change. Your checkout is the final word.</p>`,
+          body: `<div class="qa"><strong>The short answer</strong>Winona is self-pay and priced per treatment. At listed starting prices, <strong>progesterone capsules are about $39/month</strong>, <strong>estradiol tablets about $54</strong>, the <strong>estrogen body cream about $89</strong> (also about $89 in the version with progesterone), <strong>vaginal estrogen cream about $89</strong> and the <strong>estrogen patch about $149</strong>. Every subscription includes the physician's review, unlimited messaging and follow-ups, and free shipping. Winona does not take insurance, but HSA and FSA cards work.</div><table><tr><th>Treatment</th><th>Listed from</th><th>Per year at that price</th></tr><tr><td>Progesterone capsules</td><td>$39/mo</td><td>$468</td></tr><tr><td>Estradiol tablets</td><td>$54/mo</td><td>$648</td></tr><tr><td>Estrogen body cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen body cream with progesterone</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Vaginal estrogen cream</td><td>$89/mo</td><td>$1,068</td></tr><tr><td>Estrogen patch</td><td>$149/mo</td><td>$1,788</td></tr><tr><td>Blossom arousal cream (non-HRT)</td><td>$79 per order</td><td>-</td></tr></table><p>The $39 and $89 figures match what we have tracked since launch; the $54, $149 and $79 figures come from Winona's product pages as shown in search results and from third-party reviews, because Winona's site could not be loaded directly. "From" means the lowest dose or plan, so a higher dose can cost more, and promotions change. Your checkout is the final word.</p><p>Compare every provider's prices in one place in <a href="/articles/online-hrt-cost">how much HRT costs online</a>.</p>`,
         },
         {
           heading: "What a typical Winona plan costs per month",
@@ -1343,7 +1345,7 @@ export const hrtConfig: SiteConfig = {
       sections: [
         {
           heading: "What Midi Health costs, in one paragraph",
-          body: `<div class="qa"><strong>The short answer</strong>Midi is a per-visit clinic, not a subscription. With <strong>in-network insurance</strong> (most PPO plans) you pay your usual specialist copay, coinsurance or deductible; Midi says patients pay <strong>about $50 per visit on average</strong>. <strong>Without insurance</strong> the first visit is <strong>$250</strong> and follow-ups are <strong>$150</strong>. Medication goes to your own pharmacy and is paid through your drug coverage or at the pharmacy's cash price. Midi does <strong>not bill Medicare</strong>.</div><p>That makes Midi's cost harder to predict than a flat subscription and, for many insured women, lower. The rest of this guide shows where the money goes and when the math favors Midi over a cash-pay service.</p>`,
+          body: `<div class="qa"><strong>The short answer</strong>Midi is a per-visit clinic, not a subscription. With <strong>in-network insurance</strong> (most PPO plans) you pay your usual specialist copay, coinsurance or deductible; Midi says patients pay <strong>about $50 per visit on average</strong>. <strong>Without insurance</strong> the first visit is <strong>$250</strong> and follow-ups are <strong>$150</strong>. Medication goes to your own pharmacy and is paid through your drug coverage or at the pharmacy's cash price. Midi does <strong>not bill Medicare</strong>.</div><p>That makes Midi's cost harder to predict than a flat subscription and, for many insured women, lower. The rest of this guide shows where the money goes and when the math favors Midi over a cash-pay service.</p><p>Compare every provider's prices in one place in <a href="/articles/online-hrt-cost">how much HRT costs online</a>.</p>`,
         },
         {
           heading: "The insurance path: what you actually pay",
