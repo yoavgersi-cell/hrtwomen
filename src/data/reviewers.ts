@@ -220,11 +220,51 @@ const REVIEWED_LATER: Record<string, PageReview> = {
   "/articles/midi-cost": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
 };
 
+// 2026-10-25: second full-site review by Francheska Capistrano (operator-
+// confirmed) - every content page carrying the review bar on that date,
+// including the pages published or substantially updated since Oct 6 (the
+// menopause pillar, how-to-get-HRT-online, black box explainer, Winona/Midi
+// legit pages, and the rewritten progesterone and patch-vs-pill guides).
+// Applied last, so it supersedes the earlier dates for these paths.
+const REVIEWED_2026_10_25: string[] = [
+  "/",
+  "/reviews",
+  "/articles",
+  "/how-we-rank",
+  "/reviews/winona",
+  "/reviews/gala",
+  "/reviews/midi",
+  "/winona-vs-gala",
+  "/winona-vs-midi",
+  "/gala-vs-midi",
+  "/articles/menopause-complete-guide",
+  "/articles/how-to-get-hrt-online",
+  "/articles/hrt-black-box-warning-removed",
+  "/articles/perimenopause-symptoms",
+  "/articles/is-hrt-safe",
+  "/articles/estrogen-patch-vs-pill",
+  "/articles/bioidentical-hormones-explained",
+  "/articles/best-online-hrt-providers-compared",
+  "/articles/what-is-hrt",
+  "/articles/hrt-for-perimenopause",
+  "/articles/progesterone-side-effects",
+  "/articles/gala-cost",
+  "/articles/is-gala-legit",
+  "/articles/is-winona-legit",
+  "/articles/is-midi-legit",
+  "/articles/winona-cost",
+  "/articles/winona-products",
+  "/articles/midi-cost",
+];
+
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(
     REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }]),
   ),
   ...REVIEWED_LATER,
+  ...Object.fromEntries(
+    REVIEWED_2026_10_25.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-25" }]),
+  ),
 };
 
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
