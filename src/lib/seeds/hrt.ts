@@ -6,6 +6,7 @@ import { HRT_BLACK_BOX_WARNING } from "./articles/hrt-black-box-warning";
 import { PROGESTERONE_GUIDE } from "./articles/progesterone-guide";
 import { ESTROGEN_PATCH_VS_PILL } from "./articles/estrogen-patch-vs-pill";
 import { ONLINE_HRT_COST } from "./articles/online-hrt-cost";
+import { GLP1_MENOPAUSE } from "./articles/glp1-menopause";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -874,6 +875,7 @@ export const hrtConfig: SiteConfig = {
     HOW_TO_GET_HRT_ONLINE,
     HRT_BLACK_BOX_WARNING,
     ONLINE_HRT_COST,
+    GLP1_MENOPAUSE,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
