@@ -94,6 +94,36 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
       answer:
         "Winona prescribes hormone therapy only after a physician reviews your medical history, which is the key safety step. HRT itself carries real risks - including blood clots, stroke and breast-cancer considerations - and is not right for everyone, so answer the intake completely and ask your doctor about side effects such as breast tenderness, bloating, spotting or (with progesterone) drowsiness.",
     },
+    {
+      question: "What is Winona?",
+      answer:
+        "Winona (bywinona.com) is a US telehealth company for perimenopause and menopause care. You complete an online medical questionnaire, a board-certified physician licensed in your state reviews it, and if hormone therapy is appropriate your treatment ships to your door. There is no video visit; ongoing care runs through unlimited secure messaging, billed as a monthly self-pay subscription.",
+    },
+    {
+      question: "Does Winona have an estrogen patch?",
+      answer:
+        "Yes. Winona prescribes an FDA-approved estradiol patch, listed from about $149/month at our last check. It also offers FDA-approved estradiol tablets (from about $54/month) and a compounded estrogen body cream (from about $89/month). A Winona physician decides which form suits your history.",
+    },
+    {
+      question: "Does Winona sell vaginal estrogen cream?",
+      answer:
+        "Yes. Winona's vaginal estrogen cream, listed from about $89/month, treats vaginal dryness, painful sex and urinary symptoms of menopause. Winona describes its active ingredient as estradiol; ask your physician whether your prescription is an FDA-approved product or compounded.",
+    },
+    {
+      question: "Is Winona's estrogen body cream FDA-approved?",
+      answer:
+        "No. Winona's Estrogen Body Cream (with or without progesterone, from about $89/month) is a compounded bi-est cream made in Winona's own compounding pharmacies, so it is not FDA-approved. Winona's estradiol tablets, estradiol patch and progesterone capsules are FDA-approved products.",
+    },
+    {
+      question: "What is Winona Blossom cream?",
+      answer:
+        "Blossom is Winona's prescription arousal cream (about $79 per order). It combines sildenafil - the active ingredient in Viagra - with pentoxifylline and is applied to the vulvar area before intimacy to increase blood flow and sensitivity. It is pharmacy-prepared, not an FDA-approved product, and it is not hormone therapy; for dryness or pain, vaginal estrogen is the evidence-based treatment.",
+    },
+    {
+      question: "What do Winona patient reviews say?",
+      answer:
+        "Winona held a 4.6 rating from 8,631 Trustpilot reviews when we checked on October 4, 2026. Recent reviewers mostly praised symptom relief (fewer night sweats and less vaginal dryness), responsive doctors and easy home delivery; the complaints we found were about billing, cancellations and shipping rather than the quality of care. Its BBB profile showed a B rating (not accredited) on October 19, 2026.",
+    },
   ],
   gala: [
     {
@@ -105,6 +135,21 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
       question: "What hormone therapy does Gala offer?",
       answer:
         "Gala prescribes estradiol as a pill or patch, oral or vaginal progesterone, and vaginal estradiol, after a review by a US-licensed clinician. Its site carries a compounded-medication disclaimer, so ask whether your product is FDA-approved or compounded.",
+    },
+    {
+      question: "What is Gala menopause care?",
+      answer:
+        "Gala Health is a US telehealth service whose menopause HRT plan is advertised from $79/month. A US-licensed clinician reviews your health history online, and the plan includes estradiol (pill or patch) and progesterone, with check-ins, dose adjustments and shipping in one flat price. Gala also runs a separate GLP-1 weight-loss program.",
+    },
+    {
+      question: "What do Gala HRT reviews say?",
+      answer:
+        "Gala held a 4.6 rating from 4,199 Trustpilot reviews when we checked on October 4, 2026 - a score that covers all of Gala's business, including its larger weight-loss program. Recent reviewers praised the quick sign-up, communication and price; slow shipping was the recurring complaint. Its BBB profile showed a C- rating (not accredited, 37 complaints in three years) on October 19, 2026.",
+    },
+    {
+      question: "Is Gala hormone therapy FDA-approved?",
+      answer:
+        "Not confirmed. Gala's site carries a compounded-medication disclaimer, and sources disagree on whether its HRT products are FDA-approved or compounded. Before you subscribe, ask Gala which estradiol and progesterone product you would receive and whether it is FDA-approved.",
     },
   ],
   midi: [
@@ -122,6 +167,26 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
       question: "Is Midi Health available in Canada?",
       answer:
         "No. Midi Health serves patients in the United States; it is not a telehealth option for people living in Canada.",
+    },
+    {
+      question: "What is Midi Health?",
+      answer:
+        "Midi Health is a US virtual clinic for perimenopause and menopause. Care happens over video with nurse practitioners and certified nurse midwives trained in midlife women's health, it bills most commercial PPO insurance plans, and prescriptions - hormone therapy, non-hormonal options and, in some states, testosterone - go to the pharmacy you choose.",
+    },
+    {
+      question: "How much does Midi Health cost per month?",
+      answer:
+        "Midi has no monthly membership fee - you pay per visit plus your medication. With in-network PPO insurance, Midi says patients pay about $50 per visit on average; self-pay is about $250 for the first visit and $150 for follow-ups. Medication is priced by your pharmacy and drug plan, so generic estradiol and progesterone are often inexpensive with coverage.",
+    },
+    {
+      question: "What do Midi Health reviews say?",
+      answer:
+        "Midi held a 4.1 rating from 1,695 Trustpilot reviews when we checked on October 4, 2026. Recent reviewers most often said they felt listened to and that clinicians explained their options thoroughly. It is accredited by the Better Business Bureau.",
+    },
+    {
+      question: "What are the best Midi Health alternatives?",
+      answer:
+        "If you don't have PPO insurance or don't want video visits, the main alternatives are Winona (physician-led, no appointment, self-pay per product with medication included) and Gala (one flat monthly price, advertised from $79, with medication included). Midi is usually the better fit if you have commercial PPO coverage or want a face-to-face conversation.",
     },
   ],
 };
