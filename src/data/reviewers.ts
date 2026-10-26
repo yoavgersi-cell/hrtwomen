@@ -259,6 +259,16 @@ const REVIEWED_2026_10_25: string[] = [
   "/articles/online-hrt-cost",
 ];
 
+// 2026-10-26: third full-site review by Francheska Capistrano (operator-
+// confirmed) - every content page carrying the review bar on that date,
+// including the new GLP-1s and menopause pillar and the pages updated that
+// day (provider-review FAQs, providers comparison, bioidentical and
+// perimenopause guides). Applied last, so it supersedes earlier dates.
+const REVIEWED_2026_10_26: string[] = [
+  ...REVIEWED_2026_10_25,
+  "/articles/glp1-menopause",
+];
+
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(
     REVIEWED_2026_10_04.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-04" }]),
@@ -266,6 +276,9 @@ export const REVIEW_LOG: Record<string, PageReview> = {
   ...REVIEWED_LATER,
   ...Object.fromEntries(
     REVIEWED_2026_10_25.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-25" }]),
+  ),
+  ...Object.fromEntries(
+    REVIEWED_2026_10_26.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-26" }]),
   ),
 };
 
