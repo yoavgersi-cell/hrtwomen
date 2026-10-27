@@ -94,7 +94,9 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         or a head-to-head like{" "}
         <Link href="/winona-vs-gala" className="font-semibold text-[#A8285E] hover:underline">
           Winona vs Gala
-        </Link>.
+        </Link>. For the full picture, start with our{" "}
+        <Link href="/articles/menopause-complete-guide" className="font-semibold text-[#A8285E] hover:underline">complete guide to menopause</Link> or the step-by-step{" "}
+        <Link href="/articles/how-to-get-hrt-online" className="font-semibold text-[#A8285E] hover:underline">guide to getting HRT online</Link>.
       </p>
 
       {/* Slot directly under the intro (homepage product carousel) */}
@@ -178,7 +180,12 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         <Link href="/articles/what-is-hrt" className="font-semibold text-[#A8285E] hover:underline">
           what is HRT?
         </Link>{" "}
-        - our plain-English guide to hormone replacement therapy.
+        - our plain-English guide to hormone replacement therapy. Weighing weight-loss medicines as
+        well? See{" "}
+        <Link href="/articles/glp1-menopause" className="font-semibold text-[#A8285E] hover:underline">
+          GLP-1s and menopause
+        </Link>{" "}
+        for how Ozempic, Wegovy and Zepbound fit alongside HRT.
       </p>
       <TreatmentTable rows={treatmentRows} />
       <p className="mb-8 text-[13.5px] text-gray-500">
@@ -287,10 +294,13 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         To compare fairly, look at the <strong>total monthly cost for the care and medication you would
         actually use</strong> - including visits, membership, pharmacy and shipping - not just the
         lowest advertised starting price. Our{" "}
-        <Link href="/" className="font-semibold text-[#A8285E] hover:underline">
-          comparison of top providers
+        <Link href="/articles/online-hrt-cost" className="font-semibold text-[#A8285E] hover:underline">
+          online HRT cost comparison
         </Link>{" "}
-        is built to make that easier. Each provider confirms which states it serves during sign-up.
+        does that math for Winona, Gala and Midi Health - see also{" "}
+        <Link href="/articles/winona-cost" className="font-semibold text-[#A8285E] hover:underline">Winona&apos;s cost</Link>,{" "}
+        <Link href="/articles/gala-cost" className="font-semibold text-[#A8285E] hover:underline">Gala&apos;s cost</Link> and{" "}
+        <Link href="/articles/midi-cost" className="font-semibold text-[#A8285E] hover:underline">Midi Health&apos;s cost with insurance</Link>. Each provider confirms which states it serves during sign-up.
       </p>
 
       <hr className="mb-8 border-gray-200" />
@@ -313,7 +323,8 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         risk-free and none should promise to stop aging. We break this down in{" "}
         <Link href="/articles/is-hrt-safe" className="font-semibold text-[#A8285E] hover:underline">
           is HRT safe?
-        </Link>.
+        </Link>, and explain the FDA&apos;s 2025-2026 label changes in{" "}
+        <Link href="/articles/hrt-black-box-warning-removed" className="font-semibold text-[#A8285E] hover:underline">the HRT black box warning, explained</Link>.
       </p>
 
       <hr className="mb-8 border-gray-200" />
@@ -370,7 +381,9 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         Yes. Estrogen and progesterone therapies are prescription-only for safety reasons. Legitimate
         telehealth providers make this straightforward - a licensed clinician reviews your history
         before prescribing. Any site offering hormones with &quot;no prescription needed&quot; is a red
-        flag.
+        flag. Our guide on{" "}
+        <Link href="/articles/how-to-get-hrt-online" className="font-semibold text-[#A8285E] hover:underline">how to get HRT online</Link> walks through the intake,
+        eligibility and costs.
       </p>
 
       <h3 className="mb-2 text-[18px] font-bold text-[#191919]">Are bioidentical hormones safer?</h3>
@@ -395,7 +408,10 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         <Link href="/articles" className="font-semibold text-[#A8285E] hover:underline">
           HRT guides
         </Link>{" "}
-        are for.
+        are for. We checked each provider&apos;s licensing, reviews and BBB record in{" "}
+        <Link href="/articles/is-winona-legit" className="font-semibold text-[#A8285E] hover:underline">Is Winona legit?</Link>,{" "}
+        <Link href="/articles/is-gala-legit" className="font-semibold text-[#A8285E] hover:underline">Is Gala legit?</Link> and{" "}
+        <Link href="/articles/is-midi-legit" className="font-semibold text-[#A8285E] hover:underline">Is Midi Health legit?</Link>
       </p>
 
       <hr className="mb-8 border-gray-200" />

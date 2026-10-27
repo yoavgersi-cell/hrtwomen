@@ -1236,6 +1236,37 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             </div>
           )}
 
+          {/* Provider question clusters - cost / legit / products guides for
+              both contenders, only for articles that exist in the config. */}
+          {(() => {
+            const cluster = (p: { id: string; name: string }) =>
+              [
+                { slug: `${p.id}-cost`, label: `How much does ${p.name} cost?` },
+                { slug: `is-${p.id}-legit`, label: `Is ${p.name} legit?` },
+                { slug: `${p.id}-products`, label: `What does ${p.name} prescribe?` },
+              ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
+            const cols = [p1, p2].map((p) => ({ p, links: cluster(p) })).filter((c) => c.links.length);
+            if (!cols.length) return null;
+            return (
+              <div className="mt-8 grid gap-4 sm:grid-cols-2">
+                {cols.map(({ p, links }) => (
+                  <div key={p.id} className="rounded-xl border border-gray-200 bg-white p-5">
+                    <h3 className="mb-2 text-[15px] font-bold text-[#191919]">More on {p.name}</h3>
+                    <ul className="space-y-1.5 text-[14px]">
+                      {links.map((l) => (
+                        <li key={l.slug}>
+                          <Link href={hubLink(ctx, `/articles/${l.slug}`)} className="font-medium text-[#A8285E] hover:underline">
+                            {l.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
+
           {/* Related links */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-4 text-[13px]">
             <Link href={hubLink(ctx, `/reviews/${p1.id}`)} className="font-semibold text-[#A8285E] hover:underline">
@@ -1249,6 +1280,14 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <Link href={hubLink(ctx, "/")} className="font-semibold text-[#A8285E] hover:underline">
               Compare All Providers
             </Link>
+            {(config.articles ?? []).some((a) => a.slug === "online-hrt-cost") && (
+              <>
+                <span className="text-gray-500">|</span>
+                <Link href={hubLink(ctx, "/articles/online-hrt-cost")} className="font-semibold text-[#A8285E] hover:underline">
+                  Online HRT Cost Compared
+                </Link>
+              </>
+            )}
           </div>
 
           <SourcesMethodology

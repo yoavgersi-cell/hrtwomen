@@ -1,3 +1,4 @@
+import { relatedArticleSlugs } from "@/lib/article-topics";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock, ArrowLeft, ArrowRight, Check } from "lucide-react";
@@ -170,15 +171,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     })
     .filter(Boolean) as Array<{ id: string; name: string; logo: string; tagline: string; affiliateUrl: string; rating: number }>;
 
-  // Related articles: same category first, then others, exclude self, max 3
-  const relatedArticles = [
-    ...articles.filter(
-      (a) => a.slug !== slug && a.category === article.category
-    ),
-    ...articles.filter(
-      (a) => a.slug !== slug && a.category !== article.category
-    ),
-  ].slice(0, 3);
+  // Related articles: topical neighbours from the topic map (most shared
+  // topics first); falls back to same-category articles for unmapped slugs.
+  const topical = relatedArticleSlugs(slug, articles.map((a) => a.slug))
+    .map((s) => articles.find((a) => a.slug === s))
+    .filter((a): a is (typeof articles)[number] => !!a);
+  const relatedArticles = (
+    topical.length
+      ? topical
+      : [
+          ...articles.filter((a) => a.slug !== slug && a.category === article.category),
+          ...articles.filter((a) => a.slug !== slug && a.category !== article.category),
+        ]
+  ).slice(0, 4);
 
   const formattedDate = new Date(latestUpdate(article.updatedAt)).toLocaleDateString(
     "en-US",
@@ -580,7 +585,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               <h2 className="mb-5 text-[18px] font-bold text-[#191919]">
                 Related Articles
               </h2>
-              <div className="grid gap-4 sm:grid-cols-3">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {relatedArticles.map((ra) => (
                   <Link
                     key={ra.slug}
