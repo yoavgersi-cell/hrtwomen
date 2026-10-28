@@ -387,7 +387,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               (featured snippets / AI overviews lift lists like this whole). */}
           {article.keyTakeaways && article.keyTakeaways.length > 0 && (
             <div className="mb-8 rounded-xl border border-[#C2366E]/15 bg-[#F4F8FB] p-5 sm:p-6">
-              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#A8285E]">Key takeaways</p>
+              <p className="mb-3 text-[12px] font-bold uppercase tracking-wider text-[#A8285E]">{article.takeawaysTitle ?? "Key takeaways"}</p>
               <ul className="space-y-2">
                 {article.keyTakeaways.map((t) => (
                   <li key={t} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-gray-800">
