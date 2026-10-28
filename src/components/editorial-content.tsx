@@ -190,7 +190,10 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
       <TreatmentTable rows={treatmentRows} />
       <p className="mb-8 text-[13.5px] text-gray-500">
         This table is general information, not medical advice. What&apos;s right for you depends on your
-        health history and a clinician&apos;s judgment. Learn more in{" "}
+        health history and a clinician&apos;s judgment. For dryness and urinary symptoms, see our{" "}
+        <Link href="/articles/vaginal-estrogen" className="font-semibold text-[#A8285E] hover:underline">
+          vaginal estrogen guide
+        </Link>. Learn more in{" "}
         <Link href="/articles/bioidentical-hormones-explained" className="font-semibold text-[#A8285E] hover:underline">
           bioidentical hormones explained
         </Link>{" "}
