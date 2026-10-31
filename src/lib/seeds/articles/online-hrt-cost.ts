@@ -90,7 +90,7 @@ export const ONLINE_HRT_COST: ArticleData = {
     },
     {
       heading: "How much do testosterone and other add-ons cost?",
-      body: `<p><strong>Of the three providers, only Midi Health prescribes testosterone for women - in some states, self-pay, at about $45 for a 30-day supply to $100+ for 90 days per Midi, plus any extra labs and visits needed because it's a controlled substance.</strong> Winona sells non-HRT add-ons such as its Blossom arousal cream (listed at about $79 per order) - these aren't hormone therapy and are optional. There is no FDA-approved testosterone product for women in the US; see our <a href="/articles/menopause-complete-guide">complete menopause guide</a> for when testosterone is recommended.</p>`,
+      body: `<p><strong>Of the three providers, only Midi Health prescribes testosterone for women - in some states, self-pay, at about $45 for a 30-day supply to $100+ for 90 days per Midi, plus any extra labs and visits needed because it's a controlled substance.</strong> Winona sells non-HRT add-ons such as its Blossom arousal cream (listed at about $79 per order) - these aren't hormone therapy and are optional. There is no FDA-approved testosterone product for women in the US; see our <a href="/articles/testosterone-for-women">testosterone for women guide</a> for when it is recommended and how it is monitored.</p>`,
     },
     {
       heading: "Is Gala cheaper than Winona?",

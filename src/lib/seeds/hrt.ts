@@ -8,6 +8,7 @@ import { ESTROGEN_PATCH_VS_PILL } from "./articles/estrogen-patch-vs-pill";
 import { ONLINE_HRT_COST } from "./articles/online-hrt-cost";
 import { GLP1_MENOPAUSE } from "./articles/glp1-menopause";
 import { VAGINAL_ESTROGEN } from "./articles/vaginal-estrogen";
+import { TESTOSTERONE_FOR_WOMEN } from "./articles/testosterone-for-women";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -878,6 +879,7 @@ export const hrtConfig: SiteConfig = {
     ONLINE_HRT_COST,
     GLP1_MENOPAUSE,
     VAGINAL_ESTROGEN,
+    TESTOSTERONE_FOR_WOMEN,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -1386,7 +1388,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Blossom, minoxidil and the non-HRT add-ons",
-          body: `<p><strong>Blossom</strong> is Winona's prescription arousal cream (about $79 per order). It combines <strong>sildenafil</strong> (the active ingredient in Viagra) and <strong>pentoxifylline</strong>, both of which widen blood vessels, and is applied to the clitoral and vulvar area before intimacy to increase blood flow and sensitivity. There is no FDA-approved sildenafil cream for women; Blossom is a pharmacy-prepared prescription, and the evidence for it is far thinner than for HRT. Winona says not to use it if you are allergic to sildenafil, pentoxifylline or caffeine-containing products. If your main problem is dryness or pain, vaginal estrogen addresses that; Blossom does not.</p><p>Current HRT patients can also add a <strong>7% minoxidil hair serum</strong> for thinning hair, a non-hormonal treatment. Winona <strong>does not prescribe testosterone</strong>; if low libido is your main concern and you want that discussed, an insurance-based clinic such as <a href="/reviews/midi">Midi Health</a> prescribes it in selected cases.</p><p>Whatever you are prescribed, HRT carries real risks and is not right for everyone - see <a href="/articles/is-hrt-safe">is HRT safe?</a> - and a Winona physician decides what fits your history.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review, with real customer reviews</a></p><p class="cta-row"><a href="/articles/winona-cost">→ What Winona costs per month, product by product</a></p><p>Product details and prices are from Winona's product and help pages as surfaced in search at our last check and can change; confirm on Winona's site. This article is general information, not medical advice.</p>`,
+          body: `<p><strong>Blossom</strong> is Winona's prescription arousal cream (about $79 per order). It combines <strong>sildenafil</strong> (the active ingredient in Viagra) and <strong>pentoxifylline</strong>, both of which widen blood vessels, and is applied to the clitoral and vulvar area before intimacy to increase blood flow and sensitivity. There is no FDA-approved sildenafil cream for women; Blossom is a pharmacy-prepared prescription, and the evidence for it is far thinner than for HRT. Winona says not to use it if you are allergic to sildenafil, pentoxifylline or caffeine-containing products. If your main problem is dryness or pain, vaginal estrogen addresses that; Blossom does not.</p><p>Current HRT patients can also add a <strong>7% minoxidil hair serum</strong> for thinning hair, a non-hormonal treatment. Winona <strong>does not prescribe testosterone</strong> (see <a href="/articles/testosterone-for-women">testosterone for women</a> for the evidence); if low libido is your main concern and you want that discussed, an insurance-based clinic such as <a href="/reviews/midi">Midi Health</a> prescribes it in selected cases.</p><p>Whatever you are prescribed, HRT carries real risks and is not right for everyone - see <a href="/articles/is-hrt-safe">is HRT safe?</a> - and a Winona physician decides what fits your history.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review, with real customer reviews</a></p><p class="cta-row"><a href="/articles/winona-cost">→ What Winona costs per month, product by product</a></p><p>Product details and prices are from Winona's product and help pages as surfaced in search at our last check and can change; confirm on Winona's site. This article is general information, not medical advice.</p>`,
         },
       ],
     },
@@ -1422,7 +1424,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Does Midi Health prescribe testosterone, and what does it cost?",
-          body: `<p><strong>Yes, in selected cases and only in some states.</strong> The evidence-supported use of testosterone in women is for postmenopausal low sexual desire that causes distress. Insurance does not cover it at Midi: Midi puts creams and gels at <strong>about $45 for a 30-day supply to $100+ for 90 days</strong>. Because testosterone is a controlled substance, extra lab tests and visits may be needed, which add to the cost. There is no FDA-approved testosterone product for women in the US, so it is prescribed off-label at carefully adjusted doses. <a href="/reviews/winona">Winona</a> does not prescribe testosterone.</p>`,
+          body: `<p><strong>Yes, in selected cases and only in some states.</strong> The evidence-supported use of testosterone in women is for postmenopausal low sexual desire that causes distress. Insurance does not cover it at Midi: Midi puts creams and gels at <strong>about $45 for a 30-day supply to $100+ for 90 days</strong>. Because testosterone is a controlled substance, extra lab tests and visits may be needed, which add to the cost. There is no FDA-approved testosterone product for women in the US, so it is prescribed off-label at carefully adjusted doses (see our <a href="/articles/testosterone-for-women">guide to testosterone for women</a>). <a href="/reviews/winona">Winona</a> does not prescribe testosterone.</p>`,
         },
         {
           heading: "A worked first year at Midi",
