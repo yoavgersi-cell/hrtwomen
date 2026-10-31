@@ -21,6 +21,8 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "How to Get HRT Online", href: "/articles/how-to-get-hrt-online" },
       { label: "Online HRT Cost Compared", href: "/articles/online-hrt-cost" },
       { label: "GLP-1s and Menopause", href: "/articles/glp1-menopause" },
+      { label: "Vaginal Estrogen Guide", href: "/articles/vaginal-estrogen" },
+      { label: "Testosterone for Women", href: "/articles/testosterone-for-women" },
       { label: "HRT Black Box Warning Removed", href: "/articles/hrt-black-box-warning-removed" },
       { label: "What Is HRT?", href: "/articles/what-is-hrt" },
       { label: "HRT for Perimenopause", href: "/articles/hrt-for-perimenopause" },
