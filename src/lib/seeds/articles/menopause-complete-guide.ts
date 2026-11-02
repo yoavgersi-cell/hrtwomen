@@ -148,7 +148,7 @@ export const MENOPAUSE_COMPLETE_GUIDE: ArticleData = {
 <h3>Why hot flashes matter beyond comfort</h3>
 <p>Frequent, severe hot flashes are linked with poorer sleep, lower mood, reduced work productivity and lower quality of life. Research has also associated persistent, frequent vasomotor symptoms with markers of higher cardiovascular risk, although whether treating them changes that risk is not established. The practical point: hot flashes that disrupt your life are a legitimate medical problem with effective treatments, not something to wait out.</p>
 <h3>Most effective treatments</h3>
-<p>Hormone therapy is the most effective treatment, reducing hot flash frequency substantially in clinical trials. For women who can't or don't want to use hormones, fezolinetant, elinzanetant, certain antidepressants, gabapentin and oxybutynin are all evidence-based options, as are cognitive behavioural therapy and clinical hypnosis for how bothersome flashes feel. Each is covered below.</p>`,
+<p>Hormone therapy is the most effective treatment, reducing hot flash frequency substantially in clinical trials. For women who can't or don't want to use hormones, fezolinetant, elinzanetant, certain antidepressants, gabapentin and oxybutynin are all evidence-based options, as are cognitive behavioural therapy and clinical hypnosis for how bothersome flashes feel. Each is covered below. For every treatment option ranked against the October 2026 ACOG and ACP guidelines, see our <a href="/articles/hot-flashes-treatment">hot flash treatment guide</a>.</p>`,
     },
     {
       heading: "How does menopause affect sleep, mood and memory?",
@@ -299,7 +299,7 @@ export const MENOPAUSE_COMPLETE_GUIDE: ArticleData = {
 <p>Clonidine, a blood pressure medicine, has a small effect on hot flashes but more side effects (dry mouth, drowsiness, low blood pressure) than the options above, so it is used less often today.</p>
 <h3>How the options compare</h3>
 <table><tr><th>Medicine</th><th>How it's taken</th><th>Notable side effects / monitoring</th><th>Particularly suited to</th></tr><tr><td>Fezolinetant (Veozah)</td><td>Daily tablet</td><td>Liver tests at baseline and during the first 9 months</td><td>Women who want a targeted non-hormonal option</td></tr><tr><td>Elinzanetant (Lynkuet)</td><td>Daily capsule at bedtime</td><td>Drowsiness, headache, fatigue, dizziness; liver enzymes</td><td>Women with hot flashes and disrupted sleep</td></tr><tr><td>Paroxetine 7.5 mg, other SSRIs/SNRIs</td><td>Daily tablet</td><td>Nausea, sexual side effects; tamoxifen interactions (paroxetine, fluoxetine)</td><td>Hot flashes with low mood or anxiety</td></tr><tr><td>Gabapentin</td><td>Often at bedtime</td><td>Drowsiness, dizziness</td><td>Night sweats and sleep problems</td></tr><tr><td>Oxybutynin</td><td>Daily tablet</td><td>Dry mouth, constipation; caution with age</td><td>Hot flashes with overactive bladder</td></tr></table>
-<p>Non-hormonal medicines treat hot flashes but do not treat vaginal symptoms or protect bone the way estrogen does, so other treatments may be needed for those.</p>`,
+<p>Non-hormonal medicines treat hot flashes but do not treat vaginal symptoms or protect bone the way estrogen does, so other treatments may be needed for those. Our <a href="/articles/hot-flashes-treatment">hot flash treatment guide</a> compares Veozah and Lynkuet side by side, with effect sizes and side effects.</p>`,
     },
     {
       heading: "Which lifestyle changes and natural remedies actually help with menopause?",

@@ -362,7 +362,7 @@ export const TESTOSTERONE_FOR_WOMEN: ArticleData = {
 <h3>Can I buy testosterone without a prescription?</h3><p>Not legally in the US. Sellers offering it without a prescription are a safety risk; "testosterone boosters" sold as supplements aren't testosterone and aren't proven to help.</p>
 <h3>Does testosterone affect fertility or pregnancy?</h3><p>It must not be used in pregnancy because it can harm a developing fetus. Women who could become pregnant need reliable contraception.</p>
 <h3>Can I use testosterone without estrogen?</h3><p>Some trials studied testosterone without estrogen, and some women use it that way. But many women's desire also depends on treating estrogen-related symptoms, so the two are often combined.</p>
-<h3>Will it help my hot flashes?</h3><p>No. Testosterone isn't a treatment for hot flashes; estrogen-based HRT and non-hormonal medicines are.</p>`,
+<h3>Will it help my hot flashes?</h3><p>No. Testosterone isn't a treatment for hot flashes; estrogen-based HRT and non-hormonal medicines are - see <a href="/articles/hot-flashes-treatment">hot flash treatments ranked</a>.</p>`,
     },
     {
       heading: "Does testosterone cause weight gain in women?",

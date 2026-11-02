@@ -122,7 +122,7 @@ export const GLP1_MENOPAUSE: ArticleData = {
     {
       heading: "Do GLP-1 medications help hot flashes?",
       body: `<p><strong>They aren't approved or established as a treatment for hot flashes. Some women report fewer hot flashes as they lose weight - higher body weight is associated with more hot flashes in some research - but GLP-1s shouldn't be used in place of proven hot flash treatments.</strong></p>
-<p>The Menopause Society lists weight loss among the strategies that may help hot flashes in women with excess weight, but the effect is modest compared with dedicated treatments. For hot flashes, the evidence-based options are hormone therapy and the non-hormonal medicines fezolinetant (Veozah), elinzanetant (Lynkuet), certain antidepressants, gabapentin and oxybutynin, along with CBT and clinical hypnosis. Our <a href="/articles/menopause-complete-guide">complete menopause guide</a> covers them in detail.</p>`,
+<p>The Menopause Society lists weight loss among the strategies that may help hot flashes in women with excess weight, but the effect is modest compared with dedicated treatments. For hot flashes, the evidence-based options are hormone therapy and the non-hormonal medicines fezolinetant (Veozah), elinzanetant (Lynkuet), certain antidepressants, gabapentin and oxybutynin, along with CBT and clinical hypnosis. Our <a href="/articles/hot-flashes-treatment">hot flash treatment guide</a> ranks them all.</p>`,
     },
     {
       heading: "Can GLP-1 medications affect birth control or HRT pills?",

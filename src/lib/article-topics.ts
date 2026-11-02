@@ -13,6 +13,7 @@ const TOPICS: Record<string, string[]> = {
   "bioidentical-hormones-explained": ["treatments", "safety", "products"],
   "estrogen-patch-vs-pill": ["treatments", "products", "safety"],
   "progesterone-side-effects": ["treatments", "products", "perimenopause"],
+  "hot-flashes-treatment": ["treatments", "basics", "safety", "news", "pillar"],
   "testosterone-for-women": ["treatments", "safety", "news", "products"],
   "vaginal-estrogen": ["treatments", "products", "safety"],
   "glp1-menopause": ["weight", "treatments", "perimenopause", "news"],

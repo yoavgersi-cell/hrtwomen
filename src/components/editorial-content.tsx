@@ -362,7 +362,11 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         Systemic estrogen therapy is considered the most effective treatment for hot flashes and night
         sweats, but it is not suitable for everyone. Non-hormonal prescriptions can also help. The best
         choice depends on your health, symptoms and preferences - and it is one a licensed clinician
-        should make with you.
+        should make with you. See{" "}
+        <Link href="/articles/hot-flashes-treatment" className="font-semibold text-[#A8285E] hover:underline">
+          every hot flash treatment ranked
+        </Link>{" "}
+        under the October 2026 guidelines.
       </p>
 
       <h3 className="mb-2 text-[18px] font-bold text-[#191919]">Can I start HRT during perimenopause?</h3>

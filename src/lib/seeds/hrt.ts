@@ -9,6 +9,7 @@ import { ONLINE_HRT_COST } from "./articles/online-hrt-cost";
 import { GLP1_MENOPAUSE } from "./articles/glp1-menopause";
 import { VAGINAL_ESTROGEN } from "./articles/vaginal-estrogen";
 import { TESTOSTERONE_FOR_WOMEN } from "./articles/testosterone-for-women";
+import { HOT_FLASHES_TREATMENT } from "./articles/hot-flashes-treatment";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -880,6 +881,7 @@ export const hrtConfig: SiteConfig = {
     GLP1_MENOPAUSE,
     VAGINAL_ESTROGEN,
     TESTOSTERONE_FOR_WOMEN,
+    HOT_FLASHES_TREATMENT,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -904,7 +906,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "The most common symptoms",
-          body: `<p>Every woman's experience is different, but the symptoms clinicians hear about most include:</p><ul><li><strong>Irregular periods</strong> - cycles that become shorter, longer, heavier, lighter or skipped.</li><li><strong>Hot flashes and night sweats</strong> - sudden waves of heat, flushing and sweating (known as vasomotor symptoms).</li><li><strong>Sleep problems</strong> - trouble falling or staying asleep, often worsened by night sweats.</li><li><strong>Mood changes</strong> - irritability, anxiety or low mood, sometimes new for women who never experienced them before.</li><li><strong>Brain fog</strong> - trouble concentrating or finding words.</li><li><strong>Vaginal dryness and discomfort</strong> - and related urinary symptoms, which tend to persist or worsen over time (<a href="/articles/vaginal-estrogen">vaginal estrogen</a> is the main treatment).</li><li><strong>Changes in libido, joint aches and weight distribution</strong> - our sister site Treatments Hub has a separate guide to <a href="https://www.treatmentshub.com/weight-loss/articles/menopause-weight-gain">weight gain around menopause</a>, and our guide to <a href="/articles/glp1-menopause">GLP-1s and menopause</a> covers weight-loss medicines alongside HRT.</li></ul><p>Because many of these overlap with other conditions - thyroid problems, anemia, depression - it is worth having a clinician look at the whole picture rather than assuming everything is hormonal.</p>`,
+          body: `<p>Every woman's experience is different, but the symptoms clinicians hear about most include:</p><ul><li><strong>Irregular periods</strong> - cycles that become shorter, longer, heavier, lighter or skipped.</li><li><strong>Hot flashes and night sweats</strong> - sudden waves of heat, flushing and sweating (known as vasomotor symptoms); see <a href="/articles/hot-flashes-treatment">how to treat hot flashes</a>.</li><li><strong>Sleep problems</strong> - trouble falling or staying asleep, often worsened by night sweats.</li><li><strong>Mood changes</strong> - irritability, anxiety or low mood, sometimes new for women who never experienced them before.</li><li><strong>Brain fog</strong> - trouble concentrating or finding words.</li><li><strong>Vaginal dryness and discomfort</strong> - and related urinary symptoms, which tend to persist or worsen over time (<a href="/articles/vaginal-estrogen">vaginal estrogen</a> is the main treatment).</li><li><strong>Changes in libido, joint aches and weight distribution</strong> - our sister site Treatments Hub has a separate guide to <a href="https://www.treatmentshub.com/weight-loss/articles/menopause-weight-gain">weight gain around menopause</a>, and our guide to <a href="/articles/glp1-menopause">GLP-1s and menopause</a> covers weight-loss medicines alongside HRT.</li></ul><p>Because many of these overlap with other conditions - thyroid problems, anemia, depression - it is worth having a clinician look at the whole picture rather than assuming everything is hormonal.</p>`,
         },
         {
           heading: "Why hormone levels matter",
@@ -1122,7 +1124,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "What HRT treatment is used for",
-          body: `<p>Falling and fluctuating estrogen affects many parts of the body, which is why HRT therapy can help with a range of symptoms. The main ones it is used for are:</p><ul><li><strong>Hot flashes and night sweats</strong> - HRT is the most effective treatment available for these vasomotor symptoms.</li><li><strong>Sleep disruption</strong> - especially when night sweats keep waking you up.</li><li><strong>Vaginal dryness, discomfort and urinary symptoms</strong> - known as genitourinary syndrome of menopause (GSM), which tends to persist or worsen over time without treatment.</li><li><strong>Bone protection</strong> - systemic estrogen helps prevent the bone loss that speeds up after menopause.</li></ul><p>Some women also notice improvements in mood, joint aches or brain fog, but these respond less predictably, and they can have other causes worth checking. Our guide to <a href="/articles/perimenopause-symptoms">perimenopause symptoms</a> covers the full picture.</p>`,
+          body: `<p>Falling and fluctuating estrogen affects many parts of the body, which is why HRT therapy can help with a range of symptoms. The main ones it is used for are:</p><ul><li><strong>Hot flashes and night sweats</strong> - HRT is the most effective treatment available for these vasomotor symptoms (see <a href="/articles/hot-flashes-treatment">every hot flash treatment ranked</a>).</li><li><strong>Sleep disruption</strong> - especially when night sweats keep waking you up.</li><li><strong>Vaginal dryness, discomfort and urinary symptoms</strong> - known as genitourinary syndrome of menopause (GSM), which tends to persist or worsen over time without treatment.</li><li><strong>Bone protection</strong> - systemic estrogen helps prevent the bone loss that speeds up after menopause.</li></ul><p>Some women also notice improvements in mood, joint aches or brain fog, but these respond less predictably, and they can have other causes worth checking. Our guide to <a href="/articles/perimenopause-symptoms">perimenopause symptoms</a> covers the full picture.</p>`,
         },
         {
           heading: "Types of HRT: estrogen-only vs combined",
