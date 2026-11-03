@@ -212,6 +212,10 @@ const REVIEWED_2026_10_04: string[] = [
 
 // Pages published and reviewed after the full-site pass.
 const REVIEWED_LATER: Record<string, PageReview> = {
+  // 2026-11-03: the three October-November guides (operator-confirmed).
+  "/articles/vaginal-estrogen": { reviewer: "francheska-capistrano", reviewedAt: "2026-11-03" },
+  "/articles/testosterone-for-women": { reviewer: "francheska-capistrano", reviewedAt: "2026-11-03" },
+  "/articles/hot-flashes-treatment": { reviewer: "francheska-capistrano", reviewedAt: "2026-11-03" },
   // 2026-10-06: the five provider brand pages (operator-confirmed).
   "/articles/gala-cost": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
   "/articles/is-gala-legit": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-06" },
