@@ -27,7 +27,7 @@ export default async function AboutPage() {
     url: "https://www.hrtwomen.com",
     employee: [
       ...REVIEWERS.map(reviewerPersonSchema),
-      ...experts.map((e) => ({
+      ...experts.filter((e) => e.id !== "editorial").map((e) => ({
         "@type": "Person",
         name: e.credentials ? `${e.name}, ${e.credentials}` : e.name,
         jobTitle: e.role,

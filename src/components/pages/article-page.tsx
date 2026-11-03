@@ -27,6 +27,35 @@ const ARTICLE_SEO_OVERRIDES: Record<string, { title: string; description: string
 
 const ARTICLE_QUICK_ANSWERS: Record<string, string> = {};
 
+// FAQ answer = the section's answer-first lead (the "short answer" box or the
+// opening paragraph), as clean text. Answer engines quote short, direct
+// answers; the whole section body (tables flattened into run-on text) made a
+// poor, glued-together answer. If the lead is very short, the next block is
+// added so the answer stands on its own.
+function htmlToText(html: string): string {
+  return html
+    .replace(/<\/(p|li|td|th|h3|div|tr)>/gi, " ")
+    .replace(/<br\s*\/?>/gi, " ")
+    .replace(/<[^>]*>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/&nbsp;/g, " ")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;|&rsquo;/g, "'")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function faqAnswerText(body: string): string {
+  const blocks = body.match(/<div class="qa">[\s\S]*?<\/div>|<p>[\s\S]*?<\/p>/gi) ?? [];
+  const [first, second] = blocks;
+  if (!first) return htmlToText(body);
+  let text = htmlToText(first.replace(/<strong>The short answer<\/strong>/i, ""));
+  if (text.length < 140 && second) text = `${text} ${htmlToText(second)}`;
+  return text;
+}
+
 export async function articleMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
   const config = await getConfig(ctx.vertical);
   const article = (config.articles ?? []).find((a) => a.slug === slug);
@@ -208,11 +237,19 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
     articleSection: article.category,
-    author: author
+    // The byline is the editorial team, not a person - typing it as Person
+    // would be false. Only a real named expert is emitted as a Person.
+    author: author && author.id !== "editorial"
       ? {
           "@type": "Person",
           name: author.credentials ? `${author.name}, ${author.credentials}` : author.name,
           jobTitle: author.role,
+          url: canonicalUrl(ctx, "/about"),
+        }
+      : author
+      ? {
+          "@type": "Organization",
+          name: author.name,
           url: canonicalUrl(ctx, "/about"),
         }
       : {
@@ -291,7 +328,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             name: s.heading,
             acceptedAnswer: {
               "@type": "Answer",
-              text: s.body.replace(/<[^>]*>/g, ""),
+              text: faqAnswerText(s.body),
             },
           })),
         }

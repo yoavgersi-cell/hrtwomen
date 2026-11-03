@@ -112,7 +112,12 @@ import { HOT_FLASHES_TREATMENT } from "./articles/hot-flashes-treatment";
 //    confirmed - copy tells readers to ask their clinician.
 // ─────────────────────────────────────────────────────────────────────────────
 
-const UPDATED = "2026-09-26";
+// Real last-substantive-change dates (shown on page, in schema and in the
+// sitemap lastmod). Reviews: customer-sentiment + editorial Review schema
+// (Oct 25) and query-matched FAQs (Oct 26). Battles: provider cost/legit/
+// products link boxes went live Nov 3 (product carousel Oct 25).
+const REVIEWS_UPDATED = "2026-10-26";
+const BATTLES_UPDATED = "2026-11-03";
 
 export const hrtConfig: SiteConfig = {
   siteName: "HRT Women",
@@ -122,7 +127,7 @@ export const hrtConfig: SiteConfig = {
   hero: {
     backgroundImageUrl: "",
     imageAlt: "Online hormone replacement therapy for women in menopause",
-    updatedLabel: "Last Updated: October 2026",
+    updatedLabel: "Last Updated: November 2026",
     h1: "Best Online HRT for Women of 2026",
     h2: "The top online menopause & HRT providers, ranked and reviewed",
     description:
@@ -141,12 +146,7 @@ export const hrtConfig: SiteConfig = {
     // Omit "featuredImage" until we have an HRT-specific banner creative (the
     // stock image was inherited from another vertical). Show the content-rich
     // blocks instead.
-    blockOrder: ["socialProof", "secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
-  },
-
-  cardSocialProof: {
-    number: "9,800+",
-    text: "women compared HRT providers this month",
+    blockOrder: ["secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
   },
 
   ranking: {
@@ -544,7 +544,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Board-certified physicians", "No video visit needed", "Free delivery"],
-      updatedAt: UPDATED,
+      updatedAt: REVIEWS_UPDATED,
     },
     {
       slug: "gala",
@@ -609,7 +609,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["US-licensed clinicians", "Estradiol & progesterone", "Flat monthly price"],
-      updatedAt: UPDATED,
+      updatedAt: REVIEWS_UPDATED,
     },
     {
       slug: "midi",
@@ -675,7 +675,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Accepts major insurance", "Menopause-trained clinicians", "Video visits"],
-      updatedAt: UPDATED,
+      updatedAt: REVIEWS_UPDATED,
     },
   ],
 
@@ -745,7 +745,7 @@ export const hrtConfig: SiteConfig = {
         { feature: "Insurance", provider1Value: "Self-pay", provider2Value: "Self-pay", highlight: "none" },
         { feature: "Pricing", provider1Value: "Varies by plan (approx.)", provider2Value: "Flat monthly (approx.)", highlight: "provider2" },
       ],
-      updatedAt: UPDATED,
+      updatedAt: BATTLES_UPDATED,
     },
     {
       slug: "winona-vs-midi",
@@ -808,7 +808,7 @@ export const hrtConfig: SiteConfig = {
         { feature: "Medication", provider1Value: "Delivered to your door", provider2Value: "Sent to your pharmacy", highlight: "provider1" },
         { feature: "Non-hormonal options", provider1Value: "Limited", provider2Value: "Yes", highlight: "provider2" },
       ],
-      updatedAt: UPDATED,
+      updatedAt: BATTLES_UPDATED,
     },
     {
       slug: "gala-vs-midi",
@@ -869,7 +869,7 @@ export const hrtConfig: SiteConfig = {
         { feature: "Medication", provider1Value: "Shipped free", provider2Value: "Sent to your pharmacy", highlight: "provider1" },
         { feature: "Non-hormonal options", provider1Value: "See site", provider2Value: "Yes", highlight: "provider2" },
       ],
-      updatedAt: UPDATED,
+      updatedAt: BATTLES_UPDATED,
     },
   ],
 

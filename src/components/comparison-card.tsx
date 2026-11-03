@@ -1,7 +1,6 @@
 import { Check, Truck, Star } from "lucide-react";
 import { RatingBadge } from "./rating-badge";
 import { ProviderCta } from "./provider-cta";
-import { SocialProofBubble, providerVisitStat } from "./social-proof-bubble";
 
 interface ComparisonCardProduct {
   id: string;
@@ -60,14 +59,12 @@ interface ComparisonCardProps {
   hideRank?: boolean;
   pageType?: "listing" | "review" | "battle" | "quiz_results";
   sourceFlow?: "main_comparison" | "provider_review" | "battle_page" | "matching_flow";
-  socialProof?: { number: string; text: string };
   linkPrefix?: string;
 }
 
 const arrowSvg = <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>;
 
-export function ComparisonCard({ product, hideRank, pageType = "listing", sourceFlow = "main_comparison", socialProof, linkPrefix = "" }: ComparisonCardProps) {
-  const showBubble = product.rank === 1 && !!socialProof;
+export function ComparisonCard({ product, hideRank, pageType = "listing", sourceFlow = "main_comparison", linkPrefix = "" }: ComparisonCardProps) {
   return (
     <article className="relative rounded-md border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md overflow-hidden">
       {/* Rank badge - top-left, only bottom-right rounded */}
@@ -129,7 +126,6 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
             <TrustpilotLine rating={product.trustpilotRating} count={product.trustpilotReviewCount} stacked />
           </div>
           <div className="relative w-full">
-            {showBubble && <SocialProofBubble number={providerVisitStat(product.id)} text={`visited ${product.name} this month`} />}
             <ProviderCta
               href={product.affiliateUrl}
               providerName={product.name}
