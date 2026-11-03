@@ -122,7 +122,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "What do Winona patient reviews say?",
       answer:
-        "Winona held a 4.6 rating from 8,631 Trustpilot reviews when we checked on October 4, 2026. Recent reviewers mostly praised symptom relief (fewer night sweats and less vaginal dryness), responsive doctors and easy home delivery; the complaints we found were about billing, cancellations and shipping rather than the quality of care. Its BBB profile showed a B rating (not accredited) on October 19, 2026.",
+        "Winona held a 4.6 rating from 9,008 Trustpilot reviews when we checked on November 3, 2026. In the 40 newest reviews, 39 gave 5 stars; reviewers mostly praised relief from hot flashes, night sweats, sleep and mood symptoms, responsive doctors and easy refills and delivery. The complaints we found elsewhere are about billing, cancellations and shipping rather than the quality of care. Its BBB profile showed a B rating (not accredited) on October 19, 2026.",
     },
   ],
   gala: [
@@ -144,7 +144,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "What do Gala HRT reviews say?",
       answer:
-        "Gala held a 4.6 rating from 4,199 Trustpilot reviews when we checked on October 4, 2026 - a score that covers all of Gala's business, including its larger weight-loss program. Recent reviewers praised the quick sign-up, communication and price; slow shipping was the recurring complaint. Its BBB profile showed a C- rating (not accredited, 37 complaints in three years) on October 19, 2026.",
+        "Gala held a 4.6 rating from 4,258 Trustpilot reviews when we checked on November 3, 2026 - a score that covers all of Gala's business, including its larger weight-loss program. Recent reviewers praised the easy sign-up, fast delivery, communication and price. Most recent reviews were invited by Gala and several were written before treatment began. Its BBB profile showed a C- rating (not accredited, 37 complaints in three years) on October 19, 2026.",
     },
     {
       question: "Is Gala hormone therapy FDA-approved?",
@@ -181,7 +181,7 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
     {
       question: "What do Midi Health reviews say?",
       answer:
-        "Midi held a 4.1 rating from 1,695 Trustpilot reviews when we checked on October 4, 2026. Recent reviewers most often said they felt listened to and that clinicians explained their options thoroughly. It is accredited by the Better Business Bureau.",
+        "Midi held a 4.1 rating from 1,795 Trustpilot reviews when we checked on November 3, 2026. All 46 of the newest reviews gave 5 stars, most often because clinicians listened and explained options - many after being dismissed by other doctors. The lower overall score reflects older reviews, mostly about insurance billing. It is accredited by the Better Business Bureau.",
     },
     {
       question: "What are the best Midi Health alternatives?",

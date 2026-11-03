@@ -25,37 +25,42 @@ type Sentiment = {
 
 export const CUSTOMER_SENTIMENT: Record<string, Sentiment> = {
   winona: {
-    sampleSize: 11,
-    sampleDate: "Oct 4, 2026",
+    sampleSize: 40,
+    sampleDate: "Nov 3, 2026",
     rating: "4.6",
-    ratingCount: "8,631",
+    ratingCount: "9,008",
     praised: [
       {
         theme: "Symptom relief",
-        count: 6,
-        example: "\"No more night sweats. No more vaginal dryness.\" - Jamie Wilkins",
+        count: 26,
+        example: "\"Within 3 weeks I felt so much better - my hot flashes gone, brain fog gone.\" - Sheryl Shifflett",
       },
       {
-        theme: "Responsive doctors and messaging",
-        count: 4,
-        example: "\"The doctor is super responsive and helpful!!\" - Nichole",
+        theme: "Easy process, refills and home delivery",
+        count: 21,
+        example: "\"Telehealth and refills are so easy and the fact it's shipped right to my door makes the process seamless.\" - Emily",
       },
       {
-        theme: "Easy process and home delivery",
-        count: 4,
-        example: "\"The intake process was simple... having my HRT medication shipped directly to my door made everything effortless.\" - Gianna Bellusci",
+        theme: "Responsive doctors",
+        count: 15,
+        example: "\"I sent a message and the dr. got back to me right away and had me try something new and it really works.\" - Cheryl Vogt",
+      },
+      {
+        theme: "Felt dismissed elsewhere first",
+        count: 3,
+        example: "\"The doctor just wanted to put me on antidepressants and nothing I tried was helping.\" - Lana Herald",
       },
     ],
     complaints: [
       {
-        theme: "Not every symptom improved quickly",
-        count: 1,
-        example: "Crying spells eased, but libido and mood swings hadn't yet improved (3 stars).",
+        theme: "Side effects mentioned",
+        count: 2,
+        example: "Breast tenderness in the first weeks that went away quickly; persistent itchy ears (both 5 stars).",
       },
       {
-        theme: "Shipping and packaging in heat",
+        theme: "No difference yet",
         count: 1,
-        example: "Estradiol tablets arrived stuck together in Texas humidity (4 stars).",
+        example: "\"Don't feel so much difference, will see in the next few months\" (4 stars).",
       },
     ],
     bbb: {
@@ -66,40 +71,45 @@ export const CUSTOMER_SENTIMENT: Record<string, Sentiment> = {
       checked: "Oct 19, 2026",
     },
     bottomLine:
-      "Reviewers mostly praise fast symptom relief and responsive physicians; the complaints that do appear are about billing, cancellations and shipping rather than the quality of care.",
+      "39 of the 40 newest reviews gave 5 stars, mostly for symptom relief and responsive physicians; complaints show up at the BBB instead, about billing, cancellations and shipping. The profile is claimed, Winona pays for a Trustpilot subscription and replies to most reviews, and very recent reviews skew toward early, positive experiences.",
   },
   gala: {
-    sampleSize: 12,
-    sampleDate: "Oct 4, 2026",
+    sampleSize: 40,
+    sampleDate: "Nov 3, 2026",
     rating: "4.6",
-    ratingCount: "4,199",
+    ratingCount: "4,258",
     praised: [
       {
         theme: "Quick, easy sign-up and process",
-        count: 6,
-        example: "\"The new patient intake process was quick.\" - Kennetito",
+        count: 22,
+        example: "\"The process was easy and fast; shipping was here in 2 days.\" - Michele",
       },
       {
-        theme: "Support and communication",
-        count: 4,
-        example: "\"Communication with the team was excellent.\" - Kennetito",
+        theme: "Responsive support and follow-up",
+        count: 7,
+        example: "\"Fast answer to my request. Also great prices!\" - Terri",
       },
       {
         theme: "Price",
-        count: 3,
-        example: "\"Great pricing... Easy to complete.\" - Anna Bracey",
+        count: 4,
+        example: "\"It's a good price and looks like there is plenty of support.\" - EC",
       },
       {
-        theme: "Easy-to-use app",
-        count: 2,
-        example: "\"Nice app user friendly\" - Theresa",
+        theme: "Results described",
+        count: 5,
+        example: "\"No more night sweats alone has been a big help and my edgy attitude has calmed down.\" - Rachel",
       },
     ],
     complaints: [
       {
-        theme: "Slow shipping",
+        theme: "Pressure to leave a review",
+        count: 2,
+        example: "\"Stop asking me questions to get a positive review, you have not done anything yet?\" (4 stars)",
+      },
+      {
+        theme: "App update confusion",
         count: 1,
-        example: "\"The oil a long time to ship\" (3 stars).",
+        example: "\"The updated one is hard. I cannot find the shot and weight history\" (a weight-loss customer).",
       },
     ],
     bbb: {
@@ -110,36 +120,47 @@ export const CUSTOMER_SENTIMENT: Record<string, Sentiment> = {
       checked: "Oct 19, 2026",
     },
     bottomLine:
-      "Recent reviewers like how quick and simple Gala is and its price; shipping speed is the recurring friction, and its BBB record is weaker than Winona's or Midi's.",
+      "Recent reviewers like how quick and simple Gala is, fast delivery and the price - but 34 of the 40 newest reviews were invited by Gala, several came before treatment started, and some are about its weight-loss program. Its BBB record is weaker than Winona's or Midi's.",
   },
   midi: {
-    sampleSize: 8,
-    sampleDate: "Oct 4, 2026",
+    sampleSize: 46,
+    sampleDate: "Nov 3, 2026",
     rating: "4.1",
-    ratingCount: "1,695",
+    ratingCount: "1,795",
     praised: [
       {
-        theme: "Feeling listened to",
-        count: 7,
-        example: "\"They listened to me! I felt heard and seen! My concerns were not dismissed.\" - Terri Wilson",
+        theme: "Feeling heard by the clinician",
+        count: 31,
+        example: "\"I never felt rushed or dismissed... she took the time to understand what I've been experiencing.\" - Carissa Woleslagle",
       },
       {
-        theme: "Knowledgeable clinicians who explain options",
-        count: 6,
-        example: "\"Explaining different treatment options thoroughly, including possible side effects.\" - Karen Reynolds Mohme",
+        theme: "Dismissed by other doctors first",
+        count: 11,
+        example: "\"I have been dismissed for years... too young to be going through perimenopause at 39.\" - Arri",
       },
       {
-        theme: "Easy scheduling",
-        count: 2,
-        example: "\"Scheduling with Midi was easy and I quickly had my appointment.\" - Marcy Wofford",
+        theme: "Feeling better on treatment",
+        count: 9,
+        example: "\"In the two years since first coming under their care my life has improved in every single way possible.\" - Kat",
       },
       {
-        theme: "Treatment that works with insurance",
-        count: 1,
-        example: "\"She made sure to provide a treatment that my insurance covers.\" - Julie Harris",
+        theme: "Easy scheduling, fast prescriptions, insurance help",
+        count: 9,
+        example: "\"My prescription was sent to my pharmacy after the appointment and I was able to start the recommended treatment that same day!\" - Sarah",
       },
     ],
-    complaints: [],
+    complaints: [
+      {
+        theme: "Still working on some symptoms",
+        count: 1,
+        example: "Sleep and energy improved, but brain fog and fatigue were still being adjusted for (5 stars).",
+      },
+      {
+        theme: "Bumpy first weeks on HRT",
+        count: 1,
+        example: "A few emotional ups and downs in the first couple of weeks before things settled (5 stars).",
+      },
+    ],
     bbb: {
       grade: "B",
       accredited: true,
@@ -148,7 +169,7 @@ export const CUSTOMER_SENTIMENT: Record<string, Sentiment> = {
       checked: "Oct 19, 2026",
     },
     bottomLine:
-      "Patients overwhelmingly praise being heard by knowledgeable clinicians; the complaints, mostly on the BBB, are about insurance billing - which also explains its lower 4.1 Trustpilot score.",
+      "All 46 of the newest reviews were 5 stars, overwhelmingly for being heard by knowledgeable clinicians - often after being dismissed elsewhere. The lower 4.1 overall reflects older reviews and BBB complaints that are mostly about insurance billing.",
   },
 };
 

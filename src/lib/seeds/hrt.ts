@@ -174,13 +174,95 @@ export const hrtConfig: SiteConfig = {
       ],
       affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=495&aff_id=12904",
       ctaText: "Visit Site",
-      // Trustpilot ("By Winona" profile, claimed, Women's Health Clinic): 4.6
-      // across 8,631 reviews, as shown on 2026-10-04 (operator screenshots).
-      // Reviews transcribed from that profile, with minor typo fixes only;
-      // Jean's review date was cut off in the screenshot, so it has none.
+      // Trustpilot ("By Winona" profile, claimed May 2021, paid Trustpilot
+      // subscription, Women's Health Clinic): 4.6 across 9,008 reviews, as
+      // shown on 2026-11-03 (operator screenshot; previous snapshot 2026-10-04:
+      // 8,631). Reviews transcribed with minor typo fixes only; the newest ten
+      // are from the 2026-11-03 snapshot ("N hours/days ago" converted to
+      // dates), followed by three kept from the October snapshot for balance.
       trustpilotRating: "4.6",
-      trustpilotReviewCount: "8,631",
+      trustpilotReviewCount: "9,008",
       trustpilotReviews: [
+        {
+          title: "Everything is coming back!",
+          text: "At 38 I had a complete hysterectomy, I am now 49. This is the 1st time I have had a Dr agree that I needed hormones and not some antidepressant or anxiety pill. I am very happy I didn't give up, and even more happy I found Winona. For me the 1st couple weeks were a little rough. My breasts hurt so much I called my mom crying - I wasn't sure this was going to help, it seemed to make everything worse. I had spent so many years with 0 hormones, an out of control internal thermostat, brain fog so bad I couldn't remember simple things, sleep was a thing of the past and ZERO libido. Well, I can say I am overjoyed I stuck with it! The breast tenderness went away quickly, the hot flashes and night sweats are a thing of the past, I haven't had to change my sheets in the middle of the night from sweating and I am actually a happy person again. I am only on week 10 and am feeling hopeful for it only getting better.",
+          name: "Stacey",
+          location: "US",
+          rating: 5,
+          date: "Nov 1, 2026",
+        },
+        {
+          title: "Best decision ever",
+          text: "I had went to the doctor several times over the past couple years about my menopause symptoms. The doctor just wanted to put me on antidepressants and nothing I tried was helping with all my symptoms. I saw an ad for Winona and clicked the link. I answered all the questions about my symptoms and in no time the doctor had come up with a treatment plan. The process was simple and fast. I have been on HRT meds for going on three months now and I feel so much better. My hot flashes, night sweats, and other symptoms have gone away. Also if you have questions they always answer in no time.",
+          name: "Lana Herald",
+          location: "US",
+          rating: 5,
+          date: "Nov 1, 2026",
+        },
+        {
+          title: "Don't feel so much difference",
+          text: "Don't feel so much difference, will see in the next few months.",
+          name: "Ivelisse Muniz",
+          location: "PR",
+          rating: 4,
+          date: "Nov 3, 2026",
+        },
+        {
+          title: "I feel so much better",
+          text: "I feel so much better. Anxiety has almost stopped completely. I am not as angry at times. My ears still itch like crazy but I can live with that as long as the anxiety and mood swings are better. The service is great. I highly recommend.",
+          name: "Elizabeth Hoyle",
+          location: "US",
+          rating: 5,
+          date: "Nov 1, 2026",
+        },
+        {
+          title: "Easy to navigate",
+          text: "Easy to navigate. Reasonably priced. Improved my symptoms of dryness and insomnia within 2 months. Going to continue treatment.",
+          name: "Debra Gold",
+          location: "US",
+          rating: 5,
+          date: "Nov 2, 2026",
+        },
+        {
+          title: "I highly recommend Winona",
+          text: "I highly recommend Winona to every lady experiencing hormonal issues. Within 3 weeks I felt so much better - my hot flashes gone, brain fog gone, energy levels started to feel like exercising again. Winona doctors are phenomenal. Truly care for the patients.",
+          name: "Sheryl Shifflett",
+          location: "US",
+          rating: 5,
+          date: "Nov 2, 2026",
+        },
+        {
+          title: "It works!",
+          text: "Since starting my treatment, I finally feel more like myself. My night sweats are less and less. It's hassle free too. When I get low on my cream it's automatically sending me notifications that it's being processed and on the way.",
+          name: "Kelly Palmer",
+          location: "US",
+          rating: 5,
+          date: "Nov 1, 2026",
+        },
+        {
+          title: "HRT is life changing!",
+          text: "Winona has completely changed the way I navigate perimenopause! HRT and DHEA have been life-changing. Telehealth and refills are so easy and the fact it's shipped right to my door makes the process seamless.",
+          name: "Emily",
+          location: "US",
+          rating: 5,
+          date: "Nov 3, 2026",
+        },
+        {
+          title: "I really liked being a customer",
+          text: "I really liked being a customer of theirs. I had to switch eventually to my primary care doctor for personal reasons otherwise I would have stayed a customer of theirs. Worth checking out!",
+          name: "Megan McBride",
+          location: "US",
+          rating: 5,
+          date: "Nov 1, 2026",
+        },
+        {
+          title: "Doctors are great!",
+          text: "I definitely recommend doing this. It has helped me a lot. I'm doing the estrogen and progesterone cream.",
+          name: "Victoria Cook",
+          location: "US",
+          rating: 5,
+          date: "Nov 3, 2026",
+        },
         {
           title: "The estradiol last shipment arrived stuck together",
           text: "The estradiol last shipment arrived stuck all together, I guess the Texas humidity was too much. They should pack it with those little silica pouches or something. Otherwise the service is great.",
@@ -188,22 +270,6 @@ export const hrtConfig: SiteConfig = {
           location: "US",
           rating: 4,
           date: "Oct 4, 2026",
-        },
-        {
-          title: "Responsive with messages or questions",
-          text: "Responsive with messages or questions. Product help when I needed it. Email reminders of expectations. Variety of product available to adjust route with Dr review and approval.",
-          name: "Sharon Dragovich",
-          location: "US",
-          rating: 5,
-          date: "Oct 3, 2026",
-        },
-        {
-          title: "Within weeks of beginning my treatment",
-          text: "With in weeks of beginning my treatment I felt better, slept better and was happier. I asked my self every day why did I wait so long. The best thing I've ever done was research winona",
-          name: "Alena Farley",
-          location: "US",
-          rating: 5,
-          date: "Oct 2, 2026",
         },
         {
           title: "My spontaneous crying spells have subsided",
@@ -214,59 +280,12 @@ export const hrtConfig: SiteConfig = {
           date: "Oct 2, 2026",
         },
         {
-          title: "Fast easy relief thank you",
-          text: "Fast easy relief thank you",
-          name: "Andrea Ahlson",
-          location: "US",
-          rating: 5,
-          date: "Sep 29, 2026",
-        },
-        {
-          title: "Life changing",
-          text: "At 49, I was constantly feeling \"off\" and just couldn't shake the fatigue and brain fog. Reaching out to Winona was the best decision I could have made. The intake process was simple, the medical team was attentive and supportive, and having my HRT medication shipped directly to my door made everything effortless. Most importantly, I finally feel like myself again. If you're on the fence, don't wait - Winona has been an absolute game-changer for my daily well-being.",
-          name: "Gianna Bellusci",
-          location: "US",
-          rating: 5,
-          date: "Sep 26, 2026",
-        },
-        {
-          title: "Has been amazing and the doctor is super responsive",
-          text: "Has been amazing and the doctor is super responsive and helpful!!",
-          name: "Nichole",
-          location: "US",
-          rating: 5,
-          date: "Sep 26, 2026",
-        },
-        {
-          title: "Easy to access and effective HRT",
-          text: "Easy to access and effective HRT.",
-          name: "Sinead McCarthy",
-          location: "US",
-          rating: 5,
-          date: "Sep 26, 2026",
-        },
-        {
           title: "The Winona products have made all the difference",
           text: "The Winona products have made all the difference in my life. No more night sweats. No more vaginal dryness. I feel so much better and I love how easy the whole process was. Highly recommend.",
           name: "Jamie Wilkins",
           location: "US",
           rating: 5,
           date: "Sep 10, 2026",
-        },
-        {
-          title: "Has been wonderful",
-          text: "Has been wonderful! Life changing! I feel so much better than I did!",
-          name: "Shannon Smith",
-          location: "US",
-          rating: 5,
-          date: "Sep 1, 2026",
-        },
-        {
-          title: "Availability online",
-          text: "Quick responses from Dr.'s. Love the idea of not going in, waiting for appt date, and having the flexibility of chat online through app.",
-          name: "Jean",
-          location: "US",
-          rating: 4,
         },
       ],
     },
@@ -285,13 +304,73 @@ export const hrtConfig: SiteConfig = {
       ],
       affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1576&aff_id=12904&url_id=12556",
       ctaText: "Visit Site",
-      // Trustpilot ("Gala Health" profile, claimed): 4.6 across 4,199 reviews,
-      // as shown on the profile on 2026-10-04 (operator screenshot). Reviews
-      // transcribed verbatim from that profile; weight-loss-specific and
+      // Trustpilot ("Gala Health" profile, claimed May 2026, paid Trustpilot
+      // subscription): 4.6 across 4,258 reviews, as shown on 2026-11-03
+      // (operator screenshot; previous snapshot 2026-10-04: 4,199). In the
+      // 40 most recent reviews on 2026-11-03, 34 carried Trustpilot's
+      // "Invited" label and several were written before treatment started.
+      // Reviews transcribed with minor typo fixes; weight-loss-specific and
       // near-empty reviews left out because this is the HRT review page.
+      // Newest seven from the 2026-11-03 snapshot, then the October ones.
       trustpilotRating: "4.6",
-      trustpilotReviewCount: "4,199",
+      trustpilotReviewCount: "4,258",
       trustpilotReviews: [
+        {
+          title: "No more night sweats",
+          text: "No more night sweats alone has been a big help and my edgy attitude has calmed down.",
+          name: "Rachel",
+          location: "US",
+          rating: 5,
+          date: "Oct 18, 2026",
+        },
+        {
+          title: "The process was easy and fast",
+          text: "The process was easy and fast; shipping was here in 2 days, the directions are listed on the medication and you receive everything you need.",
+          name: "Michele",
+          location: "US",
+          rating: 5,
+          date: "Nov 1, 2026",
+        },
+        {
+          title: "It works well",
+          text: "It works well.",
+          name: "Anne Sulentich",
+          location: "US",
+          rating: 4,
+          date: "Nov 1, 2026",
+        },
+        {
+          title: "Simple",
+          text: "Simple, easy process. Great follow up, speedy delivery.",
+          name: "Janet",
+          location: "US",
+          rating: 5,
+          date: "Oct 30, 2026",
+        },
+        {
+          title: "Easy & effective",
+          text: "Easy ordering, effective product, great support.",
+          name: "Laurie",
+          location: "US",
+          rating: 5,
+          date: "Oct 27, 2026",
+        },
+        {
+          title: "Stop asking me questions to get a positive review",
+          text: "Stop asking me questions to get a positive review, you have not done anything yet?",
+          name: "Raymond",
+          location: "US",
+          rating: 4,
+          date: "Oct 27, 2026",
+        },
+        {
+          title: "Great experience",
+          text: "Fast answer to my request. Also great prices!",
+          name: "Terri",
+          location: "US",
+          rating: 5,
+          date: "Oct 9, 2026",
+        },
         {
           title: "The new patient intake process was quick",
           text: "The new patient intake process was quick. The price was very competitive. And communication with the team was excellent.",
@@ -405,12 +484,80 @@ export const hrtConfig: SiteConfig = {
       ],
       affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1558&aff_id=12904",
       ctaText: "Visit Site",
-      // Trustpilot ("Midi Health" profile, claimed, Women's Health Clinic): 4.1
-      // across 1,695 reviews, as shown on 2026-10-04 (operator screenshots).
-      // Reviews transcribed from that profile.
+      // Trustpilot ("Midi Health" profile, claimed Oct 2023, paid Trustpilot
+      // subscription, Women's Health Clinic): 4.1 across 1,795 reviews, as
+      // shown on 2026-11-03 (operator screenshot; previous snapshot
+      // 2026-10-04: 1,695). All 46 of the newest reviews read on 2026-11-03
+      // were 5 stars - the 4.1 overall reflects older, mostly billing-related
+      // reviews. Newest eight from the 2026-11-03 snapshot (minor typo fixes,
+      // trimmed to the parts about care), then the October ones.
       trustpilotRating: "4.1",
-      trustpilotReviewCount: "1,695",
+      trustpilotReviewCount: "1,795",
       trustpilotReviews: [
+        {
+          title: "I have been dismissed for years",
+          text: "I have been dismissed for years by my women's health care providers that I was either \"too young\" to be going through perimenopause beginning at age 39 or my hormone levels were \"normal\" at 43. I finally had enough of being dismissed and decided to try Midi. My Midi clinician listened to all of my concerns, my symptoms, as well as my past gynecological and family history. With compassion and understanding, she and I formulated a plan to treat my perimenopause symptoms within that one half hour and I was able to pick up my HRT the very next day from my pharmacy. The best part is that Midi takes my insurance and I can be seen in the comfort of my own home.",
+          name: "Arri",
+          location: "US",
+          rating: 5,
+          date: "Oct 22, 2026",
+        },
+        {
+          title: "Finally feeling heard and hopeful",
+          text: "My experience with my clinician has been wonderful so far. I felt listened to, my symptoms and previous medications were discussed, and I appreciated the collaborative approach. Since starting treatment, I've noticed meaningful improvements in my sleep, along with some increased energy and motivation. I still have symptoms we're working on, particularly brain fog and fatigue, but I appreciate that my concerns were taken seriously and that my treatment plan was adjusted based on how I've been responding.",
+          name: "Tonia Reid",
+          location: "US",
+          rating: 5,
+          date: "Oct 21, 2026",
+        },
+        {
+          title: "Please, get the services you deserve",
+          text: "I was struggling with lack of sleep, very painful joints, ridiculous hot flashes, painful sex, and trust issues with the healthcare industry, that caused me to not seek care for more than 15 years. I now feel seen, supported, and more like myself.",
+          name: "MoMzoMbie",
+          location: "US",
+          rating: 5,
+          date: "Oct 29, 2026",
+        },
+        {
+          title: "Empathetic care and quick next steps!",
+          text: "I had a really great experience with my Midi provider and left the visit with clear next steps. My provider listened to my concerns and provided helpful recommendations. My prescription was sent to my pharmacy after the appointment and I was able to start the recommended treatment that same day!",
+          name: "Sarah",
+          location: "US",
+          rating: 5,
+          date: "Oct 31, 2026",
+        },
+        {
+          title: "My provider was knowledgeable",
+          text: "My provider was so knowledgeable and listened to my symptoms and based her treatment plan on my clinical presentation rather than just doing labs, which are not accurate in this diagnosis. I would recommend Midi Health especially if you have been turned down or you have a provider that doesn't take your symptoms seriously!",
+          name: "Maddie Martin",
+          location: "US",
+          rating: 5,
+          date: "Oct 21, 2026",
+        },
+        {
+          title: "My provider was fabulous",
+          text: "My provider was fabulous. She was professional, kind, knowledgeable and thorough. She made the visit stress free and easy. They also helped navigate any insurance issues that came up.",
+          name: "Erika",
+          location: "US",
+          rating: 5,
+          date: "Oct 28, 2026",
+        },
+        {
+          title: "I had my first appointment with Midi",
+          text: "My provider was warm, attentive, and genuinely listened to my concerns. I never felt rushed or dismissed, and I really appreciated that she took the time to understand what I've been experiencing rather than jumping straight to a treatment recommendation. She explained possible options, recommended additional testing, and developed a plan for moving forward.",
+          name: "Carissa Woleslagle",
+          location: "US",
+          rating: 5,
+          date: "Oct 28, 2026",
+        },
+        {
+          title: "From barely surviving to completely thriving",
+          text: "I was already deep in the throes of perimenopause when I found Midi, not knowing that my daily challenges were all due to a natural decline in hormones. In the two years since first coming under their care my life has improved in every single way possible.",
+          name: "Kat",
+          location: "US",
+          rating: 5,
+          date: "Oct 28, 2026",
+        },
         {
           title: "Convenience and excellent provider and care",
           text: "The provider has been amazing with listening and changing my treatment plan as needed. She has been friendly, kind, and clearly knowledgeable. She has been careful to make sure my medications are safe, monitor side effects, ensure they are working as they should, and make sure I have refills as needed. The convenience has just been amazing too!",
@@ -544,7 +691,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Board-certified physicians", "No video visit needed", "Free delivery"],
-      updatedAt: REVIEWS_UPDATED,
+      updatedAt: "2026-11-03",
     },
     {
       slug: "gala",
@@ -609,7 +756,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["US-licensed clinicians", "Estradiol & progesterone", "Flat monthly price"],
-      updatedAt: REVIEWS_UPDATED,
+      updatedAt: "2026-11-03",
     },
     {
       slug: "midi",
@@ -675,7 +822,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Accepts major insurance", "Menopause-trained clinicians", "Video visits"],
-      updatedAt: REVIEWS_UPDATED,
+      updatedAt: "2026-11-03",
     },
   ],
 
@@ -1036,7 +1183,7 @@ export const hrtConfig: SiteConfig = {
       category: "Comparisons",
       readTime: "11 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-10-26",
+      updatedAt: "2026-11-03",
       heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1048,7 +1195,7 @@ export const hrtConfig: SiteConfig = {
       sections: [
         {
           heading: "What is the best online HRT provider?",
-          body: `<div class="qa"><strong>The short answer</strong><strong>Winona</strong> is our top pick for most women who want menopause care with no appointments: board-certified physicians, FDA-approved estradiol tablets and patches plus progesterone, and medication delivered to your door. <strong>Midi Health</strong> is best if you have commercial PPO insurance or want a video visit. <strong>Gala</strong> is usually the cheapest all-in cash option, with one flat monthly price.</div><table><tr><th></th><th><a href="/reviews/winona">Winona</a></th><th><a href="/reviews/gala">Gala</a></th><th><a href="/reviews/midi">Midi Health</a></th></tr><tr><td>Our rating</td><td>9.6/10</td><td>9.2/10</td><td>8.9/10</td></tr><tr><td>How you see a clinician</td><td>Online intake reviewed by a physician; messaging</td><td>Online intake reviewed by a US-licensed clinician</td><td>Scheduled video visit</td></tr><tr><td>Pricing model</td><td>Monthly subscription per product</td><td>One flat monthly plan</td><td>Per visit + your pharmacy</td></tr><tr><td>Typical cost</td><td>$39-$149 per product; about $89-$188 for estrogen + progesterone</td><td>Advertised from $79/mo; reported $69 (pill) to $99 (patch)</td><td>About $50/visit average with insurance; $250 first / $150 follow-up self-pay</td></tr><tr><td>Insurance</td><td>Not billed; HSA/FSA accepted</td><td>Not billed</td><td>Most commercial PPO plans; not HMO, Medicare or Medicaid</td></tr><tr><td>Medication</td><td>Included and shipped</td><td>Included and shipped</td><td>Sent to your pharmacy</td></tr><tr><td>Estrogen forms</td><td>Tablets, patch, body cream, vaginal cream</td><td>Pill, patch, vaginal estradiol</td><td>Whatever your clinician prescribes</td></tr><tr><td>Testosterone</td><td>No</td><td>No</td><td>Some states, self-pay</td></tr><tr><td>Trustpilot (Oct 4, 2026)</td><td>4.6 (8,631 reviews)</td><td>4.6 (4,199 reviews, all Gala services)</td><td>4.1 (1,695 reviews)</td></tr><tr><td>BBB (Oct 19, 2026)</td><td>B, not accredited</td><td>C-, not accredited</td><td>B, accredited</td></tr></table><p>Prices are approximate and change; confirm at checkout. Full breakdown: <a href="/articles/online-hrt-cost">how much online HRT costs</a>.</p>`,
+          body: `<div class="qa"><strong>The short answer</strong><strong>Winona</strong> is our top pick for most women who want menopause care with no appointments: board-certified physicians, FDA-approved estradiol tablets and patches plus progesterone, and medication delivered to your door. <strong>Midi Health</strong> is best if you have commercial PPO insurance or want a video visit. <strong>Gala</strong> is usually the cheapest all-in cash option, with one flat monthly price.</div><table><tr><th></th><th><a href="/reviews/winona">Winona</a></th><th><a href="/reviews/gala">Gala</a></th><th><a href="/reviews/midi">Midi Health</a></th></tr><tr><td>Our rating</td><td>9.6/10</td><td>9.2/10</td><td>8.9/10</td></tr><tr><td>How you see a clinician</td><td>Online intake reviewed by a physician; messaging</td><td>Online intake reviewed by a US-licensed clinician</td><td>Scheduled video visit</td></tr><tr><td>Pricing model</td><td>Monthly subscription per product</td><td>One flat monthly plan</td><td>Per visit + your pharmacy</td></tr><tr><td>Typical cost</td><td>$39-$149 per product; about $89-$188 for estrogen + progesterone</td><td>Advertised from $79/mo; reported $69 (pill) to $99 (patch)</td><td>About $50/visit average with insurance; $250 first / $150 follow-up self-pay</td></tr><tr><td>Insurance</td><td>Not billed; HSA/FSA accepted</td><td>Not billed</td><td>Most commercial PPO plans; not HMO, Medicare or Medicaid</td></tr><tr><td>Medication</td><td>Included and shipped</td><td>Included and shipped</td><td>Sent to your pharmacy</td></tr><tr><td>Estrogen forms</td><td>Tablets, patch, body cream, vaginal cream</td><td>Pill, patch, vaginal estradiol</td><td>Whatever your clinician prescribes</td></tr><tr><td>Testosterone</td><td>No</td><td>No</td><td>Some states, self-pay</td></tr><tr><td>Trustpilot</td><td>4.6 (9,008 reviews, Nov 3, 2026)</td><td>4.6 (4,258 reviews, all Gala services, Nov 3, 2026)</td><td>4.1 (1,795 reviews, Nov 3, 2026)</td></tr><tr><td>BBB (Oct 19, 2026)</td><td>B, not accredited</td><td>C-, not accredited</td><td>B, accredited</td></tr></table><p>Prices are approximate and change; confirm at checkout. Full breakdown: <a href="/articles/online-hrt-cost">how much online HRT costs</a>.</p>`,
         },
         {
           heading: "Two models of online menopause care",
@@ -1259,24 +1406,24 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Who gets the best value from Gala",
-          body: `<p><strong>Good value</strong> if you are paying cash anyway (no insurance, an HMO, a high deductible, or Medicare and you are happy to self-pay), you want one predictable figure with the clinician built in, and a pill or patch suits you. <strong>Less good value</strong> if your insurance covers a menopause specialist and generic hormones, if you want a body cream or a wider choice of forms, or if you want a live video conversation before starting. Whatever you pay, HRT carries real risks, including blood clots, stroke and breast-cancer considerations, and women with a uterus need progesterone to protect the uterine lining. A licensed clinician decides whether it is right for you; our guide to <a href="/articles/is-hrt-safe">whether HRT is safe</a> covers the evidence.</p><p class="cta-row"><a href="/reviews/gala">→ Read the full Gala Health review</a></p><p class="cta-row"><a href="/articles/is-gala-legit">→ Is Gala legit? What 4,199 Trustpilot reviews show</a></p><p class="cta-row"><a href="/gala-vs-midi">→ Gala vs Midi Health: flat cash price vs insurance</a></p><p>Prices are approximate, from Gala's advertised pricing and third-party reviews at our last check; confirm the current price on Gala's site. This article is general information, not medical advice.</p>`,
+          body: `<p><strong>Good value</strong> if you are paying cash anyway (no insurance, an HMO, a high deductible, or Medicare and you are happy to self-pay), you want one predictable figure with the clinician built in, and a pill or patch suits you. <strong>Less good value</strong> if your insurance covers a menopause specialist and generic hormones, if you want a body cream or a wider choice of forms, or if you want a live video conversation before starting. Whatever you pay, HRT carries real risks, including blood clots, stroke and breast-cancer considerations, and women with a uterus need progesterone to protect the uterine lining. A licensed clinician decides whether it is right for you; our guide to <a href="/articles/is-hrt-safe">whether HRT is safe</a> covers the evidence.</p><p class="cta-row"><a href="/reviews/gala">→ Read the full Gala Health review</a></p><p class="cta-row"><a href="/articles/is-gala-legit">→ Is Gala legit? What 4,258 Trustpilot reviews show</a></p><p class="cta-row"><a href="/gala-vs-midi">→ Gala vs Midi Health: flat cash price vs insurance</a></p><p>Prices are approximate, from Gala's advertised pricing and third-party reviews at our last check; confirm the current price on Gala's site. This article is general information, not medical advice.</p>`,
         },
       ],
     },
     {
       slug: "is-gala-legit",
-      title: "Is Gala Health Legit? Yes - What 4,199 Reviews Show (2026)",
+      title: "Is Gala Health Legit? Yes - What 4,258 Reviews Show (2026)",
       description:
-        "Yes. Gala uses US-licensed clinicians, prescribes only after review and holds a 4.6 Trustpilot rating across 4,199 reviews. What the reviews, BBB complaints and caveats say.",
+        "Yes. Gala uses US-licensed clinicians, prescribes only after review and holds a 4.6 Trustpilot rating across 4,258 reviews. What the reviews, BBB complaints and caveats say.",
       category: "Provider Guides",
       readTime: "6 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-19",
+      updatedAt: "2026-11-03",
       heroColor: "#F8D7E3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Yes, Gala Health is a legitimate US telehealth service: a US-licensed clinician reviews your health assessment and prescribes only if HRT is appropriate, then handles check-ins and dose adjustments.",
-        "Its claimed Trustpilot profile rates it 4.6 across 4,199 reviews (as shown on Oct 4, 2026). Recent reviewers mention a quick intake, competitive pricing and responsive support.",
+        "Its claimed Trustpilot profile rates it 4.6 across 4,258 reviews (as shown on Nov 3, 2026). Recent reviewers mention a quick intake, fast delivery, competitive pricing and responsive support - but most recent reviews were invited by Gala, and several were written before treatment began.",
         "The rating covers the whole brand, including Gala's GLP-1 weight-loss program, so many reviews are not about menopause care. The one recent 3-star review we transcribed is about slow shipping.",
         "Its BBB profile showed a C- rating, not accredited, with 37 complaints in three years when we checked on Oct 19, 2026 - the profile covers Gala's much larger weight-loss business too.",
         "Legit is not a guarantee of results or safety for you: HRT carries real risks (blood clots, stroke, breast-cancer considerations), and Gala does not bill insurance.",
@@ -1284,11 +1431,11 @@ export const hrtConfig: SiteConfig = {
       sections: [
         {
           heading: "The short answer on Gala",
-          body: `<div class="qa"><strong>The short answer</strong>Yes. Gala Health runs a real clinical process: you complete an online symptom and health assessment, a <strong>US-licensed clinician</strong> reviews it and decides whether hormone therapy is appropriate, and only then is anything prescribed. Its HRT page describes <strong>bioidentical estradiol and progesterone</strong> (ask whether yours is an FDA-approved product or compounded - see below), and its claimed Trustpilot profile shows <strong>4.6 stars across 4,199 reviews</strong>. What "legit" does not settle is whether Gala's cash-only, mostly message-based model suits you.</div><p>We judge legitimacy the same way for every provider we rank (see <a href="/how-we-rank">how we rank</a>): is there a genuine clinical gate, is it clear what you will pay, and what do reviewers say when you read the low-star reviews as carefully as the five-star ones.</p>`,
+          body: `<div class="qa"><strong>The short answer</strong>Yes. Gala Health runs a real clinical process: you complete an online symptom and health assessment, a <strong>US-licensed clinician</strong> reviews it and decides whether hormone therapy is appropriate, and only then is anything prescribed. Its HRT page describes <strong>bioidentical estradiol and progesterone</strong> (ask whether yours is an FDA-approved product or compounded - see below), and its claimed Trustpilot profile shows <strong>4.6 stars across 4,258 reviews</strong> (Nov 3, 2026). What "legit" does not settle is whether Gala's cash-only, mostly message-based model suits you.</div><p>We judge legitimacy the same way for every provider we rank (see <a href="/how-we-rank">how we rank</a>): is there a genuine clinical gate, is it clear what you will pay, and what do reviewers say when you read the low-star reviews as carefully as the five-star ones.</p>`,
         },
         {
           heading: "The checks Gala passes",
-          body: `<ul><li><strong>Prescription only after review.</strong> A licensed clinician looks at your symptoms, history and medications and can decline. A site that ships hormones without that step is a red flag, and Gala is not one.</li><li><strong>Mainstream medication.</strong> Estradiol as a pill or patch, progesterone (oral or vaginal) for women with a uterus, and vaginal estradiol for local symptoms. These are standard menopause treatments, not exotic protocols.</li><li><strong>Ongoing care.</strong> Messaging, symptom check-ins and dose adjustments are part of the plan rather than an upsell.</li><li><strong>Clear pricing.</strong> One plan price, advertised from about $79/month, with no copays (the math is in our <a href="/articles/gala-cost">Gala cost guide</a>).</li><li><strong>A public, claimed review profile.</strong> 4,199 Trustpilot reviews is a large record for a company to stand behind.</li></ul><p>One thing to check for yourself: Gala's HRT shares a website and a site-wide disclaimer with its GLP-1 program, which uses compounded medication, and the disclaimer notes that compounded drugs are not FDA-approved. Gala's own press materials say it offers both FDA-approved and compounded HRT products, and at least one independent review reports that its hormones are compounded, so the answer may depend on what you are prescribed. If it matters to you (it is a fair thing to care about - see <a href="/articles/bioidentical-hormones-explained">FDA-approved vs compounded hormones</a>), ask your clinician which product you are being prescribed.</p>`,
+          body: `<ul><li><strong>Prescription only after review.</strong> A licensed clinician looks at your symptoms, history and medications and can decline. A site that ships hormones without that step is a red flag, and Gala is not one.</li><li><strong>Mainstream medication.</strong> Estradiol as a pill or patch, progesterone (oral or vaginal) for women with a uterus, and vaginal estradiol for local symptoms. These are standard menopause treatments, not exotic protocols.</li><li><strong>Ongoing care.</strong> Messaging, symptom check-ins and dose adjustments are part of the plan rather than an upsell.</li><li><strong>Clear pricing.</strong> One plan price, advertised from about $79/month, with no copays (the math is in our <a href="/articles/gala-cost">Gala cost guide</a>).</li><li><strong>A public, claimed review profile.</strong> 4,258 Trustpilot reviews is a large record for a company to stand behind.</li></ul><p>One thing to check for yourself: Gala's HRT shares a website and a site-wide disclaimer with its GLP-1 program, which uses compounded medication, and the disclaimer notes that compounded drugs are not FDA-approved. Gala's own press materials say it offers both FDA-approved and compounded HRT products, and at least one independent review reports that its hormones are compounded, so the answer may depend on what you are prescribed. If it matters to you (it is a fair thing to care about - see <a href="/articles/bioidentical-hormones-explained">FDA-approved vs compounded hormones</a>), ask your clinician which product you are being prescribed.</p>`,
         },
         {
           heading: "What Gala's Trustpilot reviewers say",
@@ -1300,11 +1447,11 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Three caveats the 4.6 does not show",
-          body: `<p><strong>The rating is for the whole brand.</strong> Gala is best known for GLP-1 weight management, and the same Trustpilot profile covers both programs. A 4.6 tells you Gala runs a competent operation; it does not tell you how many of the 4,199 reviewers were menopause patients.</p><p><strong>Shipping is the recurring friction.</strong> The only below-4-star review in our recent sample was about a slow delivery. If you are switching from another provider, order before your current supply runs low, and remember that some estradiol patch brands have been intermittently hard to find in 2026.</p><p><strong>Cash only.</strong> Gala does not bill insurance. For women with good commercial coverage, an in-network clinic such as <a href="/reviews/midi">Midi Health</a> plus generic hormones through a pharmacy benefit can cost less. Gala also offers fewer estrogen forms than <a href="/reviews/winona">Winona</a>, which adds body creams and a wider product line.</p>`,
+          body: `<p><strong>The rating is for the whole brand.</strong> Gala is best known for GLP-1 weight management, and the same Trustpilot profile covers both programs. A 4.6 tells you Gala runs a competent operation; it does not tell you how many of the 4,258 reviewers were menopause patients - in our November 2026 sample, several recent reviews were plainly about the weight-loss program (one mentions "shot and weight history").</p><p><strong>Most recent reviews are invited - and some come too early.</strong> Of the 40 newest reviews we read on November 3, 2026, 34 carried Trustpilot's "Invited" label, meaning Gala asked the customer to review. Several were written before treatment had started ("Just started", "I hope I get the product soon"), and two 4-star reviewers objected to the prompt itself - one wrote "Stop asking me questions to get a positive review, you have not done anything yet?" and another said the review request appeared before they could get into the app. Inviting reviews is allowed and common; it does mean early-stage, process-focused 5-star reviews dominate, so weigh the BBB record and the reviews that describe actual results.</p><p><strong>Shipping is the recurring friction.</strong> The only below-4-star review in our recent sample was about a slow delivery. If you are switching from another provider, order before your current supply runs low, and remember that some estradiol patch brands have been intermittently hard to find in 2026.</p><p><strong>Cash only.</strong> Gala does not bill insurance. For women with good commercial coverage, an in-network clinic such as <a href="/reviews/midi">Midi Health</a> plus generic hormones through a pharmacy benefit can cost less. Gala also offers fewer estrogen forms than <a href="/reviews/winona">Winona</a>, which adds body creams and a wider product line.</p>`,
         },
         {
           heading: "What \"legit\" does not mean",
-          body: `<p>A legitimate provider is not a promise that HRT will work for you or that it is safe for you. Hormone therapy carries real risks - including blood clots, stroke and breast-cancer considerations - and estrogen without progesterone raises the risk of endometrial cancer in women with a uterus. It is generally avoided after breast cancer, a clot or stroke, or with unexplained bleeding. The clinician, not the website or the price, decides whether you are a candidate, so answer the intake fully and honestly. Our guide to <a href="/articles/is-hrt-safe">whether HRT is safe</a> explains the current evidence, including the FDA's 2025-2026 label changes.</p><p class="cta-row"><a href="/reviews/gala">→ Read the full Gala Health review, with real customer reviews</a></p><p class="cta-row"><a href="/winona-vs-gala">→ Winona vs Gala: more forms vs one flat price</a></p><p class="cta-row"><a href="/gala-vs-midi">→ Gala vs Midi Health: cash plan vs insurance-billed visits</a></p><p>Trustpilot figures as shown on Oct 4, 2026; prices are approximate - confirm on Gala's site. This article is general information, not medical advice.</p>`,
+          body: `<p>A legitimate provider is not a promise that HRT will work for you or that it is safe for you. Hormone therapy carries real risks - including blood clots, stroke and breast-cancer considerations - and estrogen without progesterone raises the risk of endometrial cancer in women with a uterus. It is generally avoided after breast cancer, a clot or stroke, or with unexplained bleeding. The clinician, not the website or the price, decides whether you are a candidate, so answer the intake fully and honestly. Our guide to <a href="/articles/is-hrt-safe">whether HRT is safe</a> explains the current evidence, including the FDA's 2025-2026 label changes.</p><p class="cta-row"><a href="/reviews/gala">→ Read the full Gala Health review, with real customer reviews</a></p><p class="cta-row"><a href="/winona-vs-gala">→ Winona vs Gala: more forms vs one flat price</a></p><p class="cta-row"><a href="/gala-vs-midi">→ Gala vs Midi Health: cash plan vs insurance-billed visits</a></p><p>Trustpilot figures as shown on Nov 3, 2026 (earlier quotes from Oct 4, 2026); prices are approximate - confirm on Gala's site. This article is general information, not medical advice.</p>`,
         },
       ],
     },
@@ -1318,7 +1465,7 @@ export const hrtConfig: SiteConfig = {
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-19",
+      updatedAt: "2026-11-03",
       heroColor: "#FBE9F0",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1346,7 +1493,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Is Winona worth what it costs?",
-          body: `<p><strong>Worth it</strong> if you are paying cash anyway, value never booking an appointment, and want a choice of estrogen forms with a physician on call by message. Winona's Trustpilot record (4.6 across 8,631 reviews as of Oct 4, 2026) suggests most customers think so (we dig into the reviews and BBB file in <a href="/articles/is-winona-legit">is Winona legit?</a>); one reviewer, Sharon Dragovich, praised the "variety of product available to adjust route with Dr review and approval" (Oct 3, 2026). <strong>Probably not worth it</strong> if good insurance would cover your care and generic hormones, or if you want a live conversation before starting. Whichever provider you choose, HRT carries real risks - blood clots, stroke and breast-cancer considerations among them - and a licensed physician decides whether it is appropriate for you.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review</a></p><p class="cta-row"><a href="/winona-vs-gala">→ Winona vs Gala: per-product pricing vs one flat plan</a></p><p class="cta-row"><a href="/winona-vs-midi">→ Winona vs Midi Health: cash subscription vs insurance</a></p><p>Prices are approximate, from Winona's listed starting prices at our last check, and change; confirm on Winona's site. This article is general information, not medical advice.</p>`,
+          body: `<p><strong>Worth it</strong> if you are paying cash anyway, value never booking an appointment, and want a choice of estrogen forms with a physician on call by message. Winona's Trustpilot record (4.6 across 9,008 reviews as of Nov 3, 2026) suggests most customers think so (we dig into the reviews and BBB file in <a href="/articles/is-winona-legit">is Winona legit?</a>); one reviewer, Sharon Dragovich, praised the "variety of product available to adjust route with Dr review and approval" (Oct 3, 2026). <strong>Probably not worth it</strong> if good insurance would cover your care and generic hormones, or if you want a live conversation before starting. Whichever provider you choose, HRT carries real risks - blood clots, stroke and breast-cancer considerations among them - and a licensed physician decides whether it is appropriate for you.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review</a></p><p class="cta-row"><a href="/winona-vs-gala">→ Winona vs Gala: per-product pricing vs one flat plan</a></p><p class="cta-row"><a href="/winona-vs-midi">→ Winona vs Midi Health: cash subscription vs insurance</a></p><p>Prices are approximate, from Winona's listed starting prices at our last check, and change; confirm on Winona's site. This article is general information, not medical advice.</p>`,
         },
       ],
     },
@@ -1402,7 +1549,7 @@ export const hrtConfig: SiteConfig = {
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-19",
+      updatedAt: "2026-11-03",
       heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1438,7 +1585,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Is Midi Health worth it?",
-          body: `<p><strong>Worth it</strong> if you have an in-network PPO plan, want a real-time conversation before starting HRT, or have a more complicated history (migraines, clot risk, a cancer history in the family) that benefits from a longer visit. That is what Midi's reviewers praise. "My provider got to know me more in my 30 minute visit than my own PCP," wrote Holman (5 stars, Sep 29, 2026). Erin Woltjen said her provider "has been careful to make sure my medications are safe, monitor side effects, ensure they are working as they should, and make sure I have refills as needed" (5 stars, Oct 1, 2026). Midi's Trustpilot profile shows 4.1 across 1,695 reviews (Oct 4, 2026).</p><p><strong>Less worth it</strong> if you are on Medicare or an HMO and would pay $250 per first visit plus medication, or if you simply want hormones delivered without scheduling anything; then a flat cash plan from Gala or Winona is simpler. HRT carries real risks - blood clots, stroke and breast-cancer considerations among them - and a licensed clinician decides whether it suits you.</p><p class="cta-row"><a href="/reviews/midi">→ Read the full Midi Health review</a></p><p class="cta-row"><a href="/winona-vs-midi">→ Winona vs Midi Health: cash subscription vs insurance</a></p><p class="cta-row"><a href="/gala-vs-midi">→ Gala vs Midi Health: flat price vs per-visit billing</a></p><p>Prices are approximate, from Midi's published pricing and help center at our last check; confirm your coverage and current prices with Midi and your insurer. This article is general information, not medical advice.</p>`,
+          body: `<p><strong>Worth it</strong> if you have an in-network PPO plan, want a real-time conversation before starting HRT, or have a more complicated history (migraines, clot risk, a cancer history in the family) that benefits from a longer visit. That is what Midi's reviewers praise. "My provider got to know me more in my 30 minute visit than my own PCP," wrote Holman (5 stars, Sep 29, 2026). Erin Woltjen said her provider "has been careful to make sure my medications are safe, monitor side effects, ensure they are working as they should, and make sure I have refills as needed" (5 stars, Oct 1, 2026). Midi's Trustpilot profile shows 4.1 across 1,795 reviews (Nov 3, 2026).</p><p><strong>Less worth it</strong> if you are on Medicare or an HMO and would pay $250 per first visit plus medication, or if you simply want hormones delivered without scheduling anything; then a flat cash plan from Gala or Winona is simpler. HRT carries real risks - blood clots, stroke and breast-cancer considerations among them - and a licensed clinician decides whether it suits you.</p><p class="cta-row"><a href="/reviews/midi">→ Read the full Midi Health review</a></p><p class="cta-row"><a href="/winona-vs-midi">→ Winona vs Midi Health: cash subscription vs insurance</a></p><p class="cta-row"><a href="/gala-vs-midi">→ Gala vs Midi Health: flat price vs per-visit billing</a></p><p>Prices are approximate, from Midi's published pricing and help center at our last check; confirm your coverage and current prices with Midi and your insurer. This article is general information, not medical advice.</p>`,
         },
       ],
     },
