@@ -137,7 +137,7 @@ export const ESTROGEN_PATCH_VS_PILL: ArticleData = {
     },
     {
       heading: "Which form of estrogen is best for perimenopause?",
-      body: `<p><strong>Any systemic form can be used in perimenopause; the choice follows the same safety and preference considerations as after menopause. Transdermal estrogen is often chosen for women with migraines, which commonly worsen in perimenopause.</strong> Perimenopausal regimens usually use a cyclical progestogen or a levonorgestrel IUD, and contraception may still be needed. See <a href="/articles/hrt-for-perimenopause">HRT for perimenopause</a>.</p>`,
+      body: `<p><strong>Any systemic form can be used in perimenopause; the choice follows the same safety and preference considerations as after menopause. Transdermal estrogen is often chosen for women with migraines, which commonly worsen in perimenopause.</strong> Perimenopausal regimens usually use a cyclical progestogen or a levonorgestrel IUD, and contraception may still be needed. See <a href="/articles/hrt-for-perimenopause">HRT for perimenopause</a> and <a href="/articles/perimenopause-symptoms">perimenopause symptoms</a>.</p>`,
     },
     {
       heading: "Questions to ask your clinician about estrogen patch vs pill",

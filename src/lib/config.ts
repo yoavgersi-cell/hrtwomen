@@ -198,6 +198,8 @@ export interface ArticleData {
   // 3-4 scannable takeaway bullets rendered in a box above the body -
   // verified facts only, written per-article (never auto-generated).
   keyTakeaways?: string[];
+  /** Optional heading for the key-takeaways box (default "Key takeaways"). */
+  takeawaysTitle?: string;
   sections: ArticleSection[];
   sidebarId?: string;
 }
