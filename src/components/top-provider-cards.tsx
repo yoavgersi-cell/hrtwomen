@@ -85,7 +85,6 @@ export function TopProviderCards({
           <ComparisonCard
             key={product.id}
             product={product}
-            socialProof={config.cardSocialProof}
             linkPrefix={linkPrefix}
             pageType={pageType}
             sourceFlow={sourceFlow}

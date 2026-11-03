@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/hero-section";
 import { ComparisonCard } from "@/components/comparison-card";
-import { SocialProofBand, providerVisitStat } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { EditorialContent } from "@/components/editorial-content";
 import { ProductCarousel } from "@/components/product-carousel";
@@ -9,7 +8,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { HOMEPAGE_UPDATED, SITE_LAUNCH_DATE } from "@/lib/config";
 
 export const revalidate = 60;
 
@@ -100,8 +99,8 @@ export default async function HomePage() {
       "Compare treatment options, pricing, medical support and overall value across the top online HRT providers of 2026.",
     url: SITE_URL,
     inLanguage: "en-US",
-    datePublished: "2026-06-01",
-    dateModified: CONTENT_LAST_UPDATED,
+    datePublished: SITE_LAUNCH_DATE,
+    dateModified: HOMEPAGE_UPDATED,
     isPartOf: { "@type": "WebSite", name: "HRT Women", url: SITE_URL },
     about: { "@type": "Thing", name: "Menopause HRT providers" },
     ...(author && {
@@ -138,7 +137,7 @@ export default async function HomePage() {
       <HeroSection
         backgroundImageUrl={config.hero.backgroundImageUrl}
         imageAlt={config.hero.imageAlt}
-        updatedLabel={config.hero.updatedLabel}
+        updatedLabel={`Last Updated: ${new Date(HOMEPAGE_UPDATED).toLocaleDateString("en-US", { month: "long", year: "numeric", timeZone: "UTC" })}`}
         h1={config.hero.h1}
         h2={config.hero.h2}
         description={config.hero.description}
@@ -152,12 +151,9 @@ export default async function HomePage() {
       <section className="mx-auto max-w-[1200px] px-4 pt-4 pb-6">
         <div className="flex gap-6 items-start">
           <div className="min-w-0 flex-1 space-y-4">
-            {displayList.map((product, idx) => (
+            {displayList.map((product) => (
               <div key={product.id}>
-                <ComparisonCard product={product} socialProof={config.cardSocialProof} />
-                {idx === 0 && (
-                  <SocialProofBand number={providerVisitStat(product.id)} text={`visited ${product.name} this month`} />
-                )}
+                <ComparisonCard product={product} />
               </div>
             ))}
           </div>

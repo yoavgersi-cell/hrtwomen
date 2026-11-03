@@ -287,7 +287,17 @@ export interface LandingPageData {
 
 // Stable fallback "last updated" date for schema when an item has no CMS
 // updatedAt. Avoids emitting today's date on every request (fake freshness).
-export const CONTENT_LAST_UPDATED = "2026-09-01";
+// Set to the site's launch date: nothing on hrtwomen.com predates it, so no
+// page should ever claim an earlier date.
+export const SITE_LAUNCH_DATE = "2026-09-26";
+export const CONTENT_LAST_UPDATED = SITE_LAUNCH_DATE;
+
+// The homepage's real last substantive change. Drives the visible "Last
+// Updated" label, WebPage.dateModified and the sitemap lastmod together, so
+// the three never disagree - and so the daily IndexNow cron (which submits
+// URLs whose lastmod is inside its window) actually pings the homepage after
+// a change. Bump it whenever the homepage content changes.
+export const HOMEPAGE_UPDATED = "2026-11-03";
 
 // Floor date for battle, review and article pages: the shared page templates
 // were last reworked on this date (quick answer, fit finder, accordions,

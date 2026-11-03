@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Fragment } from "react";
 import Link from "next/link";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_WL_BATTLE_SLUGS, SITE_LAUNCH_DATE } from "@/lib/config";
 import { splitSentences, BoldKeyFacts, ReadableProse } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
@@ -436,7 +436,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     ...pageReviewSchema(`/${battle.slug}`),
     headline: battle.title,
     description: battle.description,
-    datePublished: "2026-06-01",
+    datePublished: SITE_LAUNCH_DATE,
     dateModified: battleUpdatedAt,
     author: { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
     publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },

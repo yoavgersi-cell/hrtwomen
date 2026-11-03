@@ -1,6 +1,5 @@
 import { HeroSection } from "@/components/hero-section";
 import { RichComparisonCard } from "@/components/rich-comparison-card";
-import { SocialProofBand } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { FaqAccordion } from "@/components/faq-accordion";
 import type { SiteConfig } from "@/lib/config";
@@ -88,16 +87,13 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
       <section className="mx-auto max-w-[1200px] px-4 pt-6 pb-6">
         <div className="flex gap-6 items-start">
           <div className="min-w-0 flex-1 space-y-4">
-            {displayList.map((product, idx) => (
+            {displayList.map((product) => (
               <div key={product.id}>
                 <RichComparisonCard
                   product={product}
                   review={(config.reviews ?? []).find((r) => r.providerId === product.id)}
                   linkPrefix={linkPrefix}
                 />
-                {idx === 0 && config.cardSocialProof && (
-                  <SocialProofBand number={config.cardSocialProof.number} text={config.cardSocialProof.text} />
-                )}
               </div>
             ))}
           </div>

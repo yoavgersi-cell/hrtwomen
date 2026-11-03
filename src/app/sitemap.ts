@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getConfig } from "@/lib/config-store";
-import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
+import { CONTENT_LAST_UPDATED, HOMEPAGE_UPDATED, latestUpdate, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
 import { REVIEWERS } from "@/data/reviewers";
 
 const SITE_URL = "https://www.hrtwomen.com";
@@ -25,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const entries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
     url: `${SITE_URL}${p.path === "/" ? "" : p.path}`,
-    lastModified: FALLBACK_DATE,
+    lastModified: p.path === "/" ? new Date(HOMEPAGE_UPDATED) : FALLBACK_DATE,
     changeFrequency: p.changeFrequency,
     priority: p.priority,
   }));
