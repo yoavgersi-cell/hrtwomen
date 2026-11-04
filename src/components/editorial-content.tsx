@@ -260,7 +260,10 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
       <ul className="mb-4 list-disc space-y-1 pl-6">
         <li><strong>Menopause expertise</strong> - clinicians who regularly treat perimenopause and menopause, not a one-size-fits-all form</li>
         <li><strong>Clear, upfront pricing</strong> - what you actually pay for visits, medication and membership, before checkout</li>
-        <li><strong>Treatment choice</strong> - patches, gels, pills, vaginal estrogen, progesterone and non-hormonal options where appropriate</li>
+        <li><strong>Treatment choice</strong> - patches, gels, pills, vaginal estrogen, progesterone and non-hormonal options where appropriate (for example, see{" "}
+          <Link href="/articles/winona-products" className="font-semibold text-[#A8285E] hover:underline">
+            every product Winona prescribes
+          </Link>)</li>
         <li><strong>Ongoing support</strong> - follow-up visits, dose adjustments and a human to reach with questions</li>
         <li><strong>Insurance & lab options</strong> - some providers accept insurance for visits or can order labs when clinically useful</li>
       </ul>
