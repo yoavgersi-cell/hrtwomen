@@ -168,16 +168,20 @@ export function TrustpilotCarousel({
             >
               <ChevronLeft className="h-4 w-4" strokeWidth={2} />
             </button>
-            <div className="flex gap-1.5">
+            <div className="flex">
               {Array.from({ length: pageCount }).map((_, i) => (
                 <button
                   key={i}
                   onClick={() => setPage(i)}
                   aria-label={`Go to reviews page ${i + 1}`}
-                  className={`h-1.5 rounded-full transition-all ${
-                    i === page ? "w-5 bg-[#C2366E]" : "w-1.5 bg-gray-200 hover:bg-gray-300"
-                  }`}
-                />
+                  className="group flex h-6 min-w-6 items-center justify-center"
+                >
+                  <span
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === page ? "w-5 bg-[#C2366E]" : "w-1.5 bg-gray-200 group-hover:bg-gray-300"
+                    }`}
+                  />
+                </button>
               ))}
             </div>
             <button
@@ -207,18 +211,30 @@ export function TrustpilotCarousel({
 
         {/* Dots + arrows */}
         <div className="mt-3 flex items-center justify-between px-1">
-          <div className="flex gap-1.5">
-            {reviews.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setCurrent(i)}
-                aria-label={`Go to review ${i + 1}`}
-                className={`h-1.5 rounded-full transition-all ${
-                  i === current ? "w-5 bg-[#C2366E]" : "w-1.5 bg-gray-200"
-                }`}
-              />
-            ))}
-          </div>
+          {/* Dots need 24px tap targets, so with many reviews a "3 / 13"
+              counter replaces them to keep the row within a phone screen. */}
+          {total > 6 ? (
+            <span className="text-[13px] font-medium text-gray-500 [font-variant-numeric:tabular-nums]" aria-live="polite">
+              {current + 1} / {total}
+            </span>
+          ) : (
+            <div className="flex">
+              {reviews.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  aria-label={`Go to review ${i + 1}`}
+                  className="flex h-6 min-w-6 items-center justify-center"
+                >
+                  <span
+                    className={`h-1.5 rounded-full transition-all ${
+                      i === current ? "w-5 bg-[#C2366E]" : "w-1.5 bg-gray-200"
+                    }`}
+                  />
+                </button>
+              ))}
+            </div>
+          )}
           <div className="flex gap-1.5">
             <button
               onClick={() => setCurrent((current - 1 + total) % total)}

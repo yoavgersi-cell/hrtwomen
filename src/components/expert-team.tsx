@@ -21,7 +21,7 @@ export function ExpertTeam({ experts }: { experts: Expert[] }) {
 
       <div className="grid gap-5 sm:grid-cols-2">
         {experts.map((expert) => (
-          <article key={expert.id} className="rounded-2xl border border-gray-200 bg-white p-6 shadow-[0_1px_3px_rgba(16,32,54,0.04)]">
+          <article key={expert.id} className="min-w-0 rounded-2xl border border-gray-200 bg-white p-6 shadow-[0_1px_3px_rgba(16,32,54,0.04)]">
             <div className="flex items-center gap-4">
               <span className="flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-[#C2366E] to-[#C2366E] text-[16px] font-bold text-white">
                 {expert.avatar ? (
@@ -33,7 +33,7 @@ export function ExpertTeam({ experts }: { experts: Expert[] }) {
               </span>
               <div className="min-w-0">
                 <h3 className="flex items-center gap-1.5 text-[16px] font-bold leading-tight text-[#191919]">
-                  <span className="truncate">
+                  <span className="break-words">
                     {expert.name}
                     {expert.credentials && <span className="text-gray-500">, {expert.credentials}</span>}
                   </span>

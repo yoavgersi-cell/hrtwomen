@@ -447,7 +447,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {article.sections.map((s, i) => (
                   <li key={i} className="flex gap-2 text-[14px] leading-snug">
                     <span className="shrink-0 font-semibold text-gray-500">{i + 1}.</span>
-                    <a href={`#${slugifyHeading(s.heading)}`} className="text-[#A8285E] hover:underline">
+                    <a href={`#${slugifyHeading(s.heading)}`} className="inline-block py-1 text-[#A8285E] hover:underline">
                       {s.heading}
                     </a>
                   </li>

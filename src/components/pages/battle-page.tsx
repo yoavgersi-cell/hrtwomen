@@ -174,7 +174,7 @@ function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; la
         <BoldKeyFacts text={visible} />
       </p>
       <details className="group mt-1.5">
-        <summary className="inline-flex cursor-pointer list-none items-center gap-1 text-[14px] font-semibold text-[#A8285E] hover:underline [&::-webkit-details-marker]:hidden">
+        <summary className="inline-flex min-h-[24px] cursor-pointer list-none items-center gap-1 text-[14px] font-semibold text-[#A8285E] hover:underline [&::-webkit-details-marker]:hidden">
           {label}
           <span className="text-[11px] transition-transform group-open:rotate-180">▾</span>
         </summary>
@@ -1269,21 +1269,21 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
 
           {/* Related links */}
           <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 py-4 text-[13px]">
-            <Link href={hubLink(ctx, `/reviews/${p1.id}`)} className="font-semibold text-[#A8285E] hover:underline">
+            <Link href={hubLink(ctx, `/reviews/${p1.id}`)} className="inline-block py-1 font-semibold text-[#A8285E] hover:underline">
               {p1.name} Review
             </Link>
             <span className="text-gray-500">|</span>
-            <Link href={hubLink(ctx, `/reviews/${p2.id}`)} className="font-semibold text-[#A8285E] hover:underline">
+            <Link href={hubLink(ctx, `/reviews/${p2.id}`)} className="inline-block py-1 font-semibold text-[#A8285E] hover:underline">
               {p2.name} Review
             </Link>
             <span className="text-gray-500">|</span>
-            <Link href={hubLink(ctx, "/")} className="font-semibold text-[#A8285E] hover:underline">
+            <Link href={hubLink(ctx, "/")} className="inline-block py-1 font-semibold text-[#A8285E] hover:underline">
               Compare All Providers
             </Link>
             {(config.articles ?? []).some((a) => a.slug === "online-hrt-cost") && (
               <>
                 <span className="text-gray-500">|</span>
-                <Link href={hubLink(ctx, "/articles/online-hrt-cost")} className="font-semibold text-[#A8285E] hover:underline">
+                <Link href={hubLink(ctx, "/articles/online-hrt-cost")} className="inline-block py-1 font-semibold text-[#A8285E] hover:underline">
                   Online HRT Cost Compared
                 </Link>
               </>
