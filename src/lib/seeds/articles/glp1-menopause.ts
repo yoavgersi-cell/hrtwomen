@@ -297,7 +297,7 @@ export const GLP1_MENOPAUSE: ArticleData = {
     {
       heading: "Can you drink alcohol on a GLP-1 medication?",
       body: `<p><strong>There's no absolute ban, but alcohol can worsen nausea, reflux and dehydration, and it adds calories with no protein. Many people find they want less alcohol on a GLP-1 - an effect researchers are studying - but GLP-1s aren't approved to treat alcohol use disorder.</strong></p>
-<ul><li>Alcohol can trigger hot flashes and disrupt sleep - both already common in menopause.</li><li>Drinking on an empty stomach or after a very small meal raises the risk of feeling unwell.</li><li>People with diabetes on insulin or sulfonylureas have extra risk of low blood sugar when drinking.</li><li>Alcohol is a known risk factor for breast cancer, which matters in HRT decisions too; limiting it is generally recommended for women in midlife.</li></ul>`,
+<ul><li>Alcohol can trigger hot flashes and disrupt sleep - both already common in menopause.</li><li>Drinking on an empty stomach or after a very small meal raises the risk of feeling unwell.</li><li>People with diabetes on insulin or sulfonylureas have extra risk of low blood sugar when drinking.</li><li>Alcohol is a known risk factor for breast cancer, which matters in HRT decisions too (see <a href="/articles/hrt-breast-cancer-risk">HRT and breast cancer risk</a>); limiting it is generally recommended for women in midlife.</li></ul>`,
     },
     {
       heading: "Do GLP-1 medications help blood sugar, heart health and sleep apnea after menopause?",
