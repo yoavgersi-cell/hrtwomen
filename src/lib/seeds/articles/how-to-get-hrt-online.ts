@@ -32,7 +32,7 @@ export const HOW_TO_GET_HRT_ONLINE: ArticleData = {
   category: "Guides",
   readTime: "55 min read",
   publishedAt: "2026-10-20",
-  updatedAt: "2026-10-20",
+  updatedAt: "2026-11-06",
   heroColor: "#F8D7E3",
   author: "HRT Women Editorial Team",
   keyTakeaways: [
@@ -361,7 +361,7 @@ export const HOW_TO_GET_HRT_ONLINE: ArticleData = {
     },
     {
       heading: "What are the best online HRT providers in 2026?",
-      body: `<p><strong>Our top-ranked online HRT providers are Winona (best overall, with the widest range of estrogen forms and no appointment needed), Gala (best flat-fee value) and Midi Health (best for insurance and video visits).</strong> Each is legitimate and uses licensed clinicians who review your history before prescribing; they differ in care model, pricing and products.</p>
+      body: `<p><strong>Our top-ranked online HRT providers are Midi Health (best overall, with menopause-trained clinicians, video visits and insurance billing), Winona (the widest range of estrogen forms and no appointment needed) and Gala (best flat-fee value).</strong> Each is legitimate and uses licensed clinicians who review your history before prescribing; they differ in care model, pricing and products.</p>
 <table><tr><th></th><th><a href="/reviews/winona">Winona</a></th><th><a href="/reviews/gala">Gala</a></th><th><a href="/reviews/midi">Midi Health</a></th></tr><tr><td><strong>Care model</strong></td><td>Physician-reviewed online intake; messaging; no video visit</td><td>Clinician-reviewed assessment; check-ins and messaging</td><td>About 30-minute video visits with menopause-trained NPs and nurse midwives</td></tr><tr><td><strong>Pricing</strong></td><td>Per product: from about $39/month to about $149/month</td><td>One plan, advertised from about $79/month</td><td>Per visit: about $50 average with in-network insurance; $250 / $150 self-pay</td></tr><tr><td><strong>Insurance</strong></td><td>No (HSA/FSA accepted)</td><td>No</td><td>Most commercial PPO plans</td></tr><tr><td><strong>Medication</strong></td><td>Shipped; included in price</td><td>Shipped; included in price</td><td>Sent to your pharmacy</td></tr><tr><td><strong>Estrogen options</strong></td><td>Tablets, patch, body creams, vaginal cream, estriol</td><td>Pill, patch, vaginal estradiol</td><td>Whatever your clinician prescribes and your pharmacy stocks</td></tr><tr><td><strong>Trustpilot</strong></td><td>4.6 (9,008 reviews, Nov 3, 2026)</td><td>4.6 (4,258 reviews, Nov 3, 2026)</td><td>4.1 (1,795 reviews, Nov 3, 2026)</td></tr><tr><td><strong>Best for</strong></td><td>Women who want choice of forms and no appointments</td><td>Women who want one predictable price</td><td>Women with PPO insurance who want a live conversation</td></tr></table>
 <p>For the full comparison, read <a href="/articles/best-online-hrt-providers-compared">Best online HRT providers compared</a> and the head-to-heads: <a href="/winona-vs-gala">Winona vs Gala</a>, <a href="/winona-vs-midi">Winona vs Midi Health</a> and <a href="/gala-vs-midi">Gala vs Midi Health</a>. Our <a href="/how-we-rank">ranking methodology</a> explains how we score providers, and we may earn a commission from provider links, which does not affect rankings.</p>`,
     },
