@@ -339,7 +339,7 @@ export const GLP1_MENOPAUSE: ArticleData = {
       heading: "Can you get GLP-1s and HRT online?",
       body: `<p><strong>Yes. Licensed US telehealth services can prescribe HRT, and many also prescribe GLP-1 medicines after an online assessment, often with lab work. Check that the service uses licensed clinicians in your state, explains whether medicines are FDA-approved or compounded, and offers ongoing follow-up.</strong></p>
 <h3>Menopause-focused telehealth</h3>
-<p>The three menopause providers we review focus mainly on hormone therapy:</p>
+<p>The menopause providers we review focus mainly on hormone therapy:</p>
 <ul><li><strong>Winona</strong> offers estrogen and progesterone, including FDA-approved tablets, patches and progesterone capsules, plus compounded body creams. See our <a href="/reviews/winona">Winona review</a> and <a href="/articles/is-winona-legit">is Winona legit?</a></li><li><strong>Midi Health</strong> provides menopause care from clinicians, often billed through insurance, covering HRT and broader midlife health. See our <a href="/reviews/midi">Midi review</a> and <a href="/articles/is-midi-legit">is Midi Health legit?</a></li><li><strong>Gala</strong> offers menopause HRT and also runs a weight-loss program. As with any provider, ask whether a GLP-1 offered is a brand-name FDA-approved product or a compounded version before you sign up. See our <a href="/reviews/gala">Gala review</a> and <a href="/articles/is-gala-legit">is Gala legit?</a></li></ul>
 <p>For a side-by-side view, see our <a href="/articles/best-online-hrt-providers-compared">comparison of online HRT providers</a> and <a href="/articles/how-to-get-hrt-online">how to get HRT online</a>.</p>
 <h3>Red flags with online GLP-1 sellers</h3>
