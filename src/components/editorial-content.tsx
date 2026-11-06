@@ -330,7 +330,8 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         <Link href="/articles/is-hrt-safe" className="font-semibold text-[#A8285E] hover:underline">
           is HRT safe?
         </Link>, and explain the FDA&apos;s 2025-2026 label changes in{" "}
-        <Link href="/articles/hrt-black-box-warning-removed" className="font-semibold text-[#A8285E] hover:underline">the HRT black box warning, explained</Link>.
+        <Link href="/articles/hrt-black-box-warning-removed" className="font-semibold text-[#A8285E] hover:underline">the HRT black box warning, explained</Link>, and give the exact breast cancer numbers in{" "}
+        <Link href="/articles/hrt-breast-cancer-risk" className="font-semibold text-[#A8285E] hover:underline">HRT and breast cancer risk</Link>.
       </p>
 
       <hr className="mb-8 border-gray-200" />

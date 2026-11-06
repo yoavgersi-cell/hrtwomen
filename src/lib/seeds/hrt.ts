@@ -10,6 +10,7 @@ import { GLP1_MENOPAUSE } from "./articles/glp1-menopause";
 import { VAGINAL_ESTROGEN } from "./articles/vaginal-estrogen";
 import { TESTOSTERONE_FOR_WOMEN } from "./articles/testosterone-for-women";
 import { HOT_FLASHES_TREATMENT } from "./articles/hot-flashes-treatment";
+import { HRT_BREAST_CANCER_RISK } from "./articles/hrt-breast-cancer-risk";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -113,10 +114,9 @@ import { HOT_FLASHES_TREATMENT } from "./articles/hot-flashes-treatment";
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Real last-substantive-change dates (shown on page, in schema and in the
-// sitemap lastmod). Reviews: customer-sentiment + editorial Review schema
-// (Oct 25) and query-matched FAQs (Oct 26). Battles: provider cost/legit/
-// products link boxes went live Nov 3 (product carousel Oct 25).
-const REVIEWS_UPDATED = "2026-10-26";
+// sitemap lastmod). Reviews carry their own dates (Trustpilot refresh, Nov
+// 3). Battles: provider cost/legit/products link boxes went live Nov 3
+// (product carousel Oct 25).
 const BATTLES_UPDATED = "2026-11-03";
 
 export const hrtConfig: SiteConfig = {
@@ -1029,6 +1029,7 @@ export const hrtConfig: SiteConfig = {
     VAGINAL_ESTROGEN,
     TESTOSTERONE_FOR_WOMEN,
     HOT_FLASHES_TREATMENT,
+    HRT_BREAST_CANCER_RISK,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -1097,7 +1098,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "The real risks to understand",
-          body: `<p>Hormone therapy is a real medication with real risks. The main ones clinicians weigh include:</p><ul><li><strong>Blood clots (venous thromboembolism)</strong> - the risk is associated particularly with oral estrogen; transdermal routes (patch, gel) are thought to carry a lower clot risk, which is one reason route matters.</li><li><strong>Stroke</strong> - a small increased risk, especially with oral estrogen and in older women.</li><li><strong>Breast cancer</strong> - combined estrogen-plus-progestogen therapy has been associated with a small increase in risk with longer use; the picture differs for estrogen alone.</li><li><strong>Endometrial cancer</strong> - estrogen alone in a woman with a uterus raises this risk, which progestogen protects against.</li><li><strong>Gallbladder disease</strong> and common side effects such as breast tenderness, bloating or bleeding.</li></ul><p>These risks are why an honest, complete medical intake matters so much - and why dosing and route are clinician decisions.</p>`,
+          body: `<p>Hormone therapy is a real medication with real risks. The main ones clinicians weigh include:</p><ul><li><strong>Blood clots (venous thromboembolism)</strong> - the risk is associated particularly with oral estrogen; transdermal routes (patch, gel) are thought to carry a lower clot risk, which is one reason route matters.</li><li><strong>Stroke</strong> - a small increased risk, especially with oral estrogen and in older women.</li><li><strong>Breast cancer</strong> - combined estrogen-plus-progestogen therapy has been associated with a small increase in risk with longer use; the picture differs for estrogen alone. See <a href="/articles/hrt-breast-cancer-risk">HRT and breast cancer risk: the real numbers</a>.</li><li><strong>Endometrial cancer</strong> - estrogen alone in a woman with a uterus raises this risk, which progestogen protects against.</li><li><strong>Gallbladder disease</strong> and common side effects such as breast tenderness, bloating or bleeding.</li></ul><p>These risks are why an honest, complete medical intake matters so much - and why dosing and route are clinician decisions.</p>`,
         },
         {
           heading: "Who usually should not take HRT",
@@ -1525,7 +1526,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Estrogen body cream, with or without progesterone",
-          body: `<p>Winona's <strong>Estrogen Body Cream</strong> contains two bioidentical estrogens, <strong>estradiol and estriol</strong> (a combination often called "bi-est"), rubbed into the skin daily for whole-body symptoms. A second version, the <strong>Estrogen Body Cream with Progesterone</strong>, adds progesterone to the same cream. Both start at about $89/month.</p><p>These creams are <strong>compounded</strong>: Winona says it prepares them in its own 503A-regulated compounding pharmacies from FDA-approved ingredients, and that the finished creams are not FDA-approved. That is not unusual, but it matters. Compounded hormones have not been through the FDA's review of safety, effectiveness and batch consistency, and The Menopause Society and ACOG generally recommend FDA-approved products for most women (see <a href="/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>). "Bioidentical" does not make estrogen safer; the same class risks - blood clots, stroke, breast-cancer considerations - apply.</p><p><strong>The progesterone question.</strong> If you have a uterus, the progestogen in your plan is there to protect the uterine lining from estrogen. The evidence for that comes mainly from oral micronized progesterone; major menopause guidance does not consider progesterone absorbed from a skin cream reliable endometrial protection. If you are prescribed the combined cream, ask your physician directly how your uterine lining is being protected and what bleeding should prompt a check.</p>`,
+          body: `<p>Winona's <strong>Estrogen Body Cream</strong> contains two bioidentical estrogens, <strong>estradiol and estriol</strong> (a combination often called "bi-est"), rubbed into the skin daily for whole-body symptoms. A second version, the <strong>Estrogen Body Cream with Progesterone</strong>, adds progesterone to the same cream. Both start at about $89/month.</p><p>These creams are <strong>compounded</strong>: Winona says it prepares them in its own 503A-regulated compounding pharmacies from FDA-approved ingredients, and that the finished creams are not FDA-approved. That is not unusual, but it matters. Compounded hormones have not been through the FDA's review of safety, effectiveness and batch consistency, and The Menopause Society and ACOG generally recommend FDA-approved products for most women (see <a href="/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>). "Bioidentical" does not make estrogen safer; the same class risks - blood clots, stroke, breast-cancer considerations - apply (see <a href="/articles/hrt-breast-cancer-risk">the breast cancer numbers</a>).</p><p><strong>The progesterone question.</strong> If you have a uterus, the progestogen in your plan is there to protect the uterine lining from estrogen. The evidence for that comes mainly from oral micronized progesterone; major menopause guidance does not consider progesterone absorbed from a skin cream reliable endometrial protection. If you are prescribed the combined cream, ask your physician directly how your uterine lining is being protected and what bleeding should prompt a check.</p>`,
         },
         {
           heading: "Progesterone capsules",

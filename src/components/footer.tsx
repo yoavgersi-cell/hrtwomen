@@ -23,6 +23,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "GLP-1s and Menopause", href: "/articles/glp1-menopause" },
       { label: "Vaginal Estrogen Guide", href: "/articles/vaginal-estrogen" },
       { label: "Hot Flashes Treatment", href: "/articles/hot-flashes-treatment" },
+      { label: "HRT and Breast Cancer Risk", href: "/articles/hrt-breast-cancer-risk" },
       { label: "Testosterone for Women", href: "/articles/testosterone-for-women" },
       { label: "HRT Black Box Warning Removed", href: "/articles/hrt-black-box-warning-removed" },
       { label: "What Is HRT?", href: "/articles/what-is-hrt" },
