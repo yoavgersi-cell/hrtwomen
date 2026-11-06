@@ -372,11 +372,11 @@ export const isHiddenVertical = (id: string): boolean => HIDDEN_VERTICALS.includ
 // list no longer gates indexing - all provider reviews are indexable
 // (operator policy: impressions everywhere first, optimize what earns clicks).
 export const AFFILIATE_PROVIDER_IDS = [
+  "midi",
   "winona",
   "lifemd",
-  "wisp",
   "gala",
-  "midi",
+  "wisp",
 ];
 
 // Operator policy (Aug 2026): index everything that can honestly be indexed -

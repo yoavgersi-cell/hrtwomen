@@ -21,7 +21,7 @@ export const IS_WINONA_LEGIT: ArticleData = {
   category: "Provider Guides",
   readTime: "7 min read",
   publishedAt: "2026-10-19",
-  updatedAt: "2026-11-03",
+  updatedAt: "2026-11-06",
   heroColor: "#FBE9F0",
   author: "HRT Women Editorial Team",
   keyTakeaways: [
@@ -57,7 +57,7 @@ export const IS_WINONA_LEGIT: ArticleData = {
     },
     {
       heading: "Our verdict",
-      body: `<p>Winona is a legitimate, physician-led menopause service with a large and mostly positive review record, published prices and a wider range of estrogen forms than most online competitors. Its weak spots are the ones common to subscription telehealth - billing and cancellation friction - plus the need to ask which of its products are FDA-approved. That is why it is our <a href="/">top-ranked online HRT provider</a> overall, while women who want insurance billing or video visits may prefer Midi Health, and those who want one flat price may prefer Gala.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review, with real customer reviews</a></p><p class="cta-row"><a href="/articles/winona-cost">→ What Winona costs per month, and whether insurance helps</a></p><p class="cta-row"><a href="/winona-vs-gala">→ Winona vs Gala: more forms vs one flat price</a></p><p>Trustpilot figures as shown on Nov 3, 2026 (earlier quotes from Oct 4, 2026); BBB figures as shown on Oct 19, 2026; prices are approximate - confirm on Winona's site. This article is general information, not medical advice.</p>`,
+      body: `<p>Winona is a legitimate, physician-led menopause service with a large and mostly positive review record, published prices and a wider range of estrogen forms than most online competitors. Its weak spots are the ones common to subscription telehealth - billing and cancellation friction - plus the need to ask which of its products are FDA-approved. That is why it ranks second among our <a href="/">top online HRT providers</a>, behind Midi Health, which we prefer for its menopause-trained clinicians, video visits and insurance billing; women who want one flat price may prefer Gala.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review, with real customer reviews</a></p><p class="cta-row"><a href="/articles/winona-cost">→ What Winona costs per month, and whether insurance helps</a></p><p class="cta-row"><a href="/winona-vs-gala">→ Winona vs Gala: more forms vs one flat price</a></p><p>Trustpilot figures as shown on Nov 3, 2026 (earlier quotes from Oct 4, 2026); BBB figures as shown on Oct 19, 2026; prices are approximate - confirm on Winona's site. This article is general information, not medical advice.</p>`,
     },
   ],
 };
@@ -70,7 +70,7 @@ export const IS_MIDI_LEGIT: ArticleData = {
   category: "Provider Guides",
   readTime: "7 min read",
   publishedAt: "2026-10-19",
-  updatedAt: "2026-11-03",
+  updatedAt: "2026-11-06",
   heroColor: "#FDEEF3",
   author: "HRT Women Editorial Team",
   keyTakeaways: [
@@ -106,7 +106,7 @@ export const IS_MIDI_LEGIT: ArticleData = {
     },
     {
       heading: "Our verdict",
-      body: `<p>Midi Health is a legitimate, BBB-accredited menopause clinic, and the best option on our list for women who want insurance billing and a real conversation with a clinician. Its weak spot is the unpredictability of insurance billing, which drives most of its complaints - so verify your coverage before you book. If you would rather pay one predictable price, compare <a href="/gala-vs-midi">Gala vs Midi Health</a>; if you want more estrogen forms and no appointments, see <a href="/winona-vs-midi">Winona vs Midi Health</a>.</p><p class="cta-row"><a href="/reviews/midi">→ Read the full Midi Health review, with real patient reviews</a></p><p class="cta-row"><a href="/articles/midi-cost">→ What Midi costs with and without insurance</a></p><p>Trustpilot figures as shown on Nov 3, 2026 (earlier quotes from Oct 4, 2026); BBB figures as shown on Oct 19, 2026; prices are approximate - confirm with Midi and your insurer. This article is general information, not medical advice.</p>`,
+      body: `<p>Midi Health is a legitimate, BBB-accredited menopause clinic and our <a href="/">top-ranked online HRT provider</a> - the best option on our list for women who want insurance billing and a real conversation with a clinician. Its weak spot is the unpredictability of insurance billing, which drives most of its complaints - so verify your coverage before you book. If you would rather pay one predictable price, compare <a href="/gala-vs-midi">Gala vs Midi Health</a>; if you want more estrogen forms and no appointments, see <a href="/winona-vs-midi">Winona vs Midi Health</a>.</p><p class="cta-row"><a href="/reviews/midi">→ Read the full Midi Health review, with real patient reviews</a></p><p class="cta-row"><a href="/articles/midi-cost">→ What Midi costs with and without insurance</a></p><p>Trustpilot figures as shown on Nov 3, 2026 (earlier quotes from Oct 4, 2026); BBB figures as shown on Oct 19, 2026; prices are approximate - confirm with Midi and your insurer. This article is general information, not medical advice.</p>`,
     },
   ],
 };
