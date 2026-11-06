@@ -20,6 +20,7 @@ const TOPICS: Record<string, string[]> = {
   "glp1-menopause": ["weight", "treatments", "perimenopause", "news"],
   "how-to-get-hrt-online": ["providers", "online", "cost", "pillar"],
   "best-online-hrt-providers-compared": ["providers", "online", "legit", "cost"],
+  "best-online-hrt-clinics": ["providers", "online", "legit", "cost", "pillar"],
   "online-hrt-cost": ["providers", "cost", "online"],
   "winona-cost": ["winona", "cost", "providers"],
   "winona-products": ["winona", "products", "providers"],

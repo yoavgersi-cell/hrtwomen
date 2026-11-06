@@ -82,7 +82,11 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         <Link href="/articles/best-online-hrt-providers-compared" className="font-semibold text-[#A8285E] hover:underline">
           guide to the best online HRT providers
         </Link>{" "}
-        for the full breakdown.
+        for the full breakdown, or our ranked list of the{" "}
+        <Link href="/articles/best-online-hrt-clinics" className="font-semibold text-[#A8285E] hover:underline">
+          5 best online HRT clinics
+        </Link>
+        .
       </p>
       <p className="mb-8">
         This page is a practical, evidence-based overview of what menopause and perimenopause are,
