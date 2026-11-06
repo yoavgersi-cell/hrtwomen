@@ -35,6 +35,16 @@ import { CustomerSentiment } from "@/components/customer-sentiment";
 // "winona hrt reviews", "how much does winona cost", "does winona take
 // insurance", "is midi health legit", "gala hrt reviews", etc.
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  lifemd: {
+    title: "LifeMD Menopause Review (2026): HRT Cost, Plans & Is It Legit?",
+    description:
+      "LifeMD's Women's Health Program reviewed: HRT plan prices, video vs message visits, estradiol and progesterone options, what 4,293 Trustpilot reviews say and who it suits.",
+  },
+  wisp: {
+    title: "Wisp Menopause Review (2026): Cost, HRT Options & Is It Legit?",
+    description:
+      "Wisp menopause care reviewed: what the consult costs, which estrogen and progesterone it prescribes, how pharmacy pickup works, what 11,616 Trustpilot reviews say and who it suits.",
+  },
   winona: {
     title: "Winona HRT Reviews (2026): Cost, Insurance, Products & Is It Legit?",
     description:
@@ -55,6 +65,16 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
 // Direct answers for the "Is X legit?" FAQ, built only from the facts
 // verified in src/lib/seeds/hrt.ts.
 const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
+  lifemd: {
+    verdict:
+      "Yes - LifeMD is a legitimate US telehealth company, listed on Nasdaq (LFMD). Licensed physicians and nurse practitioners see you by video or through message-based care before prescribing. Its Trustpilot profile shows 3.9 from 4,293 reviews; confirm the total price before you commit, since some customers report billing disputes.",
+    signals: ["Licensed physicians and nurse practitioners", "Video or message-based visits", "Publicly listed US company (Nasdaq: LFMD)"],
+  },
+  wisp: {
+    verdict:
+      "Yes - Wisp is a legitimate US telehealth company. Board-certified providers review each consult before prescribing, and prescriptions are sent to a licensed pharmacy you choose. Its Trustpilot profile has 11,616 reviews (4.1), mostly about birth control and UTI care; as with any HRT, whether it's appropriate for you is a medical decision.",
+    signals: ["Board-certified providers", "Prescription only after review", "Prescriptions filled at your own pharmacy"],
+  },
   winona: {
     verdict:
       "Yes - Winona is a legitimate US telehealth company. Treatment is prescribed by board-certified physicians after an online medical questionnaire, and ongoing care runs through secure doctor messaging. As with any HRT, whether it's appropriate for you is a medical decision, so answer the intake honestly.",
@@ -73,6 +93,70 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
 };
 
 const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  lifemd: [
+    {
+      question: "What is LifeMD?",
+      answer:
+        "LifeMD is a US telehealth company (Nasdaq: LFMD) offering primary care, weight management and a Women's Health Program for perimenopause and menopause, with care from licensed physicians and nurse practitioners by video or message.",
+    },
+    {
+      question: "How much does LifeMD HRT cost?",
+      answer:
+        "LifeMD lists HRT plans from about $67/month for estradiol cream plus progesterone when billed every six months ($399), and about $77/month for an estradiol patch plus progesterone. Billed monthly, the same plans are about $119 and $149. A first video visit or program fee of $79 is also listed. LifeMD's pages describe this slightly differently, so confirm at checkout.",
+    },
+    {
+      question: "Does LifeMD take insurance for menopause care?",
+      answer:
+        "LifeMD describes its Women's Health Program as self-pay - you don't need insurance to get HRT. It says some video visits can be billed to insurance, so ask what applies to your plan.",
+    },
+    {
+      question: "What does LifeMD prescribe for menopause?",
+      answer:
+        "LifeMD's clinicians can prescribe estradiol (patch, cream or gel, and vaginal forms) and micronized progesterone for women with a uterus, if appropriate. Its guides say clinicians can also assess testosterone for eligible women after a video visit, which is off-label in the US.",
+    },
+    {
+      question: "What do LifeMD reviews say?",
+      answer:
+        "LifeMD held a 3.9 rating from 4,293 Trustpilot reviews when we checked on November 6, 2026, across all its services. The 20 newest reviews we read were all 4 or 5 stars, praising attentive clinicians, fast appointments and helpful support staff; none was explicitly about menopause care. BBB reviews include billing disputes.",
+    },
+    {
+      question: "Is LifeMD available in my state?",
+      answer:
+        "LifeMD says its HRT program is available in all 50 states. Some treatments, such as testosterone, need a video visit and may depend on state rules.",
+    },
+  ],
+  wisp: [
+    {
+      question: "What is Wisp?",
+      answer:
+        "Wisp (hellowisp.com) is a US women's health telehealth company. It's best known for birth control, UTI and sexual health care, and it also offers menopause and perimenopause consults with board-certified providers, with prescriptions sent the same day to your local pharmacy.",
+    },
+    {
+      question: "Does Wisp take insurance for menopause care?",
+      answer:
+        "The consult is paid to Wisp directly (HSA and FSA cards are accepted). Your medication is filled at your local pharmacy, where your insurance can cover it - or Wisp's discount card can lower the cash price if it doesn't.",
+    },
+    {
+      question: "How much does Wisp menopause care cost?",
+      answer:
+        "Wisp's menopause page lists consults from about $33/month, while some third-party reviews describe a $99 consult that includes follow-ups and about three months of care-team access. Medication is paid separately at your pharmacy. Confirm the current price at checkout.",
+    },
+    {
+      question: "What does Wisp prescribe for menopause?",
+      answer:
+        "Wisp's providers can prescribe estradiol (including patches), progesterone for women with a uterus, and an estradiol vaginal cream for dryness and urinary symptoms, if appropriate after reviewing your health history.",
+    },
+    {
+      question: "What do Wisp reviews say?",
+      answer:
+        "Wisp held a 4.1 rating from 11,616 Trustpilot reviews when we checked on November 6, 2026, across all of its services. Of the 60 newest reviews, 41 gave 5 stars - mostly for fast, easy prescriptions - and 17 gave 1 or 2 stars, mainly over slow replies, prescriptions not reaching the pharmacy and billing. None of the 60 was about menopause care.",
+    },
+    {
+      question: "Is Wisp available in my state?",
+      answer:
+        "Wisp says its menopause care is available in all 50 states. Medication availability depends on your local pharmacy.",
+    },
+  ],
   winona: [
     {
       question: "Does Winona take insurance?",

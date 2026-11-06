@@ -19,8 +19,12 @@ type Sentiment = {
   ratingCount: string;
   praised: Theme[];
   complaints: Theme[];
-  bbb: { grade: string; accredited: boolean; complaints: string; themes: string; checked: string };
+  /** Omitted when no BBB profile could be found for the business. */
+  bbb?: { grade: string; accredited: boolean; complaints: string; themes: string; checked: string };
   bottomLine: string;
+  /** Replaces the default "most recent menopause-related reviews" footnote
+   *  when the sample isn't menopause-specific. */
+  sampleNote?: string;
 };
 
 export const CUSTOMER_SENTIMENT: Record<string, Sentiment> = {
@@ -171,6 +175,90 @@ export const CUSTOMER_SENTIMENT: Record<string, Sentiment> = {
     bottomLine:
       "All 46 of the newest reviews were 5 stars, overwhelmingly for being heard by knowledgeable clinicians - often after being dismissed elsewhere. The lower 4.1 overall reflects older reviews and BBB complaints that are mostly about insurance billing.",
   },
+  // LifeMD: operator screenshot of the Trustpilot profile on 2026-11-06
+  // (3.9, 4,293 reviews; claimed Jul 2021; paid subscription; category
+  // Doctor) plus the 20 newest reviews the operator shared: 19 five-star,
+  // 1 four-star. None was explicitly about menopause care (3 about weight
+  // loss). BBB profile exists (LifeMD Inc., New York) but its letter grade
+  // could not be confirmed, so no BBB box.
+  lifemd: {
+    sampleSize: 20,
+    sampleDate: "Nov 6, 2026",
+    rating: "3.9",
+    ratingCount: "4,293",
+    praised: [
+      {
+        theme: "Clinicians who listen and explain",
+        count: 8,
+        example: "\"Kelly P. listened to me and did not rush the appointment. We discussed symptoms and medication options as a team.\" - Kelly B",
+      },
+      {
+        theme: "Quick, easy appointments",
+        count: 7,
+        example: "\"I got an appointment with a doctor the day after my subscription began. My provider was on time, professional...\" - verified customer",
+      },
+      {
+        theme: "Patient, helpful support staff",
+        count: 6,
+        example: "\"I was having a hard time understanding the charges on my credit card and she was nice enough to really make sure that I understood.\" - MahalohaMaulix",
+      },
+    ],
+    complaints: [
+      {
+        theme: "Slow first contact after signing up",
+        count: 1,
+        example: "\"I signed up on 9/24/2026 but never received any communication from LifeMD until yesterday.\" (5 stars - refund given)",
+      },
+    ],
+    bottomLine:
+      "The 20 newest reviews we read were all 4 or 5 stars, praising attentive clinicians, fast appointments and helpful support - but none was explicitly about menopause care, and the 3.9 overall score means lower-rated reviews exist beyond this sample, so read a few recent 1-star reviews before you sign up.",
+    sampleNote:
+      "the sample is the 20 most recent reviews across all of LifeMD's services shared with us on Nov 6, 2026 - all were 4 or 5 stars, so it does not represent the lower-rated reviews behind the 3.9 overall score.",
+  },
+  // Wisp: operator screenshots of the Trustpilot profile on 2026-11-06 (4.1,
+  // 11,616 reviews; claimed Dec 2018; paid subscription). 60 newest reviews
+  // read: 41 five-star, 1 four, 1 three, 4 two, 13 one. None was about
+  // menopause care (UTI, birth control, emergency contraception, testing,
+  // skincare). No BBB profile for Wisp (hellowisp) could be found.
+  wisp: {
+    sampleSize: 60,
+    sampleDate: "Nov 6, 2026",
+    rating: "4.1",
+    ratingCount: "11,616",
+    praised: [
+      {
+        theme: "Fast, easy prescriptions",
+        count: 38,
+        example: "\"Was able to input my symptoms, have a doc review and get a prescription all within a couple of hours.\" - Sha'dana Jenkins",
+      },
+      {
+        theme: "Cheaper than urgent care or a doctor's visit",
+        count: 7,
+        example: "\"Since my insurance doesn't cover this medication, Wisp provided a GoodRx card... My out of pocket cost went from $120 to $45.\" - Nathalie Deoliveira Hoffman",
+      },
+    ],
+    complaints: [
+      {
+        theme: "Slow or no reply from the care team",
+        count: 5,
+        example: "\"I have messaged 4 times in the app since 2:30pm (it is now 5:30) and have not received a response.\" (1 star)",
+      },
+      {
+        theme: "Prescription not sent, incomplete or wrong",
+        count: 5,
+        example: "\"Only one of my prescriptions were actually sent to the pharmacy.\" (1 star)",
+      },
+      {
+        theme: "Billing, refunds or charges without approval",
+        count: 5,
+        example: "\"I wasn't approved for my prescription with no explanation but still charged the consult review.\" (1 star)",
+      },
+    ],
+    bottomLine:
+      "Reviewers mostly praise how quickly a prescription reaches their local pharmacy - but none of the 60 newest reviews were about menopause care (most concern UTIs, birth control and testing), and about 3 in 10 gave 1 or 2 stars, mostly over slow replies, prescriptions that didn't reach the pharmacy and billing.",
+    sampleNote:
+      "the sample is the 60 most recent reviews across all of Wisp's services, including low-star ones - none of them was about menopause care.",
+  },
 };
 
 export function CustomerSentiment({ providerId, providerName }: { providerId: string; providerName: string }) {
@@ -228,19 +316,22 @@ export function CustomerSentiment({ providerId, providerName }: { providerId: st
               come from the Better Business Bureau.
             </p>
           )}
-          <div className="mt-3 rounded-lg bg-gray-50 p-3 text-[12.5px] leading-snug text-gray-700">
-            <span className="flex items-center gap-1.5 font-semibold text-[#191919]">
-              <Building2 className="h-3.5 w-3.5" strokeWidth={2.2} /> Better Business Bureau
-            </span>
-            Rated <strong>{s.bbb.grade}</strong>, {s.bbb.accredited ? "BBB-accredited" : "not BBB-accredited"}, with{" "}
-            {s.bbb.complaints}. Complaint themes: {s.bbb.themes}. (Checked {s.bbb.checked}.)
-          </div>
+          {s.bbb && (
+            <div className="mt-3 rounded-lg bg-gray-50 p-3 text-[12.5px] leading-snug text-gray-700">
+              <span className="flex items-center gap-1.5 font-semibold text-[#191919]">
+                <Building2 className="h-3.5 w-3.5" strokeWidth={2.2} /> Better Business Bureau
+              </span>
+              Rated <strong>{s.bbb.grade}</strong>, {s.bbb.accredited ? "BBB-accredited" : "not BBB-accredited"}, with{" "}
+              {s.bbb.complaints}. Complaint themes: {s.bbb.themes}. (Checked {s.bbb.checked}.)
+            </div>
+          )}
         </div>
       </div>
       <p className="mt-4 text-[11.5px] text-gray-500">
-        Trustpilot figures as shown on {s.sampleDate}; BBB figures as shown on {s.bbb.checked}. Ratings change - check
-        Trustpilot and bbb.org for the latest. We don&apos;t edit or select reviews to change the picture: the sample is the
-        most recent menopause-related reviews at the time, including low-star ones.
+        Trustpilot figures as shown on {s.sampleDate}
+        {s.bbb ? `; BBB figures as shown on ${s.bbb.checked}` : ""}. Ratings change - check Trustpilot
+        {s.bbb ? " and bbb.org" : ""} for the latest. We don&apos;t edit or select reviews to change the picture:{" "}
+        {s.sampleNote ?? "the sample is the most recent menopause-related reviews at the time, including low-star ones."}
       </p>
     </section>
   );
