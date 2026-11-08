@@ -181,6 +181,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const TOP_PROVIDERS_CRO_SLUGS = new Set(["best-tirzepatide-online"]);
   const isWeightLoss = ctx.vertical === "weight-loss";
   const showTopProvidersCro = isWeightLoss && TOP_PROVIDERS_CRO_SLUGS.has(slug);
+  // HRT ranked listicle: all five ranked clinics as full cards, right after
+  // the short answer. The usual 3-card inline CTA is skipped on this page.
+  const HRT_RANKED_LIST_SLUGS = new Set(["best-online-hrt-clinics"]);
+  const showHrtRankedList = !isWeightLoss && HRT_RANKED_LIST_SLUGS.has(slug);
   // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
   // (embody, altRx, trimrx) with the same comparison-page cards.
@@ -483,6 +487,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   />
                 )}
 
+                {i === 0 && showHrtRankedList && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={5}
+                    title="The 5 best online HRT clinics of 2026"
+                    subtitle="Ranked by clinical model, treatment range, follow-up, pricing and verified reviews."
+                  />
+                )}
+
                 {/* Provider-"alternatives" guides: CRO block of our three GLP-1
                     partners with the comparison-page cards (see showPartnerCro). */}
                 {i === 0 && showPartnerCro && (
@@ -584,7 +598,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     "is X legit" articles: a trust-check page advertising the
                     reviewed provider's competitors undermines the article's
                     credibility and cannibalizes its own conversion. */}
-                {i === 1 && !/^is-.+-legit$/.test(slug) && topProviders.length > 0 && (
+                {i === 1 && !/^is-.+-legit$/.test(slug) && !showHrtRankedList && topProviders.length > 0 && (
                   <TopProviderCards
                     config={config}
                     limit={3}
