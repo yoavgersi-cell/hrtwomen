@@ -58,7 +58,83 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   midi: {
     title: "Midi Health Reviews (2026): Cost, Insurance & Is It Worth It?",
     description:
-      "Midi Health review: insurance-covered video visits with menopause clinicians, self-pay cost, what it treats, where it's available and whether it's worth it.",
+      "Midi Health reviews: what 1,795 Trustpilot reviews and BBB complaints say, plus insurance-covered video visits with menopause clinicians, self-pay cost, what it treats and whether it's worth it.",
+  },
+};
+
+// Answer-first "What do X reviews say?" block shown near the top of each
+// review (AI/answer-engine target: "<brand> reviews", "<brand> complaints").
+// Numbers must match CUSTOMER_SENTIMENT in customer-sentiment.tsx and the
+// Trustpilot/BBB notes in src/lib/seeds/hrt.ts - never estimate a count.
+const REVIEW_SUMMARY: Record<string, { answer: string; praise: string[]; complaints: string[] }> = {
+  midi: {
+    answer:
+      "Midi Health reviews are mostly positive. It held 4.1 stars from 1,795 Trustpilot reviews when we checked on November 3, 2026, and all 46 of the newest reviews gave 5 stars - most often because a clinician listened and explained the options, often after other doctors had dismissed the patient's symptoms. The complaints are mainly about insurance billing: Midi's BBB profile lists about 175 complaints closed in three years, mostly over visits patients expected to be covered, copays and deductibles. Midi is BBB-accredited with a B rating.",
+    praise: [
+      "Feeling heard by the clinician (31 of the 46 newest reviews)",
+      "Finally helped after being dismissed by other doctors (11 of 46)",
+      "Easy scheduling and prescriptions sent the same day (9 of 46)",
+    ],
+    complaints: [
+      "Bills for visits patients thought insurance would cover (BBB)",
+      "Copay and deductible surprises (BBB)",
+      "Not billed to Medicare, HMO or Medicaid plans",
+    ],
+  },
+  winona: {
+    answer:
+      "Winona reviews are strongly positive. It held 4.6 stars from 9,008 Trustpilot reviews when we checked on November 3, 2026, and 39 of the 40 newest reviews gave 5 stars - mostly for symptom relief, easy refills with home delivery, and doctors who reply quickly. Complaints show up mainly at the Better Business Bureau, where Winona (B rating, not accredited) had 19 complaints in three years, about billing, cancellations and shipping.",
+    praise: [
+      "Symptom relief (26 of the 40 newest reviews)",
+      "Easy process, refills and home delivery (21 of 40)",
+      "Responsive doctors (15 of 40)",
+    ],
+    complaints: [
+      "Billing and cancellation issues (BBB)",
+      "How much medication a charge covers (BBB)",
+      "Side effects in the first weeks (2 of 40, both 5 stars)",
+    ],
+  },
+  gala: {
+    answer:
+      "Gala reviews are positive but need context. It held 4.6 stars from 4,258 Trustpilot reviews when we checked on November 3, 2026, and recent reviewers praise a quick sign-up, fast delivery and the price - but 34 of the 40 newest reviews were invited by Gala, several came before treatment started, and the profile also covers Gala's weight-loss program. Its BBB rating was C- (not accredited), with 37 complaints in three years about shipping delays, slow replies, cancellations and refunds.",
+    praise: [
+      "Quick, easy sign-up and process (22 of the 40 newest reviews)",
+      "Responsive support and follow-up (7 of 40)",
+      "Results such as fewer night sweats (5 of 40)",
+    ],
+    complaints: [
+      "Shipping delays and slow replies (BBB)",
+      "Cancellation and refund disputes (BBB)",
+      "Pressure to leave a review (2 of 40)",
+    ],
+  },
+  lifemd: {
+    answer:
+      "LifeMD reviews are mixed overall. It held 3.9 stars from 4,293 Trustpilot reviews when we checked on November 6, 2026, across all its services. The 20 newest reviews we read were all 4 or 5 stars, praising attentive clinicians, fast appointments and patient support staff - but none was explicitly about menopause care, and the 3.9 overall score means lower-rated reviews exist beyond that sample. BBB customer reviews include billing disputes.",
+    praise: [
+      "Clinicians who listen and explain (8 of the 20 newest reviews)",
+      "Quick, easy appointments (7 of 20)",
+      "Patient, helpful support staff (6 of 20)",
+    ],
+    complaints: [
+      "Billing disputes (BBB customer reviews)",
+      "Slow first contact after signing up (1 of 20)",
+      "Lowest prices need six months paid up front",
+    ],
+  },
+  wisp: {
+    answer:
+      "Wisp reviews are split. It held 4.1 stars from 11,616 Trustpilot reviews when we checked on November 6, 2026, across all its services. Of the 60 newest reviews, 41 gave 5 stars - mostly for fast, easy prescriptions - while 17 gave 1 or 2 stars, mainly over slow replies, prescriptions that didn't reach the pharmacy, and billing. None of the 60 was about menopause care, and we found no BBB profile for Wisp.",
+    praise: [
+      "Fast, easy prescriptions (38 of the 60 newest reviews)",
+      "Cheaper than urgent care or a doctor's visit (7 of 60)",
+    ],
+    complaints: [
+      "Slow or no reply from the care team (5 of 60)",
+      "Prescription not sent, incomplete or wrong (5 of 60)",
+      "Billing, refunds or charges without approval (5 of 60)",
+    ],
   },
 };
 
@@ -268,9 +344,14 @@ const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> 
         "Midi held a 4.1 rating from 1,795 Trustpilot reviews when we checked on November 3, 2026. All 46 of the newest reviews gave 5 stars, most often because clinicians listened and explained options - many after being dismissed by other doctors. The lower overall score reflects older reviews, mostly about insurance billing. It is accredited by the Better Business Bureau.",
     },
     {
+      question: "What are the most common Midi Health complaints?",
+      answer:
+        "Most Midi Health complaints are about insurance billing rather than care. Its BBB profile listed about 175 complaints closed in three years when we checked on October 19, 2026, mainly over visits patients expected to be covered becoming bills, copay changes and deductibles. Midi also doesn't bill Medicare, HMO or Medicaid plans. Check your coverage when you register, and ask what a visit will cost if your deductible isn't met.",
+    },
+    {
       question: "What are the best Midi Health alternatives?",
       answer:
-        "If you don't have PPO insurance or don't want video visits, the main alternatives are Winona (physician-led, no appointment, self-pay per product with medication included) and Gala (one flat monthly price, advertised from $79, with medication included). Midi is usually the better fit if you have commercial PPO coverage or want a face-to-face conversation.",
+        "If you don't have PPO insurance or don't want video visits, the main alternatives are Winona (physician-led, no appointment, self-pay per product with medication included), LifeMD (video or message-based care, plans from about $67/month on six-month billing), Gala (one flat monthly price, advertised from $79, with medication included) and Wisp (a low-cost consult with prescriptions sent to your pharmacy). Midi is usually the better fit if you have commercial PPO coverage or want a face-to-face conversation.",
     },
   ],
 };
@@ -620,6 +701,44 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             <p className="mb-2 text-[12px] font-bold uppercase tracking-[0.07em] text-[#A8285E]">The bottom line</p>
             <ReadableProse text={review.finalVerdict} paragraphClassName="text-[15px] leading-[1.8] text-gray-800" />
           </div>
+        )}
+
+        {/* What do X reviews say? - answer-first summary, linking down to the
+            counted breakdown and the transcribed reviews. */}
+        {REVIEW_SUMMARY[slug] && (
+          <section className="mb-8 rounded-2xl border border-gray-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="reviews-summary">
+            <h2 id="reviews-summary" className="mb-3 text-[20px] font-bold text-[#191919]">
+              What do {provider.name} reviews say?
+            </h2>
+            <p className="text-[15px] leading-[1.75] text-gray-700">{REVIEW_SUMMARY[slug].answer}</p>
+            <div className="mt-5 grid gap-5 sm:grid-cols-2">
+              <div>
+                <h3 className="mb-2 text-[13px] font-bold uppercase tracking-[0.06em] text-emerald-700">Most praised</h3>
+                <ul className="space-y-2">
+                  {REVIEW_SUMMARY[slug].praise.map((t) => (
+                    <li key={t} className="flex items-start gap-2 text-[14px] leading-snug text-gray-800">
+                      <Check className="mt-0.5 h-4 w-4 shrink-0 text-emerald-500" strokeWidth={2} />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h3 className="mb-2 text-[13px] font-bold uppercase tracking-[0.06em] text-[#A8285E]">Most common complaints</h3>
+                <ul className="space-y-2">
+                  {REVIEW_SUMMARY[slug].complaints.map((t) => (
+                    <li key={t} className="flex items-start gap-2 text-[14px] leading-snug text-gray-800">
+                      <span className="mt-[7px] h-1.5 w-1.5 shrink-0 rounded-full bg-[#C2366E]" />
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+            <p className="mt-4 text-[13px] text-gray-500">
+              <a href={`#sentiment-${provider.id}`} className="font-semibold text-[#A8285E] hover:underline">See the full breakdown and real reviews below</a>
+            </p>
+          </section>
         )}
 
         {/* This provider's products only, shopping-style (renders nothing

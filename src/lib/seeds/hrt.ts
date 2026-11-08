@@ -917,7 +917,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Licensed clinicians", "Video or message", "All 50 states"],
-      updatedAt: "2026-11-06",
+      updatedAt: "2026-11-08",
     },
     {
       slug: "wisp",
@@ -982,7 +982,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Board-certified providers", "All 50 states", "Rx to your pharmacy"],
-      updatedAt: "2026-11-06",
+      updatedAt: "2026-11-08",
     },
     {
       slug: "winona",
@@ -1048,7 +1048,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Board-certified physicians", "No video visit needed", "Free delivery"],
-      updatedAt: "2026-11-06",
+      updatedAt: "2026-11-08",
     },
     {
       slug: "gala",
@@ -1113,7 +1113,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["US-licensed clinicians", "Estradiol & progesterone", "Flat monthly price"],
-      updatedAt: "2026-11-03",
+      updatedAt: "2026-11-08",
     },
     {
       slug: "midi",
@@ -1179,7 +1179,7 @@ export const hrtConfig: SiteConfig = {
         },
       ],
       trustBadges: ["Accepts major insurance", "Menopause-trained clinicians", "Video visits"],
-      updatedAt: "2026-11-06",
+      updatedAt: "2026-11-08",
     },
   ],
 
@@ -1542,7 +1542,7 @@ export const hrtConfig: SiteConfig = {
       category: "Comparisons",
       readTime: "11 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-11-06",
+      updatedAt: "2026-11-08",
       heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1585,6 +1585,10 @@ export const hrtConfig: SiteConfig = {
         {
           heading: "Head-to-head at a glance",
           body: `<ul><li><strong>Best overall:</strong> <a href="/reviews/midi">Midi Health</a> - menopause-trained clinicians by video, billed to most commercial PPO plans.</li><li><strong>Most convenient:</strong> Winona - no appointments, delivered to your door. See <a href="/winona-vs-gala">Winona vs Gala</a>.</li><li><strong>Choice of video or messaging:</strong> <a href="/reviews/lifemd">LifeMD</a> - licensed clinicians either way, with plans from about $67/month on six-month billing.</li><li><strong>Most predictable price:</strong> Gala - one flat monthly fee.</li><li><strong>Best if you have insurance:</strong> Midi Health. See <a href="/winona-vs-midi">Winona vs Midi Health</a> and <a href="/gala-vs-midi">Gala vs Midi Health</a>.</li><li><strong>Want a live conversation:</strong> Midi Health's video visits.</li><li><strong>Lowest entry price:</strong> <a href="/reviews/wisp">Wisp</a> - a low-cost consult with same-day pharmacy prescriptions.</li><li><strong>Want FDA-approved products specifically:</strong> <a href="/reviews/winona">Winona</a> lists which of its products are FDA-approved (tablets, patch, progesterone capsules) and which are compounded; with any provider, ask which product you will receive.</li></ul>`,
+        },
+        {
+          heading: "Which online HRT providers deliver fastest?",
+          body: `<p><strong>Pharmacy prescriptions are quickest: Midi Health and Wisp send prescriptions to your local pharmacy, often the same day. Among home-delivery services, Gala advertises free 1-2 day shipping, LifeMD ships free within about three to five business days of processing, and Winona's free standard shipping takes about five business days from approval, with paid express options.</strong></p><p>All five say they serve most or all US states, but Winona covers fewer than the others - check your state at sign-up. Our <a href="/articles/best-online-hrt-clinics">guide to the 5 best online HRT clinics</a> has the full shipping and state table.</p>`,
         },
         {
           heading: "Which online HRT provider is cheapest?",
