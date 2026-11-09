@@ -185,6 +185,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   // the short answer. The usual 3-card inline CTA is skipped on this page.
   const HRT_RANKED_LIST_SLUGS = new Set(["best-online-hrt-clinics"]);
   const showHrtRankedList = !isWeightLoss && HRT_RANKED_LIST_SLUGS.has(slug);
+  // HRT pillar guides with intent to get treatment: the top 3 ranked
+  // providers as full cards after the short answer (replaces the inline CTA).
+  const HRT_TOP3_SLUGS = new Set(["estradiol"]);
+  const showHrtTop3 = !isWeightLoss && HRT_TOP3_SLUGS.has(slug);
   // Every provider-"alternatives" guide (altrx-alternatives, best-ozempic-
   // alternatives, etc.) gets a CRO block featuring our three GLP-1 partners
   // (embody, altRx, trimrx) with the same comparison-page cards.
@@ -497,6 +501,16 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                   />
                 )}
 
+                {i === 0 && showHrtTop3 && (
+                  <TopProvidersBlock
+                    config={config}
+                    linkPrefix={ctx.prefix}
+                    limit={3}
+                    title="Get an estradiol prescription online: our top 3"
+                    subtitle="Licensed clinicians who can prescribe estradiol after reviewing your history - ranked from our full comparison."
+                  />
+                )}
+
                 {/* Provider-"alternatives" guides: CRO block of our three GLP-1
                     partners with the comparison-page cards (see showPartnerCro). */}
                 {i === 0 && showPartnerCro && (
@@ -598,7 +612,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     "is X legit" articles: a trust-check page advertising the
                     reviewed provider's competitors undermines the article's
                     credibility and cannibalizes its own conversion. */}
-                {i === 1 && !/^is-.+-legit$/.test(slug) && !showHrtRankedList && topProviders.length > 0 && (
+                {i === 1 && !/^is-.+-legit$/.test(slug) && !showHrtRankedList && !showHrtTop3 && topProviders.length > 0 && (
                   <TopProviderCards
                     config={config}
                     limit={3}

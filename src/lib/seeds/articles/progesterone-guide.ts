@@ -86,7 +86,7 @@ export const PROGESTERONE_GUIDE: ArticleData = {
 <ul><li>Capsules come in <strong>100 mg and 200 mg</strong> strengths.</li><li>They contain <strong>peanut oil</strong> - Prometrium is contraindicated in people allergic to peanuts.</li><li>Blood levels peak within about three hours of a dose.</li><li>If you have trouble swallowing the capsules, the label advises taking them with a glass of water while standing.</li></ul>
 <p>Prometrium was among the first six hormone therapy products whose labels the FDA ${ext(SRC.fdaFeb, "updated in February 2026")}, removing the boxed warnings about cardiovascular disease, breast cancer and probable dementia. Read more in <a href="/articles/hrt-black-box-warning-removed">HRT's black box warning removed</a>.</p>
 <h3>Is micronized progesterone "bioidentical"?</h3>
-<p>Yes. Micronized progesterone is one of the FDA-approved bioidentical hormones - you don't need a compounded product to get body-identical progesterone. See <a href="/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>.</p>`,
+<p>Yes. Micronized progesterone is one of the FDA-approved bioidentical hormones - you don't need a compounded product to get body-identical progesterone. See <a href="/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>, and for the estrogen side of the regimen, our <a href="/articles/estradiol">estradiol guide</a>.</p>`,
     },
     {
       heading: "How is progesterone taken for menopause? Cyclical vs continuous",

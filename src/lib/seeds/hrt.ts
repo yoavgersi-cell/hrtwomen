@@ -12,6 +12,7 @@ import { TESTOSTERONE_FOR_WOMEN } from "./articles/testosterone-for-women";
 import { HOT_FLASHES_TREATMENT } from "./articles/hot-flashes-treatment";
 import { HRT_BREAST_CANCER_RISK } from "./articles/hrt-breast-cancer-risk";
 import { BEST_ONLINE_HRT_CLINICS } from "./articles/best-online-hrt-clinics";
+import { ESTRADIOL_GUIDE } from "./articles/estradiol";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -1388,6 +1389,7 @@ export const hrtConfig: SiteConfig = {
     HOT_FLASHES_TREATMENT,
     HRT_BREAST_CANCER_RISK,
     BEST_ONLINE_HRT_CLINICS,
+    ESTRADIOL_GUIDE,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
