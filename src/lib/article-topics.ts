@@ -12,6 +12,7 @@ const TOPICS: Record<string, string[]> = {
   "hrt-black-box-warning-removed": ["safety", "news"],
   "bioidentical-hormones-explained": ["treatments", "safety", "products"],
   "estrogen-patch-vs-pill": ["treatments", "products", "safety"],
+  "estradiol": ["treatments", "products", "safety", "news", "pillar"],
   "progesterone-side-effects": ["treatments", "products", "perimenopause"],
   "hrt-breast-cancer-risk": ["safety", "treatments", "news", "basics"],
   "hot-flashes-treatment": ["treatments", "basics", "safety", "news", "pillar"],

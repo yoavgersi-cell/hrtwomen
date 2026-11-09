@@ -98,7 +98,7 @@ export const HOT_FLASHES_TREATMENT: ArticleData = {
 <h3>How fast it works</h3>
 <p>Many women notice fewer hot flashes within 2 to 4 weeks, with full effect by about 12 weeks. ACP recommends reassessing any treatment at 8 to 12 weeks.</p>
 <h3>Risks to weigh</h3>
-<p>Blood clots (lower with transdermal estrogen), stroke, a small increase in breast cancer risk with longer use of combined therapy, and endometrial cancer if estrogen is taken without a progestogen by a woman with a uterus. For most healthy women starting near menopause, guidelines judge the benefits for bothersome symptoms to outweigh these risks. Read <a href="/articles/is-hrt-safe">is HRT safe?</a> for the numbers.</p>`,
+<p>Blood clots (lower with transdermal estrogen), stroke, a small increase in breast cancer risk with longer use of combined therapy, and endometrial cancer if estrogen is taken without a progestogen by a woman with a uterus. For most healthy women starting near menopause, guidelines judge the benefits for bothersome symptoms to outweigh these risks. Read <a href="/articles/is-hrt-safe">is HRT safe?</a> for the numbers, and our <a href="/articles/estradiol">estradiol guide</a> for forms, doses and side effects.</p>`,
     },
     {
       heading: "Who should not use hormone therapy for hot flashes?",
