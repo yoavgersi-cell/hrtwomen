@@ -56,9 +56,9 @@ const SRC = {
 
 export const HRT_BLACK_BOX_WARNING: ArticleData = {
   slug: "hrt-black-box-warning-removed",
-  title: "HRT's Black Box Warning Removed: What Changed, Why, and What It Means for You (2026)",
+  title: "HRT Black Box Warning Removed (2026): What Changed & What It Means",
   description:
-    "The FDA removed most boxed warnings from menopause hormone therapy in 2025-2026. The full story: the 2002 study behind them, what changed, what still applies, what experts say, and what it means for you.",
+    "The FDA dropped HRT's boxed warnings on heart disease, breast cancer and dementia (Nov 2025; new labels Feb 12, 2026). What changed, the warning that stays, and who can now consider HRT.",
   category: "Safety",
   readTime: "55 min read",
   publishedAt: "2026-10-24",

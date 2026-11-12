@@ -51,9 +51,9 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
       "Honest Winona HRT review: what it costs per month, whether it takes insurance, which estrogen and progesterone products it prescribes, and whether it's legit and safe.",
   },
   gala: {
-    title: "Gala Health HRT Reviews (2026): Cost, Hormone Therapy & Is Gala Legit?",
+    title: "Gala Health HRT Reviews (2026): 4.6 Stars, $79/mo - Worth It?",
     description:
-      "Gala Health hormone therapy reviewed: flat monthly pricing, estradiol and progesterone options, what's included and whether Gala is a legit option for menopause HRT.",
+      "We read Gala's newest reviews and BBB complaints: what women praise, the catches (invited reviews, a C- BBB grade, compounded disclaimer), real monthly prices and who it suits.",
   },
   midi: {
     title: "Midi Health Reviews (2026): Cost, Insurance & Is It Worth It?",
