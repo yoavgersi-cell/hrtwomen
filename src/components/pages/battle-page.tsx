@@ -40,6 +40,16 @@ const BATTLE_COST_MATH: Record<
 
 const BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {};
 
+// HRT matchup SERP overrides (CTR work from Search Console, Nov 2026). Facts
+// must match src/lib/seeds/hrt.ts.
+const HRT_BATTLE_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  "winona-vs-gala": {
+    title: "Winona vs Gala (2026): $39-$149/Product vs $79/mo Flat",
+    description:
+      "Winona: physician-led, pills, patch or cream, $39-$149 per product. Gala: one flat plan from $79/mo with check-ins included. Prices, FDA status, reviews and our pick.",
+  },
+};
+
 // Category word used in the uniform battle SERP title, per vertical. Verticals
 // not listed fall back to a category-free title.
 const BATTLE_CATEGORY_BY_VERTICAL: Record<string, string> = {
@@ -124,7 +134,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
   // an override fall back to the uniform, competitor-style neutral pattern
   // "{A} vs {B} (2026): {Category} Cost, Plans & Meds Compared". DESCRIPTIONS
   // are always the bespoke override (real prices) when present.
-  const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : undefined;
+  const override = ctx.vertical === "weight-loss" ? BATTLE_SEO_OVERRIDES[slug] : HRT_BATTLE_SEO_OVERRIDES[slug];
   const baseLabel = (battle.matchupLabel ?? battle.title.split(":")[0]).trim();
   const battleCategory = BATTLE_CATEGORY_BY_VERTICAL[ctx.vertical];
   const metaTitle = override?.title

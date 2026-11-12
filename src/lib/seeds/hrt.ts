@@ -1747,13 +1747,13 @@ export const hrtConfig: SiteConfig = {
     // the checkout. Facts checked 2026-10-06 - see the top-of-file comment.
     {
       slug: "gala-cost",
-      title: "Gala Health HRT Cost (2026): One Flat Monthly Price, Explained",
+      title: "Gala Health HRT Cost (2026): $69-$99/mo, What's Included",
       description:
         "Gala's menopause HRT is advertised from about $79/month cash-pay, with clinician, check-ins, dose changes and shipping included. Year-one math and comparisons.",
       category: "Provider Guides",
       readTime: "6 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-25",
+      updatedAt: "2026-11-12",
       heroColor: "#FCE4EC",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1776,8 +1776,12 @@ export const hrtConfig: SiteConfig = {
           body: `<p>The route your clinician chooses is the biggest variable in what Gala costs. Estradiol patches deliver the hormone through the skin and avoid the liver's first pass, which is why they are associated with a lower clot risk than pills (see <a href="/articles/estrogen-patch-vs-pill">estrogen patch vs pill</a>). They also cost Gala more to supply, and the price reflects it. Year-one cost at each reported rate:</p><table><tr><th>Plan</th><th>Reported price</th><th>12 months</th><th>52 weeks on 12-week billing</th></tr><tr><td>Estradiol pill plan</td><td>$69/mo ($207 per 12 weeks)</td><td>$828</td><td>about $897</td></tr><tr><td>Advertised starting price</td><td>$79/mo</td><td>$948</td><td>-</td></tr><tr><td>Estradiol patch plan</td><td>$99/mo ($297 per 12 weeks)</td><td>$1,188</td><td>about $1,287</td></tr></table><p>Twelve-week billing means 4.33 charges a year, not 4, so the true annual figure is about 8% above "monthly price × 12". The route should be a medical decision, made on your history and clot and stroke risk, not on the $30 difference.</p>`,
         },
         {
-          heading: "Gala vs Winona vs Midi Health on price",
+          heading: "Is Gala cheaper than Winona or Midi Health?",
           body: `<p>The providers we rank charge in different ways, so the fair comparison is a typical estrogen-plus-progesterone plan rather than one headline number:</p><table><tr><th>Provider</th><th>How you pay</th><th>Typical estrogen + progesterone cost</th><th>Insurance</th></tr><tr><td><strong>Gala</strong></td><td>One plan price, clinician included</td><td>About $69-$99/month depending on route</td><td>Not billed</td></tr><tr><td><a href="/reviews/winona">Winona</a></td><td>Per product, physician and messaging included</td><td>About $89/month (estrogen body cream with progesterone) to about $188/month (patch $149 + progesterone capsules $39)</td><td>Not billed; HSA/FSA eligible</td></tr><tr><td><a href="/reviews/midi">Midi Health</a></td><td>Per visit, medication at your pharmacy</td><td>Your copays, or $250 first visit / $150 follow-ups self-pay, plus pharmacy cost</td><td>In-network with most PPO plans; not Medicare</td></tr><tr><td><a href="/reviews/wisp">Wisp</a></td><td>Consult fee, medication at your pharmacy</td><td>Consult listed from about $33/month (some reviews report $99), plus pharmacy cost</td><td>Consult self-pay (HSA/FSA); insurance can cover medication</td></tr></table><p>Read it this way: if you have good commercial insurance, generic estradiol and progesterone through <a href="/gala-vs-midi">Midi Health</a> can cost less in a year than any cash plan. If you are paying cash, Gala's single figure is lower than most Winona combinations, while Winona offers more forms of estrogen, including body creams. The trade-offs are covered in <a href="/winona-vs-gala">Winona vs Gala</a>.</p>`,
+        },
+        {
+          heading: "Does Gala take insurance?",
+          body: `<p><strong>No. Gala's HRT plan is cash-pay only and isn't billed to insurance. The monthly fee includes the clinician, check-ins, dose adjustments and shipping, so there's no separate visit charge.</strong></p><p>Because the price doesn't change with your coverage, Gala is most competitive for women without good insurance, or with high deductibles. If your plan covers generic estradiol and progesterone well, an insurance-billed clinic such as Midi Health plus your pharmacy can cost less over a year - see <a href="/gala-vs-midi">Gala vs Midi Health</a>.</p>`,
         },
         {
           heading: "Who gets the best value from Gala",
@@ -1787,9 +1791,9 @@ export const hrtConfig: SiteConfig = {
     },
     {
       slug: "is-gala-legit",
-      title: "Is Gala Health Legit? Yes - What 4,258 Reviews Show (2026)",
+      title: "Is Gala Health Legit? Yes - But Check These 3 Things (2026)",
       description:
-        "Yes. Gala uses US-licensed clinicians, prescribes only after review and holds a 4.6 Trustpilot rating across 4,258 reviews. What the reviews, BBB complaints and caveats say.",
+        "Yes - Gala uses US-licensed clinicians and has 4.6 stars from 4,258 Trustpilot reviews. But most new reviews are invited, its BBB grade is C- and its HRT may be compounded.",
       category: "Provider Guides",
       readTime: "6 min read",
       publishedAt: "2026-10-06",
@@ -1834,13 +1838,13 @@ export const hrtConfig: SiteConfig = {
     IS_MIDI_LEGIT,
     {
       slug: "winona-cost",
-      title: "Winona Cost Per Month (2026): Prices by Treatment & Insurance",
+      title: "How Much Is Winona HRT? Prices From $39/mo & Insurance (2026)",
       description:
-        "Winona costs about $39/month for progesterone up to about $149 for the estrogen patch. No insurance billing, but HSA/FSA works. Prices, bundles and yearly math.",
+        "Winona costs about $39-$149 a month per product, or $89-$188 for estrogen plus progesterone. No insurance billing, but HSA/FSA works. Every price, what's included and yearly math.",
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-11-03",
+      updatedAt: "2026-11-12",
       heroColor: "#FBE9F0",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1867,6 +1871,14 @@ export const hrtConfig: SiteConfig = {
           body: `<table><tr><th>Provider</th><th>Typical estrogen + progesterone, per month</th><th>First year</th><th>What is included</th></tr><tr><td><strong>Winona</strong></td><td>About $89 (body cream with progesterone) to about $188 (patch + capsules)</td><td>About $1,068-$2,256</td><td>Physician review, unlimited messaging, shipping</td></tr><tr><td><a href="/reviews/gala">Gala</a></td><td>About $69 (pill) to $99 (patch); advertised from $79</td><td>About $828-$1,188</td><td>Clinician, check-ins, dose changes, medication, shipping</td></tr><tr><td><a href="/reviews/midi">Midi Health</a></td><td>Visit copays, or $250 first visit / $150 follow-ups self-pay, plus pharmacy cost</td><td>Depends on your plan</td><td>Video visits; medication through your pharmacy benefit</td></tr></table><p>On cash price alone, Gala's single plan figure is usually lower than a Winona combination. Winona's case is range: it offers body creams, tablets, patches, vaginal cream and estriol, so your physician has more ways to match treatment to your history and preferences. The head-to-heads are <a href="/winona-vs-gala">Winona vs Gala</a> and <a href="/winona-vs-midi">Winona vs Midi Health</a>.</p>`,
         },
         {
+          heading: "How much does Winona cost without insurance?",
+          body: `<p><strong>Winona is always self-pay, so the listed prices are what you pay: about $39/month for progesterone capsules, $54 for estradiol tablets, $89 for the estrogen body cream (with or without progesterone) or vaginal estrogen cream, and $149 for the estrogen patch. A typical estrogen-plus-progesterone plan runs about $89-$188 a month.</strong></p><p>Winona's listed product prices include the physician review, ongoing messaging with your doctor and shipping; we didn't see a separate visit or membership fee. Because Winona doesn't bill insurance, the price is the same whatever plan you have - which also means insurance won't lower it. If you have good pharmacy coverage, a pharmacy-based service can be cheaper for the same FDA-approved estradiol and progesterone; our <a href="/articles/online-hrt-cost">online HRT cost comparison</a> works through both routes.</p>`,
+        },
+        {
+          heading: "Can you use an HSA or FSA at Winona?",
+          body: `<p><strong>Yes. Winona accepts HSA and FSA cards, and its prescription treatments are generally eligible expenses. Some patients also submit receipts to their insurer for possible out-of-network reimbursement, but that depends entirely on the plan.</strong></p><p>Using pre-tax HSA or FSA money effectively lowers Winona's price by your tax rate. Keep your receipts and check your plan's rules on prescription and telehealth expenses before you rely on reimbursement.</p>`,
+        },
+        {
           heading: "Is Winona worth what it costs?",
           body: `<p><strong>Worth it</strong> if you are paying cash anyway, value never booking an appointment, and want a choice of estrogen forms with a physician on call by message. Winona's Trustpilot record (4.6 across 9,008 reviews as of Nov 3, 2026) suggests most customers think so (we dig into the reviews and BBB file in <a href="/articles/is-winona-legit">is Winona legit?</a>); one reviewer, Sharon Dragovich, praised the "variety of product available to adjust route with Dr review and approval" (Oct 3, 2026). <strong>Probably not worth it</strong> if good insurance would cover your care and generic hormones, or if you want a live conversation before starting. Whichever provider you choose, HRT carries real risks - blood clots, stroke and breast-cancer considerations among them - and a licensed physician decides whether it is appropriate for you.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review</a></p><p class="cta-row"><a href="/winona-vs-gala">→ Winona vs Gala: per-product pricing vs one flat plan</a></p><p class="cta-row"><a href="/winona-vs-midi">→ Winona vs Midi Health: cash subscription vs insurance</a></p><p>Prices are approximate, from Winona's listed starting prices at our last check, and change; confirm on Winona's site. This article is general information, not medical advice.</p>`,
         },
@@ -1874,13 +1886,13 @@ export const hrtConfig: SiteConfig = {
     },
     {
       slug: "winona-products",
-      title: "Winona Products Explained: Estradiol, Progesterone & Creams (2026)",
+      title: "Winona Products & Prices (2026): Every Cream, Pill & Patch",
       description:
-        "Every Winona product: estradiol tablets and patch, estrogen body cream, progesterone capsules, vaginal cream, estriol and Blossom - FDA status, uses, prices.",
+        "Every Winona product with price and FDA status: estradiol pills and patch, estrogen body cream, progesterone, vaginal cream, Blossom arousal cream and more - plus which to choose.",
       category: "Provider Guides",
       readTime: "8 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-10-06",
+      updatedAt: "2026-11-12",
       heroColor: "#F6DCE7",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1914,17 +1926,33 @@ export const hrtConfig: SiteConfig = {
           heading: "Blossom, minoxidil and the non-HRT add-ons",
           body: `<p><strong>Blossom</strong> is Winona's prescription arousal cream (about $79 per order). It combines <strong>sildenafil</strong> (the active ingredient in Viagra) and <strong>pentoxifylline</strong>, both of which widen blood vessels, and is applied to the clitoral and vulvar area before intimacy to increase blood flow and sensitivity. There is no FDA-approved sildenafil cream for women; Blossom is a pharmacy-prepared prescription, and the evidence for it is far thinner than for HRT. Winona says not to use it if you are allergic to sildenafil, pentoxifylline or caffeine-containing products. If your main problem is dryness or pain, vaginal estrogen addresses that; Blossom does not.</p><p>Current HRT patients can also add a <strong>7% minoxidil hair serum</strong> for thinning hair, a non-hormonal treatment. Winona <strong>does not prescribe testosterone</strong> (see <a href="/articles/testosterone-for-women">testosterone for women</a> for the evidence); if low libido is your main concern and you want that discussed, an insurance-based clinic such as <a href="/reviews/midi">Midi Health</a> prescribes it in selected cases.</p><p>Whatever you are prescribed, HRT carries real risks and is not right for everyone - see <a href="/articles/is-hrt-safe">is HRT safe?</a> - and a Winona physician decides what fits your history.</p><p class="cta-row"><a href="/reviews/winona">→ Read the full Winona review, with real customer reviews</a></p><p class="cta-row"><a href="/articles/winona-cost">→ What Winona costs per month, product by product</a></p><p>Product details and prices are from Winona's product and help pages as surfaced in search at our last check and can change; confirm on Winona's site. This article is general information, not medical advice.</p>`,
         },
+        {
+          heading: "Is Winona's Blossom cream a \"female Viagra\"?",
+          body: `<p><strong>Sort of. Blossom contains sildenafil - the active ingredient in Viagra - plus pentoxifylline, in a cream applied to the vulva and clitoris to increase blood flow, arousal and sensitivity. Unlike Viagra, it isn't an FDA-approved product, and the evidence for topical sildenafil in women is limited. It costs about $79 per order and needs a Winona prescription.</strong></p><p>Blossom works locally on blood flow, so it doesn't change desire the way a hormone might, and it doesn't treat vaginal dryness - that's what the vaginal estrogen cream is for. Women with low desire as the main problem may want to ask about other options; see our <a href="/articles/testosterone-for-women">testosterone for women guide</a> (Winona doesn't prescribe testosterone). Tell your physician about any heart medicines, especially nitrates, before using a sildenafil product.</p>`,
+        },
+        {
+          heading: "Winona estrogen cream vs patch vs pills: which should you choose?",
+          body: `<p><strong>All three treat whole-body symptoms such as hot flashes. The pills are cheapest ($54/month) and FDA-approved but carry more clot risk; the patch ($149) is FDA-approved and avoids the liver; the body cream ($89) also goes through the skin but is compounded, not FDA-approved. For vaginal dryness alone, the vaginal cream is the targeted choice.</strong></p><table><tr><th></th><th>Estradiol pills</th><th>Estrogen patch</th><th>Estrogen body cream</th></tr><tr><td>From</td><td>$54/mo</td><td>$149/mo</td><td>$89/mo</td></tr><tr><td>FDA-approved</td><td>Yes</td><td>Yes</td><td>No - compounded</td></tr><tr><td>Route</td><td>By mouth, daily</td><td>Skin, once or twice a week</td><td>Skin, daily</td></tr><tr><td>Clot risk</td><td>Higher than skin routes</td><td>No clear increase in studies</td><td>Skin route; less studied</td></tr><tr><td>Progesterone</td><td>Capsules, if you have a uterus</td><td>Capsules, if you have a uterus</td><td>Combined version available - ask how your lining is protected</td></tr></table><p>Your Winona physician makes the final choice based on your history. For the evidence behind each route, see our <a href="/articles/estradiol">estradiol guide</a> and <a href="/articles/estrogen-patch-vs-pill">estrogen patch vs pill</a>.</p>`,
+        },
+        {
+          heading: "Does Winona offer DHEA?",
+          body: `<p><strong>We couldn't find DHEA among the prescription products Winona lists, though some customers mention it in reviews - so ask Winona directly. For vaginal dryness and painful sex, an FDA-approved vaginal DHEA (prasterone, sold as Intrarosa) exists and can be prescribed by any clinician.</strong></p><p>Oral DHEA supplements are sold over the counter, but they're regulated as supplements, not medicines, and the evidence for them in menopause is weak. If you're considering DHEA, discuss it with your physician rather than adding a supplement on your own.</p>`,
+        },
+        {
+          heading: "Are Winona's products FDA-approved?",
+          body: `<p><strong>Some are. Winona's estradiol tablets, estrogen patch and progesterone capsules are FDA-approved products. Its estrogen body creams (with or without progesterone) and estriol face cream are compounded in Winona's own pharmacies and aren't FDA-approved, and Blossom is a pharmacy-prepared prescription. Winona describes its vaginal cream's ingredient as FDA-approved estradiol; ask whether the finished product is compounded.</strong></p><p>Compounded doesn't mean unsafe, but it does mean the product hasn't been through the FDA's review of safety, effectiveness and batch consistency. If you want FDA-approved products only, say so in your intake. More on the difference in <a href="/articles/bioidentical-hormones-explained">bioidentical hormones explained</a>.</p>`,
+        },
       ],
     },
     {
       slug: "midi-cost",
-      title: "Midi Health Cost (2026): Insurance, Self-Pay & Is It Worth It?",
+      title: "Midi Health Cost (2026): ~$50 With Insurance, $250 Without",
       description:
-        "With in-network PPO insurance Midi visits average about $50; self-pay is $250 first visit, $150 follow-ups. Medicare isn't billed. Full first-year math inside.",
+        "With in-network PPO insurance, Midi visits average about $50; without insurance it's $250 for the first visit and $150 for follow-ups. Which insurers, HSA/FSA, Medicare and Medicaid, explained.",
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",
-      updatedAt: "2026-11-03",
+      updatedAt: "2026-11-12",
       heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
@@ -1943,7 +1971,7 @@ export const hrtConfig: SiteConfig = {
           body: `<p>Midi is in-network with most commercial PPO plans. You upload your insurance card when you register and see whether you are covered. Three lines make up the bill:</p><ul><li><strong>Visits</strong> - billed to your insurer like any specialist visit. Your copay, coinsurance and deductible still apply; Midi's own figure is about $50 out of pocket per visit on average. If you have not met your deductible, you may owe up to $250 for a new-patient visit and up to $150 for a follow-up.</li><li><strong>Medication</strong> - sent to the pharmacy you choose and priced by your pharmacy benefit. Generic estradiol and progesterone are often on lower formulary tiers, but your plan decides.</li><li><strong>Labs</strong> - only if your clinician orders them, billed separately by the lab.</li></ul><p>If your plan is an <strong>HMO</strong>, Midi is not in-network and visits are self-pay. Reviewers notice when a clinician works within their coverage. Julie Harris wrote that her provider "made sure to provide a treatment that my insurance covers, and I am so happy to have received help" (5 stars, Sep 29, 2026).</p>`,
         },
         {
-          heading: "Without insurance, on Medicare, and the extras",
+          heading: "How much does Midi Health cost without insurance?",
           body: `<ul><li><strong>Self-pay:</strong> $250 for the first visit, $150 for each follow-up. No monthly fee between visits.</li><li><strong>Medicare:</strong> Midi is not covered by Medicare or Medicare-related plans. Medicare beneficiaries can be seen as self-pay patients but cannot submit claims for Midi visits, medications or related services.</li><li><strong>Medicaid:</strong> Midi is not enrolled with state Medicaid programs (including Medi-Cal) and cannot treat Medicaid patients, even as self-pay.</li><li><strong>Testosterone:</strong> prescribed in selected cases and not covered by insurance. Midi puts creams and gels at about $45 for a 30-day supply to $100+ for 90 days, and because it is a controlled substance, extra labs and visits may be needed. It is only offered in some states.</li><li><strong>Location:</strong> Midi treats patients in the United States only.</li></ul><p>Self-pay Midi is the most expensive way to start among the providers we rank, but you are paying for something the others do not offer: a scheduled video visit, about 30 minutes, with a menopause-trained nurse practitioner or nurse midwife.</p>`,
         },
         {
@@ -1957,6 +1985,18 @@ export const hrtConfig: SiteConfig = {
         {
           heading: "Midi vs Winona vs Gala on cost",
           body: `<table><tr><th>Provider</th><th>Model</th><th>Typical estrogen + progesterone, first year</th><th>Insurance</th></tr><tr><td><strong>Midi Health</strong></td><td>Per visit + your pharmacy</td><td>About $200 in visits + copays if in-network; $700 + medication self-pay</td><td>Most PPO plans; not HMO, Medicare or Medicaid</td></tr><tr><td><a href="/reviews/winona">Winona</a></td><td>Monthly per product, all-inclusive</td><td>About $1,068 (body cream with progesterone) to $2,256 (patch + capsules)</td><td>Not billed; HSA/FSA</td></tr><tr><td><a href="/reviews/gala">Gala</a></td><td>One monthly plan, all-inclusive</td><td>About $828 (pill) to $1,188 (patch)</td><td>Not billed</td></tr></table><p>With good PPO coverage, Midi is usually the cheapest route on our list, and it is the only one with a live video visit. Without coverage, Gala's flat plan typically costs less than self-pay Midi once medication is added, and Winona costs more but needs no appointment at all. Details in <a href="/winona-vs-midi">Winona vs Midi Health</a> and <a href="/gala-vs-midi">Gala vs Midi Health</a>.</p>`,
+        },
+        {
+          heading: "Which insurance does Midi Health take?",
+          body: `<p><strong>Midi is in-network with many major commercial plans - its site names Aetna, Cigna, Anthem Blue Cross Blue Shield and UnitedHealthcare - but coverage depends on your specific plan, and Blue Cross networks vary by state. Most PPO plans are in-network; HMO plans are usually treated as self-pay.</strong></p><p>Midi checks your coverage when you register, before the first visit, and some Blue Cross plans get a manual review first. Even in-network, what you pay depends on your deductible, copay and coinsurance: if you haven't met your deductible, a visit can cost up to the self-pay rate. Ask what your first visit will cost before you book. Details are on <a href="https://www.joinmidi.com/pricing-insurance" target="_blank" rel="noopener noreferrer">Midi's pricing and insurance page</a>.</p>`,
+        },
+        {
+          heading: "Does Midi Health take Medicaid or Medicare?",
+          body: `<p><strong>No. Midi says it can't accept Medicaid or Medi-Cal patients, and it doesn't bill Medicare - though people on Medicare can see Midi as self-pay patients at $250 for the first visit and $150 for follow-ups.</strong></p><p>If you're on Medicare, prescriptions Midi sends to your pharmacy may still be covered by your Part D drug plan, so generic estradiol and progesterone can stay inexpensive even when the visit is self-pay. Self-pay services such as Winona, Gala, LifeMD or Wisp are the main alternatives; see our <a href="/articles/best-online-hrt-clinics">5 best online HRT clinics</a>.</p>`,
+        },
+        {
+          heading: "Can you use an HSA or FSA at Midi Health?",
+          body: `<p><strong>Yes. Midi says HSA and FSA funds can be used for its visits and services, including copays, deductibles and self-pay visits.</strong></p><p>That makes a high-deductible plan more manageable: you can pay early-year visits that fall under your deductible with pre-tax money. Prescriptions filled at your pharmacy are usually HSA/FSA-eligible too.</p>`,
         },
         {
           heading: "Is Midi Health worth it?",
