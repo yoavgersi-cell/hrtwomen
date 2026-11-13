@@ -21,9 +21,9 @@ const SRC = {
 
 export const ESTROGEN_PATCH_VS_PILL: ArticleData = {
   slug: "estrogen-patch-vs-pill",
-  title: "Estrogen Patch vs Pill (2026): Which Is Safer, Cheaper and Right for You?",
+  title: "Estrogen Patch vs Pill (2026): Which Is Safer & Cheaper?",
   description:
-    "Estrogen patch vs pill compared: blood clot and stroke risk, effectiveness, side effects, cost, convenience, gels and sprays, and who should choose which form of HRT.",
+    "Estrogen patch vs pill: blood clot and stroke risk, effectiveness, side effects, cost, gels and sprays, and who should choose which form of HRT.",
   category: "Treatments",
   readTime: "22 min read",
   publishedAt: "2026-09-26",

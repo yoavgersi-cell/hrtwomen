@@ -34,7 +34,7 @@ export const GLP1_MENOPAUSE: ArticleData = {
   slug: "glp1-menopause",
   title: "GLP-1s and Menopause (2026): Ozempic, Wegovy, Zepbound and HRT",
   description:
-    "Do GLP-1 medicines work in menopause, and can you take them with HRT? What the 2024-2026 research shows, the new Wegovy and Foundayo pills, muscle and bone, side effects, costs, Medicare and how to decide.",
+    "Do GLP-1s like Ozempic, Wegovy and Zepbound work in menopause, and can you take them with HRT? The research, side effects, muscle and bone, and cost.",
   category: "Treatments",
   readTime: "55 min read",
   publishedAt: "2026-10-26",

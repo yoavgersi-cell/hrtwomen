@@ -16,7 +16,7 @@ const CANONICAL = "https://www.hrtwomen.com/how-we-rank";
 export const metadata: Metadata = {
   title: "How We Rank & Review HRT Providers - Our Methodology",
   description:
-    "Our full methodology for ranking and reviewing online menopause and HRT providers: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners in head-to-head comparisons.",
+    "How we rank online HRT providers: the factors we score, where our data comes from, how we verify it and how we pick head-to-head winners.",
   alternates: { canonical: CANONICAL },
   openGraph: {
     title: "How We Rank & Review HRT Providers - Our Methodology",
@@ -24,6 +24,7 @@ export const metadata: Metadata = {
       "The factors we score, where our data comes from, how we verify accuracy, and how we pick winners in our HRT provider comparisons.",
     url: CANONICAL,
     type: "article",
+    images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }],
   },
 };
 

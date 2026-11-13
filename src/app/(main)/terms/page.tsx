@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service",
+  title: "Terms of Service and Site Use",
   description:
     "The terms governing your use of HRT Women (hrtwomen.com), including our informational-only nature, affiliate disclosure, and limitation of liability.",
   alternates: { canonical: "https://www.hrtwomen.com/terms" },
+  openGraph: { title: "Terms of Service and Site Use | HRT Women", description: "The terms governing your use of HRT Women (hrtwomen.com), including our informational-only nature, affiliate disclosure, and limitation of liability.", url: "https://www.hrtwomen.com/terms", type: "website", siteName: "HRT Women", images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }] },
 };
 
 const UPDATED = "September 2026";

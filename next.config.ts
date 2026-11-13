@@ -25,8 +25,11 @@ const nextConfig: NextConfig = {
   // links or indexed URLs to the main provider comparison.
   async redirects() {
     return [
-      { source: "/online-hrt", destination: "/", permanent: true },
-      { source: "/online-hrt/:state", destination: "/", permanent: true },
+      // Sent to the clinics guide (its shipping/state table answers "online
+      // HRT in <state>" queries) rather than the homepage, which Google can
+      // treat as a soft 404.
+      { source: "/online-hrt", destination: "/articles/best-online-hrt-clinics", permanent: true },
+      { source: "/online-hrt/:state", destination: "/articles/best-online-hrt-clinics", permanent: true },
     ];
   },
   async rewrites() {

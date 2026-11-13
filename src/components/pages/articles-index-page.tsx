@@ -39,6 +39,8 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
       title,
       description,
       url,
+      type: "website",
+      images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }],
     },
   };
 }
@@ -127,6 +129,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://www.hrtwomen.com" }, { "@type": "ListItem", position: 2, name: "Articles", item: "https://www.hrtwomen.com/articles" }] }) }} />
       <div className="mx-auto max-w-[1100px] px-4 py-12 sm:px-6">
         {/* Page header */}
         <div className="mb-10">

@@ -273,10 +273,10 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
       </ul>
       <p className="mb-8">
         Want to see how specific providers stack up? Read our reviews of{" "}
+        <Link href="/reviews/midi" className="font-semibold text-[#A8285E] hover:underline">Midi Health</Link>,{" "}
         <Link href="/reviews/winona" className="font-semibold text-[#A8285E] hover:underline">Winona</Link>,{" "}
-        <Link href="/reviews/lifemd" className="font-semibold text-[#A8285E] hover:underline">LifeMD</Link>, 
-        <Link href="/reviews/gala" className="font-semibold text-[#A8285E] hover:underline">Gala</Link>,{" "}
-        <Link href="/reviews/midi" className="font-semibold text-[#A8285E] hover:underline">Midi Health</Link>{" "}
+        <Link href="/reviews/lifemd" className="font-semibold text-[#A8285E] hover:underline">LifeMD</Link>,{" "}
+        <Link href="/reviews/gala" className="font-semibold text-[#A8285E] hover:underline">Gala</Link>{" "}
         and{" "}
         <Link href="/reviews/wisp" className="font-semibold text-[#A8285E] hover:underline">Wisp</Link>, or compare them head to head in 
         <Link href="/winona-vs-midi" className="font-semibold text-[#A8285E] hover:underline">Winona vs Midi</Link>{" "}

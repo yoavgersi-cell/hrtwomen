@@ -1434,7 +1434,7 @@ export const hrtConfig: SiteConfig = {
       slug: "is-hrt-safe",
       title: "Is HRT Safe? What the Evidence Says in 2026",
       description:
-        "Hormone therapy's reputation swung sharply after 2002 and has shifted again since. Here's a balanced look at HRT's benefits, its real risks and who should - and shouldn't - consider it.",
+        "Is HRT safe? A balanced look at what the evidence says in 2026: hormone therapy's real benefits, its risks, and who should and shouldn't consider it.",
       category: "Safety",
       readTime: "8 min read",
       publishedAt: "2026-09-26",
@@ -1479,7 +1479,7 @@ export const hrtConfig: SiteConfig = {
       slug: "bioidentical-hormones-explained",
       title: "Bioidentical Hormones (2026): FDA-Approved List vs Compounded",
       description:
-        "What \"bioidentical\" really means, the full list of FDA-approved bioidentical estrogen and progesterone products, how compounded hormones and pellets differ, pros and cons, insurance and what the evidence says.",
+        "What bioidentical really means: every FDA-approved bioidentical estrogen and progesterone, how compounded hormones and pellets differ, and the evidence.",
       category: "Treatments",
       readTime: "14 min read",
       publishedAt: "2026-09-26",
@@ -1540,7 +1540,7 @@ export const hrtConfig: SiteConfig = {
       slug: "best-online-hrt-providers-compared",
       title: "Best Online HRT for Women (2026): Midi, Winona, LifeMD, Gala & Wisp",
       description:
-        "The best online HRT providers of 2026 compared side by side: Midi Health, Winona, LifeMD, Gala and Wisp on price, insurance, FDA-approved hormones, perimenopause care and real customer reviews.",
+        "Midi Health, Winona, LifeMD, Gala and Wisp compared side by side on price, insurance, FDA-approved hormones, perimenopause care and real reviews.",
       category: "Comparisons",
       readTime: "11 min read",
       publishedAt: "2026-09-26",
@@ -1793,7 +1793,7 @@ export const hrtConfig: SiteConfig = {
       slug: "is-gala-legit",
       title: "Is Gala Health Legit? Yes - But Check These 3 Things (2026)",
       description:
-        "Yes - Gala uses US-licensed clinicians and has 4.6 stars from 4,258 Trustpilot reviews. But most new reviews are invited, its BBB grade is C- and its HRT may be compounded.",
+        "Yes - Gala uses US-licensed clinicians and has 4.6 stars from 4,258 reviews. But most new reviews are invited, its BBB grade is C- and HRT may be compounded.",
       category: "Provider Guides",
       readTime: "6 min read",
       publishedAt: "2026-10-06",
@@ -1840,7 +1840,7 @@ export const hrtConfig: SiteConfig = {
       slug: "winona-cost",
       title: "How Much Is Winona HRT? Prices From $39/mo & Insurance (2026)",
       description:
-        "Winona costs about $39-$149 a month per product, or $89-$188 for estrogen plus progesterone. No insurance billing, but HSA/FSA works. Every price, what's included and yearly math.",
+        "Winona costs about $39-$149 a month per product, or $89-$188 for estrogen plus progesterone. No insurance billing, but HSA/FSA works. Every price.",
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",
@@ -1888,7 +1888,7 @@ export const hrtConfig: SiteConfig = {
       slug: "winona-products",
       title: "Winona Products & Prices (2026): Every Cream, Pill & Patch",
       description:
-        "Every Winona product with price and FDA status: estradiol pills and patch, estrogen body cream, progesterone, vaginal cream, Blossom arousal cream and more - plus which to choose.",
+        "Every Winona product with price and FDA status: estradiol pills and patch, body cream, progesterone, vaginal cream and Blossom - plus which to choose.",
       category: "Provider Guides",
       readTime: "8 min read",
       publishedAt: "2026-10-06",
@@ -1948,7 +1948,7 @@ export const hrtConfig: SiteConfig = {
       slug: "midi-cost",
       title: "Midi Health Cost (2026): ~$50 With Insurance, $250 Without",
       description:
-        "With in-network PPO insurance, Midi visits average about $50; without insurance it's $250 for the first visit and $150 for follow-ups. Which insurers, HSA/FSA, Medicare and Medicaid, explained.",
+        "Midi visits average about $50 with in-network PPO insurance, or $250 first / $150 follow-up without. Which insurers, HSA/FSA, Medicare and Medicaid.",
       category: "Provider Guides",
       readTime: "7 min read",
       publishedAt: "2026-10-06",

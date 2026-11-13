@@ -33,7 +33,7 @@ export const HRT_BREAST_CANCER_RISK: ArticleData = {
   slug: "hrt-breast-cancer-risk",
   title: "HRT and Breast Cancer Risk (2026): The Real Numbers",
   description:
-    "Does HRT cause breast cancer? The absolute numbers from the WHI trials and the 2019 Lancet meta-analysis, estrogen-only vs combined HRT, progesterone type, how long is safe, family history, mammograms and what the FDA's 2026 label change did and didn't change.",
+    "Does HRT cause breast cancer? The absolute numbers from the WHI trials and the Lancet meta-analysis, estrogen-only vs combined, and how long is safe.",
   category: "Safety",
   readTime: "30 min read",
   publishedAt: "2026-11-05",

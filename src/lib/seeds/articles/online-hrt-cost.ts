@@ -16,7 +16,7 @@ export const ONLINE_HRT_COST: ArticleData = {
   slug: "online-hrt-cost",
   title: "How Much Does HRT Cost Online? Winona vs Gala vs Midi Prices (2026)",
   description:
-    "Online HRT costs about $39-$188/month cash-pay, or about $50 per visit plus pharmacy costs with insurance. Every Winona, Gala and Midi Health price, what's included, and year-one totals.",
+    "Online HRT costs about $39-$188/month cash-pay, or about $50 per visit with insurance. Every Winona, Gala and Midi price and year-one totals.",
   category: "Comparisons",
   readTime: "16 min read",
   publishedAt: "2026-10-25",

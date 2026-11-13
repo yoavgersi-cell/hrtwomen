@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     absolute: "Online HRT for Women: Best Menopause Providers of 2026, Compared",
   },
   description:
-    "Online HRT for women, compared: the best menopause and perimenopause telehealth providers of 2026, ranked by treatment options, pricing, insurance and clinician support.",
+    "Online HRT for women compared: the 5 best menopause telehealth providers of 2026, ranked by treatments, price, insurance and clinician support.",
   alternates: { canonical: SITE_URL },
   openGraph: {
     title: "Online HRT for Women: Best Menopause Providers of 2026, Compared",

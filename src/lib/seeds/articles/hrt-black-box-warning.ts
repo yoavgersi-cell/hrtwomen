@@ -58,7 +58,7 @@ export const HRT_BLACK_BOX_WARNING: ArticleData = {
   slug: "hrt-black-box-warning-removed",
   title: "HRT Black Box Warning Removed (2026): What Changed & What It Means",
   description:
-    "The FDA dropped HRT's boxed warnings on heart disease, breast cancer and dementia (Nov 2025; new labels Feb 12, 2026). What changed, the warning that stays, and who can now consider HRT.",
+    "The FDA dropped HRT's boxed warnings on heart disease, breast cancer and dementia (new labels Feb 2026). What changed, what stays and what it means.",
   category: "Safety",
   readTime: "55 min read",
   publishedAt: "2026-10-24",

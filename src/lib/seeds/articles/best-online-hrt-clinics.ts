@@ -22,7 +22,7 @@ export const BEST_ONLINE_HRT_CLINICS: ArticleData = {
   slug: "best-online-hrt-clinics",
   title: "5 Best Online Hormone Replacement Therapy (HRT) Clinics of 2026",
   description:
-    "The 5 best online HRT clinics of 2026, ranked: Midi Health, Winona, LifeMD, Gala and Wisp. Who each clinic suits, what it costs, whether it takes insurance, which hormones it prescribes and what real customers say.",
+    "The 5 best online HRT clinics of 2026, ranked: Midi Health, Winona, LifeMD, Gala and Wisp - cost, insurance, hormones offered and real reviews.",
   category: "Comparisons",
   readTime: "17 min read",
   publishedAt: "2026-11-06",

@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.hrtwomen.com/disclaimer",
   },
+  openGraph: { title: "Disclaimer - FTC Disclosure & Affiliate Information | HRT Women", description: "FTC disclosure, affiliate relationship details, medical disclaimer, and revenue model transparency for hrtwomen.com.", url: "https://www.hrtwomen.com/disclaimer", type: "website", siteName: "HRT Women", images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }] },
 };
 
 export default function DisclaimerPage() {

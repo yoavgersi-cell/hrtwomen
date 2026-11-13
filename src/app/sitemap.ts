@@ -23,9 +23,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { path: "/terms", priority: 0.2, changeFrequency: "monthly" },
   ];
 
+  // Hub pages list their children, so they change whenever a child does.
+  const newest = (dates: (string | undefined)[]) =>
+    new Date(dates.map((d) => latestUpdate(d)).sort().pop() ?? CONTENT_LAST_UPDATED);
+  const hubDate: Record<string, Date> = {
+    "/": new Date(HOMEPAGE_UPDATED),
+    "/reviews": newest((cfg.reviews ?? []).map((r) => r.updatedAt)),
+    "/articles": newest((cfg.articles ?? []).map((a) => a.updatedAt)),
+  };
   const entries: MetadataRoute.Sitemap = staticPaths.map((p) => ({
     url: `${SITE_URL}${p.path === "/" ? "" : p.path}`,
-    lastModified: p.path === "/" ? new Date(HOMEPAGE_UPDATED) : FALLBACK_DATE,
+    lastModified: hubDate[p.path] ?? FALLBACK_DATE,
     changeFrequency: p.changeFrequency,
     priority: p.priority,
   }));

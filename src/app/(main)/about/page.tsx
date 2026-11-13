@@ -10,10 +10,11 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "About HRT Women - Our Mission, Team & Review Methodology",
   description:
-    "Learn how hrtwomen.com independently ranks and reviews online menopause and HRT providers. Our editorial methodology, review process, medical advisory approach, and commitment to unbiased comparisons.",
+    "How HRT Women independently reviews online menopause and HRT providers: our editorial standards, medical review process and affiliate policy.",
   alternates: {
     canonical: "https://www.hrtwomen.com/about",
   },
+  openGraph: { title: "About HRT Women - Our Mission, Team & Review Methodology", description: "How HRT Women independently reviews online menopause and HRT providers: our editorial standards, medical review process and affiliate policy.", url: "https://www.hrtwomen.com/about", type: "website", siteName: "HRT Women", images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }] },
 };
 
 export default async function AboutPage() {
@@ -39,6 +40,7 @@ export default async function AboutPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(teamSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://www.hrtwomen.com" }, { "@type": "ListItem", position: 2, name: "About", item: "https://www.hrtwomen.com/about" }] }) }} />
       {/* Hero */}
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
