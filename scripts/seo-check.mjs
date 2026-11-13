@@ -20,8 +20,8 @@ const REPORT = process.env.SEO_REPORT_PATH ?? "seo-report.md";
 
 // Paths that must permanently redirect to the homepage (removed thin pages).
 const REDIRECTS = [
-  ["/online-hrt", "/"],
-  ["/online-hrt/texas", "/"],
+  ["/online-hrt", "/articles/best-online-hrt-clinics"],
+  ["/online-hrt/texas", "/articles/best-online-hrt-clinics"],
 ];
 // Content pages must show the medical reviewer (YMYL trust signal).
 const needsReviewBar = (p) =>
