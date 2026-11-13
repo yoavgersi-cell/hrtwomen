@@ -26,9 +26,9 @@ const SRC = {
 
 export const PROGESTERONE_GUIDE: ArticleData = {
   slug: "progesterone-side-effects",
-  title: "Progesterone for Menopause: Benefits, Side Effects, Doses and What to Expect (2026)",
+  title: "Progesterone for Menopause (2026): Side Effects, Doses & Benefits",
   description:
-    "Why progesterone is part of HRT, micronized progesterone vs progestins, 100 mg vs 200 mg, side effects and how to manage them, bleeding, breast cancer, sleep, creams, and progesterone after hysterectomy.",
+    "Progesterone in HRT: micronized progesterone vs progestins, 100 mg vs 200 mg, side effects and how to manage them, bleeding, sleep and breast cancer.",
   category: "Treatments",
   readTime: "28 min read",
   publishedAt: "2026-09-30",

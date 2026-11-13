@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Check, X, ArrowRight, Users, Clock, Shield, Star, ArrowBigUp, ArrowBigDown, MessageCircle } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
-import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS } from "@/lib/config";
+import { latestUpdate, VERTICALS, NOINDEX_WL_REVIEW_SLUGS, SITE_LAUNCH_DATE } from "@/lib/config";
+
+// First-publication dates for reviews added after launch (Article datePublished).
+const REVIEW_PUBLISHED: Record<string, string> = { lifemd: "2026-11-06", wisp: "2026-11-06" };
 import {
   type SiteContext,
   canonicalUrl,
@@ -38,27 +41,27 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   lifemd: {
     title: "LifeMD Menopause Review (2026): HRT Cost, Plans & Is It Legit?",
     description:
-      "LifeMD's Women's Health Program reviewed: HRT plan prices, video vs message visits, estradiol and progesterone options, what 4,293 Trustpilot reviews say and who it suits.",
+      "LifeMD menopause review: HRT plans from about $67/mo, video or message visits, estradiol and progesterone options, and what 4,293 reviews say.",
   },
   wisp: {
     title: "Wisp Menopause Review (2026): Cost, HRT Options & Is It Legit?",
     description:
-      "Wisp menopause care reviewed: what the consult costs, which estrogen and progesterone it prescribes, how pharmacy pickup works, what 11,616 Trustpilot reviews say and who it suits.",
+      "Wisp menopause review: consult cost, which estrogen and progesterone it prescribes, same-day pharmacy pickup and what 11,616 reviews say.",
   },
   winona: {
     title: "Winona HRT Reviews (2026): Cost, Insurance, Products & Is It Legit?",
     description:
-      "Honest Winona HRT review: what it costs per month, whether it takes insurance, which estrogen and progesterone products it prescribes, and whether it's legit and safe.",
+      "Honest Winona HRT review: monthly cost, insurance and HSA/FSA, which estrogen and progesterone products it prescribes, and whether it's legit.",
   },
   gala: {
     title: "Gala Health HRT Reviews (2026): 4.6 Stars, $79/mo - Worth It?",
     description:
-      "We read Gala's newest reviews and BBB complaints: what women praise, the catches (invited reviews, a C- BBB grade, compounded disclaimer), real monthly prices and who it suits.",
+      "Gala's newest reviews and BBB complaints: what women praise, the catches (invited reviews, C- BBB grade, compounding) and real monthly prices.",
   },
   midi: {
     title: "Midi Health Reviews (2026): Cost, Insurance & Is It Worth It?",
     description:
-      "Midi Health reviews: what 1,795 Trustpilot reviews and BBB complaints say, plus insurance-covered video visits with menopause clinicians, self-pay cost, what it treats and whether it's worth it.",
+      "Midi Health reviews: what 1,795 Trustpilot reviews and BBB complaints say, insurance-covered video visits, self-pay cost and whether it's worth it.",
   },
 };
 
@@ -468,6 +471,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     headline: `${provider.name} Review`,
     description: review.reviewIntro,
     image: canonicalUrl(ctx, `/reviews/${slug}/opengraph-image`),
+    datePublished: REVIEW_PUBLISHED[slug] ?? SITE_LAUNCH_DATE,
     dateModified: latestUpdate(review.updatedAt),
     mainEntityOfPage: { "@id": canonicalUrl(ctx, `/reviews/${slug}`) },
     about: { "@type": "Organization", name: provider.name },
@@ -495,6 +499,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
         itemReviewed: { "@type": "Organization", name: provider.name },
         author: { "@type": "Organization", "@id": `${ctx.origin}/#organization`, name: "HRT Women", url: ctx.origin },
         publisher: { "@type": "Organization", "@id": `${ctx.origin}/#organization`, name: "HRT Women" },
+        datePublished: REVIEW_PUBLISHED[slug] ?? SITE_LAUNCH_DATE,
         dateModified: latestUpdate(review.updatedAt),
         reviewRating: {
           "@type": "Rating",

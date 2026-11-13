@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
+  openGraph: { title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article", images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }] },
 };
 
 export default function MedicalReviewPolicyPage() {
@@ -34,6 +34,7 @@ export default function MedicalReviewPolicyPage() {
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://www.hrtwomen.com" }, { "@type": "ListItem", position: 2, name: "Medical review policy", item: "https://www.hrtwomen.com/medical-review-policy" }] }) }} />
       <div className="border-b border-[#E5E5E5] bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
           <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Medical review policy" }]} />

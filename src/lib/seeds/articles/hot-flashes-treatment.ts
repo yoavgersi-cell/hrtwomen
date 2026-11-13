@@ -36,7 +36,7 @@ export const HOT_FLASHES_TREATMENT: ArticleData = {
   slug: "hot-flashes-treatment",
   title: "How to Stop Hot Flashes (2026): Every Treatment Ranked",
   description:
-    "How to stop hot flashes and night sweats in 2026: every treatment ranked using the new ACOG and ACP guidelines - hormone therapy, Veozah, Lynkuet, SSRIs, gabapentin, CBT, hypnosis and lifestyle - with effectiveness numbers, risks, costs and how to get treated.",
+    "How to stop hot flashes and night sweats: every treatment ranked by the new ACOG and ACP guidance - HRT, Veozah, Lynkuet, SSRIs, CBT and more.",
   category: "Treatments",
   readTime: "40 min read",
   publishedAt: "2026-11-02",

@@ -14,7 +14,15 @@ const oneLine = (s: string) => s.replace(/<[^>]+>/g, "").replace(/\s+/g, " ").tr
 export async function GET() {
   const cfg = await getConfig();
   const providerName = (id: string) => cfg.providers.find((p) => p.id === id)?.name ?? id;
-  const ranked = cfg.providers.map((p) => p.name).join(", ");
+  // Ranking order (not seed order), with our editorial score.
+  const { providerOrder, positions } = cfg.ranking;
+  const rankIndex = (id: string) => {
+    const i = providerOrder.indexOf(id);
+    return i === -1 ? 999 : i;
+  };
+  const ranked = providerOrder
+    .map((id, i) => `${i + 1}. ${providerName(id)} (${positions[i]?.score ?? ""}/10)`)
+    .join(", ");
   const reviewer = REVIEWERS[0];
 
   const lines: string[] = [
@@ -34,7 +42,7 @@ export async function GET() {
     "",
     "## Provider reviews",
     "",
-    ...(cfg.reviews ?? []).map(
+    ...[...(cfg.reviews ?? [])].sort((x, y) => rankIndex(x.providerId) - rankIndex(y.providerId)).map(
       (r) => `- [${providerName(r.providerId)} review](${SITE_URL}/reviews/${r.slug}): ${oneLine(r.shortSummary)}`,
     ),
     "",

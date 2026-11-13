@@ -32,7 +32,7 @@ export const VAGINAL_ESTROGEN: ArticleData = {
   slug: "vaginal-estrogen",
   title: "Vaginal Estrogen (2026): Cream vs Tablet vs Ring, Safety & Cost",
   description:
-    "Vaginal estrogen for dryness, painful sex and recurrent UTIs: how cream, inserts and the ring compare, how safe low-dose vaginal estrogen is (including after breast cancer), real costs and how to get it online.",
+    "Vaginal estrogen for dryness, painful sex and recurrent UTIs: cream vs tablet vs ring, safety (even after breast cancer), real costs and how to get it.",
   category: "Treatments",
   readTime: "24 min read",
   publishedAt: "2026-10-28",

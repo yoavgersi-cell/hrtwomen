@@ -297,7 +297,7 @@ export const CONTENT_LAST_UPDATED = SITE_LAUNCH_DATE;
 // the three never disagree - and so the daily IndexNow cron (which submits
 // URLs whose lastmod is inside its window) actually pings the homepage after
 // a change. Bump it whenever the homepage content changes.
-export const HOMEPAGE_UPDATED = "2026-11-03";
+export const HOMEPAGE_UPDATED = "2026-11-06";
 
 // Floor date for battle, review and article pages: the shared page templates
 // were last reworked on this date (quick answer, fit finder, accordions,

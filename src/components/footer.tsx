@@ -8,10 +8,10 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Reviews",
     links: [
+      { label: "Midi Health", href: "/reviews/midi" },
       { label: "Winona", href: "/reviews/winona" },
       { label: "LifeMD", href: "/reviews/lifemd" },
       { label: "Gala", href: "/reviews/gala" },
-      { label: "Midi Health", href: "/reviews/midi" },
       { label: "Wisp", href: "/reviews/wisp" },
       { label: "All Reviews", href: "/reviews" },
     ],

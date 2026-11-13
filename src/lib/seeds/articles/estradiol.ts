@@ -49,7 +49,7 @@ export const ESTRADIOL_GUIDE: ArticleData = {
   slug: "estradiol",
   title: "Estradiol (2026): Doses, Side Effects, Forms & the Patch Shortage",
   description:
-    "Estradiol for menopause explained: pills vs patch vs gel, normal doses and equivalents, side effects, weight gain, blood clot and breast cancer risk, cost, the 2026 estrogen patch shortage and how to get a prescription.",
+    "Estradiol for menopause: pills vs patch vs gel, normal doses, side effects, weight gain, clot and breast cancer risk, cost and the 2026 patch shortage.",
   category: "Treatments",
   readTime: "55 min read",
   publishedAt: "2026-11-09",

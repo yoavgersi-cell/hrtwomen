@@ -3,10 +3,11 @@ import Link from "next/link";
 import { Mail } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact Our Editorial Team",
   description:
     "Get in touch with the HRT Women editorial team - corrections, feedback, provider and partnership inquiries for hrtwomen.com.",
   alternates: { canonical: "https://www.hrtwomen.com/contact" },
+  openGraph: { title: "Contact Our Editorial Team | HRT Women", description: "Get in touch with the HRT Women editorial team - corrections, feedback, provider and partnership inquiries for hrtwomen.com.", url: "https://www.hrtwomen.com/contact", type: "website", siteName: "HRT Women", images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }] },
 };
 
 export default function ContactPage() {

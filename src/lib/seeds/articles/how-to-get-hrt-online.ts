@@ -26,9 +26,9 @@ const SRC = {
 
 export const HOW_TO_GET_HRT_ONLINE: ArticleData = {
   slug: "how-to-get-hrt-online",
-  title: "How to Get HRT Online (2026): The Complete Guide to Online Menopause Treatment",
+  title: "How to Get HRT Online (2026): Step-by-Step Guide",
   description:
-    "How to get HRT online, step by step: who qualifies, what the intake asks, what you can be prescribed, costs and insurance, how to spot a legit provider, and what happens after you start.",
+    "How to get HRT online, step by step: who qualifies, the intake, what you can be prescribed, cost and insurance, and how to spot a legit provider.",
   category: "Guides",
   readTime: "55 min read",
   publishedAt: "2026-10-20",

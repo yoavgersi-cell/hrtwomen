@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy - How We Handle Your Data",
   description:
     "How HRT Women (hrtwomen.com) collects, uses, and protects your information, including analytics, cookies, and affiliate tracking.",
   alternates: { canonical: "https://www.hrtwomen.com/privacy" },
+  openGraph: { title: "Privacy Policy - How We Handle Your Data | HRT Women", description: "How HRT Women (hrtwomen.com) collects, uses, and protects your information, including analytics, cookies, and affiliate tracking.", url: "https://www.hrtwomen.com/privacy", type: "website", siteName: "HRT Women", images: [{ url: "https://www.hrtwomen.com/opengraph-image", width: 1200, height: 630, alt: "HRT Women" }] },
 };
 
 const UPDATED = "September 2026";

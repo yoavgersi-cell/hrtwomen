@@ -17,7 +17,7 @@ export const IS_WINONA_LEGIT: ArticleData = {
   slug: "is-winona-legit",
   title: "Is Winona Legit? Yes - What 9,008 Reviews and the BBB Show (2026)",
   description:
-    "Yes. Winona's board-certified physicians review every intake before prescribing, and it holds a 4.6 Trustpilot rating across 9,008 reviews. BBB complaints, caveats and safety explained.",
+    "Yes. Winona's board-certified physicians review every intake, and it has 4.6 stars from 9,008 Trustpilot reviews. BBB complaints and caveats explained.",
   category: "Provider Guides",
   readTime: "7 min read",
   publishedAt: "2026-10-19",
@@ -66,7 +66,7 @@ export const IS_MIDI_LEGIT: ArticleData = {
   slug: "is-midi-legit",
   title: "Is Midi Health Legit? Yes - Reviews, BBB Complaints & Billing (2026)",
   description:
-    "Yes. Midi Health is a BBB-accredited virtual menopause clinic with video visits and insurance billing. What 1,795 Trustpilot reviews and its BBB billing complaints show.",
+    "Yes. Midi Health is a BBB-accredited virtual menopause clinic with video visits and insurance billing. What 1,795 reviews and its BBB complaints show.",
   category: "Provider Guides",
   readTime: "7 min read",
   publishedAt: "2026-10-19",

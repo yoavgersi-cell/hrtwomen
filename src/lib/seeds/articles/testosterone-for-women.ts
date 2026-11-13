@@ -35,7 +35,7 @@ export const TESTOSTERONE_FOR_WOMEN: ArticleData = {
   slug: "testosterone-for-women",
   title: "Testosterone for Women (2026): Libido, Risks & How to Get It",
   description:
-    "Testosterone for women in 2026: what it actually helps (and doesn't), the new heart-risk study, the FDA workshop, dosing and monitoring, side effects, Addyi and other options, cost, and how to get it online.",
+    "Testosterone for women in 2026: what it helps and doesn't, the new heart-risk study, dosing, side effects, cost and how to get it online.",
   category: "Treatments",
   readTime: "55 min read",
   publishedAt: "2026-10-31",
