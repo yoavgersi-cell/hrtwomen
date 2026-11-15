@@ -19,6 +19,7 @@ const TOPICS: Record<string, string[]> = {
   "testosterone-for-women": ["treatments", "safety", "news", "products"],
   "vaginal-estrogen": ["treatments", "products", "safety"],
   "glp1-menopause": ["weight", "treatments", "perimenopause", "news"],
+  "menopause-weight-gain": ["weight", "basics", "treatments", "perimenopause", "pillar"],
   "how-to-get-hrt-online": ["providers", "online", "cost", "pillar"],
   "best-online-hrt-providers-compared": ["providers", "online", "legit", "cost"],
   "best-online-hrt-clinics": ["providers", "online", "legit", "cost", "pillar"],

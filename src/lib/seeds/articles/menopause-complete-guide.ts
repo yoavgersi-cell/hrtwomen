@@ -425,7 +425,7 @@ export const MENOPAUSE_COMPLETE_GUIDE: ArticleData = {
     },
     {
       heading: "Does menopause cause weight gain?",
-      body: `<p><strong>Menopause is linked more to a shift of fat toward the abdomen than to large changes in total weight.</strong> Many women do gain weight in midlife, but ageing, loss of muscle, lower activity, poor sleep and stress all contribute alongside hormonal change. Abdominal fat matters because it is associated with higher cardiometabolic risk. Strength training, adequate protein, better sleep and reducing alcohol help. Hormone therapy does not cause weight gain on average. Where weight is significantly affecting health, discuss medical options with a clinician.</p>`,
+      body: `<p><strong>Menopause is linked more to a shift of fat toward the abdomen than to large changes in total weight.</strong> Many women do gain weight in midlife, but ageing, loss of muscle, lower activity, poor sleep and stress all contribute alongside hormonal change. Abdominal fat matters because it is associated with higher cardiometabolic risk. Strength training, adequate protein, better sleep and reducing alcohol help. Hormone therapy does not cause weight gain on average. Where weight is significantly affecting health, discuss medical options with a clinician. For the full evidence on why it happens and what works, read our <a href="/articles/menopause-weight-gain">menopause weight gain guide</a>.</p>`,
     },
     {
       heading: "Is it menopause or something else?",
