@@ -13,6 +13,7 @@ import { HOT_FLASHES_TREATMENT } from "./articles/hot-flashes-treatment";
 import { HRT_BREAST_CANCER_RISK } from "./articles/hrt-breast-cancer-risk";
 import { BEST_ONLINE_HRT_CLINICS } from "./articles/best-online-hrt-clinics";
 import { ESTRADIOL_GUIDE } from "./articles/estradiol";
+import { MENOPAUSE_WEIGHT_GAIN } from "./articles/menopause-weight-gain";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -1390,6 +1391,7 @@ export const hrtConfig: SiteConfig = {
     HRT_BREAST_CANCER_RISK,
     BEST_ONLINE_HRT_CLINICS,
     ESTRADIOL_GUIDE,
+    MENOPAUSE_WEIGHT_GAIN,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
