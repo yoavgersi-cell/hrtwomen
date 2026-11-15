@@ -80,6 +80,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     if (NOINDEX_ARTICLE_SLUGS.includes(a.slug)) continue;
     entries.push({
       url: `${SITE_URL}/articles/${a.slug}`,
+      ...(a.image ? { images: [`${SITE_URL}${a.image}`] } : {}),
       lastModified: flooredLastModified(a.updatedAt),
       changeFrequency: "monthly",
       priority: 0.6,

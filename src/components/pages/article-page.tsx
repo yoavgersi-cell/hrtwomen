@@ -1,6 +1,8 @@
 import { relatedArticleSlugs } from "@/lib/article-topics";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
+import { ARTICLE_IMAGES } from "@/data/article-images";
 import { Clock, ArrowLeft, ArrowRight, Check } from "lucide-react";
 import { getConfig } from "@/lib/config-store";
 import { NOINDEX_ARTICLE_SLUGS, latestUpdate, AFFILIATE_PROVIDER_IDS } from "@/lib/config";
@@ -252,7 +254,20 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    image: canonicalUrl(ctx, `/articles/${slug}/opengraph-image`),
+    // Editorial hero image first (Google Images / Discover), then the
+    // generated share card.
+    image: article.image
+      ? [
+          {
+            "@type": "ImageObject",
+            url: canonicalUrl(ctx, article.image),
+            width: ARTICLE_IMAGES[slug]?.width ?? 1536,
+            height: ARTICLE_IMAGES[slug]?.height ?? 864,
+            caption: article.imageAlt || article.title,
+          },
+          canonicalUrl(ctx, `/articles/${slug}/opengraph-image`),
+        ]
+      : canonicalUrl(ctx, `/articles/${slug}/opengraph-image`),
     datePublished: article.publishedAt,
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
@@ -414,6 +429,23 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
             <MedicalReviewBar path={`/articles/${slug}`} className="mt-4 max-w-[760px]" />
           </div>
         </div>
+
+        {/* Hero image (AI-generated editorial illustration; see
+            src/data/article-images.ts). Articles without one keep the plain
+            masthead. */}
+        {article.image && (
+          <div className="mx-auto max-w-[1100px] px-4 pt-6 sm:px-6 sm:pt-8">
+            <Image
+              src={article.image}
+              alt={article.imageAlt || article.title}
+              width={ARTICLE_IMAGES[slug]?.width ?? 1536}
+              height={ARTICLE_IMAGES[slug]?.height ?? 864}
+              priority
+              sizes="(max-width: 1100px) 100vw, 1068px"
+              className="aspect-[16/9] w-full rounded-2xl object-cover sm:aspect-[21/9]"
+            />
+          </div>
+        )}
 
         {/* Article body */}
         <div className="mx-auto max-w-[1100px] px-4 py-10 sm:px-6">

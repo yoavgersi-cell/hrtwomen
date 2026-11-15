@@ -28,6 +28,8 @@ const needsReviewBar = (p) =>
   p === "/" || p === "/reviews" || p === "/articles" || p === "/how-we-rank" ||
   p.startsWith("/reviews/") || p.startsWith("/articles/") || /^\/[a-z]+-vs-[a-z]+$/.test(p);
 const REVIEW_BAR = /Reviewed for medical accuracy by|Medical reviewer:/;
+// New articles must go live with a hero image from this date on.
+const IMAGES_REQUIRED_FROM = "2026-11-16";
 
 const failures = [];
 const warnings = [];
@@ -127,6 +129,20 @@ async function checkPage(path, linkSet) {
   }
 
   if (needsReviewBar(path) && !REVIEW_BAR.test(html)) fail(path, "medical reviewer bar missing");
+
+  // Article images: every article published on or after IMAGES_REQUIRED_FROM
+  // must ship with a hero image + alt text (generate one with
+  // scripts/generate-article-images.ts). Older articles without one are a
+  // warning until the daily backfill covers them.
+  if (/^\/articles\/[^/]+$/.test(path)) {
+    const published = attr(html, /"datePublished":"(\d{4}-\d{2}-\d{2})/);
+    const hero = html.match(/<img[^>]*src="[^"]*article-images[^"]*"[^>]*>/);
+    const alt = hero && attr(hero[0], /alt="([^"]*)"/);
+    if (!hero) {
+      if (published && published >= IMAGES_REQUIRED_FROM) fail(path, `no hero image (required for articles published from ${IMAGES_REQUIRED_FROM})`);
+      else warn(path, "no hero image yet");
+    } else if (!alt || alt.length < 20) fail(path, "hero image alt text missing or too short");
+  }
 
   for (const m of html.matchAll(/<a\s[^>]*href="([^"#?]+)/g)) {
     const href = m[1];

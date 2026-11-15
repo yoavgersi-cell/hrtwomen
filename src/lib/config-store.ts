@@ -1,5 +1,6 @@
 import { type SiteConfig } from "./config";
 import { hrtConfig } from "./seeds/hrt";
+import { ARTICLE_IMAGES } from "@/data/article-images";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Single-vertical config store.
@@ -12,8 +13,18 @@ import { hrtConfig } from "./seeds/hrt";
 // compiling) but ignored - there is only one vertical here.
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Article hero images live in a generated registry (src/data/article-images.ts)
+// rather than in each article file; merge them in once.
+const configWithImages: SiteConfig = {
+  ...hrtConfig,
+  articles: (hrtConfig.articles ?? []).map((a) => {
+    const img = ARTICLE_IMAGES[a.slug];
+    return img && !a.image ? { ...a, image: img.src, imageAlt: img.alt } : a;
+  }),
+};
+
 export async function getConfig(_vertical?: string): Promise<SiteConfig> {
-  return hrtConfig;
+  return configWithImages;
 }
 
 // No-op: content is code-authoritative on this site (no blob CMS). Kept so the
