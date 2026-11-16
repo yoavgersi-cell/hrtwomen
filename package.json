@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "images": "tsx --tsconfig tsconfig.json scripts/generate-article-images.ts"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
