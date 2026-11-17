@@ -40,6 +40,8 @@ const arg = (name: string) => {
 const COUNT = Number(arg("count") ?? 5);
 const ONLY = arg("slug")?.split(",").map((s) => s.trim());
 const DRY = args.includes("--dry-run");
+// Optional hand-written scene for a single --slug (used when a generated scene keeps producing text-like detail).
+const SCENE = arg("scene");
 
 // House style shared by every image so the site looks like one publication.
 const STYLE = [
@@ -111,7 +113,9 @@ function altFor(webp: Buffer, a: { title: string }): string {
     ],
     100,
   );
-  return alt.replace(/^["']|["']$/g, "").replace(/\.$/, "").slice(0, 140);
+  const clean = alt.replace(/^["']|["']$/g, "").replace(/\.$/, "").trim();
+  // Never cut mid-word: trim to the last full word within 125 characters.
+  return clean.length <= 125 ? clean : clean.slice(0, 125).replace(/\s+\S*$/, "");
 }
 
 function writeRegistry(map: Record<string, ArticleImage>) {
@@ -151,7 +155,7 @@ async function main() {
   const map: Record<string, ArticleImage> = { ...ARTICLE_IMAGES };
 
   for (const a of articles) {
-    const scene = sceneFor(a);
+    const scene = SCENE && ONLY?.length === 1 ? SCENE : sceneFor(a);
     console.log(`\n[${a.slug}] scene: ${scene}`);
     if (DRY) continue;
     const img = openai("images/generations", {
