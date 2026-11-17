@@ -155,11 +155,13 @@ export const hrtConfig: SiteConfig = {
   ranking: {
     // Order set by the operator on 2026-11-06: Midi #1, Winona #2, LifeMD #3,
     // Gala #4, Wisp #5.
-    providerOrder: ["midi", "winona", "lifemd", "gala", "wisp"],
+    // Fem Excel added at #4 on 2026-11-17 (operator decision).
+    providerOrder: ["midi", "winona", "lifemd", "femexcel", "gala", "wisp"],
     positions: [
       { score: 9.6, starRating: 5, label: "Exceptional", badge: "Our Top Pick" },
       { score: 9.5, starRating: 5, label: "Exceptional" },
       { score: 9.4, starRating: 5, label: "Exceptional" },
+      { score: 9.3, starRating: 5, label: "Excellent" },
       { score: 9.2, starRating: 5, label: "Excellent" },
       { score: 8.7, starRating: 4, label: "Very Good" },
     ],
@@ -277,6 +279,117 @@ export const hrtConfig: SiteConfig = {
           location: "US",
           rating: 5,
           date: "Oct 1, 2026",
+        },
+      ],
+    },
+    {
+      id: "femexcel",
+      name: "Fem Excel",
+      tagline:
+        "Bioidentical hormone therapy with an at-home blood test, video visits with hormone-focused nurse practitioners and a monthly membership",
+      logo: "/logos/femexcel-logo.webp",
+      smallLogo: "/logos/femexcel-logo.webp",
+      highlights: [
+        "At-home blood test kit",
+        "Video visits with NPs",
+        "Testosterone available",
+        "$99/month membership",
+      ],
+      affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1700&aff_id=12904",
+      ctaText: "Visit Site",
+      // Facts (checked 2026-11-17; femexcel.com via search, Fem Excel's own
+      // public Trustpilot replies, and the affiliate program description):
+      // telehealth bioidentical hormone therapy "through at-home testing,
+      // virtual medical consults, and ongoing provider support"; consults by
+      // licensed nurse practitioners under physician-supervised protocols;
+      // at-home blood kit (company lists estrogen, progesterone, testosterone,
+      // thyroid, cortisol; CLIA-certified lab). Pricing per Fem Excel's own
+      // replies: $99 monthly membership (provider care, regular lab testing,
+      // follow-ups, monitoring, portal messaging); medications billed
+      // separately every two months; supplements extra. Intro offers seen on
+      // its landing pages ($29 to start); reviewers report a ~$50 initial
+      // charge and a shipping fee - presented as reported. Self-pay, no
+      // insurance billing. Testosterone offered (may need an in-person exam
+      // depending on state law). Some medications are compounded - not
+      // claimed FDA-approved. BBB: not verified - not claimed.
+      // Trustpilot ("Fem Excel", claimed Aug 2024, paid subscription,
+      // category Online Prescription Medication Vendor): 4.5 across 882
+      // reviews on 2026-11-17 (operator screenshot). Reviews below
+      // transcribed (trimmed) from the 51 newest the operator shared.
+      trustpilotRating: "4.5",
+      trustpilotReviewCount: "882",
+      trustpilotReviews: [
+        {
+          title: "quick response time",
+          text: "Quick response time. Lovely video appointment with NP Meaghan who took time to explain the medications and answer all my questions.",
+          name: "Morning Waters",
+          location: "US",
+          rating: 5,
+          date: "Nov 16, 2026",
+        },
+        {
+          title: "Impressed and hopeful",
+          text: "My provider seemed legitimately interested in finding and treating the root cause of my symptoms. I never felt that she was in a hurry. It's also nice to know that they'll be looking at my bloodwork to make sure the recommendations are spot on.",
+          name: "Tami",
+          location: "US",
+          rating: 5,
+          date: "Nov 5, 2026",
+        },
+        {
+          title: "Hot flashes have gone to a bare minimum",
+          text: "Hot flashes have gone to a bare minimum. My hair that was falling out in clumps is now still shedding but no longer needing to clean my brush every day. Bloating is tremendously down.",
+          name: "Mary",
+          location: "US",
+          rating: 4,
+          date: "Nov 16, 2026",
+        },
+        {
+          title: "This company keeps good tabs on my blood work",
+          text: "This company keeps good tabs on my blood work that I can submit by mail and has helped my menopausal hormones stay stable. They treat more than just the values indicated by the blood work and address symptoms as well.",
+          name: "Kim",
+          location: "US",
+          rating: 5,
+          date: "Oct 18, 2026",
+        },
+        {
+          title: "Someone finally listened",
+          text: "I felt like my symptoms were taken seriously even though I have been on HRT for close to 20 years. My original GYN just didn't seem to care about my quality of life.",
+          name: "Nikki Hipps",
+          location: "US",
+          rating: 5,
+          date: "Oct 30, 2026",
+        },
+        {
+          title: "Perimenopause (with period)",
+          text: "The medication and medical staff are exceptional, if you can tolerate and have enough patience to navigate past the customer service and messaging wall on the front end. They were the only offering that listened and helped me feel better when my own doctors were not addressing the real problems.",
+          name: "Ana Hunter",
+          location: "US",
+          rating: 4,
+          date: "Oct 16, 2026",
+        },
+        {
+          title: "Get your wallet ready",
+          text: "Products were great, pricing was outrageous.",
+          name: "Ijeoma Asinugo",
+          location: "US",
+          rating: 3,
+          date: "Nov 16, 2026",
+        },
+        {
+          title: "Pricing Confusion",
+          text: "I was under the impression that the $99 I paid when signing up was my first monthly fee. After my consultation (which went well and I felt like I was actually listened to) I was charged the $99 again on top of the cost of the medication. I just wish it would have been made more clear.",
+          name: "Bailey",
+          location: "US",
+          rating: 3,
+          date: "Oct 22, 2026",
+        },
+        {
+          title: "The actual doctor was great, company kind of a scam",
+          text: "The actual doctor was great. However, no one notified me that on top of the original $50 charge, there would be a $99 charge every month, on top of the over $200 charge for the prescription and another $15 for the supplements.",
+          name: "Jessica",
+          location: "US",
+          rating: 1,
+          date: "Oct 27, 2026",
         },
       ],
     },
@@ -922,6 +1035,73 @@ export const hrtConfig: SiteConfig = {
       updatedAt: "2026-11-08",
     },
     {
+      slug: "femexcel",
+      providerId: "femexcel",
+      shortSummary:
+        "A telehealth hormone clinic for women that pairs an at-home blood test with video visits from hormone-focused nurse practitioners, offering bioidentical estrogen, progesterone and testosterone on a $99 monthly membership plus medication costs.",
+      reviewIntro:
+        "Fem Excel is a US telehealth hormone clinic for women in perimenopause and menopause. Its model is lab-led: you complete an at-home blood test, meet a licensed nurse practitioner by video, and get a personalized plan that can include bioidentical estrogen, progesterone and testosterone, with ongoing follow-up through a member portal. Care runs on a monthly membership, with medications billed separately. This review covers what it offers, what it really costs, what customers say and who it suits.",
+      keyFeatures: [
+        "At-home blood test kit (the company lists estrogen, progesterone, testosterone, thyroid and cortisol)",
+        "Video visits with licensed nurse practitioners",
+        "Bioidentical estrogen, progesterone and testosterone options",
+        "$99 monthly membership with ongoing provider care, lab monitoring and portal messaging",
+        "Medications billed separately, every two months",
+        "Self-pay - no insurance billing",
+      ],
+      pricingSummary:
+        "Approximate only - confirm at checkout. Fem Excel says its membership is $99 a month and covers ongoing provider care, regular lab testing, follow-ups and treatment monitoring. Medications are billed separately every two months and depend on your plan; reviewers report prescription charges of around $200-$250 per order, plus shipping and optional supplements. Introductory offers vary (one landing page advertises $29 to start), and several reviewers say an initial sign-up or consult charge was followed by the first $99 membership fee on the same day. It doesn't bill insurance.",
+      treatmentOptions: [
+        "Bioidentical estradiol (form chosen by your provider)",
+        "Progesterone (for women with a uterus taking estrogen)",
+        "Testosterone for women, where state rules allow",
+        "Thyroid medication when indicated by symptoms and labs",
+        "Weight-management support and supplements (separate programs and costs)",
+      ],
+      pros: [
+        "Lab-led care with an at-home blood test included in the membership",
+        "Live video visits with nurse practitioners who, in reviews, often take time to listen",
+        "Testosterone available - many menopause services don't offer it",
+        "Strong recent Trustpilot record (4.5 from 882 reviews)",
+      ],
+      cons: [
+        "Costs add up: $99 a month plus medications, shipping and supplements",
+        "Several reviewers say the membership and medication charges weren't clearly explained up front",
+        "Self-pay only - no insurance billing",
+        "Some medications are compounded - ask which products you'll receive",
+        "Routine hormone blood tests aren't required to diagnose or treat most menopause symptoms, so the lab focus adds cost more than necessity for many women",
+      ],
+      bestFor: [
+        "Women who want lab testing as part of their hormone care",
+        "Those interested in testosterone alongside estrogen and progesterone",
+        "Women who prefer a live video visit and an ongoing relationship with one provider",
+      ],
+      finalVerdict:
+        "Fem Excel suits women who want a lab-led, hands-on approach: an at-home blood test, a live video visit with a nurse practitioner, and access to testosterone as well as estrogen and progesterone. Many reviewers say its providers listen and explain things well. The trade-off is cost and clarity - a $99 monthly membership plus separately billed medications, shipping and supplements - and a recurring theme in reviews is that these charges weren't explained clearly enough before sign-up. Ask for a full written cost breakdown, including your first-month charges and medication prices, and which products are compounded, before you commit. Hormone therapy carries real risks and isn't right for everyone; let the clinician decide. This review is general information, not medical advice.",
+      howItWorks: [
+        {
+          timing: "Step 1",
+          title: "Sign up and test at home",
+          detail:
+            "Join, complete a health questionnaire and use the at-home blood kit. Be thorough about your history - blood clots, stroke and certain cancers matter a great deal for HRT.",
+        },
+        {
+          timing: "Step 2",
+          title: "Video visit",
+          detail:
+            "Meet a licensed nurse practitioner by video to review your symptoms, history and results and agree a treatment plan.",
+        },
+        {
+          timing: "Step 3",
+          title: "Treatment and follow-up",
+          detail:
+            "Medications are shipped and billed separately; follow-ups, lab monitoring and portal messaging are covered by the monthly membership.",
+        },
+      ],
+      trustBadges: ["At-home lab testing", "Video visits", "Testosterone available"],
+      updatedAt: "2026-11-17",
+    },
+    {
       slug: "wisp",
       providerId: "wisp",
       shortSummary:
@@ -1530,7 +1710,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Which online HRT providers offer FDA-approved bioidentical hormones?",
-          body: `<p><strong>All five providers we review can prescribe bioidentical estradiol and progesterone; how clearly they separate FDA-approved from compounded products differs.</strong></p><ul><li><strong><a href="/reviews/winona">Winona</a></strong> - its estradiol tablets, estradiol patch and progesterone capsules are FDA-approved; its estrogen body creams are compounded bi-est made in Winona's own pharmacies. See <a href="/articles/winona-products">Winona's products explained</a>.</li><li><strong><a href="/reviews/midi">Midi Health</a></strong> - prescriptions go to your own pharmacy, so you typically receive standard FDA-approved products priced through your insurance.</li><li><strong><a href="/reviews/gala">Gala</a></strong> - offers estradiol (pill or patch) and progesterone; its site carries a compounded-medication disclaimer, so ask which product you'd receive.</li></ul><p>Compare them side by side in our <a href="/articles/best-online-hrt-providers-compared">online HRT providers comparison</a>.</p>`,
+          body: `<p><strong>All six providers we review can prescribe bioidentical estradiol and progesterone; how clearly they separate FDA-approved from compounded products differs.</strong></p><ul><li><strong><a href="/reviews/winona">Winona</a></strong> - its estradiol tablets, estradiol patch and progesterone capsules are FDA-approved; its estrogen body creams are compounded bi-est made in Winona's own pharmacies. See <a href="/articles/winona-products">Winona's products explained</a>.</li><li><strong><a href="/reviews/midi">Midi Health</a></strong> - prescriptions go to your own pharmacy, so you typically receive standard FDA-approved products priced through your insurance.</li><li><strong><a href="/reviews/gala">Gala</a></strong> - offers estradiol (pill or patch) and progesterone; its site carries a compounded-medication disclaimer, so ask which product you'd receive.</li></ul><p>Compare them side by side in our <a href="/articles/best-online-hrt-providers-compared">online HRT providers comparison</a>.</p>`,
         },
         {
           heading: "What should you ask before starting bioidentical hormones?",
@@ -1540,27 +1720,28 @@ export const hrtConfig: SiteConfig = {
     },
     {
       slug: "best-online-hrt-providers-compared",
-      title: "Best Online HRT for Women (2026): Midi, Winona, LifeMD, Gala & Wisp",
+      title: "Best Online HRT for Women (2026): 6 Providers Compared",
       description:
-        "Midi Health, Winona, LifeMD, Gala and Wisp compared side by side on price, insurance, FDA-approved hormones, perimenopause care and real reviews.",
+        "Midi Health, Winona, LifeMD, Fem Excel, Gala and Wisp compared side by side on price, insurance, FDA-approved hormones, labs and real reviews.",
       category: "Comparisons",
       readTime: "11 min read",
       publishedAt: "2026-09-26",
-      updatedAt: "2026-11-08",
+      updatedAt: "2026-11-17",
       heroColor: "#FDEEF3",
       author: "HRT Women Editorial Team",
       keyTakeaways: [
         "Midi Health: our top pick - insurance-billed video visits with menopause-trained NPs and nurse midwives; prescriptions go to your own pharmacy.",
         "Winona: runner-up - physician-led, no video visit, several estrogen forms, self-pay subscription with free delivery.",
         "LifeMD: licensed physicians and NPs by video or message, estradiol and progesterone plans from about $67/month on six-month billing, all 50 states.",
+        "Fem Excel: at-home blood test and NP video visits, testosterone available, $99/month membership plus medications.",
         "Gala: US-licensed clinicians, estradiol and progesterone, one flat self-pay monthly price.",
         "Wisp: low-cost online consults with board-certified providers; prescriptions sent same-day to your local pharmacy, all 50 states.",
-        "All five require a clinician's decision - HRT carries real risks and isn't right for everyone.",
+        "All six require a clinician's decision - HRT carries real risks and isn't right for everyone.",
       ],
       sections: [
         {
           heading: "What is the best online HRT provider?",
-          body: `<div class="qa"><strong>The short answer</strong><strong>Midi Health</strong> is our top pick: a virtual menopause clinic with menopause-trained clinicians over video, billed to most major commercial PPO insurance, with prescriptions sent to your own pharmacy. <strong>Winona</strong>, our runner-up, is best if you want no appointments at all: board-certified physicians, FDA-approved estradiol tablets and patches plus progesterone, and medication delivered to your door. <strong>LifeMD</strong> lets you choose a video visit or message-based care, with clearly priced estradiol and progesterone plans. <strong>Gala</strong> offers one flat monthly cash price. <strong>Wisp</strong> offers a low-cost online consult with prescriptions sent same-day to your own pharmacy, where insurance or a discount card sets the medication price.</div><table><tr><th></th><th><a href="/reviews/midi">Midi Health</a></th><th><a href="/reviews/winona">Winona</a></th><th><a href="/reviews/lifemd">LifeMD</a></th><th><a href="/reviews/gala">Gala</a></th><th><a href="/reviews/wisp">Wisp</a></th></tr><tr><td>Our rating</td><td>9.6/10</td><td>9.5/10</td><td>9.4/10</td><td>9.2/10</td><td>8.7/10</td></tr><tr><td>How you see a clinician</td><td>Scheduled video visit</td><td>Online intake reviewed by a physician; messaging</td><td>Video visit or message-based care with a licensed physician or NP</td><td>Online intake reviewed by a US-licensed clinician</td><td>Online consult reviewed by a board-certified provider</td></tr><tr><td>Pricing model</td><td>Per visit + your pharmacy</td><td>Monthly subscription per product</td><td>Plan price per month (6-month or monthly billing)</td><td>One flat monthly plan</td><td>Consult fee + your pharmacy</td></tr><tr><td>Typical cost</td><td>About $50/visit average with insurance; $250 first / $150 follow-up self-pay</td><td>$39-$149 per product; about $89-$188 for estrogen + progesterone</td><td>From about $67/mo (cream + progesterone) or $77/mo (patch + progesterone) billed every 6 months; about $119-$149 monthly; $79 first visit listed</td><td>Advertised from $79/mo; reported $69 (pill) to $99 (patch)</td><td>Consult listed from about $33/mo (some reviews report $99 for ~3 months); medication via insurance or discount card</td></tr><tr><td>Insurance</td><td>Most commercial PPO plans; not HMO, Medicare or Medicaid</td><td>Not billed; HSA/FSA accepted</td><td>HRT program self-pay; some video visits billable to insurance</td><td>Not billed</td><td>Consult self-pay (HSA/FSA); insurance can cover medication at your pharmacy</td></tr><tr><td>Medication</td><td>Sent to your pharmacy</td><td>Included and shipped</td><td>Included in the plan price</td><td>Included and shipped</td><td>Sent same-day to your pharmacy</td></tr><tr><td>Estrogen forms</td><td>Whatever your clinician prescribes</td><td>Tablets, patch, body cream, vaginal cream</td><td>Patch, cream or gel, vaginal</td><td>Pill, patch, vaginal estradiol</td><td>Estradiol incl. patch; vaginal cream</td></tr><tr><td>Testosterone</td><td>Some states, self-pay</td><td>No</td><td>Assessed after a video visit (off-label)</td><td>No</td><td>Not listed</td></tr><tr><td>Trustpilot</td><td>4.1 (1,795 reviews, Nov 3, 2026)</td><td>4.6 (9,008 reviews, Nov 3, 2026)</td><td>3.9 (4,293 reviews, all LifeMD services, Nov 6, 2026)</td><td>4.6 (4,258 reviews, all Gala services, Nov 3, 2026)</td><td>4.1 (11,616 reviews, all Wisp services, Nov 6, 2026)</td></tr><tr><td>BBB (Oct 19, 2026)</td><td>B, accredited</td><td>B, not accredited</td><td>Profile found; grade not confirmed (Nov 6, 2026)</td><td>C-, not accredited</td><td>No profile found</td></tr></table><p>Prices are approximate and change; confirm at checkout. Full breakdown: <a href="/articles/online-hrt-cost">how much online HRT costs</a>. Prefer a ranked list with a verdict for each? See <a href="/articles/best-online-hrt-clinics">the 5 best online HRT clinics of 2026</a>.</p>`,
+          body: `<div class="qa"><strong>The short answer</strong><strong>Midi Health</strong> is our top pick: a virtual menopause clinic with menopause-trained clinicians over video, billed to most major commercial PPO insurance, with prescriptions sent to your own pharmacy. <strong>Winona</strong>, our runner-up, is best if you want no appointments at all: board-certified physicians, FDA-approved estradiol tablets and patches plus progesterone, and medication delivered to your door. <strong>LifeMD</strong> lets you choose a video visit or message-based care, with clearly priced estradiol and progesterone plans. <strong>Gala</strong> offers one flat monthly cash price. <strong>Wisp</strong> offers a low-cost online consult with prescriptions sent same-day to your own pharmacy, where insurance or a discount card sets the medication price.</div><table><tr><th></th><th><a href="/reviews/midi">Midi Health</a></th><th><a href="/reviews/winona">Winona</a></th><th><a href="/reviews/lifemd">LifeMD</a></th><th><a href="/reviews/femexcel">Fem Excel</a></th><th><a href="/reviews/gala">Gala</a></th><th><a href="/reviews/wisp">Wisp</a></th></tr><tr><td>Our rating</td><td>9.6/10</td><td>9.5/10</td><td>9.4/10</td><td>9.3/10</td><td>9.2/10</td><td>8.7/10</td></tr><tr><td>How you see a clinician</td><td>Scheduled video visit</td><td>Online intake reviewed by a physician; messaging</td><td>Video visit or message-based care with a licensed physician or NP</td><td>Video visit with a licensed NP, after an at-home blood test</td><td>Online intake reviewed by a US-licensed clinician</td><td>Online consult reviewed by a board-certified provider</td></tr><tr><td>Pricing model</td><td>Per visit + your pharmacy</td><td>Monthly subscription per product</td><td>Plan price per month (6-month or monthly billing)</td><td>Monthly membership + medications</td><td>One flat monthly plan</td><td>Consult fee + your pharmacy</td></tr><tr><td>Typical cost</td><td>About $50/visit average with insurance; $250 first / $150 follow-up self-pay</td><td>$39-$149 per product; about $89-$188 for estrogen + progesterone</td><td>From about $67/mo (cream + progesterone) or $77/mo (patch + progesterone) billed every 6 months; about $119-$149 monthly; $79 first visit listed</td><td>$99/mo membership; medications billed every two months (reported about $200-$250 per order)</td><td>Advertised from $79/mo; reported $69 (pill) to $99 (patch)</td><td>Consult listed from about $33/mo (some reviews report $99 for ~3 months); medication via insurance or discount card</td></tr><tr><td>Insurance</td><td>Most commercial PPO plans; not HMO, Medicare or Medicaid</td><td>Not billed; HSA/FSA accepted</td><td>HRT program self-pay; some video visits billable to insurance</td><td>Not billed</td><td>Not billed</td><td>Consult self-pay (HSA/FSA); insurance can cover medication at your pharmacy</td></tr><tr><td>Medication</td><td>Sent to your pharmacy</td><td>Included and shipped</td><td>Included in the plan price</td><td>Shipped to your door</td><td>Included and shipped</td><td>Sent same-day to your pharmacy</td></tr><tr><td>Estrogen forms</td><td>Whatever your clinician prescribes</td><td>Tablets, patch, body cream, vaginal cream</td><td>Patch, cream or gel, vaginal</td><td>Provider-selected bioidentical estrogen; some compounded</td><td>Pill, patch, vaginal estradiol</td><td>Estradiol incl. patch; vaginal cream</td></tr><tr><td>Testosterone</td><td>Some states, self-pay</td><td>No</td><td>Assessed after a video visit (off-label)</td><td>Yes, where state rules allow</td><td>No</td><td>Not listed</td></tr><tr><td>Trustpilot</td><td>4.1 (1,795 reviews, Nov 3, 2026)</td><td>4.6 (9,008 reviews, Nov 3, 2026)</td><td>3.9 (4,293 reviews, all LifeMD services, Nov 6, 2026)</td><td>4.5 (882 reviews, Nov 17, 2026)</td><td>4.6 (4,258 reviews, all Gala services, Nov 3, 2026)</td><td>4.1 (11,616 reviews, all Wisp services, Nov 6, 2026)</td></tr><tr><td>BBB (Oct 19, 2026)</td><td>B, accredited</td><td>B, not accredited</td><td>Profile found; grade not confirmed (Nov 6, 2026)</td><td>Not verified</td><td>C-, not accredited</td><td>No profile found</td></tr></table><p>Prices are approximate and change; confirm at checkout. Full breakdown: <a href="/articles/online-hrt-cost">how much online HRT costs</a>. Prefer a ranked list with a verdict for each? See <a href="/articles/best-online-hrt-clinics">the 5 best online HRT clinics of 2026</a>.</p>`,
         },
         {
           heading: "Two models of online menopause care",
@@ -1579,6 +1760,10 @@ export const hrtConfig: SiteConfig = {
           body: `<p><a href="/reviews/lifemd">LifeMD</a> is a large US telehealth company (Nasdaq: LFMD) whose Women's Health Program treats perimenopause and menopause. You can see a <strong>licensed physician or nurse practitioner by video</strong> or use <strong>message-based care</strong> - a choice most menopause services don't offer. Plans built around estradiol (patch, cream or gel, vaginal) and micronized progesterone start from about <strong>$67/month on six-month billing</strong> ($399), or about $77/month with a patch; billed monthly they run about $119-$149. LifeMD says the program is available in all 50 states.</p><p><strong>Watch-outs:</strong> the lowest price needs six months up front, LifeMD's pages describe the fees slightly differently, and its Trustpilot score (3.9 from 4,293 reviews) is lower than Winona's or Gala's, with some BBB reviews about billing. Confirm the total at checkout.</p>`,
         },
         {
+          heading: "Fem Excel: lab-guided care",
+          body: `<p><a href="/reviews/femexcel">Fem Excel</a> builds care around an <strong>at-home blood test</strong> and a <strong>video visit with a licensed nurse practitioner</strong>. Plans can include bioidentical estrogen, progesterone and, where state rules allow, <strong>testosterone</strong>. A <strong>$99 monthly membership</strong> covers follow-ups, lab monitoring and portal messaging; medications are billed separately every two months.</p><p><strong>Watch-outs:</strong> it's self-pay, the total adds up with medications, shipping and supplements, some medications are compounded, and a recurring theme in its reviews is charges that weren't clear up front. Get a written cost breakdown before you start.</p>`,
+        },
+        {
           heading: "Gala: flat-fee simplicity",
           body: `<p><a href="/reviews/gala">Gala</a> focuses on estradiol (pill or patch), oral or vaginal progesterone and vaginal estradiol, prescribed by US-licensed clinicians. Its selling point is one monthly price that includes the clinician, check-ins, dose adjustments and shipping. Gala also runs a separate weight-management program.</p><p><strong>Watch-outs:</strong> self-pay only, and a narrower list of estrogen forms than Winona. Advertised pricing varies - approximate only, confirm at checkout.</p>`,
         },
@@ -1588,11 +1773,11 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Head-to-head at a glance",
-          body: `<ul><li><strong>Best overall:</strong> <a href="/reviews/midi">Midi Health</a> - menopause-trained clinicians by video, billed to most commercial PPO plans.</li><li><strong>Most convenient:</strong> Winona - no appointments, delivered to your door. See <a href="/winona-vs-gala">Winona vs Gala</a>.</li><li><strong>Choice of video or messaging:</strong> <a href="/reviews/lifemd">LifeMD</a> - licensed clinicians either way, with plans from about $67/month on six-month billing.</li><li><strong>Most predictable price:</strong> Gala - one flat monthly fee.</li><li><strong>Best if you have insurance:</strong> Midi Health. See <a href="/winona-vs-midi">Winona vs Midi Health</a> and <a href="/gala-vs-midi">Gala vs Midi Health</a>.</li><li><strong>Want a live conversation:</strong> Midi Health's video visits.</li><li><strong>Lowest entry price:</strong> <a href="/reviews/wisp">Wisp</a> - a low-cost consult with same-day pharmacy prescriptions.</li><li><strong>Want FDA-approved products specifically:</strong> <a href="/reviews/winona">Winona</a> lists which of its products are FDA-approved (tablets, patch, progesterone capsules) and which are compounded; with any provider, ask which product you will receive.</li></ul>`,
+          body: `<ul><li><strong>Best overall:</strong> <a href="/reviews/midi">Midi Health</a> - menopause-trained clinicians by video, billed to most commercial PPO plans.</li><li><strong>Most convenient:</strong> Winona - no appointments, delivered to your door. See <a href="/winona-vs-gala">Winona vs Gala</a>.</li><li><strong>Choice of video or messaging:</strong> <a href="/reviews/lifemd">LifeMD</a> - licensed clinicians either way, with plans from about $67/month on six-month billing.</li><li><strong>Lab testing and testosterone:</strong> <a href="/reviews/femexcel">Fem Excel</a> - at-home blood test, NP video visits, testosterone where allowed.</li><li><strong>Most predictable price:</strong> Gala - one flat monthly fee.</li><li><strong>Best if you have insurance:</strong> Midi Health. See <a href="/winona-vs-midi">Winona vs Midi Health</a> and <a href="/gala-vs-midi">Gala vs Midi Health</a>.</li><li><strong>Want a live conversation:</strong> Midi Health's video visits.</li><li><strong>Lowest entry price:</strong> <a href="/reviews/wisp">Wisp</a> - a low-cost consult with same-day pharmacy prescriptions.</li><li><strong>Want FDA-approved products specifically:</strong> <a href="/reviews/winona">Winona</a> lists which of its products are FDA-approved (tablets, patch, progesterone capsules) and which are compounded; with any provider, ask which product you will receive.</li></ul>`,
         },
         {
           heading: "Which online HRT providers deliver fastest?",
-          body: `<p><strong>Pharmacy prescriptions are quickest: Midi Health and Wisp send prescriptions to your local pharmacy, often the same day. Among home-delivery services, Gala advertises free 1-2 day shipping, LifeMD ships free within about three to five business days of processing, and Winona's free standard shipping takes about five business days from approval, with paid express options.</strong></p><p>All five say they serve most or all US states, but Winona covers fewer than the others - check your state at sign-up. Our <a href="/articles/best-online-hrt-clinics">guide to the 5 best online HRT clinics</a> has the full shipping and state table.</p>`,
+          body: `<p><strong>Pharmacy prescriptions are quickest: Midi Health and Wisp send prescriptions to your local pharmacy, often the same day. Among home-delivery services, Gala advertises free 1-2 day shipping, LifeMD ships free within about three to five business days of processing, and Winona's free standard shipping takes about five business days from approval, with paid express options.</strong></p><p>All of them say they serve most or all US states, but Winona covers fewer than the others - check your state at sign-up. Our <a href="/articles/best-online-hrt-clinics">guide to the 5 best online HRT clinics</a> has the full shipping and state table.</p>`,
         },
         {
           heading: "Which online HRT provider is cheapest?",
@@ -1600,7 +1785,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Which online HRT provider is best for perimenopause?",
-          body: `<p><strong>All five see women in perimenopause. Midi Health and LifeMD are often the best fit when periods are irregular or heavy, because a video visit makes it easier to work through bleeding patterns, contraception and options such as a hormonal IUD. Wisp, Winona and Gala suit women with straightforward symptoms who prefer an online intake.</strong></p><p>Whichever you use, remember that menopausal HRT isn't contraception. Our guide to <a href="/articles/hrt-for-perimenopause">HRT for perimenopause</a> covers how treatment is usually set up, and <a href="/articles/perimenopause-symptoms">perimenopause symptoms</a> explains how to tell if that's what you're experiencing.</p>`,
+          body: `<p><strong>All six see women in perimenopause. Midi Health and LifeMD are often the best fit when periods are irregular or heavy, because a video visit makes it easier to work through bleeding patterns, contraception and options such as a hormonal IUD. Wisp, Winona and Gala suit women with straightforward symptoms who prefer an online intake.</strong></p><p>Whichever you use, remember that menopausal HRT isn't contraception. Our guide to <a href="/articles/hrt-for-perimenopause">HRT for perimenopause</a> covers how treatment is usually set up, and <a href="/articles/perimenopause-symptoms">perimenopause symptoms</a> explains how to tell if that's what you're experiencing.</p>`,
         },
         {
           heading: "Which online HRT provider is best if you're on Medicare?",

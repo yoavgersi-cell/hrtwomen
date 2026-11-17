@@ -38,6 +38,11 @@ import { CustomerSentiment } from "@/components/customer-sentiment";
 // "winona hrt reviews", "how much does winona cost", "does winona take
 // insurance", "is midi health legit", "gala hrt reviews", etc.
 const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  femexcel: {
+    title: "Fem Excel HRT Review (2026): Cost, Labs & Is It Legit?",
+    description:
+      "Fem Excel reviewed: $99/mo membership plus medications, at-home blood tests, NP video visits, testosterone, and what 882 Trustpilot reviews say.",
+  },
   lifemd: {
     title: "LifeMD Menopause Review (2026): HRT Cost, Plans & Is It Legit?",
     description:
@@ -70,6 +75,20 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
 // Numbers must match CUSTOMER_SENTIMENT in customer-sentiment.tsx and the
 // Trustpilot/BBB notes in src/lib/seeds/hrt.ts - never estimate a count.
 const REVIEW_SUMMARY: Record<string, { answer: string; praise: string[]; complaints: string[] }> = {
+  femexcel: {
+    answer:
+      "Fem Excel reviews are mostly positive, with a clear caveat on cost. It held 4.5 stars from 882 Trustpilot reviews when we checked on November 17, 2026. Of the 51 newest reviews, 36 gave 5 stars - most often for nurse practitioners who listen, explain and use lab results - while 11 gave 1 to 3 stars, mainly because the total of a $99 monthly membership plus separately billed medications, shipping and supplements wasn't clear to them up front.",
+    praise: [
+      "Providers who listen and explain (20 of the 51 newest reviews)",
+      "Symptom relief described (8 of 51)",
+      "At-home blood testing and lab-guided care (7 of 51)",
+    ],
+    complaints: [
+      "Cost and unexpected charges (9 of 51)",
+      "No improvement yet or side effects (3 of 51)",
+      "Self-pay only - no insurance billing",
+    ],
+  },
   midi: {
     answer:
       "Midi Health reviews are mostly positive. It held 4.1 stars from 1,795 Trustpilot reviews when we checked on November 3, 2026, and all 46 of the newest reviews gave 5 stars - most often because a clinician listened and explained the options, often after other doctors had dismissed the patient's symptoms. The complaints are mainly about insurance billing: Midi's BBB profile lists about 175 complaints closed in three years, mostly over visits patients expected to be covered, copays and deductibles. Midi is BBB-accredited with a B rating.",
@@ -144,6 +163,11 @@ const REVIEW_SUMMARY: Record<string, { answer: string; praise: string[]; complai
 // Direct answers for the "Is X legit?" FAQ, built only from the facts
 // verified in src/lib/seeds/hrt.ts.
 const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
+  femexcel: {
+    verdict:
+      "Yes - Fem Excel is a legitimate US telehealth hormone clinic. Licensed nurse practitioners review your history and at-home lab results by video before prescribing. Its Trustpilot profile shows 4.5 from 882 reviews; the most common complaint is unclear total cost, so get a written breakdown before you start.",
+    signals: ["Licensed nurse practitioners by video", "At-home blood testing", "Prescription only after review"],
+  },
   lifemd: {
     verdict:
       "Yes - LifeMD is a legitimate US telehealth company, listed on Nasdaq (LFMD). Licensed physicians and nurse practitioners see you by video or through message-based care before prescribing. Its Trustpilot profile shows 3.9 from 4,293 reviews; confirm the total price before you commit, since some customers report billing disputes.",
@@ -172,6 +196,33 @@ const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
 };
 
 const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  femexcel: [
+    {
+      question: "What is Fem Excel?",
+      answer:
+        "Fem Excel is a US telehealth hormone clinic for women in perimenopause and menopause. It combines an at-home blood test with video visits from licensed nurse practitioners and offers bioidentical estrogen, progesterone and testosterone on a monthly membership.",
+    },
+    {
+      question: "How much does Fem Excel cost?",
+      answer:
+        "Fem Excel says its membership is $99 a month, covering ongoing provider care, regular lab testing, follow-ups and monitoring. Medications are billed separately every two months and depend on your plan; reviewers report prescription charges of roughly $200-$250 per order plus shipping. Introductory offers vary, so ask for a written breakdown of your first-month charges.",
+    },
+    {
+      question: "Does Fem Excel take insurance?",
+      answer:
+        "No. Fem Excel is self-pay: the membership and medications are paid directly. Ask whether your HSA or FSA can be used.",
+    },
+    {
+      question: "Does Fem Excel prescribe testosterone?",
+      answer:
+        "Yes, where state rules allow. Testosterone is a controlled substance, and Fem Excel notes that some states may require an in-person exam before it can be prescribed.",
+    },
+    {
+      question: "What do Fem Excel reviews say?",
+      answer:
+        "Fem Excel held a 4.5 rating from 882 Trustpilot reviews when we checked on November 17, 2026. Of the 51 newest reviews, 36 gave 5 stars - mostly for providers who listen and explain - and 11 gave 1 to 3 stars, mainly over total cost and charges that reviewers say weren't clear up front.",
+    },
+  ],
   lifemd: [
     {
       question: "What is LifeMD?",

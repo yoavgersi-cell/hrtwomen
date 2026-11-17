@@ -175,6 +175,49 @@ export const CUSTOMER_SENTIMENT: Record<string, Sentiment> = {
     bottomLine:
       "All 46 of the newest reviews were 5 stars, overwhelmingly for being heard by knowledgeable clinicians - often after being dismissed elsewhere. The lower 4.1 overall reflects older reviews and BBB complaints that are mostly about insurance billing.",
   },
+  // Fem Excel: operator screenshot of the Trustpilot profile on 2026-11-17
+  // (4.5, 882 reviews; claimed Aug 2024; paid subscription) plus the 51
+  // newest reviews the operator shared: 36 five-star, 4 four, 5 three, 0 two,
+  // 6 one. No BBB profile verified, so no BBB box.
+  femexcel: {
+    sampleSize: 51,
+    sampleDate: "Nov 17, 2026",
+    rating: "4.5",
+    ratingCount: "882",
+    praised: [
+      {
+        theme: "Providers who listen and explain",
+        count: 20,
+        example: "\"My provider seemed legitimately interested in finding and treating the root cause of my symptoms. I never felt that she was in a hurry.\" - Tami",
+      },
+      {
+        theme: "Symptom relief described",
+        count: 8,
+        example: "\"Hot flashes have gone to a bare minimum... Bloating is tremendously down.\" - Mary",
+      },
+      {
+        theme: "At-home blood testing and lab-guided care",
+        count: 7,
+        example: "\"This company keeps good tabs on my blood work that I can submit by mail.\" - Kim",
+      },
+    ],
+    complaints: [
+      {
+        theme: "Cost and unexpected charges",
+        count: 9,
+        example: "\"No one notified me that on top of the original $50 charge, there would be a $99 charge every month, on top of the over $200 charge for the prescription.\" (1 star)",
+      },
+      {
+        theme: "No improvement yet or side effects",
+        count: 3,
+        example: "\"Pills I take at night are disrupting my sleep.\" (3 stars)",
+      },
+    ],
+    bottomLine:
+      "Most of the 51 newest reviews praise nurse practitioners who listen, explain and look at lab results, and several describe real symptom relief - but about 1 in 5 gave 1 to 3 stars, mostly over the total cost and charges (membership plus medications) that reviewers say weren't made clear up front.",
+    sampleNote:
+      "the sample is the 51 most recent reviews shared with us on Nov 17, 2026, including low-star ones; some mention Fem Excel's weight-loss program.",
+  },
   // LifeMD: operator screenshot of the Trustpilot profile on 2026-11-06
   // (3.9, 4,293 reviews; claimed Jul 2021; paid subscription; category
   // Doctor) plus the 20 newest reviews the operator shared: 19 five-star,

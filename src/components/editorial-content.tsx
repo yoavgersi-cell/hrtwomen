@@ -276,6 +276,7 @@ export function EditorialContent({ midSlot, topSlot }: { midSlot?: React.ReactNo
         <Link href="/reviews/midi" className="font-semibold text-[#A8285E] hover:underline">Midi Health</Link>,{" "}
         <Link href="/reviews/winona" className="font-semibold text-[#A8285E] hover:underline">Winona</Link>,{" "}
         <Link href="/reviews/lifemd" className="font-semibold text-[#A8285E] hover:underline">LifeMD</Link>,{" "}
+        <Link href="/reviews/femexcel" className="font-semibold text-[#A8285E] hover:underline">Fem Excel</Link>,{" "}
         <Link href="/reviews/gala" className="font-semibold text-[#A8285E] hover:underline">Gala</Link>{" "}
         and{" "}
         <Link href="/reviews/wisp" className="font-semibold text-[#A8285E] hover:underline">Wisp</Link>, or compare them head to head in 

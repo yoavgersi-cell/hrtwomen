@@ -375,6 +375,7 @@ export const AFFILIATE_PROVIDER_IDS = [
   "midi",
   "winona",
   "lifemd",
+  "femexcel",
   "gala",
   "wisp",
 ];
