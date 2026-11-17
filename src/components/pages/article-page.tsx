@@ -189,11 +189,17 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
   const showHrtRankedList = !isWeightLoss && HRT_RANKED_LIST_SLUGS.has(slug);
   // HRT pillar guides with intent to get treatment: the top 3 ranked
   // providers as full cards after the short answer (replaces the inline CTA).
-  const HRT_TOP_PROVIDER_BLOCKS: Record<string, { limit: number; title: string; subtitle: string }> = {
+  const HRT_TOP_PROVIDER_BLOCKS: Record<string, { limit: number; title: string; subtitle: string; providerIds?: string[] }> = {
     estradiol: {
       limit: 3,
       title: "Get an estradiol prescription online: our top 3",
       subtitle: "Licensed clinicians who can prescribe estradiol after reviewing your history - ranked from our full comparison.",
+    },
+    "online-hrt-insurance": {
+      limit: 3,
+      providerIds: ["midi", "wisp", "lifemd"],
+      title: "Online HRT that works with your insurance",
+      subtitle: "Midi bills many commercial plans for visits; Wisp and LifeMD can send prescriptions to your pharmacy so your plan covers the medication.",
     },
     "menopause-weight-gain": {
       limit: 2,
@@ -550,6 +556,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     config={config}
                     linkPrefix={ctx.prefix}
                     limit={hrtTopBlock.limit}
+                    providerIds={hrtTopBlock.providerIds}
                     title={hrtTopBlock.title}
                     subtitle={hrtTopBlock.subtitle}
                   />

@@ -24,6 +24,7 @@ const TOPICS: Record<string, string[]> = {
   "best-online-hrt-providers-compared": ["providers", "online", "legit", "cost"],
   "best-online-hrt-clinics": ["providers", "online", "legit", "cost", "pillar"],
   "online-hrt-cost": ["providers", "cost", "online"],
+  "online-hrt-insurance": ["providers", "cost", "online", "insurance"],
   "winona-cost": ["winona", "cost", "providers"],
   "winona-products": ["winona", "products", "providers"],
   "is-winona-legit": ["winona", "legit", "providers"],

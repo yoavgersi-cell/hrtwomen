@@ -13,3 +13,10 @@ saves `public/article-images/<slug>.webp` and updates `src/data/article-images.t
 Look at each image before committing it: no text, logos, brands, needles or anything
 that misrepresents the article. `scripts/seo-check.mjs` fails for articles published
 from 2026-11-16 without a hero image.
+
+# Keyword research for new articles
+
+Before writing any new article, research the real search phrases with the
+Keyword Tool connector (KeywordTool.io MCP: Google, Bing, Copilot and Google
+Trends, country "United States"). Build headings around the actual questions it
+returns, and record the main phrases in the article file's header comment.

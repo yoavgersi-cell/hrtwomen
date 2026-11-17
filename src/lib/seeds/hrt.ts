@@ -14,6 +14,7 @@ import { HRT_BREAST_CANCER_RISK } from "./articles/hrt-breast-cancer-risk";
 import { BEST_ONLINE_HRT_CLINICS } from "./articles/best-online-hrt-clinics";
 import { ESTRADIOL_GUIDE } from "./articles/estradiol";
 import { MENOPAUSE_WEIGHT_GAIN } from "./articles/menopause-weight-gain";
+import { ONLINE_HRT_INSURANCE } from "./articles/online-hrt-insurance";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Menopause / HRT vertical content - hrtwomen.com
@@ -1572,6 +1573,7 @@ export const hrtConfig: SiteConfig = {
     BEST_ONLINE_HRT_CLINICS,
     ESTRADIOL_GUIDE,
     MENOPAUSE_WEIGHT_GAIN,
+    ONLINE_HRT_INSURANCE,
     {
       slug: "perimenopause-symptoms",
       title: "Perimenopause Symptoms: What's Normal and When to Get Help",
@@ -2175,7 +2177,7 @@ export const hrtConfig: SiteConfig = {
         },
         {
           heading: "Which insurance does Midi Health take?",
-          body: `<p><strong>Midi is in-network with many major commercial plans - its site names Aetna, Cigna, Anthem Blue Cross Blue Shield and UnitedHealthcare - but coverage depends on your specific plan, and Blue Cross networks vary by state. Most PPO plans are in-network; HMO plans are usually treated as self-pay.</strong></p><p>Midi checks your coverage when you register, before the first visit, and some Blue Cross plans get a manual review first. Even in-network, what you pay depends on your deductible, copay and coinsurance: if you haven't met your deductible, a visit can cost up to the self-pay rate. Ask what your first visit will cost before you book. Details are on <a href="https://www.joinmidi.com/pricing-insurance" target="_blank" rel="noopener noreferrer">Midi's pricing and insurance page</a>.</p>`,
+          body: `<p><strong>Midi is in-network with many major commercial plans - its site names Aetna, Cigna, Anthem Blue Cross Blue Shield and UnitedHealthcare - but coverage depends on your specific plan, and Blue Cross networks vary by state. Most PPO plans are in-network; HMO plans are usually treated as self-pay.</strong></p><p>Midi checks your coverage when you register, before the first visit, and some Blue Cross plans get a manual review first. Even in-network, what you pay depends on your deductible, copay and coinsurance: if you haven't met your deductible, a visit can cost up to the self-pay rate. Ask what your first visit will cost before you book. Details are on <a href="https://www.joinmidi.com/pricing-insurance" target="_blank" rel="noopener noreferrer">Midi's pricing and insurance page</a>. For how every online HRT service handles insurance, see <a href="/articles/online-hrt-insurance">online HRT that takes insurance</a>.</p>`,
         },
         {
           heading: "Does Midi Health take Medicaid or Medicare?",

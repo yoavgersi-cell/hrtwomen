@@ -56,6 +56,12 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "online-hrt-insurance": {
+    src: "/article-images/online-hrt-insurance.webp",
+    alt: "Woman on a sofa holding a blank card and her phone, with tea and a pill bottle nearby, checking her insurance coverage for HRT",
+    width: 1536,
+    height: 864,
+  },
   "testosterone-for-women": {
     src: "/article-images/testosterone-for-women.webp",
     alt: "Woman stretching in a cozy bedroom with soft natural light, illustrating wellness and hormonal health topics",
