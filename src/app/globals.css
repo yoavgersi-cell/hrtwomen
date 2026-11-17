@@ -173,15 +173,19 @@ html[data-hub] .hub-name {
   font-weight: 600;
   color: #191919;
 }
-@media (max-width: 640px) {
-  /* Wide tables scroll inside their own box. Cells wrap with a sensible
-     minimum width, so a 4-column table is ~550px of swipe rather than one
-     unwrapped line per cell (which made some tables 1,600px wide). */
+@media (max-width: 1024px) {
+  /* Wide tables (e.g. 7-column provider comparisons) scroll inside their own
+     box on phones and tablets instead of widening the page. */
   .article-body table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
   }
+}
+@media (max-width: 640px) {
+  /* Cells wrap with a sensible minimum width, so a 4-column table is ~550px
+     of swipe rather than one unwrapped line per cell (which made some tables
+     1,600px wide). */
   .article-body table th,
   .article-body table td {
     min-width: 8.5rem;

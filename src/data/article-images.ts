@@ -20,9 +20,21 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "glp1-menopause": {
+    src: "/article-images/glp1-menopause.webp",
+    alt: "Middle-aged woman with a medication patch on her arm holding a pill bottle at a kitchen table with fruit and a spine model nearby",
+    width: 1536,
+    height: 864,
+  },
   "hot-flashes-treatment": {
     src: "/article-images/hot-flashes-treatment.webp",
     alt: "Woman sitting on a bed at sunset using a handheld fan to cool down, illustrating managing hot flashes",
+    width: 1536,
+    height: 864,
+  },
+  "hrt-black-box-warning-removed": {
+    src: "/article-images/hrt-black-box-warning-removed.webp",
+    alt: "Middle-aged woman reading a pamphlet at her kitchen table, illustrating the 2026 changes to HRT label warnings",
     width: 1536,
     height: 864,
   },
@@ -35,6 +47,24 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
   "menopause-weight-gain": {
     src: "/article-images/menopause-weight-gain.webp",
     alt: "Woman in a kitchen holding a bowl of fresh vegetables, illustrating healthy eating for menopause weight management",
+    width: 1536,
+    height: 864,
+  },
+  "online-hrt-cost": {
+    src: "/article-images/online-hrt-cost.webp",
+    alt: "Woman counting coins into a dish beside two plain pill bottles and a cup of tea, weighing the cost of HRT",
+    width: 1536,
+    height: 864,
+  },
+  "testosterone-for-women": {
+    src: "/article-images/testosterone-for-women.webp",
+    alt: "Woman stretching in a cozy bedroom with soft natural light, illustrating wellness and hormonal health topics",
+    width: 1536,
+    height: 864,
+  },
+  "vaginal-estrogen": {
+    src: "/article-images/vaginal-estrogen.webp",
+    alt: "Cream jar, pill bottle and soft vaginal ring on a bathroom counter beside flowers, the three forms of vaginal estrogen",
     width: 1536,
     height: 864,
   },
