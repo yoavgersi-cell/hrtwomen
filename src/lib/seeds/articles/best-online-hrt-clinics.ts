@@ -95,7 +95,7 @@ export const BEST_ONLINE_HRT_CLINICS: ArticleData = {
     },
     {
       heading: "Do online HRT clinics take insurance?",
-      body: `<p><strong>Of the clinics in this guide, only Midi Health bills insurance for visits - most commercial PPO plans, but not Medicare, HMO or Medicaid. Winona, Gala, Fem Excel and LifeMD's HRT program are self-pay, and Wisp charges a self-pay consult but sends prescriptions to your pharmacy, where insurance can cover the medication.</strong></p><p>Even with a self-pay clinic, check your HSA or FSA: Winona and Wisp say they accept those cards. Generic estradiol and progesterone are on most pharmacy formularies, so a pharmacy-based model can be cheaper if your drug coverage is good. More in <a href="/articles/online-hrt-cost">how much online HRT costs</a>.</p>`,
+      body: `<p><strong>Of the clinics in this guide, only Midi Health bills insurance for visits - most commercial PPO plans, but not Medicare, HMO or Medicaid. Winona, Gala, Fem Excel and LifeMD's HRT program are self-pay, and Wisp charges a self-pay consult but sends prescriptions to your pharmacy, where insurance can cover the medication.</strong></p><p>Even with a self-pay clinic, check your HSA or FSA: Winona and Wisp say they accept those cards. Generic estradiol and progesterone are on most pharmacy formularies, so a pharmacy-based model can be cheaper if your drug coverage is good. More in <a href="/articles/online-hrt-cost">how much online HRT costs</a>. Our <a href="/articles/online-hrt-insurance">online HRT insurance guide</a> covers Medicare, Medicaid, state laws and reimbursement.</p>`,
     },
     {
       heading: "Do online clinics prescribe FDA-approved hormones?",
