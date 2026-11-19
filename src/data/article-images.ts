@@ -20,6 +20,12 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "gala-cost": {
+    src: "/article-images/gala-cost.webp",
+    alt: "Smiling woman lifting a plain pill bottle from a pink delivery box at home, illustrating a flat monthly HRT plan",
+    width: 1536,
+    height: 864,
+  },
   "glp1-menopause": {
     src: "/article-images/glp1-menopause.webp",
     alt: "Middle-aged woman with a medication patch on her arm holding a pill bottle at a kitchen table with fruit and a spine model nearby",
@@ -32,6 +38,12 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "how-to-get-hrt-online": {
+    src: "/article-images/how-to-get-hrt-online.webp",
+    alt: "Woman on a sofa on a video call with a smiling clinician on her laptop, showing how to get HRT online",
+    width: 1536,
+    height: 864,
+  },
   "hrt-black-box-warning-removed": {
     src: "/article-images/hrt-black-box-warning-removed.webp",
     alt: "Middle-aged woman reading a pamphlet at her kitchen table, illustrating the 2026 changes to HRT label warnings",
@@ -41,6 +53,24 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
   "hrt-breast-cancer-risk": {
     src: "/article-images/hrt-breast-cancer-risk.webp",
     alt: "Middle-aged woman in a pink shirt sitting thoughtfully at a table with an open book and medication, reflecting on HRT and breast cancer risk",
+    width: 1536,
+    height: 864,
+  },
+  "is-midi-legit": {
+    src: "/article-images/is-midi-legit.webp",
+    alt: "Woman on a video call with a clinician on her laptop, with a notebook and a hot drink, illustrating telehealth menopause care",
+    width: 1536,
+    height: 864,
+  },
+  "is-winona-legit": {
+    src: "/article-images/is-winona-legit.webp",
+    alt: "Woman by a window carefully examining a plain pill bottle, checking whether an online HRT service is legit",
+    width: 1536,
+    height: 864,
+  },
+  "menopause-complete-guide": {
+    src: "/article-images/menopause-complete-guide.webp",
+    alt: "Middle-aged woman sitting comfortably with herbal tea and supplements, reflecting self-care during menopause treatment",
     width: 1536,
     height: 864,
   },
