@@ -56,6 +56,12 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "is-gala-legit": {
+    src: "/article-images/is-gala-legit.webp",
+    alt: "Woman on a sofa thoughtfully holding a plain pill bottle, with tea and a pink hydrangea nearby, deciding whether Gala Health is legit",
+    width: 1536,
+    height: 864,
+  },
   "is-midi-legit": {
     src: "/article-images/is-midi-legit.webp",
     alt: "Woman on a video call with a clinician on her laptop, with a notebook and a hot drink, illustrating telehealth menopause care",
@@ -80,6 +86,12 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "midi-cost": {
+    src: "/article-images/midi-cost.webp",
+    alt: "Woman at a kitchen table reviewing a card and a bill beside a calculator, laptop and tea, working out what Midi Health visits cost",
+    width: 1536,
+    height: 864,
+  },
   "online-hrt-cost": {
     src: "/article-images/online-hrt-cost.webp",
     alt: "Woman counting coins into a dish beside two plain pill bottles and a cup of tea, weighing the cost of HRT",
@@ -101,6 +113,24 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
   "vaginal-estrogen": {
     src: "/article-images/vaginal-estrogen.webp",
     alt: "Cream jar, pill bottle and soft vaginal ring on a bathroom counter beside flowers, the three forms of vaginal estrogen",
+    width: 1536,
+    height: 864,
+  },
+  "what-is-hrt": {
+    src: "/article-images/what-is-hrt.webp",
+    alt: "Middle-aged woman sitting in bed holding a mug, with a pill bottle and a glass of water on the bedside table, introducing HRT",
+    width: 1536,
+    height: 864,
+  },
+  "winona-cost": {
+    src: "/article-images/winona-cost.webp",
+    alt: "Woman at a table with a weekly pill organizer and a pink calendar with marked dates, planning the monthly cost of Winona HRT",
+    width: 1536,
+    height: 864,
+  },
+  "winona-products": {
+    src: "/article-images/winona-products.webp",
+    alt: "Woman's hands on a wooden table arranging a pill bottle, a cream jar and an applicator, representing Winona's menopause products",
     width: 1536,
     height: 864,
   },
