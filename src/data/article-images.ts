@@ -20,6 +20,12 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "estrogen-patch-vs-pill": {
+    src: "/article-images/estrogen-patch-vs-pill.webp",
+    alt: "Bedside table with a plain estrogen patch, a pill bottle, lavender and a glass of water, illustrating patch vs pill for HRT",
+    width: 1536,
+    height: 864,
+  },
   "gala-cost": {
     src: "/article-images/gala-cost.webp",
     alt: "Smiling woman lifting a plain pill bottle from a pink delivery box at home, illustrating a flat monthly HRT plan",
@@ -56,9 +62,21 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "hrt-for-perimenopause": {
+    src: "/article-images/hrt-for-perimenopause.webp",
+    alt: "Woman in her 40s by a sunlit window holding a pill blister pack beside a pink calendar, illustrating starting HRT in perimenopause",
+    width: 1536,
+    height: 864,
+  },
   "is-gala-legit": {
     src: "/article-images/is-gala-legit.webp",
     alt: "Woman on a sofa thoughtfully holding a plain pill bottle, with tea and a pink hydrangea nearby, deciding whether Gala Health is legit",
+    width: 1536,
+    height: 864,
+  },
+  "is-hrt-safe": {
+    src: "/article-images/is-hrt-safe.webp",
+    alt: "Middle-aged woman thoughtfully resting her chin on her hand at a table with a pill bottle and an open book, weighing whether HRT is safe",
     width: 1536,
     height: 864,
   },
@@ -101,6 +119,18 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
   "online-hrt-insurance": {
     src: "/article-images/online-hrt-insurance.webp",
     alt: "Woman on a sofa holding a blank card and her phone, with tea and a pill bottle nearby, checking her insurance coverage for HRT",
+    width: 1536,
+    height: 864,
+  },
+  "perimenopause-symptoms": {
+    src: "/article-images/perimenopause-symptoms.webp",
+    alt: "Middle-aged woman on a bed with a fan and a glass of water, illustrating perimenopause symptoms like hot flashes",
+    width: 1536,
+    height: 864,
+  },
+  "progesterone-side-effects": {
+    src: "/article-images/progesterone-side-effects.webp",
+    alt: "Woman sitting on a bed by a nightstand with a pill organizer, glass of water and notebook, reflecting on progesterone side effects",
     width: 1536,
     height: 864,
   },
