@@ -14,6 +14,18 @@ export const ARTICLE_IMAGES: Record<string, ArticleImage> = {
     width: 1536,
     height: 864,
   },
+  "best-online-hrt-providers-compared": {
+    src: "/article-images/best-online-hrt-providers-compared.webp",
+    alt: "Woman in cozy clothing sitting in a chair holding a mug, symbolizing comfort and well-being for HRT treatment options",
+    width: 1536,
+    height: 864,
+  },
+  "bioidentical-hormones-explained": {
+    src: "/article-images/bioidentical-hormones-explained.webp",
+    alt: "Woman holding a cream tube at a bathroom counter with various hormone therapy products and a glass of water nearby",
+    width: 1536,
+    height: 864,
+  },
   "estradiol": {
     src: "/article-images/estradiol.webp",
     alt: "Wooden tray on a bed holds a glass of water, pill bottle, cream tube, pill, and patch with a woman sitting by a window in the background",
